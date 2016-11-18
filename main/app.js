@@ -28,6 +28,13 @@ clearbank.config(function($routeProvider, $locationProvider) {
 	});
 });
 
+$scope.CustomerData = [{
+            csId: "1234567890",
+			phn:"0000000001",
+            pwd: "Mindtree@123"
+        }
+        }];
+		
 clearbank.controller('loginController',['$scope',function($scope){
 	
 	$scope.cIdCheck=/^[0-9]{10}$/;
@@ -48,6 +55,13 @@ clearbank.controller('loginController',['$scope',function($scope){
 			loginForm.pswd.focus();
 			return false;
 			}
+			for(i=0;i<$scope.customerData.length;i++)
+			{
+			if($scope.cId==$scope.customerData[i].csId && $scope.pwd==$scope.customerData[i].pwd )
+			{
+		     window.location.href="index.html";
+			}
+		    }
 		else{
 			return false;
 		}
@@ -74,6 +88,19 @@ clearbank.controller("forgotPasswordController",['$scope',function($scope){
 			 this.forgotPasswordWidget=false;
 			 this.changeSuccessWidget=true;
 		 }
+		 
+		 for(i=0;i<$scope.customerData.length;i++)
+			{
+			if($scope.nums==$scope.customerData[i].phn &&)
+			{
+		        $scope.students.splice(i, 0, {
+             pwd: $scope.changePassword
+             
+         }
+		 window.location.href="index.html";
+		 );
+			}
+		    }
 	}
 }]);
 
@@ -116,5 +143,11 @@ clearbank.controller("registrationController",function($scope){
 		
 		$scope.save=function(){
 			
+         $scope.customerData.push({
+             csId: $scope.cid,
+             phn: $scope.phn,
+             pwd: $scope.cpass
+		 });
+       window.location.href="index.html";
 		}
 });
