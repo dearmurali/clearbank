@@ -1,0 +1,60 @@
+
+<div class="col-md-3 col-sm-1"></div>
+<div class="col-xs-12 col-sm-10 col-md-6">
+<div class="well well-lg reg-form">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Register Here!!!</div>
+      <div class="panel-body">
+      <form name="myform">
+<div class="form-group">
+    <label for="cust-name">What's your name?</label>
+    <input type="text" class="form-control cName" name="cname" data-ng-model="cname" data-ng-pattern="/^[a-z A-Z]+$/" placeholder="Enter name" required>
+       <div ng-messages="myform.cname.$error" class="nameError">
+    <div ng-message="pattern" class="errorMsg"><small>Please enter alphabets only!</small></div>
+  <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
+  </div>
+    <small id="name-Help" class="form-text text-muted">We need your name to talk to you!</small>
+  
+  </div>
+    <div class="form-group">
+    <label for="customer-id">and your customer id?</label>
+    <input type="text" class="form-control cId" name="cid" data-ng-model="cid" data-ng-pattern="/^[0-9]{10}$/" placeholder="Enter account no." required>
+      <div ng-messages="myform.cid.$error" class="cidError">
+    <div ng-message="pattern" class="errorMsg"><small>Please enter a valid 10 digit account id!</small></div>
+  <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
+  </div>
+    <small class="form-text text-muted">We'll never share your account info with anyone else.</small>
+  </div>
+<div class="form-group">     
+<label for="cust-email">an e-mail address to contact you</label>     
+<input class="form-control cMail" name="mail" data-ng-model="cmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" placeholder="Enter email" required>
+  <div ng-messages="myform.mail.$error" class="mailError">
+    <div ng-message="pattern" class="errorMsg"><small>Please enter a valid email address!</small></div>
+  <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
+  </div>
+     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+  <div class="form-group">
+    <label for="cust-password">Set a Password for this account</label>
+    <input type="password" class="form-control cPass" name="password" data-ng-model="cpass" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" placeholder="Password" required>
+    <div ng-messages="myform.password.$error" class="passError">
+    <div ng-message="pattern" class="errorMsg"><small>Please enter a valid password!</small></div>
+  <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
+  </div>
+    <small class="form-text text-muted">secure your account with a password(8-20 alphanumeric and special characters).</small>
+  </div>
+  <div class="form-group">
+    <label for="cust-password2">and re-enter to confirm</label>
+    <input type="password" class="form-control cPass2" name="password2" placeholder="Password" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/"   data-ng-model="ccpass" required>
+     <div ng-messages="myform.password2.$error" class="passError2">
+    <div ng-message="pattern" class="errorMsg"><small>enter same password as above!</small></div>
+  <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
+  </div>
+  <span class="errorMsg passError2"><small>Passwords do not match!!</small></span>
+  </div>
+  <button type="button" class="btn btn-primary" data-ng-click="save()">Submit</button>
+  </form>
+</div>
+    </div>
+    </div>
+	</div> 
