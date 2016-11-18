@@ -27,14 +27,7 @@ clearbank.config(function($routeProvider, $locationProvider) {
 		requireBase: false
 	});
 });
-/*
-$scope.CustomerData = [{
-		csId: "1234567890",
-		phn:"0000000001",
-        pwd: "Mindtree@123"
-}];
-	*/	
-clearbank.controller('loginController',['$scope',function($scope){
+clearbank.controller('loginController',['$scope',function($scope,bankService){
 	
 	$scope.cIdCheck=/^[0-9]{10}$/;
 	$scope.pwdCheck= /^[a-z][A-Z]0-9!@#$%^&*_-]{8,20}$/;
@@ -54,14 +47,18 @@ clearbank.controller('loginController',['$scope',function($scope){
 			loginForm.pswd.focus();
 			return false;
 			}
-			for(i=0;i<$scope.customerData.length;i++)
+		else{
+			var cs=bankService.getCustomer();
+			for(i=0;i<cs.length;i++)
 			{
-			if($scope.cId==$scope.customerData[i].csId && $scope.pwd==$scope.customerData[i].pwd )
+			if($scope.cId==cs[i].csId && $scope.pwd==cs[i].pwd )
 			{
 		     window.location.href="index.html";
 			}
-		else{
-			return false;
+			else{
+				alert("Incorrect username or password")
+			}
+			
 		}
 	};
 	}
@@ -71,7 +68,7 @@ clearbank.controller("navController",function($scope){
 	this.heading="ClearBank";
 })
 
-clearbank.controller("forgotPasswordController",['$scope',function($scope){
+clearbank.controller("forgotPasswordController",['$scope',function($scope,bankService){
 
 	//function to confirm change password submission
 	this.forgotPasswordWidget=true;
@@ -86,24 +83,26 @@ clearbank.controller("forgotPasswordController",['$scope',function($scope){
 			 this.noMatch=false;
 			 this.forgotPasswordWidget=false;
 			 this.changeSuccessWidget=true;
+			 
+			 
+			 var cs=bankService.getCustomer();
+			 for(i=0;i<cs.length;i++)
+				{
+				 
+				if($scope.nums==cs[i].phn)
+				{
+			        bankService.ediCustomer(i,$scope.changePassword);
+					window.location.href="index.html";
+				}
+			    }
 		 }
 		 
-		 for(i=0;i<$scope.customerData.length;i++)
-			{
-			if($scope.nums==$scope.customerData[i].phn)
-			{
-		        $scope.students.splice(i, 0,
-					{
-						pwd: $scope.changePassword
-					}
-				)
-				window.location.href="index.html";
-			}
-		    }
+		 
 	}
 }]);
 
-clearbank.controller("registrationController",function($scope){
+clearbank.controller("registrationController",function($scope,bankService){
+	var isValid=true;
 	var name=$scope.cname;
 	var mail=$scope.cmail;
 	var cid=$scope.cid;
@@ -113,40 +112,53 @@ clearbank.controller("registrationController",function($scope){
 	$('.cName').on('blur',function(){
 		if($scope.cname===undefined){
 			$('.nameError').show('200');
+			isvalid=false;
 			}
+		else flag=true;
 		});
 		$('.cId').on('blur',function(){
 			if($scope.cid===undefined){
 			$('.cidError').show('200');
+			flag=false;
 			}
+			else flag=true;
 		});
 		
 		$('.cMail').on('blur',function(){
 			if($scope.cmail===undefined){
 			$('.mailError').show('200');
-			}
+			flag=false;
+			}else flag=true;
 		});
 		
 		$('.cPass').on('blur',function(){ 
 			if($scope.cpass===undefined){
 			$('.passError').show('200');
-			}
+			flag=false;
+			}else flag=true;
 		});
+		
 		$('.cPass2').on('blur',function(){
 			if($scope.cpass!=$scope.ccpass){
 				$('.passError2').show('200');
+				flag=false;
 			}else{
 				$('.passError2').hide('200');
+				flag=true;
 			}
 		});
 		
 		$scope.save=function(){
+			if(isValid){
+				var obj = {
+					csId: $scope.cid,
+					phn:$scope.phn,
+			        pwd: $scope.cpass
+			};
+			bankService.addCustomer(obj);
+				
 			
-         $scope.customerData.push({
-             csId: $scope.cid,
-             phn: $scope.phn,
-             pwd: $scope.cpass
-		 });
-       window.location.href="index.html";
+				window.location.href="index.html";
+			}
 		}
 });
