@@ -111,3 +111,23 @@ background-color:#34495e;
 .errorMsg{
 	color:red;
 }
+
+
+.logo{
+	margin-bottom:1%;
+}
+
+.button1{
+	margin-right:2%; 
+}
+
+.button2{
+	margin-left:2%;
+	
+}
+
+.jumbotron{
+	background-color:transparent;  
+	text-align:center;
+	margin: 5% auto;
+}

@@ -3,6 +3,10 @@ var clearbank = angular.module('ClearBank', ['ngRoute','ngMessages']);
 clearbank.config(function($routeProvider, $locationProvider) {
 
     $routeProvider
+		.when('/', {
+            templateUrl: 'views/home.html'
+        })
+	
         .when('/login', {
             templateUrl: 'views/login/login.html',
 			controller:'loginController'
@@ -28,18 +32,19 @@ clearbank.controller('loginController',['$scope',function($scope){
 	
 	$scope.cIdCheck=/^[0-9]{10}$/;
 	$scope.pwdCheck= /^[a-z][A-Z]0-9!@#$%^&*_-]{8,20}$/;
-	
+	this.heading="ClearBank";
 	
 	$scope.onLogin=function(){
-		if($scope.cId=="")
+		if($scope.cId==undefined)
 			{
-			alert("Can't leave any field empty!!!")
+			console.log("entered functiion cid");
+			alert("Customer Id can't be empty");
 		    loginForm.csId.focus();
 			return false;
 			}
-		if($scope.pwd=="")
+		if($scope.pwd==undefined)
 			{
-			alert("Can't leave any field empty!!!")
+			alert("Password can't be empty");
 			loginForm.pswd.focus();
 			return false;
 			}
@@ -61,13 +66,13 @@ clearbank.controller("forgotPasswordController",['$scope',function($scope){
 	{
 		 if(this.confirmPassword==undefined || this.changePassword.length!=this.confirmPassword.length || this.changePassword!=this.confirmPassword)
 		 {
-		 this.noMatch=true;
+			this.noMatch=true;
 		 }
 		 else if(this.changePassword===this.confirmPassword)
 		 {
-		 this.noMatch=false;
-		 this.forgotPasswordWidget=false;
-		 this.changeSuccessWidget=true;
+			 this.noMatch=false;
+			 this.forgotPasswordWidget=false;
+			 this.changeSuccessWidget=true;
 		 }
 	}
 }]);
