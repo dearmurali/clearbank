@@ -27,14 +27,13 @@ clearbank.config(function($routeProvider, $locationProvider) {
 		requireBase: false
 	});
 });
-
+/*
 $scope.CustomerData = [{
-            csId: "1234567890",
-			phn:"0000000001",
-            pwd: "Mindtree@123"
-        }
-        }];
-		
+		csId: "1234567890",
+		phn:"0000000001",
+        pwd: "Mindtree@123"
+}];
+	*/	
 clearbank.controller('loginController',['$scope',function($scope){
 	
 	$scope.cIdCheck=/^[0-9]{10}$/;
@@ -61,11 +60,11 @@ clearbank.controller('loginController',['$scope',function($scope){
 			{
 		     window.location.href="index.html";
 			}
-		    }
 		else{
 			return false;
 		}
 	};
+	}
 }]);
 
 clearbank.controller("navController",function($scope){
@@ -91,14 +90,14 @@ clearbank.controller("forgotPasswordController",['$scope',function($scope){
 		 
 		 for(i=0;i<$scope.customerData.length;i++)
 			{
-			if($scope.nums==$scope.customerData[i].phn &&)
+			if($scope.nums==$scope.customerData[i].phn)
 			{
-		        $scope.students.splice(i, 0, {
-             pwd: $scope.changePassword
-             
-         }
-		 window.location.href="index.html";
-		 );
+		        $scope.students.splice(i, 0,
+					{
+						pwd: $scope.changePassword
+					}
+				)
+				window.location.href="index.html";
 			}
 		    }
 	}
