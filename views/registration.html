@@ -18,7 +18,7 @@
   </div>
     <div class="form-group">
     <label for="customer-id">and your customer id?</label>
-    <input type="text" class="form-control cId" name="cid" data-ng-model="cid" data-ng-pattern="/^[0-9]{10}$/" placeholder="Enter account no." required>
+    <input type="text" class="form-control cId" name="cid" data-ng-model="cid" data-ng-pattern="/^[0-9]{10}$/" placeholder="Enter account no." required maxlength="10">
       <div ng-messages="myform.cid.$error" class="cidError">
     <div ng-message="pattern" class="errorMsg"><small>Please enter a valid 10 digit account id!</small></div>
   <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>

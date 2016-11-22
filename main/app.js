@@ -21,6 +21,10 @@ clearbank.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'views/forgotPassword.html',
 			controller: 'forgotPasswordController'
 		})
+		
+		.when('/dashboard',{
+			templateUrl: 'views/dashboard.html'
+		})
 	
 	$locationProvider.html5Mode({
 		enabled: true,
@@ -39,6 +43,7 @@ clearbank.controller('loginController',['$scope','CommonData','LoginService', fu
 	$scope.cIdCheck=/^[0-9]{10}$/;
 	$scope.pwdCheck= /^[a-z][A-Z]0-9!@#$%^&*_-]{8,20}$/;
 	this.heading="ClearBank";
+	$scope.validCredentials=true;
 	
 	//console.log(LoginService.validLogin('1234567891','Mindtree@123'));
 	$scope.onLogin=function(){
@@ -58,10 +63,12 @@ clearbank.controller('loginController',['$scope','CommonData','LoginService', fu
 		LoginService.validLogin($scope.cId,$scope.pwd, function(result){
 			//console.log('result ',result);
 			if(result == "success"){
-				window.location.href="index.html";
+				$scope.validCredentials=true;
+				window.location.href="/#dashboard";
 			}
 			else{
-				alert("Invalid ID and/or password.");
+			//	alert("Invalid ID and/or password.");
+			$scope.validCredentials=false;
 			}
 		});
 	};
@@ -98,7 +105,7 @@ clearbank.controller("forgotPasswordController",['$scope','CommonData', function
 						pwd: $scope.changePassword
 					}
 				)
-				window.location.href="index.html";
+				window.location.href="/";
 			}
 		    }
 	}
@@ -152,5 +159,6 @@ clearbank.controller('registrationController', function($scope){
 		 */
 		//window.location.href="/login";
 		alert('Successfully registered');
+		window.location.href="/";
 		}
 });
