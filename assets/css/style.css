@@ -52,7 +52,7 @@ clear:left;
 	color:red;
 }
  .mainContainer{
- background-image:url("http://japandailypress.com/wp-content/uploads/2013/10/shutterstock_156660380.jpg") ;
+ background-image:url("../images/bg.jpg") ;
  background-size:1600px 850px;
  background-repeat:no-repeat;
  }
