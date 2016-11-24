@@ -132,7 +132,11 @@ background-color:#34495e;
 
 .button2{
 	margin-left:2%;
-	
+}
+
+.logout{
+    color:white;
+    font-size:2em;
 }
 
 .jumbotron{
