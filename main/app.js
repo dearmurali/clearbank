@@ -1,7 +1,40 @@
-clearbank = angular.module('ClearBank', ['ngRoute','ngMessages']);
+clearbank = angular.module('ClearBank', ['ngRoute','ngMessages','ngAnimate','ui.router']);
 
-clearbank.config(function($routeProvider, $locationProvider) {
+clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
+	
+	$urlRouterProvider.otherwise('/');
 
+	$stateProvider
+		.state('home',{
+			url:'/',
+			templateUrl: 'views/home.html'
+		})
+		
+		.state('login',{
+			url:'/login',	
+			templateUrl: 'views/login/login.html',
+			controller:'loginController'
+		})
+		
+		.state('register',{
+			url:'/register',
+			templateUrl: 'views/registration.html',
+			controller: 'registrationController'
+		})
+		
+		.state('forgotpassword',{
+			url:'/forgotpassword',
+			templateUrl: 'views/forgotPassword.html',
+			controller: 'forgotPasswordController'
+		})
+		
+		.state('dashboard',{
+			url:'/dashboard',
+			templateUrl: 'views/dashboard.html'
+		})
+	
+	
+	/*
     $routeProvider
 		.when('/', {
             templateUrl: 'views/home.html'
@@ -25,19 +58,18 @@ clearbank.config(function($routeProvider, $locationProvider) {
 		.when('/dashboard',{
 			templateUrl: 'views/dashboard.html'
 		})
-	
+	*/
 	$locationProvider.html5Mode({
 		enabled: true,
 		requireBase: false
 	});
 });
+
+//clearbank.run(['$state', function ($state) {
+	//$state.transitionTo('home');
+//}]);
+
 /*
-$scope.CustomerData = [{
-		csId: "1234567890",
-		phn:"0000000001",
-        pwd: "Mindtree@123"
-}];
-	*/	
 clearbank.controller('loginController',['$scope','CommonData','LoginService', function($scope, CommonData, LoginService){
 	
 	$scope.cIdCheck=/^[0-9]{10}$/;
@@ -73,13 +105,15 @@ clearbank.controller('loginController',['$scope','CommonData','LoginService', fu
 		});
 	};
 	}
-]);
+]);*/
 
-clearbank.controller('navController','CommonData',function($scope, CommonData){
+/*clearbank.controller('navController','CommonData', '$state', function($scope, CommonData, $state){
 	this.heading="ClearBank";
-})
+	console.log('inside nav controller');
+	//$state.go('home');
+})*/
 
-clearbank.controller("forgotPasswordController",['$scope','CommonData', function($scope, CommonData){
+clearbank.controller("forgotPasswordController",['$scope', function($scope){
 
 	//function to confirm change password submission
 	this.forgotPasswordWidget=true;
@@ -96,7 +130,7 @@ clearbank.controller("forgotPasswordController",['$scope','CommonData', function
 			 this.changeSuccessWidget=true;
 		 }
 		 
-		 for(i=0;i<CommonData.getData().length;i++)
+		/* for(i=0;i<CommonData.getData().length;i++)
 			{
 			if($scope.nums==CommonData.getData()[i].phn)
 			{
@@ -107,7 +141,7 @@ clearbank.controller("forgotPasswordController",['$scope','CommonData', function
 				)
 				window.location.href="/";
 			}
-		    }
+		    }*/
 	}
 }]);
 
