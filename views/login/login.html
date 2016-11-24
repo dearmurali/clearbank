@@ -7,7 +7,7 @@
  <form name="loginForm">
   <div class="form-group">
     <label>Customer Id <span class="warning">*</span></label>
-    <input type="text" name="csId" class="form-control"  data-ng-model="cId" data-ng-pattern="cIdCheck" required placeholder="Type Your Customer Id" maxlength="10">
+    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="cIdCheck" required placeholder="Type Your Customer Id" maxlength="10">	
     <div data-ng-messages="loginForm.csId.$error">
     <div data-ng-message="pattern"><span class="warning">*Must have 10 digits</span></div>
    
@@ -22,8 +22,7 @@
   </div>
   <div ng-show="!validCredentials" class="warning">Invalid Id and/or Password.</div> <br/>
   <button type="button" class="btn btn-primary" data-ng-click="onLogin()">Login</button>&nbsp;
-  <a href="/"><button type="button" class="btn btn-warning">Cancel</button></a>&nbsp;
-  <a href="/forgotpassword"><small>Forgot password?</small></a>
+  <a ui-sref="forgotpassword"><small>Forgot password?</small></a>
 </form> 
 <p></p>
 <small>Note: <span class="warning">*</span>indicates mandatory fields</small>
