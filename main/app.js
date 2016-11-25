@@ -32,6 +32,22 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 			url:'/dashboard',
 			templateUrl: 'views/dashboard.html'
 		})
+		
+		.state('lastTransactions',{
+			url:'/lastTransactions',
+			templateUrl: 'views/lastTransactions.html',
+			controller : 'lastTransactionsController'
+		})
+		
+		.state('accounts',{
+			url:'/accounts',
+			templateUrl: 'views/dashboard.html'
+		})
+		
+		.state('transfers',{
+			url:'/transfers',
+			templateUrl: 'views/transfers.html'
+		})
 	
 	
 	/*
@@ -144,6 +160,13 @@ clearbank.controller("forgotPasswordController",['$scope', function($scope){
 		    }*/
 	}
 }]);
+
+clearbank.controller('lastTransactionsController',function($scope){
+	$scope.showTransactions=false;
+	$scope.showTransaction=function(){
+		$scope.showTransactions=!$scope.showTransactions;
+	}
+});
 
 clearbank.controller('registrationController', function($scope){
 	var isValid=true;

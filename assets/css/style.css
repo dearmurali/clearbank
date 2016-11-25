@@ -31,6 +31,55 @@ box-shadow: 0px 0px 55px #111111;
          margin-left:20px;
     }
 }
+.menu{
+	background-color:#ff8000;
+}
+
+.mainMenu{
+	
+	color:white;
+}
+
+.leftAside{
+	margin:2px;
+	background-color:white;
+	border:1px solid black;
+	border-radius:5px;
+}
+
+.asideMenu{
+	list-style:none;
+}
+
+.asideItems{
+	margin:15% 0;
+}
+.mainView{
+	margin:2px;
+	background-color:white;
+	border:1px solid black;
+	padding:2%;
+	border-radius:5px;
+	
+}
+
+.tableheading{
+	background-color:#c0c0c0;
+}
+
+.managePayee{
+	text-align:center;
+}
+
+.accountInfo{
+	border:1px solid grey;
+}
+
+.lastTransactions{
+	display:none;
+	border:1px solid grey;
+}
+
 .modal{
 	color:#3498db;
 }
@@ -62,7 +111,7 @@ clear:left;
 }
  .mainContainer{
  background-image:url("../images/bg.jpg") ;
- background-size:1600px 850px;
+ background-size:cover;
  background-repeat:no-repeat;
  }
  
