@@ -146,40 +146,54 @@ clearbank.controller("forgotPasswordController",['$scope', function($scope){
 }]);
 
 clearbank.controller('registrationController', function($scope){
-	var name=$scope.cname;
-	var mail=$scope.cmail;
-	var cid=$scope.cid;
-	var cpass=$scope.cpass;
-	var ccpass=$scope.ccpass;
-	
-	$('.nameError,.cidError,.mailError,.passError,.passError2').hide();
+	var isValid=true;
+	$('.nameError,.cidError,.mailError,.passError,.passError2.contactError').hide();
 	$('.cName').on('blur',function(){
-		if($scope.cname===undefined){
+		if($scope.customerName===undefined){
 			$('.nameError').show('200');
+            isValid=false;
 			}
+        else isValid=true;
 		});
 		$('.cId').on('blur',function(){
-			if($scope.cid===undefined){
+			if($scope.customerId===undefined){
 			$('.cidError').show('200');
+                isValid=false;
 			}
+            else isValid=true;
 		});
 		
-		$('.cMail').on('blur',function(){
-			if($scope.cmail===undefined){
-			$('.mailError').show('200');
+    $('.contact').on('blur',function(){
+			if($scope.customerContact===undefined){
+			$('.contactError').show('200');
+                isValid=false;
 			}
+        else isValid=true;
+		});
+		
+    
+		$('.cMail').on('blur',function(){
+			if($scope.customerEmail===undefined){
+			$('.mailError').show('200');
+                isValid=false;
+			}
+            else isValid=true;
 		});
 		
 		$('.cPass').on('blur',function(){ 
-			if($scope.cpass===undefined){
+			if($scope.customerPassword===undefined){
 			$('.passError').show('200');
+                isValid=false;
 			}
+            else isValid=true;
 		});
 		$('.cPass2').on('blur',function(){
-			if($scope.cpass!=$scope.ccpass){
+			if($scope.customerPassword!=$scope.confirmedPassword){
 				$('.passError2').show('200');
+                isValid=false;
 			}else{
 				$('.passError2').hide('200');
+              isValid=true;
 			}
 		});
 		
