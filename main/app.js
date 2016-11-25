@@ -116,18 +116,18 @@ clearbank.controller('loginController',['$scope','CommonData','LoginService', fu
 clearbank.controller("forgotPasswordController",['$scope', function($scope){
 
 	//function to confirm change password submission
-	this.forgotPasswordWidget=true;
-	this.changeSubmit=function()
-	{
-		 if(this.confirmPassword==undefined || this.changePassword.length!=this.confirmPassword.length || this.changePassword!=this.confirmPassword)
+	$scope.forgotPasswordWidget=true;
+	$scope.changeSubmit=function()
+	{		
+		 if($scope.changePassword!=$scope.confirmPassword)
 		 {
-			this.noMatch=true;
+			$scope.No_match=true;
 		 }
-		 else if(this.changePassword===this.confirmPassword)
+		 else if($scope.changePassword===$scope.confirmPassword)
 		 {
-			 this.noMatch=false;
-			 this.forgotPasswordWidget=false;
-			 this.changeSuccessWidget=true;
+			 $scope.No_match=false;
+			 $scope.forgotPasswordWidget=false;
+			 $scope.changeSuccessWidget=true;
 		 }
 		 
 		/* for(i=0;i<CommonData.getData().length;i++)
@@ -147,7 +147,7 @@ clearbank.controller("forgotPasswordController",['$scope', function($scope){
 
 clearbank.controller('registrationController', function($scope){
 	var isValid=true;
-	$('.nameError,.cidError,.mailError,.passError,.passError2.contactError').hide();
+	$('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
 	$('.cName').on('blur',function(){
 		if($scope.customerName===undefined){
 			$('.nameError').show('200');
@@ -206,7 +206,9 @@ clearbank.controller('registrationController', function($scope){
 		});
 		 */
 		//window.location.href="/login";
+		if(isValid){
 		alert('Successfully registered');
 		window.location.href="/";
+		}
 		}
 });
