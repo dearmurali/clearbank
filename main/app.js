@@ -147,7 +147,7 @@ clearbank.controller("forgotPasswordController",['$scope', function($scope){
 
 clearbank.controller('registrationController', function($scope){
 	var isValid=true;
-	$('.nameError,.cidError,.mailError,.passError,.passError2.contactError').hide();
+	$('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
 	$('.cName').on('blur',function(){
 		if($scope.customerName===undefined){
 			$('.nameError').show('200');
