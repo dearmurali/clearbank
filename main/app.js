@@ -1,56 +1,56 @@
-clearbank = angular.module('ClearBank', ['ngRoute','ngMessages','ngAnimate','ui.router']);
+clearbank = angular.module('ClearBank', ['ngRoute', 'ngMessages', 'ngAnimate', 'ui.router']);
 
-clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
-	
-	$urlRouterProvider.otherwise('/');
+clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
 
-	$stateProvider
-		.state('home',{
-			url:'/',
-			templateUrl: 'views/home.html'
-		})
-		
-		.state('login',{
-			url:'/login',	
-			templateUrl: 'views/login/login.html',
-			controller:'loginController'
-		})
-		
-		.state('register',{
-			url:'/register',
-			templateUrl: 'views/registration.html',
-			controller: 'registrationController'
-		})
-		
-		.state('forgotpassword',{
-			url:'/forgotpassword',
-			templateUrl: 'views/forgotPassword.html',
-			controller: 'forgotPasswordController'
-		})
-		
-		.state('dashboard',{
-			url:'/dashboard',
-			templateUrl: 'views/dashboard.html'
-		})
-		
-		.state('lastTransactions',{
-			url:'/lastTransactions',
-			templateUrl: 'views/lastTransactions.html',
-			controller : 'lastTransactionsController'
-		})
-		
-		.state('accounts',{
-			url:'/accounts',
-			templateUrl: 'views/dashboard.html'
-		})
-		
-		.state('transfers',{
-			url:'/transfers',
-			templateUrl: 'views/transfers.html'
-		})
-	
-	
-	/*
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: 'views/home.html'
+        })
+
+    .state('login', {
+        url: '/login',
+        templateUrl: 'views/login/login.html',
+        controller: 'loginController'
+    })
+
+    .state('register', {
+        url: '/register',
+        templateUrl: 'views/registration.html',
+        controller: 'registrationController'
+    })
+
+    .state('forgotpassword', {
+        url: '/forgotpassword',
+        templateUrl: 'views/forgotPassword.html',
+        controller: 'forgotPasswordController'
+    })
+
+    .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.html'
+    })
+
+    .state('lastTransactions', {
+        url: '/lastTransactions',
+        templateUrl: 'views/lastTransactions.html',
+        controller: 'lastTransactionsController'
+    })
+
+    .state('accounts', {
+        url: '/accounts',
+        templateUrl: 'views/dashboard.html'
+    })
+
+    .state('transfers', {
+        url: '/transfers',
+        templateUrl: 'views/transfers.html'
+    })
+
+
+    /*
     $routeProvider
 		.when('/', {
             templateUrl: 'views/home.html'
@@ -75,14 +75,14 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 			templateUrl: 'views/dashboard.html'
 		})
 	*/
-	$locationProvider.html5Mode({
-		enabled: true,
-		requireBase: false
-	});
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
 });
 
 //clearbank.run(['$state', function ($state) {
-	//$state.transitionTo('home');
+//$state.transitionTo('home');
 //}]);
 
 /*
@@ -129,109 +129,109 @@ clearbank.controller('loginController',['$scope','CommonData','LoginService', fu
 	//$state.go('home');
 })*/
 
-clearbank.controller("forgotPasswordController",['$scope', function($scope){
+clearbank.controller("forgotPasswordController", ['$scope', function ($scope) {
 
-	//function to confirm change password submission
-	$scope.forgotPasswordWidget=true;
-	$scope.changeSubmit=function()
-	{		
-		 if($scope.changePassword!=$scope.confirmPassword)
-		 {
-			$scope.No_match=true;
-		 }
-		 else if($scope.changePassword===$scope.confirmPassword)
-		 {
-			 $scope.No_match=false;
-			 $scope.forgotPasswordWidget=false;
-			 $scope.changeSuccessWidget=true;
-		 }
-		 
-		/* for(i=0;i<CommonData.getData().length;i++)
-			{
-			if($scope.nums==CommonData.getData()[i].phn)
-			{
-		        $scope.students.splice(i, 0,
-					{
-						pwd: $scope.changePassword
-					}
-				)
-				window.location.href="/";
-			}
-		    }*/
-	}
+    //function to confirm change password submission
+    $scope.forgotPasswordWidget = true;
+    $scope.changeSubmit = function () {
+        if ($scope.changePassword != $scope.confirmPassword) {
+            $scope.No_match = true;
+        } else if ($scope.changePassword === $scope.confirmPassword) {
+            $scope.No_match = false;
+            $scope.forgotPasswordWidget = false;
+            $scope.changeSuccessWidget = true;
+        }
+
+        /* for(i=0;i<CommonData.getData().length;i++)
+        	{
+        	if($scope.nums==CommonData.getData()[i].phn)
+        	{
+                $scope.students.splice(i, 0,
+        			{
+        				pwd: $scope.changePassword
+        			}
+        		)
+        		window.location.href="/";
+        	}
+            }*/
+    }
 }]);
 
-clearbank.controller('lastTransactionsController',function($scope){
-	$scope.showTransactions=false;
-	$scope.showTransaction=function(){
-		$scope.showTransactions=!$scope.showTransactions;
-	}
+clearbank.controller('lastTransactionsController', function ($scope) {
+    $scope.showTransactions = false;
+    $scope.showTransaction = function () {
+        $scope.showTransactions = !$scope.showTransactions;
+    }
 });
 
-clearbank.controller('registrationController', function($scope){
-	var isValid=true;
-	$('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
-	$('.cName').on('blur',function(){
-		if($scope.customerName===undefined){
-			$('.nameError').show('200');
-            isValid=false;
-			}
-        else isValid=true;
-		});
-		$('.cId').on('blur',function(){
-			if($scope.customerId===undefined){
-			$('.cidError').show('200');
-                isValid=false;
-			}
-            else isValid=true;
-		});
-		
-    $('.contact').on('blur',function(){
-			if($scope.customerContact===undefined){
-			$('.contactError').show('200');
-                isValid=false;
-			}
-        else isValid=true;
-		});
-		
-    
-		$('.cMail').on('blur',function(){
-			if($scope.customerEmail===undefined){
-			$('.mailError').show('200');
-                isValid=false;
-			}
-            else isValid=true;
-		});
-		
-		$('.cPass').on('blur',function(){ 
-			if($scope.customerPassword===undefined){
-			$('.passError').show('200');
-                isValid=false;
-			}
-            else isValid=true;
-		});
-		$('.cPass2').on('blur',function(){
-			if($scope.customerPassword!=$scope.confirmedPassword){
-				$('.passError2').show('200');
-                isValid=false;
-			}else{
-				$('.passError2').hide('200');
-              isValid=true;
-			}
-		});
-		
-		$scope.save=function(){
-			
-      /*  CommonData.setData({
+clearbank.controller('registrationController', function ($scope) {
+    $('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
+    $('.cName').on('blur', function () {
+        if ($scope.customerName === undefined) {
+            $('.nameError').show('200');
+
+        }
+
+    });
+    $('.cId').on('blur', function () {
+        if ($scope.customerId === undefined) {
+            $('.cidError').show('200');
+
+        }
+
+    });
+
+    $('.contact').on('blur', function () {
+        if ($scope.customerContact === undefined) {
+            $('.contactError').show('200');
+
+        }
+
+    });
+
+
+    $('.cMail').on('blur', function () {
+        if ($scope.customerEmail === undefined) {
+            $('.mailError').show('200');
+
+        }
+
+    });
+
+    $('.cPass').on('blur', function () {
+        if ($scope.customerPassword === undefined) {
+            $('.passError').show('200');
+
+        }
+
+    });
+    $('.cPass2').on('blur', function () {
+        if ($scope.customerPassword != $scope.confirmedPassword) {
+            $('.passError2').show('200');
+
+        } else {
+            $('.passError2').hide('200');
+
+        }
+    });
+
+    $scope.save = function () {
+
+        /*  CommonData.setData({
             csId: $scope.cid,
             phn: $scope.phn,
             pwd: $scope.cpass
 		});
 		 */
-		//window.location.href="/login";
-		if(isValid){
-		alert('Successfully registered');
-		window.location.href="/";
-		}
-		}
+        //window.location.href="/login";
+        if (!($scope.customerName === undefined || $scope.customerId === undefined || $scope.customerContact === undefined || $scope.customerEmail === undefined || $scope.customerPassword === undefined)) {
+            alert('Successfully registered');
+            window.location.href = "/";
+        } else if ($scope.customerPassword != $scope.confirmedPassword) {
+            $('.passError2').show('200');
+        } else {
+            $('.passError2').hide('200');
+            $('.nameError,.cidError,.mailError,.passError,.contactError').show();
+        }
+    }
 });
