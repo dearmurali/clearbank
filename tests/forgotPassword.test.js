@@ -1,6 +1,6 @@
 //UNIT TEST CASES FOR FORGOT PASSWORD
 
-describe('forgotPasswordController', function() {
+describe('testing  forgotPassword Controller', function() {
   beforeEach(module('ClearBank'));
 
   var $controller;
@@ -9,7 +9,7 @@ describe('forgotPasswordController', function() {
    
     $controller = _$controller_;
   }));
-  describe('$scope.forgotpasswordwidget',function(){
+  describe('test the widget to be displayed',function(){
 	  it('should check which widget is displayed',function(){
 		  var $scope={};
 		  var controller=$controller("forgotPasswordController",{$scope:$scope});
@@ -17,7 +17,7 @@ describe('forgotPasswordController', function() {
 		  expect($scope.No_match).toBe(undefined);
 	  })
 	})
-describe("$scope.changeSubmit",function(){
+describe("function to be executed when submit is done",function(){
 	
 	var $controller;
 	beforeEach(angular.mock.inject(function(_$controller_) {
