@@ -1,4 +1,4 @@
-clearbank = angular.module('ClearBank', ['ngRoute','ngMessages','ngAnimate','ui.router']);
+clearbank = angular.module('ClearBank', ['ngRoute','ngMessages','ui.router']);
 
 clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
 	
