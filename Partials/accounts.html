@@ -1,0 +1,24 @@
+<h4>Account Details</h4>
+  <div class="accountInfo">
+  <div class="table-responsive">
+  <table class="table">
+  <thead>
+  <tr class="tableheading"><td>Account Number</td>
+  <td>Account Type</td>
+  <td>Available Balance</td>
+  <td>Opening Date</td>
+  <td>Currency</td>
+  </tr>  
+  </thead>
+  <tbody>
+  <tr data-ng-repeat="account in accountInfo"><td><a ui-sref="lastTransactions">{{account.accountNumber}}</a></td>
+  <td>{{account.accountType}}</td>
+  <td><a ui-sref="lastTransactions">{{account.accountBalance}}</a></td>
+  <td>{{account.openingDate}}</td>
+  <td>{{account.currency}}</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+
+</div>

@@ -1,88 +1,17 @@
 <div class=" container">
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <nav>
-                <div class="navbar menu">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="glyphicon glyphicon-list menuDropdown"></span>
-      </button>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a class="mainMenu" ui-sref="accounts">Accounts</a></li>
-                            <li>
-                                <a class="mainMenu" href="billpayment">Bills Payment</a></li>
-                            <li>
-                                <a class="mainMenu" href="cards">Cards</a></li>
-                            <li>
-                                <a class="mainMenu" href="loans">Loans</a></li>
-                            <li>
-                                <a class="mainMenu" href="mutualfunds">Mutual Funds</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-3">
-            <div class="leftAside ">
-                <ul class="asideMenu">
-                    <li class="asideItems"><a href="#">Profile</a>
-                        <div><small>Account number:{{accountNumber}}</small>
-                            <small>Available Balance:{{availableBalance}}</small></div>
-                    </li>
-                    <li class="asideItems"><a ui-sref="transfers">Transfers</a></li>
-                    <li class="asideItems"><a ui-sref="deposits">Deposits</a></li>
-                    <li class="asideItems"><a ui-sref="managepayee">Manage Payee</a></li>
-                    <li class="asideItems" data-ng-repeat="menu in sideMenu.[{{selection}}]"><a href="#">{{menu.menuItem}}</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-9 col-sm-9">
-            <div class="mainView">
-                <h4>Account Details</h4>
-                <div class="accountInfo">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr class="tableheading">
-                                    <td>Account Number</td>
-                                    <td>Account Type</td>
-                                    <td>Available Balance</td>
-                                    <td>Opening Date</td>
-                                    <td>Currency</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a ui-sref="lastTransactions">33307911126</a></td>
-                                    <td>Savings</td>
-                                    <td><a ui-sref="lastTransactions">15500</a></td>
-                                    <td>07/03/2010</td>
-                                    <td>INR</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">33302544485</a></td>
-                                    <td>Savings</td>
-                                    <td><a href="#">10550</a></td>
-                                    <td>04/03/2009</td>
-                                    <td>INR</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">33302543485</a></td>
-                                    <td>Current</td>
-                                    <td><a href="#">40550</a></td>
-                                    <td>04/03/2013</td>
-                                    <td>INR</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<top-menu></top-menu>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3 col-sm-3">
+<left-menu></left-menu>
+</div>
+<div class="col-md-9 col-sm-9">
+<div class="mainView">
+ <accounts></accounts>
+</div>
+</div>
+</div>
 </div>

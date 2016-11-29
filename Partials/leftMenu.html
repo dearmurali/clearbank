@@ -1,0 +1,21 @@
+<div class="leftAside " >
+<ul class="asideMenu">
+<li class="asideItems"><a ui-sref="profile">{{CustomerName}}Guest</a></li>
+<ul class="asideMenu">
+<li class="asideItems">Account number:{{accountInfo[0].accountNumber}}<li>
+<li class="asideItems">Available Balance:{{accountInfo[0].accountBalance}}</li>
+</ul>
+<br>
+<li class="asideItems">Favourite links</li>
+<ul class="asideMenu">
+<li class="asideItems"><a ui-sref="cards">Cards</a></li>
+<li class="asideItems"><a ui-sref="managepayee">Manage Payee</a></li>
+<li class="asideItems"><a ui-sref="transfers">Transfers</a></li>
+</ul>
+<br>
+<li class="asideItems">Top Payee</li>
+<ul class="asideMenu">
+<li data-ng-repeat="payee in toppayee"><a ui-sref="transfers">{{payee.customerName}}</a></li>
+</ul>
+</ul>
+</div>

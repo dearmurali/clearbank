@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+	
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#showMenu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-toggle collapsed customerName"  ui-sref="profile"> Hi,{{CustomerName}}Guest</a>
+      <a class="navbar-brand" href="/">Clear Bank</a>
+    </div>  
+ 
+	<div class="collapse navbar-collapse " id="showMenu">
+	<ul class="nav navbar-nav navbar-right">
+	    <li><a ui-sref="profile" class="customerName"> Hi,{{CustomerName}}Guest</a></li>
+        <li><a href="#"><img src="assets/images/ned.png" title="Dutch" height="30" width="42"></a></li>
+        <li><a href="#"><img src="assets/images/english.jpg" title="English"  height="30" width="42"></a></li>
+		<li><a ui-sref="/"><span class="glyphicon glyphicon-off logout" title="Logout"></span></a></li>
+      </ul>
+	</div>
+  </div>
+</nav>
