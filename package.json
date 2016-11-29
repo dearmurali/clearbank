@@ -1,4 +1,59 @@
 {
+<<<<<<< .mine
+  "name": "clearbank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "karma": "cd config",
+    "sonar-scanner": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-htmlfile-reporter": "^0.3.4",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "sonarqube-scanner": "^1.0.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+||||||| .r18
+  "name": "clearbank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+=======
     "name": "clearbank",
     "version": "1.0.0",
     "description": "Banking project for ClearBank",
@@ -33,4 +88,5 @@
         "url": "https://github.com/dearmurali/clearbank/issues"
     },
     "homepage": "https://github.com/dearmurali/clearbank#readme"
+>>>>>>> .r34
 }
