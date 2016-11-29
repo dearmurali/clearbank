@@ -1,7 +1,4 @@
  @CHARSET "ISO-8859-1";
-body{
-	 background-color:#34495e;
-}
 .forget-form {
 width:600px;
 height:450px;
@@ -95,9 +92,8 @@ box-shadow: 0px 0px 55px #111111;
 }
 legend{
 text-align:center;
-background-color:#2980b9;
 padding:10px;
-color:white;
+color:black;
 width:106%;
 }
 .reset_pass{

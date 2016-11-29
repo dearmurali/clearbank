@@ -7,16 +7,20 @@
 		browsers:['Chrome', 'Firefox', 'IE'],
 		
 		files:[
+			'bower_components/jquery/dist/jquery.js',
 			'bower_components/angular/angular.js',
 			'bower_components/angular-route/angular-route.js',
+			'bower_components/angular-messages/angular-messages.js',
+			'bower_components/angular-animate/angular-animate.js',
 			'bower_components/angular-mocks/angular-mocks.js',
 			'bower_components/angular-messages/angular-messages.js',
 			'bower_components/angular-ui-router/release/angular-ui-router.js',
-			
+			'bower_components/bootstrap/dist/js/bootstrap.js',
 			'main/app.js',
 			'main/services/login.js',
 			'main/controllers/login.js',
-			
+			"tests/forgotPassword.test.js",
+			"tests/registration.test.js",
 			'tests/**/*.js'
 		],
 		
