@@ -3,6 +3,7 @@
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="glyphicon glyphicon-list menuDropdown"></span>
       </button>
+	  <a class="navbar-toggle collapsed customerName"  ui-sref="profile"> Hi,&nbsp;{{accName}}</a>
       <div class="collapse navbar-collapse" id="myNavbar">
 <ul class="nav navbar-nav">
 <li>
@@ -22,6 +23,10 @@
 <li>
 <a class="mainMenu" ui-sref="contactus">Contact Us</a></li>
 </ul>
+
+<ul class="nav navbar-nav navbar-right">
+        <li> <a class="customerName" ui-sref="profile"> Hi,&nbsp;{{accName}}</a></li>
+      </ul>
 </div>
 </div>
 </nav>

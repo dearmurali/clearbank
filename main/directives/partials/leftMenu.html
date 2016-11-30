@@ -1,9 +1,9 @@
 <div class="leftAside " >
 <ul class="asideMenu">
-<li class="asideItems"><a ui-sref="profile">{{CustomerName}}Guest</a></li>
+<li class="asideItems"><a ui-sref="profile">{{accName}}</a></li>
 <ul class="asideMenu">
-<li class="asideItems">Account number:{{accountInfo[0].accountNumber}}<li>
-<li class="asideItems">Available Balance:{{accountInfo[0].accountBalance}}</li>
+<li class="asideItems">Account number:<span class="profileInfo"><b>{{accountInfo[0].accountNumber}}</b></span><li>
+<li class="asideItems">Available Balance:<span class="profileInfo"><b>{{accountInfo[0].accountBalance}}&nbsp;INR</b></span></li>
 </ul>
 <br>
 <li class="asideItems">Favourite links</li>

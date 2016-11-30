@@ -1,6 +1,5 @@
 clearbank.controller('loginController',['$scope','LoginService', '$state', function($scope, LoginService, $state	){
-	
-	
+		
 	this.heading="ClearBank";
 	$scope.validCredentials=true;
 	
