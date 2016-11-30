@@ -226,70 +226,74 @@ clearbank.controller("forgotPasswordController",['$scope', function($scope){
 
 
 
-clearbank.controller('registrationController', function($scope){
-	var isValid=true;
-	$('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
-	$('.cName').on('blur',function(){
-		if($scope.customerName===undefined){
-			$('.nameError').show('200');
-            isValid=false;
-			}
-        else isValid=true;
-		});
-		$('.cId').on('blur',function(){
-			if($scope.customerId===undefined){
-			$('.cidError').show('200');
-                isValid=false;
-			}
-            else isValid=true;
-		});
-		
-    $('.contact').on('blur',function(){
-			if($scope.customerContact===undefined){
-			$('.contactError').show('200');
-                isValid=false;
-			}
-        else isValid=true;
-		});
-		
-    
-		$('.cMail').on('blur',function(){
-			if($scope.customerEmail===undefined){
-			$('.mailError').show('200');
-                isValid=false;
-			}
-            else isValid=true;
-		});
-		
-		$('.cPass').on('blur',function(){ 
-			if($scope.customerPassword===undefined){
-			$('.passError').show('200');
-                isValid=false;
-			}
-            else isValid=true;
-		});
-		$('.cPass2').on('blur',function(){
-			if($scope.customerPassword!=$scope.confirmedPassword){
-				$('.passError2').show('200');
-                isValid=false;
-			}else{
-				$('.passError2').hide('200');
-              isValid=true;
-			}
-		});
-		
-		$scope.save=function(){
-			
-      /*  CommonData.setData({
+clearbank.controller('registrationController', function ($scope) {
+    $('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
+    $('.cName').on('blur', function () {
+        if ($scope.customerName === undefined) {
+            $('.nameError').show('200');
+
+        }
+
+    });
+    $('.cId').on('blur', function () {
+        if ($scope.customerId === undefined) {
+            $('.cidError').show('200');
+
+        }
+
+    });
+
+    $('.contact').on('blur', function () {
+        if ($scope.customerContact === undefined) {
+            $('.contactError').show('200');
+
+        }
+
+    });
+
+
+    $('.cMail').on('blur', function () {
+        if ($scope.customerEmail === undefined) {
+            $('.mailError').show('200');
+
+        }
+
+    });
+
+    $('.cPass').on('blur', function () {
+        if ($scope.customerPassword === undefined) {
+            $('.passError').show('200');
+
+        }
+
+    });
+    $('.cPass2').on('blur', function () {
+        if ($scope.customerPassword != $scope.confirmedPassword) {
+            $('.passError2').show('200');
+
+        } else {
+            $('.passError2').hide('200');
+
+        }
+    });
+
+    $scope.save = function () {
+
+        /*  CommonData.setData({
             csId: $scope.cid,
             phn: $scope.phn,
             pwd: $scope.cpass
 		});
 		 */
-		//window.location.href="/login";
-		if(isValid){
-		alert('Successfully registered');
-		window.location.href="/";
-		}
-		}
+        //window.location.href="/login";
+        if (!($scope.customerName === undefined || $scope.customerId === undefined || $scope.customerContact === undefined || $scope.customerEmail === undefined || $scope.customerPassword === undefined)) {
+            alert('Successfully registered');
+            window.location.href = "/";
+        } else if ($scope.customerPassword != $scope.confirmedPassword) {
+            $('.passError2').show('200');
+        } else {
+            $('.passError2').hide('200');
+            $('.nameError,.cidError,.mailError,.passError,.contactError').show();
+        }
+    }
 });
