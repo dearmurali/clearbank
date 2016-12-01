@@ -1,5 +1,4 @@
 {
-<<<<<<< .mine
   "name": "clearbank",
   "version": "1.0.0",
   "description": "",
@@ -26,67 +25,7 @@
     "sonarqube-scanner": "^1.0.0"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "karma-junit-sonarqube-reporter": "0.0.1"
   }
-||||||| .r18
-  "name": "clearbank",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.3.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "^1.0.2"
-  },
-  "dependencies": {
-    "express": "^4.14.0"
-  }
-=======
-    "name": "clearbank",
-    "version": "1.0.0",
-    "description": "Banking project for ClearBank",
-    "main": "index.js",
-    "directories": {
-        "test": "tests"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "bower": "^1.8.0",
-        "gulp": "^3.9.1",
-        "gulp-sass": "^2.3.2",
-        "jasmine-core": "^2.5.2",
-        "karma": "^1.3.0",
-        "karma-chrome-launcher": "^2.0.0",
-        "karma-firefox-launcher": "^1.0.0",
-        "karma-jasmine": "^1.0.2"
-    },
-    "dependencies": {
-        "express": "^4.14.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dearmurali/clearbank.git"
-    },
-    "bugs": {
-        "url": "https://github.com/dearmurali/clearbank/issues"
-    },
-    "homepage": "https://github.com/dearmurali/clearbank#readme"
->>>>>>> .r34
 }
