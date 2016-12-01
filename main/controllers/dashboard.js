@@ -2,7 +2,11 @@ clearbank.controller('dashboardController',['$scope','$cookies','dashboardServic
 
 	    
 		$scope.accName=$cookies.get('customerName');
-		dashboardService.getData($scope.cId, function(result){
+        $scope.accNumber=$cookies.get('customerNumber');
+        $scope.accBalance=$cookies.get('customerBalance');
+	    $scope.accCurrency=$cookies.get('currency');
+        var accId=$cookies.get('customerId');
+    dashboardService.getData(accId, function(result){
 			$scope.accountInfo=result;
 		});
 	}

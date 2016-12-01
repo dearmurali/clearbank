@@ -19,7 +19,11 @@ clearbank.service('LoginService',function($http,$cookies){
 							console.log('inside if');
 							valid = true;
 							callback('success');
+                            $cookies.put('customerId',customer_id);
 							$cookies.put('customerName',result.data.customerData[i].customerName);
+                            $cookies.put('customerNumber',result.data.customerData[i].accountInfo[0].accountNumber);
+                            $cookies.put('customerBalance',result.data.customerData[i].accountInfo[0].accountBalance);
+                            $cookies.put('currency',result.data.customerData[i].accountInfo[0].currency);
 						}
 					}
 					if(valid === false){

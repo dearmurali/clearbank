@@ -8,7 +8,7 @@ exports.config = {
     framework: 'jasmine',
     //protractor runs test cases uses jasmine to write test cases
     specs: ['../tests/login.e2e.spec.js',
-            '../tests/forgotPassword.spec.js'
-           ]
+            '../tests/dashBoard.spec.js'
+           ],
 
 }

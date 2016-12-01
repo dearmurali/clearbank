@@ -11,7 +11,7 @@
   </tr>  
   </thead>
   <tbody>
-  <tr data-ng-repeat="account in accountInfo"><td><a ui-sref="lastTransactions">{{account.accountNumber}}</a></td>
+  <tr data-ng-repeat="account in accountInfo"><td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.accountNumber}}</a></td>
   <td>{{account.accountType}}</td>
   <td><a ui-sref="lastTransactions">{{account.accountBalance}}</a></td>
   <td>{{account.openingDate}}</td>

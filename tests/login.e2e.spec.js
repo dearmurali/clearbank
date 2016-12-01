@@ -18,15 +18,17 @@ describe('The ClearBank website', () => {
         self.customerId.sendKeys('123wew4567890');
         self.password.sendKeys('Mi23');
         self.submit.click(); 
+        expect(browser.getCurrentUrl()).not.toEqual("http://localhost:3000/dashboard");
         browser.sleep(5000);
     });
 
     it('should show error in login field', () => {
         self.customerId.clear();
         self.password.clear();
-        self.customerId.sendKeys('1234erw567890');
+        self.customerId.sendKeys('1234erw560');
         self.password.sendKeys('Mindtree@123');
         self.submit.click();
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/login");
         browser.sleep(5000);
     });
     
@@ -36,6 +38,7 @@ describe('The ClearBank website', () => {
         self.customerId.sendKeys('1234567890');
         self.password.sendKeys('Mindtre3');
         self.submit.click();
+        expect(browser.getCurrentUrl()).not.toEqual("http://localhost:3000/dashboard");
         browser.sleep(5000);
     });
     
@@ -45,6 +48,7 @@ describe('The ClearBank website', () => {
         self.customerId.sendKeys('1234567890');
         self.password.sendKeys('Mindtree@123');
         self.submit.click();
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/dashboard");
         browser.sleep(5000);
     });
 
