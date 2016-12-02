@@ -36,7 +36,7 @@
 		},
 		
 		junitReporter:{
-			outputFile: '/tests/junit_test_results.xml',
+			outputFile: 'tests/junit_test_results.xml',
 			suite:''
 		}
 	});
