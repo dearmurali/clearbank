@@ -5,8 +5,7 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 	$stateProvider
 		.state('home',{
 			url:'/',
-			templateUrl: 'views/home.html',
-			controller:'navigationBar'
+			templateUrl: 'views/home.html'
 		})
 		
 		.state('login',{
