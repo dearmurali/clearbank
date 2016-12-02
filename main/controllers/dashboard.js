@@ -6,6 +6,11 @@ clearbank.controller('dashboardController',['$scope','$cookies','dashboardServic
         $scope.accBalance=$cookies.get('customerBalance');
 	    $scope.accCurrency=$cookies.get('currency');
         var accId=$cookies.get('customerId');
+    
+    $scope.getIndex=function(index){
+    $cookies.put('currentIndex',index);
+    }
+    
     dashboardService.getData(accId, function(result){
 			$scope.accountInfo=result;
 		});

@@ -9,6 +9,7 @@
 <div class="col-md-3 col-sm-3">
 <left-menu></left-menu>
 </div>
+    
 <div class="col-md-9 col-sm-9">
 <div class="mainView">
   <h4>Account Details</h4>
@@ -17,19 +18,19 @@
   <table class="table">
   <tbody>
   <tr><td>Account Number</td>
-  <td>33307911126</td>
+  <td>{{transactionInfo.accountNumber}}</td>
   </tr>
   <tr><td>Name</td>
   <td>{{accName}}</td>
   </tr>
   <tr><td>Account Type</td>
-  <td>Savings</td>
+  <td>{{transactionInfo.accountType}}</td>
   </tr>
   <tr><td>Available Balance</td>
-  <td>15500</td>
+  <td>{{transactionInfo.accountBalance}}</td>
   </tr>
   <tr><td>Currency</td>
-  <td>INR</td>
+  <td>{{transactionInfo.currency}}</td>
   </tr>
   </tbody>
   </table>

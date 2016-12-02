@@ -42,7 +42,8 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('transfers',{
 			url:'/transfers',
-			templateUrl: 'views/transfers.html'
+			templateUrl: 'views/transfers.html',
+            controller : 'transfersController'
 		})
 		
 		.state('mutualfunds',{

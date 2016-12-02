@@ -33,9 +33,10 @@ box-shadow: 0px 0px 55px #111111;
 	float:right;
 }
 
-.asideItems{
-clear:both;	
+.profile:hover{
+    cursor:pointer;
 }
+    
 
 .customerName{
 	color:white;
@@ -54,6 +55,7 @@ clear:both;
 .mainMenu{
 	
 	color:white;
+    
 }
 
 .leftAside{
@@ -67,6 +69,7 @@ clear:both;
 
 .asideMenu{
 	list-style:none;
+    clear:both;	
 }
 
 
