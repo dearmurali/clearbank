@@ -1,21 +1,28 @@
 <div class="leftAside " >
+
+    <div class="well">
+        <li class="asideMenu"><a ui-sref="profile" class="profile"><h4>{{accName}}</h4></a></li>
 <ul class="asideMenu">
-<li class="asideItems"><a ui-sref="profile">{{accName}}</a></li>
-<ul class="asideMenu">
-<li class="asideItems">Account number:<span class="profileInfo"><b>{{accNumber}}</b></span><li>
-<li class="asideItems">Available Balance:<span class="profileInfo"><b>{{accBalance}}&nbsp;{{accCurrency}}</b></span></li>
+<li class="asideMenu">Account number:<span class="profileInfo"><b>{{accNumber}}</b></span><li>
+<li class="asideMenu">Available Balance:<span class="profileInfo"><b>{{accBalance}}&nbsp;{{accCurrency}}</b></span></li>
 </ul>
-<br>
-<li class="asideItems">Favourite links</li>
+    </div>
+    <div class="well">
+        <li class="asideMenu"><h4>Favourite links</h4></li>
 <ul class="asideMenu">
-<li class="asideItems"><a ui-sref="cards">Cards</a></li>
-<li class="asideItems"><a ui-sref="managepayee">Manage Payee</a></li>
-<li class="asideItems"><a ui-sref="transfers">Transfers</a></li>
+<li class="asideMenu"><a ui-sref="cards">Cards</a></li>
+<li class="asideMenu"><a ui-sref="managepayee">Manage Payee</a></li>
+<li class="asideMenu"><a ui-sref="transfers">Transfers</a></li>
 </ul>
-<br>
-<li class="asideItems">Top Payee</li>
+    </div>
+    <div class="well">
+        <li class="asideMenu"><h4>Top Payee</h4></li>
 <ul class="asideMenu">
+    <li class="asideMenu"><a class="topPayee">Nitesh Rana</a></li>
+    <li class="asideMenu"><a class="topPayee">Nitish Bali</a></li>
+    <li class="asideMenu"><a class="topPayee">Gagan Singh</a></li>
 <li data-ng-repeat="payee in toppayee"><a ui-sref="transfers">{{payee.customerName}}</a></li>
 </ul>
-</ul>
+    </div>
+
 </div>

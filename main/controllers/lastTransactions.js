@@ -1,11 +1,20 @@
-clearbank.controller('lastTransactionsController',function($scope,$cookies){
+clearbank.controller('lastTransactionsController',['$scope','$cookies','lastTransactionsService', function($scope,$cookies,lastTransactionsService){
     
         $scope.accName=$cookies.get('customerName');
         $scope.accNumber=$cookies.get('customerNumber');
         $scope.accBalance=$cookies.get('customerBalance');
 	    $scope.accCurrency=$cookies.get('currency');
-	$scope.showTransactions=false;
+        var index=$cookies.get('currentIndex');
+        var accId=$cookies.get('customerId');
+	    $scope.showTransactions=false;
+    
 	$scope.showTransaction=function(){
 		$scope.showTransactions=!$scope.showTransactions;
 	}
-});
+    
+    lastTransactionsService.getData(index,accId,function(result){
+			$scope.transactionInfo=result;
+        console.log(result);
+		});
+}
+]);

@@ -5,8 +5,7 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 	$stateProvider
 		.state('home',{
 			url:'/',
-			templateUrl: 'views/home.html',
-			controller:'navigationBar'
+			templateUrl: 'views/home.html'
 		})
 		
 		.state('login',{
@@ -42,7 +41,8 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('transfers',{
 			url:'/transfers',
-			templateUrl: 'views/transfers.html'
+			templateUrl: 'views/transfers.html',
+            controller : 'transfersController'
 		})
 		
 		.state('mutualfunds',{

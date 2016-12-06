@@ -4,7 +4,7 @@
 		
 		frameworks:['jasmine'],
 		
-		browsers:['Chrome', 'Firefox', 'IE'],
+		browsers:['Chrome'],
 		
 		files:[
 			'bower_components/jquery/dist/jquery.js',
@@ -15,16 +15,19 @@
 			'bower_components/angular-mocks/angular-mocks.js',
 			'bower_components/angular-messages/angular-messages.js',
 			'bower_components/angular-ui-router/release/angular-ui-router.js',
+            'bower_components/angular-cookies/angular-cookies.js',
 			'bower_components/bootstrap/dist/js/bootstrap.js',
-			'main/app.js',
+			'main/app.module.js',
+            'main/app.route.js',
 			'main/services/login.js',
 			'main/controllers/login.js',
+            'main/controllers/forgotPassword.js',
+            'main/controllers/registration.js',
 			"tests/forgotPassword.test.js",
-			"tests/registration.test.js",
-			'tests/**/*.js'
+			"tests/registration.test.js"
 		],
 		
-		reporters:['progress', 'html', 'junit'],
+		reporters:['progress', 'junit'],
 		
 		htmlReporter:{
 			outputFile:'tests/test_results.html',
@@ -36,7 +39,7 @@
 		},
 		
 		junitReporter:{
-			outputFile: '/tests/junit_test_results.xml',
+			outputFile: 'tests/junit_test_results.xml',
 			suite:''
 		}
 	});
