@@ -23,7 +23,6 @@
     "karma-ie-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.1.0",
-    "protractor-html-screenshot-reporter": "0.0.21",
     "protractor-jasmine2-html-reporter": "0.0.6",
     "sonarqube-scanner": "^1.0.0"
   },

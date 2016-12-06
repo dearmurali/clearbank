@@ -1,6 +1,6 @@
 "use strict"
 
-var JasmineReporter = require('protractor-jasminehtml-reporter');
+var JasmineReporter = require('protractor-jasmine2-html-reporter');
 
 exports.config = {
     directConnect: true,
