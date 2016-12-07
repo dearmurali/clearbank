@@ -85,6 +85,15 @@ cursor:pointer;
 	opacity:0.8;
 }
 
+.mainView2{
+	margin:2px;
+	background-color:white;
+	border:1px solid black;
+	padding:2%;
+	border-radius:5px;
+	
+}
+
 .tableheading{
 	background-color:#c0c0c0;
 	font-weight:bold;
@@ -98,8 +107,8 @@ cursor:pointer;
 	border:1px solid grey;
 }
 
-.accountInfo2{
 
+.accountInfo2{
     text-align:center;
 }
 

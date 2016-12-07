@@ -1,8 +1,8 @@
 
 var pie = new d3pie("pieChart", {
 	"size": {
-		"canvasHeight": 340,
-		"canvasWidth":450,
+		"canvasHeight": 330,
+		"canvasWidth":500,
 		"pieOuterRadius": "90%"
 	},
 	"data": {
@@ -34,7 +34,7 @@ var pie = new d3pie("pieChart", {
 		},
 		"mainLabel": {
 			"font": "verdana",
-			"fontSize": 11
+			"fontSize": 13
 		},
 		"percentage": {
 			"color": "#e1e1e1",
@@ -44,11 +44,11 @@ var pie = new d3pie("pieChart", {
 		"value": {
 			"color": "#e1e1e1",
 			"font": "verdana",
-			"fontSize": 11
+			"fontSize": 12
 		},
 		"lines": {
 			"enabled": true,
-			"color": "#cccccc"
+			"color": "#000000"
 		}
 	},
 	"effects": {

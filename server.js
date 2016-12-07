@@ -1,15 +1,13 @@
+var http = require('http'),
+    fs = require('fs');
+
 var express = require('express');
 var app = express();
-var fs=require('fs');
 
 app.use("/", express.static(__dirname));
 
-app.get('/', function(req, res) {
-    res.sendFile('./index.html');
-});
-
 app.listen(3000, function () {
-    console.log('listening at 3000...')
+    console.log('listening')
 });
 
 /*

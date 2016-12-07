@@ -7,7 +7,7 @@
  <form name="loginForm">
   <div class="form-group">
     <label>Customer Id <span class="warning">*</span></label>
-    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="/^[0-9]{10}$/"  placeholder="Type Your Customer Id" maxlength="10" autocomplete="off">	
+    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="/^[0-9]{10}$/"  placeholder="Type Your Customer Id" maxlength="10">	
     <div data-ng-messages="loginForm.csId.$error">
     <div data-ng-message="pattern"><span class="warning">*Must have 10 digits</span></div>
     </div>
