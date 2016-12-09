@@ -73,9 +73,9 @@ describe('The clearBank website', () => {
         this.confirmedPassword.clear();
         this.confirmedPassword.sendKeys('A!!day10ng');
         //browser.sleep(2000);
-        
+
         //browser.sleep(2000);
-        
+
         expect(element(by.css('.contactError')).isDisplayed()).toBe(true);
         expect(element(by.css('.cidError')).isDisplayed()).toBe(true);
         expect(element(by.css('.nameError')).isDisplayed()).toBe(true);
@@ -90,9 +90,11 @@ describe('The clearBank website', () => {
         expect(element(by.css('.mailError')).isDisplayed()).toBe(false);
         expect(element(by.css('.passError')).isDisplayed()).toBe(false);
         this.submit.click();
-        browser.switchTo().alert().accept();
-        //browser.sleep(2000);
-        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/dashboard");
+
+        browser.sleep(2000);
+        expect(browser.switchTo().alert().getText()).toContain('successfully');
+        //browser.switchTo().alert().accept();
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/");
         expect(browser.getCurrentUrl()).not.toEqual("http://localhost:3000/login");
     });
 });

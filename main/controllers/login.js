@@ -5,6 +5,7 @@ clearbank.controller('loginController',['$scope','LoginService', '$state', funct
 	
 	//console.log(LoginService.validLogin('1234567891','Mindtree@123'));
 	$scope.onLogin=function(){
+        console.log("in login service");
 		LoginService.validLogin($scope.customer_id,$scope.pwd, function(result){
 			//console.log('result ',result);
 			if(result == "success"){

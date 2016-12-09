@@ -62,12 +62,21 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('managepayee',{
 			url:'/managepayee',
-			templateUrl: 'views/managePayee.html'
+			templateUrl: 'views/managePayee.html',
+            controller:'managePayee'
 		})
-	
 	
 	$locationProvider.html5Mode({
 		enabled: false,
 		requireBase: false
 	});
+
+//	$locationProvider.html5Mode({
+//		enabled: true,
+//		requireBase: false
+//	});
+    
+//      $locationProvider.html5Mode(false);
+//    $locationProvider.hashPrefix('!');
+
 });

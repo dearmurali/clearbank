@@ -1,5 +1,5 @@
 <!--div class="modal"-->
-  <!-- Modal content -->
+<!-- Modal content -->
   <div class="modal-content">
    
 <div class="panel-heading"><h2>Login</h2></div>
@@ -7,22 +7,21 @@
  <form name="loginForm">
   <div class="form-group">
     <label>Customer Id <span class="warning">*</span></label>
-    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="/^[0-9]{8}$/"  placeholder="Type Your Customer Id" maxlength="8">	
+    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="/^[0-9]{10}$/"  placeholder="Type Your Customer Id" maxlength="10">	
     <div data-ng-messages="loginForm.csId.$error">
-    <div data-ng-message="pattern"><span class="warning">*Must have 8 digits</span></div>
+    <div data-ng-message="pattern"><span class="warning">*Must have 10 digits</span></div>
     </div>
-  </div>
-  <div class="form-group">
-    <label>Password <span class="warning">*</span></label>
-    <input type="password" name="pswd" class="form-control" data-ng-model="pwd"  placeholder="Type Your Password">
-  </div>
-  <div ng-show="!validCredentials" class="warning">Invalid Id and/or Password.</div> <br/>
-  <button type="button" class="btn btn-primary" data-ng-click="onLogin()">Login</button>&nbsp;
-  <a href="/"><button type="button" class="btn btn-warning"">Cancel</button></a>&nbsp;
-  <a ui-sref="forgotpassword"><small>Forgot password?</small></a>
-</form> 
-<p></p>
-<small>Note: <span class="warning">*</span>indicates mandatory fields</small>
+     <div class="form-group">
+                <label>Password <span class="warning">*</span></label>
+                <input type="password" name="pswd" class="form-control" data-ng-model="pwd" placeholder="Type Your Password">
+            </div>
+            <div ng-show="!validCredentials" class="warning">Invalid Id and/or Password.</div> <br/>
+            <button type="button" class="btn btn-primary" data-ng-click="onLogin()">Login</button>&nbsp;
+            <a href="/"><button type="button" class="btn btn-warning">Cancel</button></a>&nbsp;
+            <a ui-sref="forgotpassword"><small>Forgot password?</small></a>
+        </form>
+        <p></p>
+        <small>Note: <span class="warning">*</span>indicates mandatory fields</small>
+
+    </div>
 </div>
-</div>
-<!--/div-->

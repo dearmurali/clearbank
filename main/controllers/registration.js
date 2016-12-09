@@ -1,4 +1,4 @@
-clearbank.controller('registrationController', function ($scope,RegistrationService) {
+clearbank.controller('registrationController', function ($scope, RegistrationService) {
     $('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
     $('.cName').on('blur', function () {
         if ($scope.customerName === undefined) {
@@ -59,12 +59,12 @@ clearbank.controller('registrationController', function ($scope,RegistrationServ
 		 */
         //window.location.href="/login";
         if (!($scope.customerName === undefined || $scope.customerId === undefined || $scope.customerContact === undefined || $scope.customerEmail === undefined || $scope.customerPassword === undefined)) {
-            RegistrationService.RegisterCustomer($scope.customerName, $scope.customerId, $scope.customerContact, $scope.customerEmail, $scope.customerPassword, function(response){
-			console.log(response);
-            alert(response);
-            window.location.href = "/";
-		})
-            
+            RegistrationService.RegisterCustomer($scope.customerName, $scope.customerId, $scope.customerContact, $scope.customerEmail, $scope.customerPassword, function (response) {
+                console.log(response);
+                alert(response);
+                window.location.href = "/";
+            })
+
         } else if ($scope.customerPassword != $scope.confirmedPassword) {
             $('.passError2').show('200');
         } else {

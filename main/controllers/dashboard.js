@@ -1,18 +1,18 @@
-clearbank.controller('dashboardController',['$scope','$cookies','dashboardService', function($scope,$cookies, dashboardService){
+clearbank.controller('dashboardController', ['$scope', '$cookies', 'LoginService', function ($scope, $cookies) {
 
-	    
-		$scope.accName=$cookies.get('customerName');
-        $scope.accNumber=$cookies.get('customerNumber');
-        $scope.accBalance=$cookies.get('customerBalance');
-	    $scope.accCurrency=$cookies.get('currency');
-        var accId=$cookies.get('customerId');
-    
-    $scope.getIndex=function(index){
-    $cookies.put('currentIndex',index);
-    }
-    
-    dashboardService.getData(accId, function(result){
-			$scope.accountInfo=result;
-		});
+
+        $scope.accName = localStorage.getItem('customerName');
+        $scope.accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
+    $scope.accNumber=localStorage.getItem('accountNumber');
+    $scope.accBalance=localStorage.getItem('accountBalance');
+    $scope.accCurrency=localStorage.getItem('currency');
+        console.log($scope.accountInfo);
+        $scope.getIndex = function (index) {
+           localStorage.setItem('currentIndex', index);
+        }
+
+
+
 	}
+
 ]);
