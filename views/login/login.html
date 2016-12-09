@@ -7,9 +7,9 @@
  <form name="loginForm">
   <div class="form-group">
     <label>Customer Id <span class="warning">*</span></label>
-    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="/^[0-9]{10}$/"  placeholder="Type Your Customer Id" maxlength="10">	
+    <input type="text" name="csId" class="form-control"  data-ng-model="customer_id" data-ng-pattern="/^[0-9]{8}$/"  placeholder="Type Your Customer Id" maxlength="8">	
     <div data-ng-messages="loginForm.csId.$error">
-    <div data-ng-message="pattern"><span class="warning">*Must have 10 digits</span></div>
+    <div data-ng-message="pattern"><span class="warning">*Must have 8 digits</span></div>
     </div>
   </div>
   <div class="form-group">

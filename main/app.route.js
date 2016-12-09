@@ -47,12 +47,12 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('mutualfunds',{
 			url:'/mutualfunds',
-			templateUrl: 'views/mutualfunds.html'
+			templateUrl: 'views/mutualFunds.html'
 		})
 		
 		.state('contactus',{
 			url:'/contactus',
-			templateUrl: 'views/contactus.html'
+			templateUrl: 'views/contactUs.html'
 		})
 		
 		.state('cards',{
@@ -62,12 +62,12 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('managepayee',{
 			url:'/managepayee',
-			templateUrl: 'views/managepayee.html'
+			templateUrl: 'views/managePayee.html'
 		})
 	
 	
 	$locationProvider.html5Mode({
-		enabled: true,
+		enabled: false,
 		requireBase: false
 	});
 });

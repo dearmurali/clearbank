@@ -15,6 +15,13 @@ clearbank.controller('lastTransactionsController',['$scope','$cookies','lastTran
         console.log(result);
 		});
     
+    lastTransactionsService.getTransactionData(index,accId,function(result){
+        console.log("transaction data");
+        console.log(result);
+			$scope.lastTransactionInfo=result;
+        console.log(result);
+		});
+    
     $scope.showTransaction=function(){
 		$scope.showTransactions=!$scope.showTransactions;
 	}

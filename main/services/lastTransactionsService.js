@@ -21,6 +21,30 @@ clearbank.service('lastTransactionsService',function($http){
 					console.log('some error occurred');
 				}
 			)
+		},
+        
+        getTransactionData:function(index,accId, callback){
+			//console.log(customer_id, password, callback);
+			$http({
+				method:"get",
+				url:"http://localhost:3000/assets/transactionData.json"
+			}).then(
+				//success
+				function(result){
+                    console.log('inside last transaction service');
+					for(i=0;i<result.data.transactionData.length;i++){
+						//console.log('inside for');
+						if(accId=== result.data.transactionData[i].csId){
+				     callback(result.data.customerData[i].accountInfo[index].transactions);	
+						}
+					}
+					
+				},
+				//error
+				function(err){
+					console.log('some error occurred');
+				}
+			)
 		}
 		
 	}

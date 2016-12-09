@@ -43,20 +43,24 @@
   <thead>
   <tr>
   <th>Date</th>
-  <th>Description</th>
-  <th>Debit</th>
-  <th>Credit</th>
+  <th>Transaction Number</th>  
+  <th>Reference</th>
+  <th>Type</th>
   <th>Balance</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-  <td>10/11/2016</td>
-  <td>to 33307911150</td>
-  <td>5000</td>
-  <td></td>
-  <td>10050</td>
+  <tr data-ng-repeat="data in lastTransactionInfo">
+  <td>{{data.date}}</td>
+  <td>{{data.transactionNumber}}</td>
+  <td>{{data.transactionNumber}}</td>
+  <td>{{data.reference}}</td>
+  <td>{{data.type}}</td>
+  <td>{{data.amount}}</td>
+  <td>{{data.finalAmount}}</td>
+  <td>data.finalAmount</td>
   </tr>
+<!--
   <tr>
   <td>15/11/2016</td>
   <td>to 33307911150</td>
@@ -120,6 +124,7 @@
   <td>15000</td>
   <td>15500</td>
   </tr>
+-->
   </tbody>
   </table>
   </div>

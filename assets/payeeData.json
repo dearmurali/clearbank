@@ -1,0 +1,130 @@
+{
+	"payeeData":[
+		{
+			"csId": "1234567890",
+			"payee":[{"sameBank":[{
+			                
+							 "payeeAccountNumber":"33307915126",
+							 "payeeName":"Nitish Bali",
+                             "payeeLimit":"100000"
+						   },
+						   {
+							"payeeAccountNumber":"33307916666",
+							 "payeeName":"Nitesh Rana",
+                             "payeeLimit":"800000"
+						   },
+						   { 
+							"payeeAccountNumber":"33307915456",
+							 "payeeName":"Akash Singh",
+                             "payeeLimit":"500000"
+						   }
+						  ]},
+                    {"otherBank":[{
+			                
+							 "payeeAccountNumber":"415307915126",
+							 "payeeName":"Nitish Bali",
+                             "payeeIFSC":"SBIN0017008",
+                             "payeeLimit":"200000"
+						   },
+						   {
+							"payeeAccountNumber":"88307916666",
+							 "payeeName":"Nitesh Rana",
+                             "payeeIFSC":"UTB000170123",
+                             "payeeLimit":"500000"
+						   },
+						   { 
+							"payeeAccountNumber":"12307915456",
+							 "payeeName":"Akash Singh",
+                             "payeeIFSC":"SBIN0017003",
+                             "payeeLimit":"300000"
+						   }
+						  ]}
+						  ]
+			
+		},
+		{
+			"csId": "1234567891",
+			"payee":[{"sameBank":[{
+			                
+							 "payeeAccountNumber":"33307915126",
+							 "payeeName":"Nitish Bali",
+                             "payeeLimit":"100000"
+						   },
+						   {
+							"payeeAccountNumber":"33307916666",
+							 "payeeName":"Nitesh Rana",
+                             "payeeLimit":"800000"
+						   },
+						   { 
+							"payeeAccountNumber":"33307915456",
+							 "payeeName":"Akash Singh",
+                             "payeeLimit":"500000"
+						   }
+						  ]},
+                    {"otherBank":[{
+			                
+							 "payeeAccountNumber":"415307915126",
+							 "payeeName":"Nitish Bali",
+                             "payeeIFSC":"SBIN0017008",
+                             "payeeLimit":"200000"
+						   },
+						   {
+							"payeeAccountNumber":"88307916666",
+							 "payeeName":"Nitesh Rana",
+                             "payeeIFSC":"UTB000170123",
+                             "payeeLimit":"500000"
+						   },
+						   { 
+							"payeeAccountNumber":"12307915456",
+							 "payeeName":"Akash Singh",
+                             "payeeIFSC":"SBIN0017003",
+                             "payeeLimit":"300000"
+						   }
+						  ]}
+						  ]
+			
+		},
+        {
+			"csId": "1234567892",
+			"payee":[{"sameBank":[{
+			                
+							 "payeeAccountNumber":"33307915126",
+							 "payeeName":"Nitish Bali",
+                             "payeeLimit":"100000"
+						   },
+						   {
+							"payeeAccountNumber":"33307916666",
+							 "payeeName":"Nitesh Rana",
+                             "payeeLimit":"800000"
+						   },
+						   { 
+							"payeeAccountNumber":"33307915456",
+							 "payeeName":"Akash Singh",
+                             "payeeLimit":"500000"
+						   }
+						  ]},
+                    {"otherBank":[{
+			                
+							 "payeeAccountNumber":"415307915126",
+							 "payeeName":"Nitish Bali",
+                             "payeeIFSC":"SBIN0017008",
+                             "payeeLimit":"200000"
+						   },
+						   {
+							"payeeAccountNumber":"88307916666",
+							 "payeeName":"Nitesh Rana",
+                             "payeeIFSC":"UTB000170123",
+                             "payeeLimit":"500000"
+						   },
+						   { 
+							"payeeAccountNumber":"12307915456",
+							 "payeeName":"Akash Singh",
+                             "payeeIFSC":"SBIN0017003",
+                             "payeeLimit":"300000"
+						   }
+						  ]}
+						  ]
+			
+		}
+        ]
+}

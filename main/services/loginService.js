@@ -3,13 +3,14 @@ clearbank.service('LoginService',function($http,$cookies){
 		validLogin:function(customer_id, password, callback){
 			$http({
 				method:"POST",
-				url:"http://10.80.190.161:8080/clearbank/auth",
+				url:"http://10.80.190.171:8085/clearbank-1.0/auth",
 				data:{
 					"username": customer_id,
 					"password": password
 				}
 			}).then(
 				function(result){
+                    console.log(result.data);
 					console.log("result on login",result.config.data.username);
 						if(result.data.success){
 							callback('success');
