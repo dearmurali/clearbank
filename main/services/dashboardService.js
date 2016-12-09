@@ -12,12 +12,11 @@ clearbank.service('dashboardService', function ($http, $cookies) {
                     for (i = 0; i < result.data.customerData.length; i++) {
                         //console.log('inside for');
                         if (customer_id === result.data.customerData[i].csId) {
-
-                            $cookies.put('customerName', result.data.customerData[i].customerName);
-                            $cookies.put('customerNumber', result.data.customerData[i].accountInfo[0].accountNumber);
-                            $cookies.put('customerBalance', result.data.customerData[i].accountInfo[0].accountBalance);
-                            $cookies.put('currency', result.data.customerData[i].accountInfo[0].currency);
-                            callback(result.data.customerData[i].accountInfo);
+//                            $cookies.put('customerName', result.data.customerData[i].customerName);
+//                            $cookies.put('customerNumber', result.data.customerData[i].accountInfo[0].accountNumber);
+//                            $cookies.put('customerBalance', result.data.customerData[i].accountInfo[0].accountBalance);
+//                            $cookies.put('currency', result.data.customerData[i].accountInfo[0].currency);
+//                            callback(result.data.customerData[i].accountInfo);
                         }
                     }
 

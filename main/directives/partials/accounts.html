@@ -11,9 +11,9 @@
   </tr>  
   </thead>
   <tbody>
-  <tr data-ng-repeat="account in accountInfo"><td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.accountNumber}}</a></td>
-  <td>{{account.accountType}}</td>
-  <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.accountBalance}}</a></td>
+  <tr data-ng-repeat="account in accountInfo track by $index"><td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.accountnumber}}</a></td>
+  <td>{{account.accounttype}}</td>
+  <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.accountbalance}}</a></td>
   <td>{{account.openingDate}}</td>
   <td>{{account.currency}}</td>
   </tr>

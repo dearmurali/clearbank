@@ -66,8 +66,11 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		})
 	
 	
-	$locationProvider.html5Mode({
-		enabled: true,
-		requireBase: false
-	});
+//	$locationProvider.html5Mode({
+//		enabled: true,
+//		requireBase: false
+//	});
+    
+//      $locationProvider.html5Mode(false);
+//    $locationProvider.hashPrefix('!');
 });

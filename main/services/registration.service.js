@@ -3,7 +3,7 @@ clearbank.service('RegistrationService',function($http){
 		RegisterCustomer:function(customer_name, customer_id, customer_mobile, customer_email, customer_password, callback){
 			$http({
 				method:"POST",
-				url:"http://10.80.190.161:8080/clearbank/register",
+				url:"http://10.80.190.171:8085/clearbank-1.0/register",
 				data:{
 				  "customerid": customer_id,
 				  "password": customer_password,
