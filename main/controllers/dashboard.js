@@ -8,12 +8,10 @@ clearbank.controller('dashboardController', ['$scope', '$cookies',function ($sco
     $scope.accCurrency=localStorage.getItem('currency');
     
         $scope.defaultData=true;
-        $scope.customData=false;
     
         $scope.getIndex = function (index) {
          localStorage.setItem('currentIndex', index);
          $scope.defaultData=false;
-         $scope.customData=true;
         }
         
         var index=localStorage.getItem('currentIndex');
