@@ -60,7 +60,7 @@ cursor:pointer;
 }
 
 .menu{
-	background-color:#ff8000;
+	background-color:dodgerblue;
 }
 
 .mainMenu{
@@ -154,8 +154,11 @@ clear:left;
 	color:red;
 }
  .mainContainer{
+     background-color: aliceblue;
+/*
  background-image:url("../images/bg.jpg") ;
  background-size:cover;
+*/
  }
  
 
