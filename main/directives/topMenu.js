@@ -1,6 +1,6 @@
 clearbank.directive("topMenu", function() {
     return {
         restrict : "E",
-        templateUrl : "main/directives/partials/topMenu.html"
+        templateUrl : "main/partials/topMenu.html"
     };
 });

@@ -10,14 +10,12 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('login',{
 			url:'/login',	
-			templateUrl: 'views/login/login.html',
-			controller:'loginController'
+			templateUrl: 'views/login/login.html'
 		})
 		
 		.state('register',{
 			url:'/register',
-			templateUrl: 'views/registration.html',
-			controller: 'registrationController'
+			templateUrl: 'views/registration.html'
 		})
 		
 		.state('forgotpassword',{
