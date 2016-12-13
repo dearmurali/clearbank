@@ -1,6 +1,6 @@
 clearbank.directive("managePayee", function() {
     return {
         restrict : "E",
-        templateUrl : "main/directives/partials/payee.html"
+        templateUrl : "main/partials/payee.html"
     };
 });
