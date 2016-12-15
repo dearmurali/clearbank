@@ -13,11 +13,14 @@ clearbank.controller('lastTransactionsController',['$scope','lastTransactionsSer
         var info=JSON.parse(localStorage.getItem('accountInfo'));
         $scope.transactionInfo=info[index];                                
     
-//    lastTransactionsService.getData(index,accId,function(result){
-//			$scope.transactionInfo=result;
+    
+//    var currentAccountNumber=info[index].accountnumber;
+//     lastTransactionsService.getTransactionData(index,accId,function(result){   
+//        console.log("transaction data");
+//        console.log(result);
+//        $scope.lastTransactionInfo=result;
 //        console.log(result);
 //		});
-    
     lastTransactionsService.getTransactionData(index,accId,function(result){
         console.log("transaction data");
         console.log(result);

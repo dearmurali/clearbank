@@ -1,37 +1,38 @@
-<div class="leftAside " >
 
 
-    <div data-ng-show="defaultData" class="well">
-        <li class="asideMenu"><a ui-sref="profile" class="profile"><h4>{{accName}}</h4></a></li>
-<ul class="asideMenu">
-<li class="asideMenu">Account number:<span class="profileInfo"><b>{{accNumber}}</b></span><li>
-<li class="asideMenu">Available Balance:<span class="profileInfo"><b>{{accBalance}}&nbsp;{{accCurrency}}</b></span></li>
-</ul>
+<div>
+    <div data-ng-show="defaultData"  class="accountBalance">
+        <li class="asideMenu"><h4>Account Balance</h4></li>
+        <hr>
+        <li class="asideMenu"><span><b>{{accNumber}}<small>-{{accType}}</small></b></span></li>
+        <li class="asideMenu"><h3><b>{{accBalance}}&nbsp;{{accCurrency}}</b></h3></li>
+        <li class="asideMenu"></li>
     </div>
     
-    <div data-ng-show="!defaultData" class="well">
-        <li class="asideMenu"><a ui-sref="profile" class="profile"><h4>{{accName}}</h4></a></li>
-<ul class="asideMenu">
-<li class="asideMenu">Account number:<span class="profileInfo"><b>{{transactionInfo.accountnumber}}</b></span><li>
-<li class="asideMenu">Available Balance:<span class="profileInfo"><b>{{transactionInfo.accountbalance}}&nbsp;{{transactionInfo.currency}}</b></span></li>
-</ul>
+    <div data-ng-show="!defaultData" class="accountBalance" >
+        <li class="asideMenu"><h4>Account Balance</h4></li>
+        <hr>
+        <li class="asideMenu"><span><b>{{transactionInfo.accountnumber}}<small>-{{transactionInfo.accounttype}}</small></b></span></li>
+        <li class="asideMenu"><h3><b>{{transactionInfo.accountbalance}}&nbsp;{{transactionInfo.currency}}</b>           </h3></li>
     </div>
-    <div class="well">
+</div>
+    
+    <div class="favouriteLinks">
         <li class="asideMenu"><h4>Favourite links</h4></li>
-<ul class="asideMenu">
+        <hr>
+
 <li class="asideMenu"><a ui-sref="cards">Cards</a></li>
 <li class="asideMenu"><a ui-sref="managepayee">Manage Payee</a></li>
 <li class="asideMenu"><a ui-sref="transfers">Transfers</a></li>
-</ul>
-    </div>
-    <div class="well">
+ </div>
+
+    <div class="topPayees">
         <li class="asideMenu"><h4>Top Payee</h4></li>
-<ul class="asideMenu">
+        <hr>
+
     <li class="asideMenu"><a class="topPayee">Nitesh Rana</a></li>
     <li class="asideMenu"><a class="topPayee">Nitish Bali</a></li>
     <li class="asideMenu"><a class="topPayee">Gagan Singh</a></li>
 <li data-ng-repeat="payee in toppayee"><a ui-sref="transfers">{{payee.customerName}}</a></li>
-</ul>
     </div>
 
-</div>
