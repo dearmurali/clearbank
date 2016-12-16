@@ -1,19 +1,12 @@
-clearbank.component('userRegistration' ,{
+clearbank.component('userRegistration', {
 
     templateUrl: 'main/partials/registration.html',
     controller: function registrationController(RegistrationService) {
         var self = this;
-        $('.nameError,.cidError,.mailError,.passError,.passError2,.contactError').hide();
+        $('.nameError,.mailError,.passError,.passError2,.contactError').hide();
         $('.cName').on('blur', function () {
             if (self.customerName === undefined) {
                 $('.nameError').show('200');
-
-            }
-
-        });
-        $('.cId').on('blur', function () {
-            if (self.customerId === undefined) {
-                $('.cidError').show('200');
 
             }
 
@@ -53,27 +46,24 @@ clearbank.component('userRegistration' ,{
             }
         });
 
-        self.save = function () {
 
-            /*  CommonData.setData({
-            csId: $scope.cid,
-            phn: $scope.phn,
-            pwd: $scope.cpass
-		});
-		 */
-            //window.location.href="/login";
-            if (!(self.customerName === undefined || self.customerId === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined)) {
-                RegistrationService.RegisterCustomer(self.customerName, self.customerId, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
+
+        self.save = function () {
+            console.log("saving")
+            console.log(self.customerName,self.customerContact, self.customerEmail,self.customerPassword)
+            if (!(self.customerName === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined)) {
+                
+                RegistrationService.RegisterCustomer(self.customerName, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
                     console.log(response);
                     alert(response);
-                    window.location.href = "/";
+                   // window.location.href = "/";
                 })
 
-            } else if (self.customerPassword != $scope.confirmedPassword) {
+            } else if (self.customerPassword != self.confirmedPassword) {
                 $('.passError2').show('200');
             } else {
                 $('.passError2').hide('200');
-                $('.nameError,.cidError,.mailError,.passError,.contactError').show();
+                $('.nameError,.mailError,.passError,.contactError').show();
             }
         }
     }

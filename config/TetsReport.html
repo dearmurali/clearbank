@@ -1,0 +1,355 @@
+[17:12:55] I/direct - Using ChromeDriver directly...
+[17:12:55] I/launcher - Running 1 instances of WebDriver
+problem trying to remove a folder:
+Started
+[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m
+
+Failures:
+1) The ClearBank website should show error in login
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:5:16)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run beforeAll in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:3:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as sendKeys] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as sendKeys] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:17:25)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run it("should show error in login") in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:16:5
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:15:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+
+2) The ClearBank website should show error in login field
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:5:16)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run beforeAll in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:3:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as clear] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as clear] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:25:25)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run it("should show error in login field") in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:16:5
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:24:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+
+3) The ClearBank website should show error in password field
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:5:16)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run beforeAll in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:3:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as clear] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as clear] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:35:25)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run it("should show error in password field") in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:16:5
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:34:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+
+4) The ClearBank website should  go to dashobard
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:5:16)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run beforeAll in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:3:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as clear] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as clear] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:45:25)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2820:25
+    From: Task: Run it("should  go to dashobard") in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:16:5
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:44:5)
+        at Object.<anonymous> (D:\clearbank\tests\login.e2e.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+
+5) The clearBank website should show account transactions for a selected account
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\dashBoard.spec.js:6:22)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+    From: Task: Run it("should show account transactions for a selected account") in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\dashBoard.spec.js:4:5)
+        at Object.<anonymous> (D:\clearbank\tests\dashBoard.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+
+6) The clearBank website should show exactly 10 transactions
+  Message:
+[31m    Failed: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"[0m
+  Stack:
+    Error: Error while waiting for Protractor to sync with the page: "window.angular is undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\browser.js:269:23
+        at ManagedPromise.invokeCallback_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1379:14)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:639:7
+        at process._tickCallback (node.js:377:9)Error
+        at ElementArrayFinder.applyAction_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:397:27)
+        at ElementArrayFinder._this.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:100:30)
+        at ElementFinder.(anonymous function) [as click] (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\built\element.js:728:22)
+        at Object.<anonymous> (D:\clearbank\tests\dashBoard.spec.js:14:22)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:23
+        at new ManagedPromise (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1082:7)
+        at controlFlowExecute (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:80:18)
+        at TaskQueue.execute_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2913:14)
+        at TaskQueue.executeNext_ (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2896:21)
+        at C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2775:27
+    From: Task: Run it("should show exactly 10 transactions") in control flow
+        at Object.<anonymous> (C:\Users\M1037565\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:79:14)
+    From asynchronous test: 
+    Error
+        at Suite.<anonymous> (D:\clearbank\tests\dashBoard.spec.js:12:5)
+        at Object.<anonymous> (D:\clearbank\tests\dashBoard.spec.js:1:1)
+        at Module._compile (module.js:425:26)
+        at Object.Module._extensions..js (module.js:432:10)
+        at Module.load (module.js:356:32)
+        at Function.Module._load (module.js:311:12)
+
+6 specs, 6 failures
+Finished in 9.952 seconds
+[17:13:07] I/launcher - 0 instance(s) of WebDriver still running
+[17:13:07] I/launcher - chrome #01 failed 6 test(s)
+[17:13:07] I/launcher - overall: 6 failed spec(s)
+[17:13:07] E/launcher - Process exited with error code 1

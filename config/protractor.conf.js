@@ -14,9 +14,9 @@ exports.config = {
 
     framework: 'jasmine',
     //protractor runs test cases, uses jasmine to write test cases
-    specs: ['../tests/registration.spec.js'
-           // '../tests/login.e2e.spec.js',
-            //'../tests/dashBoard.spec.js'
+    specs: [
+            '../tests/login.e2e.spec.js',
+            '../tests/dashBoard.spec.js'
            ],
     onPrepare: function(){
         jasmine.getEnv().addReporter(

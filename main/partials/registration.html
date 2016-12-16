@@ -1,71 +1,64 @@
-
-<div class="col-md-3 col-sm-1"></div>
-<div class="col-xs-12 col-sm-10 col-md-6">
-<div class="well well-lg reg-form">
-    <div class="panel panel-primary">
-      <div class="panel-heading">{{ 'register here' | translate }}</div>
-      <div class="panel-body">
-      <form name="myform">
-<div class="form-group">
-    <label for="cust-name">{{ 'whats your name' | translate }}?</label>
-    <input type="text" class="form-control cName" name="cname" data-ng-model="customerName" data-ng-pattern="/^[a-z A-Z]+$/" placeholder="{{'enter name' | translate}}" required>
-       <div ng-messages="myform.cname.$error" class="nameError">
-    <div ng-message="pattern" class="errorMsg"><small>{{ 'please enter alphabets only' | translate }}!</small></div>
-  <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
-  </div>
-    <small id="name-Help" class="form-text text-muted">{{ 'we need your name to talk to you' | translate }}!</small>
-  
-  </div>
-    <div class="form-group">
-    <label for="customer-id">{{ 'and your customer id' | translate}}?</label>
-    <input type="text" class="form-control cId" name="cid" data-ng-model="customerId" data-ng-pattern="/^[0-9]{10}$/" placeholder="{{ 'enter account number' | translate }}" required maxlength="10">
-      <div ng-messages="myform.cid.$error" class="cidError">
-    <div ng-message="pattern" class="errorMsg"><small>{{ 'please enter a valid 10 digit account id' | translate }}!</small></div>
-  <div ng-message="required" class="errorMsg"><small>{{ 'dont leave this empty' | translate}}!</small></div>
-  </div>
-    <small class="form-text text-muted">{{ 'well never share your account info with anyone else' | translate }}.</small>
-  </div>
-          
-    <div class="form-group">
-    <label for="customer-id">{{ 'contact number' | translate }}</label>
-    <input type="text" class="form-control contact" name="phone" data-ng-model="customerContact" data-ng-pattern="/^[0-9]{10}$/" placeholder="{{ 'enter phone number' | translate }}" required maxlength="10">
-      <div ng-messages="myform.phone.$error" class="contactError">
-    <div ng-message="pattern" class="errorMsg"><small>{{ 'please enter a valid 10 digit contact number' | translate }}</small></div>
-  <div ng-message="required" class="errorMsg"><small>{{ 'dont leave this empty' | translate }}.</small></div>
- </div>
- </div>
-          
-<div class="form-group">     
-<label for="cust-email">{{ 'an email address to contact you' | translate }}</label>     
-<input class="form-control cMail" name="mail" data-ng-model="customerEmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" placeholder="{{ 'enter email' | translate }}" required>
-  <div ng-messages="myform.mail.$error" class="mailError">
-    <div ng-message="pattern" class="errorMsg"><small>{{ 'please enter a valid email address' | translate }}!</small></div>
-  <div ng-message="required" class="errorMsg"><small>{{ 'dont leave this empty' | translate }}.</small></div>
-  </div>
-     <small id="emailHelp" class="form-text text-muted">{{ 'well never share your email with anyone else' | translate }}.</small>
-        </div>
-  <div class="form-group">
-    <label for="cust-password">{{ 'set a password for this account' | translate }}</label>
-    <input type="password" class="form-control cPass" name="password" data-ng-model="customerPassword" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" placeholder="{{ 'password' | translate }}" required>
-    <div ng-messages="myform.password.$error" class="passError">
-    <div ng-message="pattern" class="errorMsg"><small>{{ 'please enter a valid password' | translate }}!</small></div>
-  <div ng-message="required" class="errorMsg"><small>{{ 'dont leave this empty' | translate }}.</small></div>
-  </div>
-    <small class="form-text text-muted">{{ 'secure your account with a password' | translate }}.</small>
-  </div>
-  <div class="form-group">
-    <label for="cust-password2">{{ 'and reenter to confirm' | translate }}</label>
-    <input type="password" class="form-control cPass2" name="password2" placeholder="{{ 'password' | translate }}" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/"   data-ng-model="confirmedPassword" required>
-     <div ng-messages="myform.password2.$error" class="passError2">
-    <div ng-message="pattern" class="errorMsg"><small>{{ 'enter same password as above' | translate }}!</small></div>
-  <div ng-message="required" class="errorMsg"><small>{{ 'dont leave this empty' | translate }}.</small></div>
-  </div>
-  <span class="errorMsg passError2"><small>{{ 'passwords do not match' | translate }}.</small></span>
-  </div>
-  <button type="button" class="btn btn-success" data-ng-click="save()">{{ 'submit' | translate }}</button>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/"><button type="button" class="btn btn-warning reset_pass"  oncopy="return false" onpaste="return false">{{ 'cancel' | translate }}</button></a>
-  </form>
+ <div class="panel-heading"><small><span  class="warning login-hint">*All fields are mandatory</span></small></div>
+<div class="col-md-2 col-sm-1">
 </div>
+<div class="col-xs-12 col-sm-10 col-md-7">
+        <div class="panel-body">
+            <form name="myform">
+
+                <md-input-container class="md-block">
+                    <label>Name<span class="warning">*</span></label>
+                    <input name="cname" class="cName" data-ng-model="$ctrl.customerName" data-ng-pattern="/^[a-z A-Z]+$/" required>
+                    <div ng-messages="myform.cname.$error" class="nameError">
+                        <div ng-message="pattern" class="errorMsg"><small>'please enter alphabets only'!</small></div>
+                        <div ng-message="required" class="errorMsg"><small>Don't leave this empty!</small></div>
+                    </div>
+                </md-input-container>
+
+
+                <md-input-container class="md-block">
+                    <label>Contact Number<span class="warning">*</span></label>
+                    <input type="text" class="contact" name="phone" data-ng-model="$ctrl.customerContact" data-ng-pattern="/^[0-9]{10}$/" required maxlength="10">
+                    <div ng-messages="myform.phone.$error" class="contactError">
+                        <div ng-message="pattern" class="errorMsg"><small>please enter a valid 10 digit contact number</small></div>
+                        <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label for="cust-email">Email address to contact you<span class="warning">*</span></label>
+                    <input class="cMail" name="mail" data-ng-model="$ctrl.customerEmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" minlength="10" maxlength="30" required>
+                    <div ng-messages="myform.mail.$error" class="mailError">
+                        <div ng-message="pattern" class="errorMsg"><small>please enter a valid email address!</small></div>
+                        <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
+                    </div>
+                </md-input-container>
+
+
+                <md-input-container class="md-block">
+                    <label for="cust-password">set a password for this account<span class="warning">*</span></label>
+                    <input type="password" class="cPass" name="password" data-ng-model="$ctrl.customerPassword" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" required>
+                    <div ng-messages="myform.password.$error" class="passError">
+                        <div ng-message="pattern" class="errorMsg"><small>please enter a valid password!</small></div>
+                        <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
+                    </div>
+
+                </md-input-container>
+                
+                <md-input-container class="md-block">
+                    <label for="cust-password2">and reenter to confirm<span class="warning">*</span></label>
+                    <input type="password" class="cPass2" name="password2" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" data-ng-model="$ctrl.confirmedPassword" required>
+                    <div ng-messages="myform.password2.$error" class="passError2" oncopy="return false">
+                        <div ng-message="pattern" class="errorMsg"><small>enter same password as above!</small></div>
+                        <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
+                    </div>
+                    <span class="errorMsg passError2"><small>passwords do not match.</small></span>
+                </md-input-container>
+
+                <md-button class="md-primary md-hue-1" type="reset"><strong>Clear All</strong></md-button>&nbsp;
+                <md-button class="md-raised md-primary" data-ng-click="$ctrl.save()"><strong>Register</strong></md-button>
+
+
+            </form>
+        </div>
     </div>
-    </div>
-	</div> 
+

@@ -8,13 +8,13 @@ describe('The clearBank website', () => {
     });
 
     beforeEach(() => {
-        this.customerName = element(by.model('customerName'));
-        this.customerId = element(by.model('customerId'));
-        this.customerContact = element(by.model('customerContact'));
-        this.customerEmail = element(by.model('customerEmail'));
-        this.customerPassword = element(by.model('customerPassword'));
-        this.confirmedPassword = element(by.model('confirmedPassword'));
-        this.submit = element(by.css('[data-ng-click="save()"]'));
+        this.customerName = element(by.model('$ctrl.customerName'));
+        this.customerId = element(by.model('$ctrl.customerId'));
+        this.customerContact = element(by.model('$ctrl.customerContact'));
+        this.customerEmail = element(by.model('$ctrl.customerEmail'));
+        this.customerPassword = element(by.model('$ctrl.customerPassword'));
+        this.confirmedPassword = element(by.model('$ctrl.confirmedPassword'));
+        this.submit = element(by.css('[data-ng-click="$ctrl.save()"]'));
     });
 
 

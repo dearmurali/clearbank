@@ -7,9 +7,9 @@ describe('The ClearBank website', () => {
     });
     beforeEach(() => {
       browser.sleep(2000);
-        this.customerId = element(by.model('customer_id'));
-        this.password = element(by.model('pwd'));
-        this.submit = element(by.css('[data-ng-click="onLogin()"]'));
+        this.customerId = element(by.model('$ctrl.customer_id'));
+        this.password = element(by.model('$ctrl.pwd'));
+        this.submit = element(by.css('[data-ng-click="$ctrl.onLogin()"]'));
     });
     
     it('should show error in login', () => {
