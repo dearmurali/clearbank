@@ -32,7 +32,7 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		.state('lastTransactions',{
 			url:'/lastTransactions',
 			templateUrl: 'views/lastTransactions.html',
-			controller : 'lastTransactionsController'
+			controller : 'lastTransactionController'
 		})
 		
 		
