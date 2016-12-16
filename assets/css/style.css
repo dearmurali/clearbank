@@ -104,7 +104,7 @@ float:right;
 .accountBalance{
     margin-bottom:8%;
 	background-color:#F8F8F8;
-	box-shadow: 0px 0px 12px #222222; 
+	box-shadow: 0px 0px 8px #cccccc; 
 	padding:7%;
 }
 
@@ -113,7 +113,7 @@ float:right;
 .favouriteLinks{
     margin-bottom:8%;
 	background-color:#F8F8F8;
-	box-shadow: 0px 0px 12px #222222; 
+	box-shadow: 0px 0px 8px #cccccc; 
 	padding:7%;
 }
 
@@ -121,7 +121,7 @@ float:right;
 .topPayees{
     margin-bottom:8%;
 	background-color:#F8F8F8;
-	box-shadow: 0px 0px 12px #222222; 
+	box-shadow: 0px 0px 8px #cccccc; 
 	padding:7%;
 }
 
@@ -129,7 +129,7 @@ float:right;
 .mainView{
 	background-color:#F8F8F8;
 	padding:2%;
-    box-shadow: 0px 0px 12px #222222; 
+    box-shadow: 0px 0px 8px #cccccc; 
 	
 }
 
@@ -198,11 +198,7 @@ clear:left;
 	color:red;
 }
  .mainContainer{
-     background-color: #F7F8E0;
-/*
- background-image:url("../images/bg.jpg") ;
- background-size:cover;
-*/
+     background-color: #F3F3E9;
  }
  
 
