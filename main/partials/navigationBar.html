@@ -1,15 +1,13 @@
-<nav class="navbar navbar-inverse ">
+<!--
+<nav class="navbar">
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
 	
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#showMenu">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="glyphicon glyphicon-list menuDropdown"></span>
       </button>
-      <a class="navbar-brand" href="/">Clear Bank</a>
+        <a class="navbar-brand" href="/"><img src="assets/images/Logo-blue.png" height="50px"></img></a>
     </div>  
  
 	<div class="collapse navbar-collapse " id="showMenu">
@@ -21,3 +19,13 @@
 	</div>
   </div>
 </nav>
+-->
+
+<div class="container">
+    <div class="nav-logo"><a ui-sref="home"><img src="assets/images/Logo-blue.png" height="70px"></img></a></div>
+<div class="topName"><h4 class="topName"><strong>Welcome&nbsp;{{$ctrl.accName}}</strong></h4>
+<div>
+<a ui-sref="">Profile | </a ui-sref=""><a> Change Password | </a ui-sref=""><a>Logout</a>    
+</div>
+</div>
+</div>
