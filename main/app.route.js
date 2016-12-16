@@ -21,7 +21,6 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		.state('forgotpassword',{
 			url:'/forgotpassword',
 			templateUrl: 'views/forgotPassword.html',
-			controller: 'forgotPasswordController'
 		})
 		
 		.state('dashboard',{

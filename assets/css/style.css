@@ -11,13 +11,19 @@ box-shadow: 0px 0px 55px #111111;
         height:100%;
         margin-left:0px;
     }
+     .landing-page{
+        display:none;
+    }
    
 }
-@media(max-width: 768px) {
+@media(max-width: 720px) {
     .forget-form {
         width:100%;
         height:100%;
          margin-left:0px;
+    }
+     .landing-page{
+        display:none;
     }
     
 }
@@ -27,6 +33,7 @@ box-shadow: 0px 0px 55px #111111;
         height:100%;
          margin-left:20px;
     }
+   
 }
 
 .profileInfo{
@@ -218,7 +225,10 @@ background-color:#34495e;
 
 
 .logo{
-	margin-bottom:1%;
+    
+   
+    max-width: 40vh;
+    margin-top: 35vh;
 }
 
 .button1{
@@ -238,4 +248,42 @@ background-color:#34495e;
 	background-color:transparent;  
 	text-align:center;
 	margin: 5% auto;
+}
+
+.login-hint{
+    float:right;
+}
+
+.login-panel{
+    min-height: 20vh;
+    vertical-align: middle;
+}
+
+.md-button.md-hue-1.md-primary{
+        color: #2079BE;
+}
+
+
+.md-button.md-primary.md-raised{
+    color: rgba(255,255,255,0.87);
+    background-color: #2079BE;
+}
+
+.md-button.md-primary.md-raised:not([disabled]):hover:focus{
+    color: rgba(255,255,255,0.87);
+    background-color: #025A9E;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input{
+    border-color: rgba(0,0,0,0.12);
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label{
+    color:#2079BE
+}
+
+.landing-page{
+    background-color:#2079BE;
+    min-height: 100vh;
+    vertical-align: middle;
 }
