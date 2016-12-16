@@ -6,17 +6,17 @@ clearbank.controller('dashboardController', ['$scope', '$cookies',function ($sco
     $scope.accNumber=localStorage.getItem('accountNumber');
     $scope.accBalance=localStorage.getItem('accountBalance');
     $scope.accCurrency=localStorage.getItem('currency');
+    $scope.accType=localStorage.getItem('accountType');
     
         $scope.defaultData=true;
     
-        $scope.getIndex = function (index) {
+         $scope.getIndex = function (index) {
          localStorage.setItem('currentIndex', index);
          $scope.defaultData=false;
         }
         
         var index=localStorage.getItem('currentIndex');
-        var info=JSON.parse(localStorage.getItem('accountInfo'));
-        $scope.transactionInfo=info[index];
+        $scope.transactionInfo=$scope.accountInfo[index];
         
 
 	}

@@ -11,35 +11,33 @@
 </div>
 <div class="col-md-9 col-sm-9">
 <div class="mainView">
-  <h4>Account Details</h4>
-  <div class="accountInfo">
-  <div class="table-responsive">
+  <h4>{{transactionInfo.accounttype}}&nbsp;Account Details</h4>
+    <hr>
+      
+    <div class="table-responsive">
   <table class="table">
+  <thead>
+  <tr class="tableheading"><td>Account Number</td>
+  <td>Account Type</td>
+  <td>Available Balance</td>
+  <td>Opening Date</td>
+  </tr>  
+  </thead>
   <tbody>
-  <tr><td>Account Number</td>
-  <td>{{transactionInfo.accountnumber}}</td>
-  </tr>
-  <tr><td>Name</td>
-  <td>{{accName}}</td> 
-  </tr>
-  <tr><td>Account Type</td>
+  <tr><td>{{transactionInfo.accountnumber}}</td>
   <td>{{transactionInfo.accounttype}}</td>
-  </tr>
-  <tr><td>Available Balance</td>
-  <td>{{transactionInfo.accountbalance}}</td>
-  </tr>
-  <tr><td>Currency</td>
-  <td>{{transactionInfo.currency}}</td>
+  <td>{{transactionInfo.accountbalance}}&nbsp;{{transactionInfo.currency}}</td>
+  <td>{{transactionInfo.openingDate}}</td>
   </tr>
   </tbody>
   </table>
   </div>
-  </div>
-  <br/>
+    
+  <br>
   <a ng-click="showTransaction()"><h4 class="lastTransaction">Last 10 transactions</h4></a>
   <div ng-show="showTransactions">
   <div class="table-responsive">
-  <table class=" table table-striped table-bordered">
+  <table class=" table">
   <thead>
   <tr>
   <th>Date</th>
