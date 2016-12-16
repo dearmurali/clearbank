@@ -3,7 +3,6 @@
 <div>
     <div data-ng-show="defaultData"  class="accountBalance">
         <li class="asideMenu"><h4>Account Balance</h4></li>
-        <hr>
         <li class="asideMenu"><span><b>{{accNumber}}<small>-{{accType}}</small></b></span></li>
         <li class="asideMenu"><h3><b>{{accBalance}}&nbsp;{{accCurrency}}</b></h3></li>
         <li class="asideMenu"></li>
@@ -19,16 +18,14 @@
     
     <div class="favouriteLinks">
         <li class="asideMenu"><h4>Favourite links</h4></li>
-        <hr>
 
-<li class="asideMenu"><a ui-sref="cards">Cards</a></li>
-<li class="asideMenu"><a ui-sref="managepayee">Manage Payee</a></li>
-<li class="asideMenu"><a ui-sref="transfers">Transfers</a></li>
+<li class="asideMenu data"><a ui-sref="cards">Cards</a></li>
+<li class="asideMenu data"><a ui-sref="managepayee">Manage Payee</a></li>
+<li class="asideMenu data"><a ui-sref="transfers">Transfers</a></li>
  </div>
 
     <div class="topPayees">
         <li class="asideMenu"><h4>Top Payee</h4></li>
-        <hr>
 
     <li class="asideMenu"><a class="topPayee">Nitesh Rana</a></li>
     <li class="asideMenu"><a class="topPayee">Nitish Bali</a></li>
