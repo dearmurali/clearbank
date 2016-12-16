@@ -22,6 +22,7 @@ clearbank.service('LoginService',function($http,$cookies){
 //                            console.log('customerMail',result.data.customerData[0].email);
 //                           console.log('customerMobile',result.data.customerData[0].custMobile); console.log('accountInfo',JSON.stringify(result.data.customerData[0].accountInfo))
                            localStorage.setItem('customerName', result.data.customer_information.customer_Name);
+                            console.log(result.data.customer_information.customer_Name);
                            localStorage.setItem('customerId', result.data.customer_information.customer_Id);
                            localStorage.setItem('customerMail', result.data.customer_information.customer_email);
                            localStorage.setItem('customerMobile',result.data.customer_information.customer_mobileNumber);
