@@ -3,7 +3,7 @@ clearbank.service('LoginService',function($http,$cookies){
 		validLogin:function(customer_id, password, callback){
 			$http({
 				method:"POST",
-				url:"http://10.80.190.171:8085/clearbank-1.0/auth",
+				url:"http://10.80.190.161:8080/clearbank-1.0/auth",
 				data:{
 					"username": customer_id,
 					"password": password
@@ -11,24 +11,24 @@ clearbank.service('LoginService',function($http,$cookies){
 			}).then(
 				function(result){
 
-                    console.log(result.data);
+                    console.log(result.data.success);
 					console.log("result on login",result.config.data.username);
-					console.log("result on login",result.data.customerData[0]);
 
 						if(result.data.success){
+                            console.log("conos");
 							callback('success');
 //                            console.log('customerName',result.data.customerData[0].customerName);
 //                            console.log('customerId',result.data.customerData[0].csId);
 //                            console.log('customerMail',result.data.customerData[0].email);
 //                           console.log('customerMobile',result.data.customerData[0].custMobile); console.log('accountInfo',JSON.stringify(result.data.customerData[0].accountInfo))
-                           localStorage.setItem('customerName', result.data.customerData[0].customerName);
-                           localStorage.setItem('customerId', result.data.customerData[0].csId);
-                           localStorage.setItem('customerMail', result.data.customerData[0].email);
-                           localStorage.setItem('customerMobile', result.data.customerData[0].custMobile);
-                            localStorage.setItem('accountNumber', result.data.customerData[0].accountInfo[0].accountnumber);
-                            localStorage.setItem('accountBalance', result.data.customerData[0].accountInfo[0].accountbalance);
-                            localStorage.setItem('currency', result.data.customerData[0].accountInfo[0].currency);
-                           localStorage.setItem('accountInfo', JSON.stringify(result.data.customerData[0].accountInfo));
+//                           localStorage.setItem('customerName', result.data.customerData[0].customerName);
+//                           localStorage.setItem('customerId', result.data.customerData[0].csId);
+//                           localStorage.setItem('customerMail', result.data.customerData[0].email);
+//                           localStorage.setItem('customerMobile', result.data.customerData[0].custMobile);
+//                            localStorage.setItem('accountNumber', result.data.customerData[0].accountInfo[0].accountnumber);
+//                            localStorage.setItem('accountBalance', result.data.customerData[0].accountInfo[0].accountbalance);
+//                            localStorage.setItem('currency', result.data.customerData[0].accountInfo[0].currency);
+//                           localStorage.setItem('accountInfo', JSON.stringify(result.data.customerData[0].accountInfo));
                         }                   
                         
 						else

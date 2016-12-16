@@ -7,7 +7,7 @@ clearbank.controller('loginController',['$scope','LoginService', '$state', funct
 	$scope.onLogin=function(){
         console.log("in login service");
 		LoginService.validLogin($scope.customer_id,$scope.pwd, function(result){
-			//console.log('result ',result);
+			console.log('result ',result);
 			if(result == "success"){
 				$scope.validCredentials=true;
 				//window.location.href="/#dashboard";
