@@ -1,4 +1,4 @@
-clearbank.controller('lastTransactionsController',['$scope','lastTransactionsService', function($scope,lastTransactionsService){
+clearbank.controller('lastTransactionController',['$scope','lastTransactionService', function($scope,lastTransactionService){
     
         $scope.accName = localStorage.getItem('customerName');
     $scope.accNumber=localStorage.getItem('accountNumber');
@@ -7,7 +7,7 @@ clearbank.controller('lastTransactionsController',['$scope','lastTransactionsSer
     
         
         var index=localStorage.getItem('currentIndex');
-        var accId=localStorage.getItem('customerId');
+        $scope.accId=localStorage.getItem('customerId');
 	    $scope.showTransactions=false;
   
         var info=JSON.parse(localStorage.getItem('accountInfo'));
@@ -21,17 +21,23 @@ clearbank.controller('lastTransactionsController',['$scope','lastTransactionsSer
 //        $scope.lastTransactionInfo=result;
 //        console.log(result);
 //		});
-    lastTransactionsService.getTransactionData(index,accId,function(result){
+//    lastTransactionsService.getTransactionData(index,accId,function(result){
+//        console.log("transaction data");
+//        console.log(result);
+//        $scope.lastTransactionInfo=result;
+//        console.log(result);
+//		});
+    
+    $scope.showTransaction=function(){
+        
+          var currentAccountNumber=info[index].account_number;
+        console.log(currentAccountNumber);
+     lastTransactionService.getTransactionData($scope.accid,currentAccountNumber,function(result){   
         console.log("transaction data");
         console.log(result);
         $scope.lastTransactionInfo=result;
         console.log(result);
-		});
-    
-    $scope.showTransaction=function(){
-       
-		$scope.showTransactions=!$scope.showTransactions;
-       
-	}
-}              
-]);
+       console.log("SHOW the transactions")
+     });
+    }
+}]);
