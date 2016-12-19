@@ -7,6 +7,10 @@ clearbank.controller('managePayee', ['$scope', function ($scope) {
     $scope.accCurrency=localStorage.getItem('currency');
     $scope.accType=localStorage.getItem('accountType');
     
+    var customerInfo = JSON.parse(localStorage.getItem('customerInfo'));
+        $scope.favLinks=customerInfo.fav_links;
+        $scope.topPayee=customerInfo.top_payee;
+    
         $scope.defaultData=true;
       
         var index=localStorage.getItem('currentIndex');

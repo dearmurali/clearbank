@@ -3,7 +3,7 @@ clearbank.service('LoginService',function($http,$cookies){
 		validLogin:function(customer_id, password, callback){
 			$http({
 				method:"POST",
-				url:"http://10.80.190.161:8080/clearbank-1.0/auth",
+				url:"http://10.80.190.161:9090/clearbank-1.0/auth",
 				data:{
 					"username": customer_id,
 					"password": password
@@ -25,11 +25,13 @@ clearbank.service('LoginService',function($http,$cookies){
                            localStorage.setItem('customerId', result.data.customer_information.customer_Id);
                            localStorage.setItem('customerMail', result.data.customer_information.customer_email);
                            localStorage.setItem('customerMobile',result.data.customer_information.customer_mobileNumber);
+                           localStorage.setItem('token',result.data.token);
                             localStorage.setItem('accountNumber', result.data.customer_information.accounts_information.accounts[0].account_number);
                              localStorage.setItem('accountType', result.data.customer_information.accounts_information.accounts[0].account_type);
                             localStorage.setItem('accountBalance', result.data.customer_information.accounts_information.accounts[0].available_balance);
                             localStorage.setItem('currency', result.data.customer_information.accounts_information.accounts[0].currency);
                            localStorage.setItem('accountInfo', JSON.stringify(result.data.customer_information.accounts_information.accounts));
+                             localStorage.setItem('customerInfo', JSON.stringify(result.data.customer_information));
                         }                   
                         
 						else

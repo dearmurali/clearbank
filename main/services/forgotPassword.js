@@ -4,7 +4,7 @@ clearbank.service('ForgotPasswordService',function($http){
 			console.log('mobile_number ',mobile_number);
 			$http({
 					method:"POST",
-					url:"http://10.80.190.161:8080/clearbank/validate/mobile",
+					url:"http://10.80.190.161:9090/clearbank/validate/mobile",
 					data:{
 						"customermobile": mobile_number
 					}
