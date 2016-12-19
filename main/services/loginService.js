@@ -22,6 +22,7 @@ clearbank.service('LoginService',function($http,$cookies){
 //                            console.log('customerId',result.data.customerData[0].csId);
 //                            console.log('customerMail',result.data.customerData[0].email);
 //                           console.log('customerMobile',result.data.customerData[0].custMobile); console.log('accountInfo',JSON.stringify(result.data.customerData[0].accountInfo))
+
                            sessionStorage.setItem('customerName', result.data.customer_information.customer_Name);
                             console.log(result.data.customer_information.customer_Name);
                            sessionStorage.setItem('customerId', result.data.customer_information.customer_Id);
@@ -32,6 +33,8 @@ clearbank.service('LoginService',function($http,$cookies){
                             sessionStorage.setItem('accountBalance', result.data.customer_information.accounts_information.accounts[0].available_balance);
                             sessionStorage.setItem('currency', result.data.customer_information.accounts_information.accounts[0].currency);
                            sessionStorage.setItem('accountInfo', JSON.stringify(result.data.customer_information.accounts_information.accounts));
+                            sessionStorage.setItem('customerInfo', JSON.stringify(result.data.customer_information));
+                             sessionStorage.setItem('token',result.data.token);
                             
                         }                   
                         

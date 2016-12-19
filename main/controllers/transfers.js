@@ -8,6 +8,10 @@ clearbank.controller('transfersController',['$scope','$cookies', function($scope
     $scope.accCurrency=sessionStorage.getItem('currency');
     $scope.accType=sessionStorage.getItem('accountType');
     
+    var customerInfo = JSON.parse(localStorage.getItem('customerInfo'));
+        $scope.favLinks=customerInfo.fav_links;
+        $scope.topPayee=customerInfo.top_payee;
+    
         $scope.defaultData=true;
       
         var index=sessionStorage.getItem('currentIndex');
