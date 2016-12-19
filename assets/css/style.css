@@ -300,7 +300,8 @@ background-color:#34495e;
     background-color: #2079BE;
 }
 
-.md-button.md-primary.md-raised:not([disabled]):hover:focus{
+.md-button.md-primary.md-raised:not([disabled]):hover,
+.md-button.md-primary.md-raised:not([disabled]):focus{
     color: rgba(255,255,255,0.87);
     background-color: #025A9E;
 }
@@ -320,4 +321,11 @@ md-input-container:not(.md-input-invalid).md-input-focused label{
 }
 .navbar{
     padding-left: 0px;
+}
+
+.lang-picker{
+   float:right;
+    clear:right;
+    vertical-align: middle;
+    padding-top: 3%;
 }

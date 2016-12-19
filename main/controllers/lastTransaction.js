@@ -1,16 +1,16 @@
 clearbank.controller('lastTransactionController',['$scope','lastTransactionService', function($scope,lastTransactionService){
     
-        $scope.accName = localStorage.getItem('customerName');
-    $scope.accNumber=localStorage.getItem('accountNumber');
-    $scope.accBalance=localStorage.getItem('accountBalance');
-    $scope.accCurrency=localStorage.getItem('currency');
+        $scope.accName = sessionStorage.getItem('customerName');
+    $scope.accNumber=sessionStorage.getItem('accountNumber');
+    $scope.accBalance=sessionStorage.getItem('accountBalance');
+    $scope.accCurrency=sessionStorage.getItem('currency');
     
         
-        var index=localStorage.getItem('currentIndex');
+        var index=sessionStorage.getItem('currentIndex');
         $scope.accId=localStorage.getItem('customerId');
 	    $scope.showTransactions=false;
   
-        var info=JSON.parse(localStorage.getItem('accountInfo'));
+        var info=JSON.parse(sessionStorage.getItem('accountInfo'));
         $scope.transactionInfo=info[index];                                
     
     

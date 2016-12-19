@@ -26,7 +26,8 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		.state('dashboard',{
 			url:'/dashboard',
 			templateUrl: 'views/dashboard.html',
-			controller:'dashboardController'
+			controller:'dashboardController',
+            
 		})
 		
 		.state('lastTransactions',{

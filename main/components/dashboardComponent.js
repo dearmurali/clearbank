@@ -12,7 +12,7 @@ clearbank.component('dashboard',{
         controller:function dashboardController(){
          self=this;
             
-        this.accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
+        this.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
         console.log("this.accountInfo");
         console.log(this.accountInfo);
         
