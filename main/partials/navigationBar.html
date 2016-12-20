@@ -7,7 +7,7 @@
         <h4 class="topName"><strong>Welcome&nbsp;{{$ctrl.accName}}</strong></h4>
     </div>
     <div class="topName" ng-show="$ctrl.loggedIn">
-        <a>Profile | </a> <a> Change Password | </a> <a ng-click="$ctrl.logout()">Logout</a>
+        <a ui-sref="profile">Profile | </a> <a> Change Password | </a> <a ng-click="$ctrl.logout()">Logout</a>
     </div>
     <div ng-hide="$ctrl.loggedIn" class="lang-picker"><select class="selectpicker" data-width="fit">
     <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
