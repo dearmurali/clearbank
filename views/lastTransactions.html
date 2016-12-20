@@ -28,9 +28,11 @@
   </tbody>
   </table>
   </div>
+    </div>
     
-  <br>
-  <a ng-click="showTransaction()"><h4 class="lastTransaction">Last 10 transactions</h4></a>
+    <div class="mainView">
+  <h4 data-ng-click="showTransaction()" class="lastTransaction">Last 10 transactions</h4>
+        <hr>
   <div ng-show="showTransactions">
   <div class="table-responsive">
   <table class=" table">
