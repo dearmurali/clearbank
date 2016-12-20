@@ -23,13 +23,13 @@ clearbank.component('leftMenu',{
             }
         
             
-        this.accNumber=localStorage.getItem('accountNumber');
-        this.accBalance=localStorage.getItem('accountBalance');    
-        this.accType=localStorage.getItem('accountType');
-        this.accCurrency=localStorage.getItem('currency');    
+        this.accNumber=sessionStorage.getItem('accountNumber');
+        this.accBalance=sessionStorage.getItem('accountBalance');    
+        this.accType=sessionStorage.getItem('accountType');
+        this.accCurrency=sessionStorage.getItem('currency');    
             console.log(this.accNumber);
                 console.log(this.accType);
-        this.defaultData=localStorage.getItem('defaultData');
+        this.defaultData=sessionStorage.getItem('defaultData');
             console.log(this.defaultData);
 
         }

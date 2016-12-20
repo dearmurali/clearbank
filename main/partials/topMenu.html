@@ -1,11 +1,12 @@
 
 <div class="navbar menu ">
     <div class="container">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
         <span class="glyphicon glyphicon-list menuDropdown"></span>
       </button>
-	  <a class="navbar-toggle collapsed customerName"  ui-sref="profile"> Hi,&nbsp;{{accName}}</a>
-      <div class="collapse navbar-collapse" id="myNavbar">
+            </div>
+      <div class="collapse navbar-collapse" id="collapseNavbar">
 <ul class="nav navbar-nav ">
 <li>
 <a class="mainMenu" data-ng-click="delectedMenu('one')" ui-sref="dashboard">Dashboard</a></li>
@@ -22,10 +23,7 @@
 <li>
 <a class="mainMenu" ui-sref="contactus">Contact Us</a></li>
 </ul>
-
-<ul class="nav navbar-nav navbar-right">
-        <li> <a class="customerName" ui-sref="profile"> Hi,&nbsp;{{accName}}</a></li>
-      </ul>
+          
 </div>
 </div>
 </div>

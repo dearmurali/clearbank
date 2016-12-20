@@ -55,7 +55,7 @@ border-color:darkgrey;
 
 .nav-logo{
 float:left;
-    clear:right;
+    
 }
 
 .topName{
@@ -104,7 +104,7 @@ float:right;
 .accountBalance{
     margin-bottom:8%;
 	background-color:#F8F8F8;
-	box-shadow: 0px 0px 12px #222222; 
+	box-shadow: 0px 0px 8px #cccccc; 
 	padding:7%;
 }
 
@@ -113,7 +113,7 @@ float:right;
 .favouriteLinks{
     margin-bottom:8%;
 	background-color:#F8F8F8;
-	box-shadow: 0px 0px 12px #222222; 
+	box-shadow: 0px 0px 8px #cccccc; 
 	padding:7%;
 }
 
@@ -121,7 +121,7 @@ float:right;
 .topPayees{
     margin-bottom:8%;
 	background-color:#F8F8F8;
-	box-shadow: 0px 0px 12px #222222; 
+	box-shadow: 0px 0px 8px #cccccc; 
 	padding:7%;
 }
 
@@ -129,7 +129,7 @@ float:right;
 .mainView{
 	background-color:#F8F8F8;
 	padding:2%;
-    box-shadow: 0px 0px 12px #222222; 
+    box-shadow: 0px 0px 8px #cccccc; 
 	
 }
 
@@ -197,11 +197,7 @@ clear:left;
 	color:red;
 }
  .mainContainer{
-     background-color: #F7F8E0;
-/*
- background-image:url("../images/bg.jpg") ;
- background-size:cover;
-*/
+     background-color: #F3F3E9;
  }
  
 
@@ -303,7 +299,8 @@ background-color:#34495e;
     background-color: #2079BE;
 }
 
-.md-button.md-primary.md-raised:not([disabled]):hover:focus{
+.md-button.md-primary.md-raised:not([disabled]):hover,
+.md-button.md-primary.md-raised:not([disabled]):focus{
     color: rgba(255,255,255,0.87);
     background-color: #025A9E;
 }
@@ -323,4 +320,11 @@ md-input-container:not(.md-input-invalid).md-input-focused label{
 }
 .navbar{
     padding-left: 0px;
+}
+
+.lang-picker{
+   float:right;
+    clear:right;
+    vertical-align: middle;
+    padding-top: 3%;
 }
