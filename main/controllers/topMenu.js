@@ -1,7 +1,7 @@
-clearbank.controller('topMenu',['$scope','$cookies', function($scope,$cookies){
+clearbank.controller('topMenu',['$scope','$cookies', function($scope){
       
     $scope.selectedMenu=function(index){
-    $cookies.put('selectedIndex',index);
+    sessionStorage.putItem('selectedIndex',index);
    
         $(document).ready(function(){
     $("."+index).click(function(){

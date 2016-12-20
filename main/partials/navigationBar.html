@@ -1,29 +1,16 @@
-<!--
-<nav class="navbar">
-
-  <div class="container">
-    <div class="navbar-header">
-	
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#showMenu">
-        <span class="glyphicon glyphicon-list menuDropdown"></span>
-      </button>
-        <a class="navbar-brand" href="/"><img src="assets/images/Logo-blue.png" height="50px"></img></a>
-    </div>  
-	<ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><img src="assets/images/ned.png" title="Dutch" height="30" width="42"></a></li>
-        <li><a href="#"><img src="assets/images/english.jpg" title="English"  height="30" width="42"></a></li>
-		<li><a ui-sref="/"><span class="glyphicon glyphicon-off logout" title="Logout"></span></a></li>
-      </ul>
-	</div>
-  </div>
-</nav>
--->
-
 <div class="container">
-    <div class="nav-logo"><a ui-sref="home"><img src="assets/images/Logo-blue.png" height="70px"></img></a></div>
-<div class="topName"><h4 class="topName"><strong>Welcome&nbsp;{{$ctrl.accName}}</strong></h4>
-<div class="topName" >
-    <a ui-sref="">Profile | </a> <a ui-sref=""> Change Password | </a> <a ui-sref="">Logout</a>    
-</div>
-</div>
+
+    <div class="nav-logo">
+        <a ui-sref="home"><img src="assets/images/Logo-blue.png" height="70px"></a>
+    </div>
+    <div ng-show="$ctrl.loggedIn" class="topName">
+        <h4 class="topName"><strong>Welcome&nbsp;{{$ctrl.accName}}</strong></h4>
+    </div>
+    <div class="topName" ng-show="$ctrl.loggedIn">
+        <a ui-sref="profile">Profile | </a> <a> Change Password | </a> <a ng-click="$ctrl.logout()">Logout</a>
+    </div>
+    <div ng-hide="$ctrl.loggedIn" class="lang-picker"><select class="selectpicker" data-width="fit">
+    <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+  <option  data-content='<span class="flag-icon flag-icon-nl"></span> Español'>Dutch</option>
+</select></div>
 </div>

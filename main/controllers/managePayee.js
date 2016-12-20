@@ -1,11 +1,11 @@
 clearbank.controller('managePayee', ['$scope', function ($scope) {
 
-   $scope.accName = localStorage.getItem('customerName');
-     $scope.accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
-    $scope.accNumber=localStorage.getItem('accountNumber');
-    $scope.accBalance=localStorage.getItem('accountBalance');
-    $scope.accCurrency=localStorage.getItem('currency');
-    $scope.accType=localStorage.getItem('accountType');
+   $scope.accName = sessionStorage.getItem('customerName');
+     $scope.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
+    $scope.accNumber=sessionStorage.getItem('accountNumber');
+    $scope.accBalance=sessionStorage.getItem('accountBalance');
+    $scope.accCurrency=sessionStorage.getItem('currency');
+    $scope.accType=sessionStorage.getItem('accountType');
     
     var customerInfo = JSON.parse(localStorage.getItem('customerInfo'));
         $scope.favLinks=customerInfo.fav_links;
