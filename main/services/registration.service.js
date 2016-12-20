@@ -4,7 +4,7 @@ clearbank.service('RegistrationService',function($http){
             console.log("in service")
 			$http({
 				method:"POST",
-				url:"http://10.80.190.161:8080/clearbank-1.0/register",
+				url:"http://10.80.190.161:9090/clearbank-1.0/register",
 				data:{
 				  "password": customer_password,
 				  "customername": customer_name,

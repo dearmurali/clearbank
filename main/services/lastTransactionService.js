@@ -27,7 +27,7 @@ clearbank.service('lastTransactionService',function($http){
 			console.log(accId);
 			$http({
 				method:"get",
-				url:"http://10.80.190.161:8080/clearbank-1.0/transaction",
+				url:"http://10.80.190.161:9090/clearbank-1.0/transaction",
                 data:{
 					"accountnumber": accNumber,
 					"customerId": accId

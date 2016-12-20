@@ -20,7 +20,7 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 		
 		.state('forgotpassword',{
 			url:'/forgotpassword',
-			templateUrl: 'views/forgotPassword.html',
+			templateUrl: 'views/forgotPassword.html'
 		})
 		
 		.state('dashboard',{
@@ -62,6 +62,11 @@ clearbank.config(function($routeProvider, $locationProvider, $stateProvider, $ur
 			templateUrl: 'views/managePayee.html',
             controller:'managePayee'
 		})
+        
+        .state('profile',{
+         url:'/profile',
+        templateUrl:"views/updateProfile.html"
+    })
 	
 	$locationProvider.html5Mode({
 		enabled: false,
