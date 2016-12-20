@@ -5,7 +5,7 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
     $scope.accBalance=sessionStorage.getItem('accountBalance');
     $scope.accCurrency=sessionStorage.getItem('currency');
     
-        var customerInfo = JSON.parse(localStorage.getItem('customerInfo'));
+        var customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
         $scope.favLinks=customerInfo.fav_links;
         $scope.topPayee=customerInfo.top_payee;
     
@@ -29,6 +29,6 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
         $scope.lastTransactionInfo=result;
         console.log(result);
 		});
-         
+     }
  
 }]);
