@@ -168,8 +168,13 @@ color:#2079BE;
 }
 
 .asideMenu small{
+color:#2EC40B;
+}
+
+.asideMenu li .accType{
 color:black;
 }
+
 .accountInfo2{
     text-align:center;
 }

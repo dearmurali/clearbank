@@ -3,16 +3,16 @@
     <div data-ng-show="defaultData"  class="accountBalance">
       <ul class="asideMenu">
         <li class="asideMenu"><h4>Account Balance</h4></li>
-        <li ><span><b>{{accNumber}}<small>-{{accType}}</small></b></span></li>
-        <li ><h3><b>{{accBalance}}&nbsp;{{accCurrency}}</b></h3></li>
+        <li ><span><b>{{accNumber}}<small class="accType">-{{accType}}</small></b></span></li>
+        <li ><h3><b>{{accBalance}}&nbsp;<small>{{accCurrency}}</small></b></h3></li>
     </ul>
           </div>
     
     <div data-ng-show="!defaultData" class="accountBalance" >
        <ul class="asideMenu">
         <li class="asideMenu"><h4>Account Balance</h4></li>
-        <li ><span><b>{{transactionInfo.account_number}}<small>-{{transactionInfo.account_type}}</small></b></span></li>
-        <li><h3><b>{{transactionInfo.available_balance}}&nbsp;{{transactionInfo.currency}}</b></h3></li>
+        <li ><span><b>{{transactionInfo.account_number}}<small class="accType">-{{transactionInfo.account_type}}</small></b></span></li>
+        <li><h3><b>{{transactionInfo.available_balance}}&nbsp;<small>{{transactionInfo.currency}}</small></b></h3></li>
         </ul>
     </div>
 </div>
@@ -20,14 +20,26 @@
     <div class="favouriteLinks">
         <ul class="asideMenu" >
         <li class="asideMenu"><h4>Favourite links</h4></li>
-        <li data-ng-repeat="fav in  favLinks"><a href={{fav.link_url_1}}><h4>{{fav.label_1}}<img class="arrow" src="assets/images/Arrow.png"></h4></a></li>
+<!--
+        <li class="asideMenu"><a ui-sref="cards"><h4>Cards<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
+        <li class="asideMenu"><a ui-sref="managepayee"><h4>Manage Payee<img class="arrow" src="assets/images/Arrow.png">
+        </img></h4></a></li>
+        <li ><a ui-sref="transfers"><h4>Transfers<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
+        </ul>
+-->
+        <li class="asideMenu" data-ng-repeat="fav in  favLinks"><a href={{fav.link_url_1}}><h4>{{fav.label_1}}<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
         </ul>
  </div>
 
     <div class="topPayees">
         <ul class="asideMenu" >
         <li class="asideMenu"><h4>Top Payee</h4></li>
-            <li data-ng-repeat="payee in topPayee"><a ui-sref="transfers" class="topPayee"><h4>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h4></a></li>
+<!--
+            <li class="asideMenu"><a class="topPayee"><h4>Nitesh Rana<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
+            <li class="asideMenu"><a class="topPayee"><h4>Nitish Bali<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
+            <li ><a class="topPayee"><h4>Gagan Singh<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
+-->
+            <li class="asideMenu" data-ng-repeat="payee in topPayee"><a ui-sref="transfers" class="topPayee"><h4>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></img></h4></a></li>
             </ul>
     </div>
 

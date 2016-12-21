@@ -35,7 +35,7 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
 //		});
          
          $scope.showTransactions=!($scope.showTransactions);
-    lastTransactionService.getTransactionData(index,cust  omerID,function(result){
+    lastTransactionService.getTransactionData(index,customerID,function(result){
         console.log("transaction data");
         console.log(result);
         $scope.lastTransactionInfo=result;
@@ -44,7 +44,7 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
      }
      
      $scope.getColor=function(index){
-         if($scope.lastTransactionInfo[index].type=="credit")
+         if($scope.lastTransactionInfo[index].type=="Cr")
              return "green";
          else 
              return "red";

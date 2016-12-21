@@ -39,9 +39,8 @@
   <thead>
   <tr>
   <th>Date</th>
-  <th>Transaction Number</th>  
-  <th>Reference</th>
-  <th>Type</th>
+  <th>Description</th>      
+  <th>Reference Number</th>  
   <th>Amount</th>
   <th>Balance</th>
   </tr>
@@ -49,10 +48,9 @@
   <tbody>
   <tr data-ng-repeat="data in lastTransactionInfo" >
   <td>{{data.date}}</td>
-  <td>{{data.transactionNumber}}</td>
-  <td>{{data.refrence}}</td>
-  <td data-ng-class="getColor($index)">{{data.type}}</td>
-  <td>{{data.amount}}</td>
+  <td>{{data.description}}</td>      
+  <td>{{data.referenceNumber}}</td>
+  <td data-ng-class="getColor($index)">{{data.type}}.{{data.amount}}</td>
   <td>{{data.finalAmount}}</td>
   </tr>
 <!--
