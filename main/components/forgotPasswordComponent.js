@@ -14,8 +14,9 @@ clearbank.component('forgotPassword', {
 		 if(self.changePassword!=self.confirmPassword || self.changePassword===undefined || self.confirmPassword===undefined)
 		 {
 			self.No_match=true;
+              self.changeSuccessWidget=false;
 		 }
-		 else if(self.changePassword===self.confirmPassword)
+		 else if(self.changePassword===self.confirmPassword && self.checkNumber==true)
 		 {
              ForgotPasswordService.resetPassword(self.mobileNumber,self.changePassword,function(result){
              self.No_match=false;

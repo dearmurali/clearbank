@@ -4,11 +4,9 @@ clearbank.controller('dashboardController', ['$scope', function ($scope) {
         console.log($scope.accName);
         $scope.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
         console.log($scope.accountInfo);
-
         var customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
         $scope.favLinks = customerInfo.fav_links;
         $scope.topPayee = customerInfo.top_payee;
-
         $scope.accNumber = sessionStorage.getItem('accountNumber');
         $scope.accBalance = sessionStorage.getItem('accountBalance');
         $scope.accCurrency = sessionStorage.getItem('currency');

@@ -8,7 +8,7 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
         var customerInfo = JSON.parse(localStorage.getItem('customerInfo'));
         $scope.favLinks=customerInfo.fav_links;
         $scope.topPayee=customerInfo.top_payee;
-    
+        
         
         var index=localStorage.getItem('currentIndex');
         $scope.accId=localStorage.getItem('customerId');
@@ -21,9 +21,11 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
         var currentAccountNumber=$scope.transactionInfo.account_number;
         var accountType=$scope.transactionInfo.account_type;    
     
-        var token=localStorage.getItem('token');    
     
         $scope.showTransactions=false;
+
+        var token=sessionStorage.getItem('token');    
+
      $scope.showTransaction=function(){
 //     lastTransactionService.getTransactionData(currentAccountNumber,accountType,customerID,token,function(result){   
 //        console.log("transaction data");

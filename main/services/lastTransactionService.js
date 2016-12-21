@@ -32,6 +32,16 @@ clearbank.service('lastTransactionService',function($http){
 			$http({
 				method:"get",
 				url:"http://localhost:3000/assets/transactionData.json"
+//            getTransactionData:function(accNumber,accountType,customerId,token, callback){
+//                console.log('token ',token);
+//			$http({
+//	            method:"POST",
+//				url:"http://10.80.190.161:9090/clearbank-1.0/transaction",   
+//                data:{
+//                    "accountnumber": accNumber,
+//					"accounttype":accountType
+//                }
+
 			}).then(
 				//success
 				function(result){
