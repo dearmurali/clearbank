@@ -47,11 +47,11 @@
   </tr>
   </thead>
   <tbody>
-  <tr data-ng-repeat="data in lastTransactionInfo">
+  <tr data-ng-repeat="data in lastTransactionInfo" >
   <td>{{data.date}}</td>
   <td>{{data.transactionNumber}}</td>
   <td>{{data.refrence}}</td>
-  <td>{{data.type}}</td>
+  <td data-ng-class="getColor($index)">{{data.type}}</td>
   <td>{{data.amount}}</td>
   <td>{{data.finalAmount}}</td>
   </tr>
