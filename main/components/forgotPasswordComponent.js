@@ -4,13 +4,19 @@ clearbank.component('forgotPassword', {
     controller: function forgotPasswordController(ForgotPasswordService) {
         var self = this;
         self.forgotPasswordWidget=true;
+       self.checkNumber=true;
 	self.changeSubmit=function()
-	{		
-		 if(self.changePassword!=$scope.confirmPassword)
+	{	if(self.mobileNumber===undefined)
+    {
+     self.checkMobile=false;
+    }
+        
+		 if(self.changePassword!=self.confirmPassword || self.changePassword===undefined || self.confirmPassword===undefined)
 		 {
 			self.No_match=true;
+              self.changeSuccessWidget=false;
 		 }
-		 else if(self.changePassword===self.confirmPassword)
+		 else if(self.changePassword===self.confirmPassword && self.checkNumber==true)
 		 {
              ForgotPasswordService.resetPassword(self.mobileNumber,self.changePassword,function(result){
              self.No_match=false;
@@ -22,15 +28,22 @@ clearbank.component('forgotPassword', {
 	}
     
     self.checkMobile=function(mobileNumber){
-        console.log("oj");
+        console.log(mobileNumber);
          ForgotPasswordService.validateMobileNumber(mobileNumber,function(result){
-        if(result.data.error)
+            
+        if(result.data.success===false)
         {
-            self.forgotPassForm.nums.$valid=false;
-            self.forgotPassForm.nums.$error.pattern=true;
-
-           
+             self.checkNumber=false;
+            
         }
+          
+             if(result.data.success)
+             {
+                 console.log(self.checkNumber);
+              self.checkNumber=true;
+                 console.log(self.checkNumber);
+             }
+             
         });
         }
 

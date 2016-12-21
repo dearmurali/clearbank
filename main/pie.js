@@ -2,7 +2,7 @@
 var pie = new d3pie("pieChart", {
 	"size": {
 		"canvasHeight": 330,
-		"canvasWidth":500,
+		"canvasWidth":550,
 		"pieOuterRadius": "90%"
 	},
 	"data": {
@@ -12,17 +12,17 @@ var pie = new d3pie("pieChart", {
 		},
 		"content": [
 			{
-				"label": "Savings",
+				"label": "Savings(70%)",
 				"value": 70,
 				"color": "#387e6a"
 			},
 			{
-				"label": "Expenditure",
+				"label": "Expenditure(20%)",
 				"value": 20,
 				"color": "#386a7e"
 			},
 			{
-				"label": "Investment",
+				"label": "Investment(10%)",
 				"value": 10,
 				"color": "#7e3838"
 			}
@@ -34,6 +34,7 @@ var pie = new d3pie("pieChart", {
 		},
 		"mainLabel": {
 			"font": "verdana",
+            "fontFace": "bold",
 			"fontSize": 13
 		},
 		"percentage": {

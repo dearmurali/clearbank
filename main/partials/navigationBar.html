@@ -1,5 +1,5 @@
+<div class="container navbar">
 <div class="container">
-
     <div class="nav-logo" ng-show="loggedIn">
         <a ui-sref="home"><img src="assets/images/Logo-blue.png" height="70px"></a>
     </div>
@@ -8,9 +8,12 @@
     </div>
     <div class="topName" ng-show="loggedIn">
         <a ui-sref="profile">Profile</a>&nbsp; | &nbsp;<a ui-sref="forgotpassword">Change Password</a>&nbsp; | &nbsp;<a ng-click="$ctrl.logout()">Logout</a>
+
     </div>
+
     <div ng-hide="loggedIn" class="lang-picker"><select class="selectpicker" data-width="fit">
     <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-  <option  data-content='<span class="flag-icon flag-icon-nl"></span> Español'>Dutch</option>
+  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
 </select></div>
+    </div>
 </div>

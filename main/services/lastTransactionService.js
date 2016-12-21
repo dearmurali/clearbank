@@ -1,15 +1,14 @@
 clearbank.service('lastTransactionService',function($http){
 	return{
             getTransactionData:function(accNumber,accountType,customerId,token, callback){
+                console.log('token ',token);
 			$http({
-				method:"GET",
-				url:"http://10.80.190.161:9090/clearbank-1.0/transaction",
+	            method:"POST",
+				url:"http://10.80.190.161:9090/clearbank-1.0/transaction",   
                 data:{
-					"account_number": accNumber,
-					"account_type":accountType,
-                    "customer_Id": customerId,
-                    "token":token
-				}
+                    "accountnumber": accNumber,
+					"accounttype":accountType
+                }
 			}).then(
 				//success
 				function(result){

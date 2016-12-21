@@ -16,13 +16,13 @@ clearbank.service('LoginService',function($http,$cookies){
 
 						if(result.data.success){
                             sessionStorage.setItem('isLoggedIn',true);
-                            console.log("conos");
-							callback('success');
+//							 console.log(result.data.token)
+                            callback('success');
 //                            console.log('customerName',result.data.customerData[0].customerName);
 //                            console.log('customerId',result.data.customerData[0].csId);
 //                            console.log('customerMail',result.data.customerData[0].email);
 //                           console.log('customerMobile',result.data.customerData[0].custMobile); console.log('accountInfo',JSON.stringify(result.data.customerData[0].accountInfo))
-
+                           
                            sessionStorage.setItem('customerName', result.data.customer_information.customer_Name);
                             console.log(result.data.customer_information.customer_Name);
                            sessionStorage.setItem('customerId', result.data.customer_information.customer_Id);

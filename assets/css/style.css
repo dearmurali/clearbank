@@ -1,348 +1,352 @@
  @CHARSET "ISO-8859-1";
-.forget-form {
-width:600px;
-height:450px;
-margin-left:-30px;
-    vertical-align: baseline;
-}
-@media(max-width: 450px) {
-    .forget-form {
-        width:100%;
-        height:100%;
-        margin-left:0px;
-    }
-     .landing-page{
-        display:none;
-    }
-
-}
-@media(max-width: 720px) {
-    .forget-form {
-        width:100%;
-        height:100%;
-         margin-left:0px;
-    }
-     .landing-page{
-        display:none;
-    }
-    
-    
-}
-@media(max-width: 991px) {
-    .forget-form {
-        width:90%;
-        height:100%;
-         margin-left:20px;
-    }
-}
-
-.profile:hover{
-    cursor:pointer;
-}
-    
-.topPayee:hover{
-cursor:pointer;
-}
-
-.customerName{
-	color:white;
-	
-}
-
-hr{
-border-color:darkgrey;
-}
-
-.nav-logo{
-float:left;
-    
-}
-
-.topName{
-float:right;
-    clear:right;
-    cursor: pointer;
-}
-
-.customerName:hover{
-	color:black;
-	cursor:pointer;
-}
-
-.lastTransaction:hover{
-cursor:pointer;
-}
-
-.payeesMenu:hover{
-cursor:pointer;
-}
-
-.menu{
-	background-color:dodgerblue;
-}
-
-
-.mainMenu{
-	
-	color:white;
-}
-
-
-.asideMenu{
-	list-style:none;
-    padding:0px;
-    
-}
-.asideMenu li.asideMenu{
-  border-bottom:1px solid darkgrey;
-}
-
-.arrow{
-float:right;
-}
-
-
-.accountBalance{
-    margin-bottom:8%;
-	background-color:#F8F8F8;
-	box-shadow: 0px 0px 8px #cccccc; 
-	padding:7%;
-}
-
-
-
-.favouriteLinks{
-    margin-bottom:8%;
-	background-color:#F8F8F8;
-	box-shadow: 0px 0px 8px #cccccc; 
-	padding:7%;
-}
-
-
-.topPayees{
-    margin-bottom:8%;
-	background-color:#F8F8F8;
-	box-shadow: 0px 0px 8px #cccccc; 
-	padding:7%;
-}
-
-
-.mainView{
-	background-color:#F8F8F8;
-	padding:2%;
-    box-shadow: 0px 0px 8px #cccccc; 
-	
-}
-
-
-.tableheading{
-
-	font-weight:bold;
-    color:black;
-}
-
-tbody{
-color:#2079BE;
-font-weight: bold;
-}
-
-.managePayee{
-	text-align:center;
-}
-
-.asideMenu h3{
-color:#2EC40B;
-}
-
-.asideMenu span{
-color:#2079BE;
-}
-
-.asideMenu small{
-color:black;
-}
-.accountInfo2{
-    text-align:center;
-}
-
-.lastTransactions{
-	display:none;
-	border:1px solid grey;
-}
-
-.modal{
-	color:#3498db;
-}
-legend{
-text-align:center;
-padding:10px;
-color:black;
-width:106%;
-}
-.reset_pass{
-margin-right:-15px;
-clear:left;	
-}
-.valText{
-	color:red;
-}
- 
- .loginFrm{
- /*margin-left:10%;*/
- margin:5% auto;
- border-radius:10px;
- opacity:.8;
- border:2px solid #337ab7;
- box-shadow: 0px 0px 25px #111111; 
- }
-.warning{
-	color:red;
-}
- .mainContainer{
-     background-color: #F3F3E9;
+ .forget-form {
+     width: 600px;
+     height: 450px;
+     margin-left: -30px;
+     vertical-align: baseline;
  }
  
-
+ @media(max-width: 450px) {
+     .forget-form {
+         width: 100%;
+         height: 100%;
+         margin-left: 0px;
+     }
+     .landing-page {
+         display: none;
+     }
+ }
+ 
+ @media(max-width: 720px) {
+     .forget-form {
+         width: 100%;
+         height: 100%;
+         margin-left: 0px;
+     }
+     .landing-page {
+         display: none;
+     }
+ }
+ 
+ @media(max-width: 991px) {
+     .forget-form {
+         width: 90%;
+         height: 100%;
+         margin-left: 20px;
+     }
+ }
+ 
+ .profile:hover {
+     cursor: pointer;
+ }
+ 
+ .topPayee:hover {
+     cursor: pointer;
+ }
+ 
+ .customerName {
+     color: white;
+ }
+ 
+ hr {
+     border-color: darkgrey;
+ }
+ 
+ .nav-logo {
+     float: left;
+ }
+ 
+ .topName {
+     float: right;
+     clear: right;
+     cursor: pointer;
+ }
+ 
+ .customerName:hover {
+     color: black;
+     cursor: pointer;
+ }
+ 
+ .lastTransaction:hover {
+     cursor: pointer;
+ }
+ 
+ .payeesMenu:hover {
+     cursor: pointer;
+ }
+ 
+ .menu {
+     background-color: dodgerblue;
+ }
+ 
+ .mainMenu {
+     color: white;
+ }
+ 
+ .asideMenu {
+     list-style: none;
+     padding: 0px;
+ }
+ 
+ .asideMenu li.asideMenu {
+     border-bottom: 1px solid darkgrey;
+ }
+ 
+ .arrow {
+     float: right;
+ }
+ 
+ .accountBalance {
+  
+     padding: 7%;
+ }
+ 
+ .favouriteLinks {
+     padding: 7%;
+ }
+ 
+ .topPayees {
+     margin-bottom: 8%;
+     background-color: #F8F8F8;
+     box-shadow: 0px 0px 8px #cccccc;
+     padding: 7%;
+ }
+ 
+ .mainView {
+     background-color: #FfFfFf;
+     padding: 2%;
+     box-shadow: 0px 0px 8px #cccccc;
+ }
+ 
+ .tableheading {
+     font-weight: bold;
+     color: black;
+ }
+ 
+ tbody {
+     color: #2079BE;
+     font-weight: bold;
+ }
+ 
+ .managePayee {
+     text-align: center;
+ }
+ 
+ .asideMenu h3 {
+     color: #2EC40B;
+ }
+ 
+ .asideMenu span {
+     color: #2079BE;
+ }
+ 
+ .asideMenu small {
+     color: black;
+ }
+ 
+ .accountInfo2 {
+     text-align: center;
+ }
+ 
+ .lastTransactions {
+     display: none;
+     border: 1px solid grey;
+ }
+ 
  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+     color: #3498db;
+ }
+ 
+ legend {
+     text-align: center;
+     padding: 10px;
+     color: black;
+ }
+ 
+ .reset_pass {
+     margin-right: -15px;
+     clear: left;
+ }
+ 
+ .valText {
+     color: red;
+ }
+ 
+ .loginFrm {
+     /*margin-left:10%;*/
+     margin: 5% auto;
+     border-radius: 10px;
+     opacity: .8;
+     border: 2px solid #337ab7;
+     box-shadow: 0px 0px 25px #111111;
+ }
+ 
+ .warning {
+     color: red;
+ }
+ 
+ .mainContainer {
+     background-color: #F3F3E9;
+     background-size: cover; 
+ }
+ 
+ .modal {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     /* Stay in place */
+     z-index: 1;
+     /* Sit on top */
+     padding-top: 150px;
+     /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%;
+     /* Full width */
+     height: 100%;
+     /* Full height */
+     overflow: auto;
+     /* Enable scroll if needed */
+     background-color: rgb(0, 0, 0);
+     /* Fallback color */
+     background-color: rgba(0, 0, 0, 0.4);
+     /* Black w/ opacity */
+ }
+ 
+ .modal-content {
+     background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 50%;
+ }
+ 
+ .close {
+     color: #aaaaaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+ }
+ 
+ .reg-form {
+     margin-top: 5%;
+     box-shadow: 0px 0px 25px #111111;
+     opacity: 0.94;
+ }
+ 
+ .bank-web {
+     min-height: 100vh;
+     background-color: #34495e;
+ }
+ 
+ .errorMsg {
+     color: red;
+ }
+ 
+ .logo {
+     max-width: 30vh;
+     margin-top: 30vh;
+ }
+ 
+ .button1 {
+     margin-right: 2%;
+ }
+ 
+ .button2 {
+     margin-left: 2%;
+ }
+ 
+ .logout {
+     color: white;
+     font-size: 2em;
+ }
+ 
+ .jumbotron {
+     background-color: transparent;
+     text-align: center;
+     margin: 5% auto;
+ }
+ 
+ .login-hint {
+     float: right;
+ }
+ 
+ .login-panel {
+     min-height: 20vh;
+     vertical-align: middle;
+ }
+ 
+ .md-button.md-hue-1.md-primary {
+     color: #2079BE;
+ }
+ 
+ .md-button.md-primary.md-raised {
+     color: rgba(255, 255, 255, 0.87);
+     background-color: #2079BE;
+ }
+ 
+ .md-button.md-primary.md-raised:not([disabled]):hover,
+ .md-button.md-primary.md-raised:not([disabled]):focus {
+     color: rgba(255, 255, 255, 0.87);
+     background-color: #025A9E;
+ }
+ 
+ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+     border-color: rgba(0, 0, 0, 0.12);
+ }
+ 
+ md-input-container:not(.md-input-invalid).md-input-focused label {
+     color: #2079BE
+ }
+ 
+ .landing-page {
+     background-color: #2079BE;
+     min-height: 80vh;
+     vertical-align: middle;
+ }
+ 
+ .navbar {
+     padding-left: 0px;
+ }
+ 
+ .lang-picker {
+     float: right;
+     clear: right;
+     vertical-align: middle;
+     padding-top: 3%;
+ }
+ 
+ .home-page {
+     height: 80vh;
+     padding: 0px;
+     box-shadow: 0 0px 10px #777;
+ }
+ 
+ .form-tabs {
+     min-height: 80vh;
+ }
+
+ 
+.login-form{
+    margin-top: 10vh;
 }
-
-
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-}
-
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
+.nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
-    cursor: pointer;
+    background-color: #1168ac;
+    color: #ffffff;
+}
+.panel-default > .panel-heading{
+    background-color: #ffffff;
 }
 
-
-.reg-form{
-margin-top:5%;
-box-shadow: 0px 0px 25px #111111;
-opacity:0.94;
-}
-
-.bank-web{
-min-height:100vh;
-background-color:#34495e;
-}
-
-.errorMsg{
-	color:red;
-}
-
-
-.logo{
-    max-width: 20vh;
-    margin-top: 35vh;
-}
-
-.button1{
-	margin-right:2%; 
-}
-
-.button2{
-	margin-left:2%;
-}
-
-.logout{
-    color:white;
-    font-size:2em;
-}
-
-.jumbotron{
-	background-color:transparent;  
-	text-align:center;
-	margin: 5% auto;
-}
-
-.login-hint{
-    float:right;
-}
-
-.login-panel{
-    min-height: 20vh;
-    vertical-align: middle;
-}
-
-.md-button.md-hue-1.md-primary{
-        color: #2079BE;
-}
-
-
-.md-button.md-primary.md-raised{
-    color: rgba(255,255,255,0.87);
-    background-color: #2079BE;
-}
-
-.md-button.md-primary.md-raised:not([disabled]):hover,
-.md-button.md-primary.md-raised:not([disabled]):focus{
-    color: rgba(255,255,255,0.87);
-    background-color: #025A9E;
-}
-
-md-input-container:not(.md-input-invalid).md-input-focused .md-input{
-    border-color: rgba(0,0,0,0.12);
-}
-
-md-input-container:not(.md-input-invalid).md-input-focused label{
-    color:#2079BE
-}
-
-.landing-page{
-    background-color:#2079BE;
-    min-height: 80vh;
-    vertical-align: middle;
-}
-.navbar{
-    padding-left: 0px;
-}
-
-.lang-picker{
-   float:right;
-    clear:right;
-    vertical-align: middle;
-    padding-top: 3%;
-}
-
-.home-page{
-    height: 80vh;
-    padding:0px;
-}
-
-.form-tabs{
-    min-height: 80vh;
-}
-.content{
-   padding: 0px;
-}
-.tab-head{
-    
-width:50%;
+.container > .navbar-collapse{
+        margin-right: -15px;
+    margin-left: -15px;
 }

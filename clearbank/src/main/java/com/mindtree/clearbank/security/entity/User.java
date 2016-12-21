@@ -2,6 +2,7 @@ package com.mindtree.clearbank.security.entity;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,21 +22,18 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.mindtree.clearbank.account.entity.Account;
 
 @Entity
 @Table(name = "USER")
 public class User {
 
 	@Id
-	@Column(name = "ID")
+	@Column(name = "CUSTOMER_ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column(name = "CUSTOMER_ID", length = 100, unique = true)
-	@NotNull
-	@Size(min = 4, max = 100)
-	private String customerid;
-
+	
 	@Column(name = "CUSTOMER_PASSWORD", length = 100)
 	@NotNull
 	@Size(min = 4, max = 100)
@@ -69,9 +68,12 @@ public class User {
 	@JsonIgnore
 	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
 	@JoinTable(name = "USER_AUTHORITY", joinColumns = {
-			@JoinColumn(name = "USER_ID", referencedColumnName = "ID") }, inverseJoinColumns = {
+			@JoinColumn(name = "USER_ID", referencedColumnName = "CUSTOMER_ID") }, inverseJoinColumns = {
 					@JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID") })
 	private List<Authority> authorities;
+	
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="user")
+	private List<Account> accountList;
 
 	public Long getId() {
 		return id;
@@ -81,13 +83,7 @@ public class User {
 		this.id = id;
 	}
 
-	public String getCustomerid() {
-		return customerid;
-	}
-
-	public void setCustomerid(String customerid) {
-		this.customerid = customerid;
-	}
+	
 
 	public String getPassword() {
 		return password;
@@ -152,5 +148,15 @@ public class User {
 	public void setCustomeraddress(String customeraddress) {
 		this.customeraddress = customeraddress;
 	}
+	
+	
+	public List<Account> getAccountList() {
+		return accountList;
+	}
 
+	public void setAccountList(List<Account> accountList) {
+		this.accountList = accountList;
+	}
+
+	
 }
