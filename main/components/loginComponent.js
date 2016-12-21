@@ -14,8 +14,9 @@ clearbank.component('login', {
                      sessionStorage.setItem('isLoggedIn',true);
                     console.log('session',sessionStorage.getItem('isLoggedIn'));
                 
-                    //window.location.href="/#dashboard";
-                    $state.transitionTo('dashboard', {});
+                     console.log(window.location.href);
+
+                    window.location.href=window.location.href+'dashboard';
                 } else {
                     //	alert("Invalid ID and/or password.");
                     this.validCredentials = false;

@@ -1,0 +1,83 @@
+<top-menu></top-menu>
+<div class="panel-heading"><small><span  class="warning login-hint">* Marked fields are mandatory</span></small></div>
+<div class="col-md-3 col-sm-2">
+</div>
+<div class="col-xs-12 col-sm-10 col-md-6">
+    <div class="well edit-profile">
+        <form name="myform">
+            <md-input-container class="md-block">
+                <label>Customer Id</label>
+                <input type="text" class="csId" name="csid" data-ng-model="$ctrl.customerId" ng-disabled="true">
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+                <label>Name</label>
+                <input name="cname" class="cName" data-ng-model="$ctrl.customerName" ng-disabled="true">
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+                <label>Contact Number<span class="warning">*</span></label>
+                <input type="text" class="contact" name="phone" data-ng-model="$ctrl.customerContact" data-ng-pattern="/^[0-9]{10}$/" required md-maxlength="10">
+                <div ng-messages="myform.phone.$error" class="contactError">
+                    <div ng-message="pattern" class="errorMsg"><small>please enter a valid 10 digit contact number</small></div>
+                    <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label for="cust-email">Email address to contact you<span class="warning">*</span></label>
+                <input class="cMail" name="mail" data-ng-model="$ctrl.customerEmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" md-minlength="10" md-maxlength="30" required>
+                <div ng-messages="myform.mail.$error" class="mailError">
+                    <div ng-message="pattern" class="errorMsg"><small>please enter a valid email address!</small></div>
+                    <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Address<span class="warning">*</span></label>
+                <input name="address" class="cAddress" data-ng-model="$ctrl.address" md-minlength="4" md-maxlength="30" required>
+                <div ng-messages="myform.address.$error" class= "addressError" role="alert" multiple="">
+                    <div ng-message="required" class="errorMsg">You must supply an address</div>
+                    <div ng-message="maxlength" class="errorMsg">
+                       address should be atleast 4 or maximum 30 characters long
+                    </div>
+                </div>
+            </md-input-container>
+
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm="">
+                    <label>City</label>
+                    <input data-ng-model="$ctrl.city" data-ng-pattern="/^[a-z A-Z]+$/">
+                </md-input-container>
+
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>State</label>
+                        <input data-ng-model="$ctrl.state" data-ng-pattern="/^[a-z A-Z]+$/">
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Postal Code</label>
+                        <input name="postalCode" ng-model="$ctrl.postalCode" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+
+                        <div ng-messages="myform.postalCode.$error" role="alert" multiple="">
+                            <div ng-message="required" class="errorMsg">You must supply a postal code.</div>
+                            <div ng-message="pattern" class="errorMsg">That doesn't look like a valid postal code.
+                            </div>
+                            <div ng-message="md-maxlength" class="errorMsg">
+                                Don't use the long version silly...we don't need to be that specific...
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+            </div>
+
+            <md-button class="md-primary md-hue-1" type="reset"><strong>Clear All</strong></md-button>&nbsp;
+            <md-button class="md-raised md-primary" data-ng-click="$ctrl.update()"><strong>Update</strong></md-button>
+
+        </form>
+    </div>
+</div>

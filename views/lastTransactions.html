@@ -1,142 +1,68 @@
-
-<top-menu></top-menu>
+<top-menu>
+</top-menu>
 <div class=" container">
-<div class="row">
-<div class="col-md-3 col-sm-3">
-<left-menu></left-menu>
+    <div class="row">
+        <div class="col-md-3 col-sm-3">
+            <left-menu></left-menu>
+        </div>
+        <div class="col-md-9 col-sm-9">
+            <div class="mainView">
+                <h4>{{transactionInfo.account_type}}&nbsp;Account Details</h4>
+                <hr>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="tableheading">
+                                <td>Account Number</td>
+                                <td>Account Type</td>
+                                <td>Available Balance</td>
+                                <td>Opening Date</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{transactionInfo.account_number}}</td>
+                                <td>{{transactionInfo.account_type}}</td>
+                                <td>{{transactionInfo.available_balance}}&nbsp;{{transactionInfo.currency}}</td>
+                                <td>{{transactionInfo.opening_date}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <br>
+                <a ng-click="showTransaction()">
+                    <h4 class="lastTransaction">Last 10 transactions</h4>
+                </a>
+                <div ng-show="showTransactions">
+                    <div class="table-responsive">
+                        <table class=" table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction Number</th>
+                                    <th>Reference</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="data in lastTransactionInfo">
+                                    <td>{{data.date}}</td>
+                                    <td>{{data.transactionNumber}}</td>
+                                    <td>{{data.refrence}}</td>
+                                    <td>{{data.type}}</td>
+                                    <td>{{data.amount}}</td>
+                                    <td>{{data.finalAmount}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="col-md-9 col-sm-9">
-<div class="mainView">
-  <h4>{{transactionInfo.account_type}}&nbsp;Account Details</h4>
-    <hr>
-      
-    <div class="table-responsive">
-  <table class="table">
-  <thead>
-  <tr class="tableheading"><td>Account Number</td>
-  <td>Account Type</td>
-  <td>Available Balance</td>
-  <td>Opening Date</td>
-  </tr>  
-  </thead>
-  <tbody>
-  <tr><td>{{transactionInfo.account_number}}</td>
-  <td>{{transactionInfo.account_type}}</td>
-  <td>{{transactionInfo.available_balance}}&nbsp;{{transactionInfo.currency}}</td>
-  <td>{{transactionInfo.opening_date}}</td>
-  </tr>
-  </tbody>
-  </table>
-  </div>
-    
-  <br>
-  <a ng-click="showTransaction()"><h4 class="lastTransaction">Last 10 transactions</h4></a>
-  <div ng-show="showTransactions">
-  <div class="table-responsive">
-  <table class=" table">
-  <thead>
-  <tr>
-  <th>Date</th>
-  <th>Transaction Number</th>  
-  <th>Reference</th>
-  <th>Type</th>
-  <th>Amount</th>
-  <th>Balance</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr data-ng-repeat="data in lastTransactionInfo">
-  <td>{{data.date}}</td>
-  <td>{{data.transactionNumber}}</td>
-  <td>{{data.refrence}}</td>
-  <td>{{data.type}}</td>
-  <td>{{data.amount}}</td>
-  <td>{{data.finalAmount}}</td>
-  </tr>
-<!--
-  <tr>
-  <td>15/11/2016</td>
-  <td>to 33307911150</td>
-  <td>50</td>
-  <td></td>
-  <td>10000</td>
-  </tr>
-  <tr>
-  <td>18/11/2016</td>
-  <td>from 33307911550</td>
-  <td></td>
-  <td>500</td>
-  <td>10500</td>
-  </tr>
-  <tr>
-  <td>19/11/2016</td>
-  <td>from 33307911550</td>
-  <td></td>
-  <td>500</td>
-  <td>11000</td>
-  </tr>
-  <tr>
-  <td>19/11/2016</td>
-  <td>to 33307911550</td>
-  <td>500</td>
-  <td></td>
-  <td>10500</td>
-  </tr>
-  <tr>
-  <td>21/11/2016</td>
-  <td>Paytm refund</td>
-  <td></td>
-  <td>200</td>
-  <td>10700</td>
-  </tr>
-  <tr>
-  <td>23/11/2016</td>
-  <td>to 34307933550</td>
-  <td>4000</td>
-  <td></td>
-  <td>6700</td>
-  </tr>
-  <tr>
-  <td>24/11/2016</td>
-  <td>from 33391155250</td>
-  <td></td>
-  <td>300</td>
-  <td>7000</td>
-  </tr>
-  <tr>
-  <td>25/11/2016</td>
-  <td>to amazon.in(paisapay)</td>
-  <td>6500</td>
-  <td></td>
-  <td>500</td>
-  </tr>
-  <tr>
-  <td>25/11/2016</td>
-  <td>from 3330734560</td>
-  <td></td>
-  <td>15000</td>
-  <td>15500</td>
-  </tr>
--->
-  </tbody>
-  </table>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

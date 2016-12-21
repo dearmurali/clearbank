@@ -56,7 +56,7 @@ clearbank.component('userRegistration', {
                 RegistrationService.RegisterCustomer(self.customerName, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
                     console.log(response);
                     alert(response);
-                   // window.location.href = "/";
+//                    window.location.href = "/";
                 })
 
             } else if (self.customerPassword != self.confirmedPassword) {

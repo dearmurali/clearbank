@@ -3,7 +3,7 @@
 width:600px;
 height:450px;
 margin-left:-30px;
-box-shadow: 0px 0px 55px #111111;
+    vertical-align: baseline;
 }
 @media(max-width: 450px) {
     .forget-form {
@@ -61,6 +61,7 @@ float:left;
 .topName{
 float:right;
     clear:right;
+    cursor: pointer;
 }
 
 .customerName:hover{
@@ -258,7 +259,7 @@ background-color:#34495e;
 
 
 .logo{
-    max-width: 40vh;
+    max-width: 20vh;
     margin-top: 35vh;
 }
 
@@ -316,7 +317,7 @@ md-input-container:not(.md-input-invalid).md-input-focused label{
 
 .landing-page{
     background-color:#2079BE;
-    min-height: 100vh;
+    min-height: 80vh;
     vertical-align: middle;
 }
 .navbar{
@@ -328,4 +329,20 @@ md-input-container:not(.md-input-invalid).md-input-focused label{
     clear:right;
     vertical-align: middle;
     padding-top: 3%;
+}
+
+.home-page{
+    height: 80vh;
+    padding:0px;
+}
+
+.form-tabs{
+    min-height: 80vh;
+}
+.content{
+   padding: 0px;
+}
+.tab-head{
+    
+width:50%;
 }

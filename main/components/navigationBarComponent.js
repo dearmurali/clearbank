@@ -2,30 +2,28 @@ clearbank.component("navigationBar", {
     templateUrl: "main/partials/navigationBar.html",
     controller: function navigationBarController($state, $scope) {
         var self = this;
-        self.loggedIn = false;
-        console.log("be4 login", self.loggedIn);
-        //        $scope.$apply(function () {
-        self.accName = sessionStorage.getItem('customerName');
-        self.loggedIn = sessionStorage.getItem('isLoggedIn');
-//       $state.reload();
-        //        });
+        $scope.loggedIn = false;
+        console.log("be4 login", $scope.loggedIn);
+
+        var intervalId = setInterval(function () {
+            console.log('First name being reset');
+            $scope.$apply(function () {
+                $scope.loggedIn = sessionStorage.getItem('isLoggedIn');
+                self.accName = sessionStorage.getItem('customerName');
+                if ($scope.loggedIn) {
+                    console.log("esdfasdf");
+                    clearInterval(intervalId);
+                }
+            })
+        }, 100);
+        console.log(intervalId);
+
+
         console.log(self.accName);
-      
+
         self.logout = function () {
-                //            sessionStorage.setItem('isLoggedIn', false);
-                //           this.loggedIn = sessionStorage.getItem('isLoggedIn');
-                //            self.$apply(function (){
-                //                sessionStorage.setItem('isLoggedIn', false);
-                //            });
-                sessionStorage.clear();
-                $state.go('home', {});
-            }
-            //        self.$apply(function (){
-
-        console.log('this.loggedIn', self.loggedIn);
-
-        console.log('session after login', sessionStorage.getItem('isLoggedIn'));
-        //        });
-
+            sessionStorage.clear();
+            window.location.href = '/';
+        }
     }
 });
