@@ -13,7 +13,7 @@ jwt:
       
 spring:
   datasource:
-    url : jdbc:mysql://localhost:3306/clearbank?useSSL=false
+    url : jdbc:mysql://localhost:3306/bank?useSSL=false
     username : clearbankuser
     password : clearbankuser12345
   jpa:
