@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.mindtree.clearbank.security.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findByCustomerid(String customerid);
+    User findById(long id);
     User findByCustomermobile(Long customermobile);
+     
 }

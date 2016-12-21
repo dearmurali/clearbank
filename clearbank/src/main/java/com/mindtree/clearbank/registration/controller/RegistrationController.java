@@ -19,18 +19,28 @@ public class RegistrationController {
 
 	@RequestMapping(value = "register", method = RequestMethod.POST)
 	public GenericResponse register(@RequestBody User user) {
-		registrationService.createUser(user);
-		if (user.getId() != 0) {
-			return new GenericResponse(Boolean.TRUE);
-		}
-		return null;
+
+		User customer = registrationService.createUser(user);
+		long customerId = customer.getId();
+
+		return new GenericResponse(Boolean.TRUE, String.valueOf(customerId));
+
+	}
+
+	@RequestMapping(value = "modifyUser", method = RequestMethod.PUT)
+	public GenericResponse modify(@RequestBody User user) {
+
+		User customer = registrationService.updateUser(user);
+
+		return new GenericResponse(Boolean.TRUE, customer);
+
 	}
 
 	// validate mobile
 	@RequestMapping(value = "validate/mobile", method = RequestMethod.POST)
 	public GenericResponse validateMobile(@RequestBody User user) {
 		user = registrationService.findByMobile(user.getCustomermobile());
-		if (null != user && null != user.getCustomerid()) {
+		if (null != user && null != user.getId()) {
 			return new GenericResponse(Boolean.TRUE);
 		} else {
 			return new GenericFailResponse("Mobile number does not exist");
@@ -43,11 +53,12 @@ public class RegistrationController {
 	public GenericResponse updatePassword(@RequestBody User user) {
 		String password = user.getPassword();
 		user = registrationService.findByMobile(user.getCustomermobile());
-		if (null != user && null != user.getCustomerid()) {
-			return new GenericResponse(registrationService.updatePassword(user, password));
+		if (null != user && null != user.getId()) {
+			return new GenericResponse(registrationService.updatePassword(user,
+					password));
 		} else {
 			return new GenericFailResponse("Unable to update password");
 		}
 	}
-	
+
 }

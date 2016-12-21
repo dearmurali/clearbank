@@ -12,7 +12,6 @@ public class JwtUser implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	
 	private final Long id;
-    private final String customerid;
     private final String customername;
     private final String password;
     private final String customeremail;
@@ -22,7 +21,6 @@ public class JwtUser implements UserDetails {
 
     public JwtUser(
           Long id,
-          String customerid,
           String customername,
           String customeremail,
           Long customermobile,
@@ -31,7 +29,6 @@ public class JwtUser implements UserDetails {
           Collection<? extends GrantedAuthority> authorities
     ) {
         this.id = id;
-        this.customerid = customerid;
         this.customername = customername;
         this.customeremail = customeremail;
         this.customermobile = customermobile;
@@ -47,7 +44,7 @@ public class JwtUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return customerid;
+        return String.valueOf(id);
     }
 
     @JsonIgnore

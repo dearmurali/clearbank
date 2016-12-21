@@ -67,6 +67,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/register/**").permitAll()
 				.antMatchers("/validate/**").permitAll()				
 				.antMatchers("/resetpassword/**").permitAll()
+		//		.antMatchers("/transcation/**").permitAll()
+		//		.antMatchers("/modifyUser/**").permitAll()
+		//	    .antMatchers("/addPayee/**").permitAll()
 				.anyRequest().authenticated();
 
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(), 

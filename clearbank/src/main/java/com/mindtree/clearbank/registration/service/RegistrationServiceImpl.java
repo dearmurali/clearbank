@@ -49,5 +49,25 @@ public class RegistrationServiceImpl implements RegistrationService{
 		userRepository.save(user);
 		return Boolean.TRUE;
 	}
+
+	@Override
+	public User findByCustomerId(long customerId) {
+		
+		return userRepository.findById(customerId);
+	}
+
+	@Override
+	public User updateUser(User user) {
+		// TODO Auto-generated method stub
+		
+		User existingUser=userRepository.findById(user.getId());
+	    existingUser.setCustomermobile(user.getCustomermobile());
+		existingUser.setCustomeremail(user.getCustomeremail());
+		existingUser.setCustomeraddress(user.getCustomeraddress());
+		userRepository.save(existingUser);
+		
+		
+		return existingUser;
+	}
 	
 }
