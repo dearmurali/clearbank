@@ -10,8 +10,8 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
         $scope.topPayee=customerInfo.top_payee;
         
         
-        var index=localStorage.getItem('currentIndex');
-        $scope.accId=localStorage.getItem('customerId');
+        var index=sessionStorage.getItem('currentIndex');
+        $scope.accId=sessionStorage.getItem('customerId');
 	    $scope.showTransactions=false;
   
         var info=JSON.parse(localStorage.getItem('accountInfo'));
@@ -35,7 +35,7 @@ clearbank.controller('lastTransactionController',['$scope','lastTransactionServi
 //		});
          
          $scope.showTransactions=!($scope.showTransactions);
-    lastTransactionService.getTransactionData(index,customerID,function(result){
+    lastTransactionService.getTransactionData(index,cust  omerID,function(result){
         console.log("transaction data");
         console.log(result);
         $scope.lastTransactionInfo=result;
