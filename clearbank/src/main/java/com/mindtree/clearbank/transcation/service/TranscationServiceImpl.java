@@ -347,7 +347,7 @@ public class TranscationServiceImpl implements TranscationService {
 		List<Transactions> transactions = new ArrayList<Transactions>();
 		TransactionData transactionData = new TransactionData();
 		transactionData.setCsId(customerId);
-		if (accountNumber.equals("111111111111") &&  accountType.equals("saving")) {
+		if (accountNumber.equals("111111111111") &&  accountType.equalsIgnoreCase("SAVING")) {
 			AccountInfo firstaccount = new AccountInfo();
 			firstaccount.setAccountNumber("111111111111");
 			Transactions transaction = new Transactions();
@@ -389,7 +389,7 @@ public class TranscationServiceImpl implements TranscationService {
 			firstaccount.setTransactions(transactions);
 			accountInfo.add(firstaccount);
 		}
-		else if (accountNumber.equals("222222222222") &&  accountType.equals("current")){
+		else if (accountNumber.equals("222222222222") &&  accountType.equalsIgnoreCase("CURRENT")){
 			AccountInfo secondaccount = new AccountInfo();
 			secondaccount.setAccountNumber("222222222222");
 			Transactions transactions21 = new Transactions();
@@ -433,7 +433,7 @@ public class TranscationServiceImpl implements TranscationService {
 			accountInfo.add(secondaccount);
 			}
 			
-			if (accountNumber.equals("333333333333") &&  accountType.equals("FD")){
+			if (accountNumber.equals("333333333333") &&  accountType.equalsIgnoreCase("FD")){
 				AccountInfo thirdaccount = new AccountInfo();
 				thirdaccount.setAccountNumber("333333333333");
 				Transactions transactions21 = new Transactions();
