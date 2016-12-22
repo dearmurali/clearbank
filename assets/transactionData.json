@@ -1,35 +1,35 @@
 {
 	"transactionData":[
 		{
-			"csId": "1234567890",
+			"csId": "1000000008",
 			"accountInfo":[{
 			                
 							"accountNumber":"307915124",
 							"transactions":[{"date":"12-12-2008",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1455003",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"20000"
                                            },
                                            {"date":"13-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"25000"
                                            },
                                             {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"interest paid",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"interest paid",
+                                             "type":"Cr",
                                              "amount":"300",
                                              "finalAmount":"25300"
                                            },
                                            {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"transfer to",
+                                             "type":"Dr",
                                              "amount":"8000",
                                              "finalAmount":"17300"
                                            }
@@ -37,25 +37,25 @@
 						    },
 						  {
 			                
-							"accountNumber":"307977254",
+							"accountNumber":"1000000008",
 							"transactions":[{"date":"15-01-2010",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1455003",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"50000"
                                            },
                                            {"date":"13-02-2011",
-                                             "transactionNumber":"txn1125044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1125044",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"55000"
                                            },
                                            {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"transfer to",
+                                             "type":"Dr",
                                              "amount":"5000",
                                              "finalAmount":"50000"
                                            }
@@ -65,207 +65,77 @@
 			                
 							"accountNumber":"333079154",
 							"transactions":[{"date":"15-01-2010",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1455003",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"50000"
                                            },
                                            {"date":"13-02-2011",
-                                             "transactionNumber":"txn1125044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1125044",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"55000"
                                            },
-                                           {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
-                                           }
-                                           ]	
-						    }
-                            ]
-        },
-        {
-			"csId": "1234567891",
-			"accountInfo":[{
-			                
-							"accountNumber":"33307915124",
-							"transactions":[{"date":"12-11-2008",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"20000"
+                                           {"date":"19-01-2012",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"transfer to",
+                                             "type":"Dr",
+                                             "amount":"500",
+                                             "finalAmount":"54500"
                                            },
-                                           {"date":"13-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"25000"
+                                            {"date":"21-01-2012",
+                                             "referenceNumber":"txn1455003",
+                                             "description":"transfer from",
+                                             "type":"Cr",
+                                             "amount":"15000",
+                                             "finalAmount":"69500"
                                            },
-                                            {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"interest paid",
-                                             "type":"credit",
-                                             "amount":"300",
-                                             "finalAmount":"25300"
+                                           {"date":"13-02-2012",
+                                             "referenceNumber":"txn1125044",
+                                             "description":"transfer from",
+                                             "type":"Cr",
+                                             "amount":"2500",
+                                             "finalAmount":"72000"
                                            },
-                                           {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
-                                             "amount":"8000",
-                                             "finalAmount":"17300"
-                                           }
-                                           ]	
-						    },
-						  {
-			                
-							"accountNumber":"33307915156",
-							"transactions":[{"date":"15-01-2010",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
-                                           },
-                                           {"date":"13-02-2011",
-                                             "transactionNumber":"txn1125044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"55000"
-                                           },
-                                           {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
+                                           {"date":"19-12-2012",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"transfer to",
+                                             "type":"Dr",
+                                             "amount":"1000",
+                                             "finalAmount":"71000"
                                            }
                                            ]	
 						    },
                              {
 			                
-							"accountNumber":"33307914545",
+							"accountNumber":"333079154",
 							"transactions":[{"date":"15-01-2010",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1455003",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"50000"
                                            },
                                            {"date":"13-02-2011",
-                                             "transactionNumber":"txn1125044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
+                                             "referenceNumber":"txn1125044",
+                                             "description":"transfer from",
+                                             "type":"Cr",
                                              "amount":"5000",
                                              "finalAmount":"55000"
                                            },
                                            {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
+                                             "referenceNumber":"txn1455044",
+                                             "description":"transfer to",
+                                             "type":"Dr",
                                              "amount":"5000",
                                              "finalAmount":"50000"
                                            }
                                            ]	
 						    }
                             ]
-        },
-        {
-			"csId": "1234567893",
-			"accountInfo":[{
-			                
-							"accountNumber":"33307915126",
-							"transactions":[{"date":"12-12-2008",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"20000"
-                                           },
-                                           {"date":"13-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"25000"
-                                           },
-                                            {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"interest paid",
-                                             "type":"credit",
-                                             "amount":"300",
-                                             "finalAmount":"25300"
-                                           },
-                                           {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
-                                             "amount":"8000",
-                                             "finalAmount":"17300"
-                                           }
-                                           ]	
-						    },
-						  {
-			                
-							"accountNumber":"33307915156",
-							"transactions":[{"date":"15-01-2010",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
-                                           },
-                                           {"date":"13-02-2011",
-                                             "transactionNumber":"txn1125044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"55000"
-                                           },
-                                           {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
-                                           }
-                                           ]	
-						    },
-                             {
-			                
-							"accountNumber":"33307914545",
-							"transactions":[{"date":"15-01-2010",
-                                             "transactionNumber":"txn1455003",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
-                                           },
-                                           {"date":"13-02-2011",
-                                             "transactionNumber":"txn1125044",
-                                             "refrence":"transfer from",
-                                             "type":"credit",
-                                             "amount":"5000",
-                                             "finalAmount":"55000"
-                                           },
-                                           {"date":"19-12-2008",
-                                             "transactionNumber":"txn1455044",
-                                             "refrence":"transfer to",
-                                             "type":"debit",
-                                             "amount":"5000",
-                                             "finalAmount":"50000"
-                                           }
-                                           ]	
-						    }
-                            ]
-             }
-             ]
+        }
+            
+     ]
 }

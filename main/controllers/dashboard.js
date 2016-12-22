@@ -15,8 +15,10 @@ clearbank.controller('dashboardController', ['$scope', function ($scope) {
         $scope.defaultData = true;
 
         $scope.getIndex = function (index) {
+            console.log("index");
             sessionStorage.setItem('currentIndex', index);
             $scope.defaultData = false;
+             console.log(index);
         }
 
         var index = sessionStorage.getItem('currentIndex');

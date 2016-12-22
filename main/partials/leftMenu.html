@@ -1,63 +1,31 @@
-<!--
-<div>
-    <div data-ng-show="defaultData"  class="accountBalance">
-      <ul class="asideMenu">
-        <li class="asideMenu"><h4>Account Balance</h4></li>
-        <li ><span><b>{{accNumber}}<small>-{{accType}}</small></b></span></li>
-        <li ><h3><b>{{accBalance}}&nbsp;{{accCurrency}}</b></h3></li>
-    </ul>
-          </div>
-    
-    <div data-ng-show="!defaultData" class="accountBalance" >
-       <ul class="asideMenu">
-        <li class="asideMenu"><h4>Account Balance</h4></li>
-        <li ><span><b>{{transactionInfo.account_number}}<small>-{{transactionInfo.account_type}}</small></b></span></li>
-        <li><h3><b>{{transactionInfo.available_balance}}&nbsp;{{transactionInfo.currency}}</b></h3></li>
-        </ul>
-    </div>
-</div>
-    
-    <div class="favouriteLinks">
-        <ul class="asideMenu" >
-        <li class="asideMenu"><h4>Favourite links</h4></li>
-        <li class="asideMenu" data-ng-repeat="fav in  favLinks"><a href={{fav.link_url_1}}><h4>{{fav.label_1}}<img class="arrow" src="assets/images/Arrow.png"></h4></a></li>
-        </ul>
- </div>
 
-    <div class="topPayees">
-        <ul class="asideMenu" >
-        <li class="asideMenu"><h4>Top Payee</h4></li>
-            <li class="asideMenu" data-ng-repeat="payee in topPayee"><a ui-sref="transfers" class="topPayee"><h4>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h4></a></li>
-            </ul>
-    </div>
--->
-
-<div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <span>Account Balance</span>
+                <a><strong>Account Balance</strong></a>
             </h4>
         </div>
-        <div data-ng-show="defaultData" class="accountBalance ">
-            <ul class="asideMenu">
-                <span><b>{{accNumber}}<small>- {{accType}}</small></b></span>
-                <h3><b>{{accBalance}}&nbsp;{{accCurrency}}</b></h3>
+        <div class="panel-body">
+            <ul class="asideMenu" data-ng-show="defaultData">
+                <span><strong>{{accNumber}}<small>- {{accType}}</small></strong><br />
+                    <strong><span class="green">{{accBalance}}</span>&nbsp;<small class="green">{{accCurrency}}</small></strong>
+                </span>
             </ul>
-        </div>
-        <div data-ng-show="!defaultData" class="accountBalance">
-            <ul class="asideMenu">
-                <span><b>{{accNumber}}<small>- {{accType}}</small></b></span>
-                <h3><b>{{accBalance}}&nbsp;{{accCurrency}}</b></h3>
+
+
+            <ul class="asideMenu" data-ng-show="!defaultData">
+              <span><strong>{{accNumber}}<small>- {{accType}}</small></strong><br />
+                    <strong><span class="green">{{accBalance}}</span>&nbsp;<small class="green">{{accCurrency}}</small></strong>
+               </span>
             </ul>
         </div>
     </div>
-</div>
-<div class="panel-group" >
+
+<div class="panel-group"> 
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Favourite Links</a>
+                <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse2"><strong>Favourite Links</strong><span class="glyphicon glyphicon-minus "></span></a>
             </h4>
         </div>
         <div id="collapse2" class="panel-collapse collapse in">
@@ -72,21 +40,20 @@
         </div>
     </div>
 </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">Top Payee</a>
-            </h4>
-        </div>
-        <div id="collapse3" class="panel-collapse collapse in">
-
-            <ul class="list-group">
-                <li class="list-group-item" data-ng-repeat="payee in topPayee">
-                    <a ui-sref="transfers" class="topPayee">
-                        <h5>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
-                    </a>
-                </li>
-            </ul>
-        </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse3"><strong>Top Payee</strong><span class="glyphicon glyphicon-minus "></span></a>
+        </h4>
     </div>
+    <div id="collapse3" class="panel-collapse collapse in">
 
+        <ul class="list-group">
+            <li class="list-group-item" data-ng-repeat="payee in topPayee">
+                <a ui-sref="transfers" class="topPayee">
+                    <h5>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                </a>
+
+        </ul>
+    </div>
+</div>

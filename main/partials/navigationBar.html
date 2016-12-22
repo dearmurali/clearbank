@@ -1,19 +1,22 @@
-<div class="container navbar">
+<div class=row><div class="container navbar">
 <div class="container">
     <div class="nav-logo" ng-show="loggedIn">
-        <a ui-sref="home"><img src="assets/images/Logo-blue.png" height="70px"></a>
+        <a ui-sref="dashboard"><img src="assets/images/Logo-blue.png" height="70px"></a>
     </div>
     <div ng-show="loggedIn" class="topName">
-        <h4 class="topName"><strong>Welcome&nbsp;{{$ctrl.accName}}</strong></h4>
+        <h4 class="topName">Welcome&nbsp;<strong>{{$ctrl.accName}}</strong></h4>
     </div>
     <div class="topName" ng-show="loggedIn">
         <a ui-sref="profile">Profile</a>&nbsp; | &nbsp;<a ui-sref="forgotpassword">Change Password</a>&nbsp; | &nbsp;<a ng-click="$ctrl.logout()">Logout</a>
 
     </div>
 
-    <div ng-hide="loggedIn" class="lang-picker"><select class="selectpicker" data-width="fit">
-    <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
-</select></div>
+    <div ng-hide="loggedIn" class="lang-picker">
+
+   <span class="flag-icon flag-icon-us"></span> EN |
+ <span class="flag-icon flag-icon-nl"></span> NL
+
     </div>
+    </div>
+</div>
 </div>

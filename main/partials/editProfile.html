@@ -1,9 +1,15 @@
 <top-menu></top-menu>
-<div class="panel-heading"><small><span  class="warning login-hint">* Marked fields are mandatory</span></small></div>
 <div class="col-md-3 col-sm-2">
 </div>
 <div class="col-xs-12 col-sm-10 col-md-6">
-    <div class="well edit-profile">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span><h3 class="panel-title">
+                <a><strong>Customer Profile</strong></a>
+            
+            <span  class="warning login-hint">* Marked fields are mandatory</span></h3></span>
+        </div>
+        <div class="panel-body">
         <form name="myform">
             <md-input-container class="md-block">
                 <label>Customer Id</label>
@@ -79,5 +85,7 @@
             <md-button class="md-raised md-primary" data-ng-click="$ctrl.update()"><strong>Update</strong></md-button>
 
         </form>
+        </div>
+    
     </div>
 </div>

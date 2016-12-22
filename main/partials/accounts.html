@@ -1,21 +1,27 @@
-<h4>Account Details</h4>
-<hr>
-  <div class="table-responsive">
-  <table class="table">
-  <thead>
-  <tr class="tableheading"><td>Account Number</td>
-  <td>Account Type</td>
-  <td>Available Balance</td>
-  <td>Opening Date</td>
-  </tr>  
-  </thead>
-  <tbody>
-  <tr  data-ng-repeat="account in accountInfo track by $index"><td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.account_number}}</a></td>
-  <td>{{account.account_type}}</td>
-  <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.available_balance}}&nbsp;{{account.currency}}</a></td>
-  <td>{{account.opening_date}}</td>
-  </tr>
-  </tbody>
-  </table>
-  </div>
-
+<div class="panel panel-default">
+    <div class="panel-heading ">
+        <h4 class="panel-title"><strong>Account Details</strong></h4>
+    </div>
+    <div class="panel-body table-responsive">
+        
+            <table class="table">
+                <thead>
+                    <tr class="tableheading">
+                        <td>Account Number</td>
+                        <td>Account Type</td>
+                        <td>Available Balance</td>
+                        <td>Opening Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="account in accountInfo track by $index">
+                        <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.account_number}}</a></td>
+                        <td>{{account.account_type}}</td>
+                        <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.available_balance}}&nbsp;{{account.currency}}</a></td>
+                        <td>{{account.opening_date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    </div>
+</div>

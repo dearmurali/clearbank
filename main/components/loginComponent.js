@@ -3,6 +3,7 @@ clearbank.component('login', {
     controller: function loginController(LoginService, $state) {
         this.heading = "ClearBank";
         this.validCredentials = true;
+        this.customer_id=sessionStorage.getItem('csid');
         //console.log(LoginService.validLogin('1234567891','Mindtree@123'));
         this.onLogin = function () {
             console.log("in login service");

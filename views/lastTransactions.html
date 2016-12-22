@@ -1,14 +1,89 @@
 <top-menu>
 </top-menu>
 <div class=" container">
+
     <div class="row">
         <div class="col-md-3 col-sm-3">
             <left-menu></left-menu>
         </div>
         <div class="col-md-9 col-sm-9">
-            <div class="mainView">
-                <h4>{{transactionInfo.account_type}}&nbsp;Account Details</h4>
-                <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a><strong>{{transactionInfo.account_type}} Account Balance</strong></a>
+                    </h4>
+                </div>
+                <div class="panel-body table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr class="tableheading">
+                                    <td>Account Number</td>
+                                    <td>Account Type</td>
+                                    <td>Available Balance</td>
+                                    <td>Opening Date</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{transactionInfo.account_number}}</td>
+                                    <td>{{transactionInfo.account_type}}</td>
+                                    <td>{{transactionInfo.available_balance}}&nbsp;{{transactionInfo.currency}}</td>
+                                    <td>{{transactionInfo.opening_date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+
+        
+                 <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" data-target="#transaction"><strong>Last 10 transactions</strong></a><a><strong class="right-head">more</strong></a>
+                    </h4>
+                </div>
+                <div  id="transaction" class="panel-collapse collapse in panel-body table-responsive">
+
+                        <table class="table">
+                            <thead>
+                                <tr class="tableheading">
+                                    <td>Date</td> 
+                                    <td>Description</td>
+                                    <td>Reference Number</td>
+                                    <td>Amount</td>
+                                    <td>Balance</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="data in lastTransactionInfo">
+                                    <td>{{data.date}}</td>
+                                    <td>{{data.description}}</td>
+                                    <td>{{data.referenceNumber}}</td>
+                                    <td data-ng-class="getColor($index)">{{data.type}}.{{data.amount}}</td>
+                                    <td>{{data.finalAmount}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--
+
+
+
+>>>>>>> a277c0a31952dec6823ca21240a95110aa493a46
 
                 <div class="table-responsive">
                     <table class="table">
@@ -64,5 +139,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
+</div>
+-->
