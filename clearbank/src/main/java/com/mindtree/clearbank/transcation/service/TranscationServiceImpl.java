@@ -54,16 +54,16 @@ public class TranscationServiceImpl implements TranscationService {
 		customer_information.setCustomer_mobileNumber(String.valueOf(customerMobile));
 		List<Fav_links> fav_links=new ArrayList<Fav_links>();
 		Fav_links fav_link=new Fav_links();
-		fav_link.setLabel_1("test");
-		fav_link.setLink_url_1("http://www.yahoo.com");
+		fav_link.setLabel_1("Transfers");
+		fav_link.setLink_url_1("tranfers");
 		
 		Fav_links fav_link1=new Fav_links();
-		fav_link1.setLabel_1("sample");
-		fav_link1.setLink_url_1("http://www.mindtree.com");
+		fav_link1.setLabel_1("Loans");
+		fav_link1.setLink_url_1("Loans");
 		
 		Fav_links fav_link2=new Fav_links();
-		fav_link2.setLabel_1("web");
-		fav_link2.setLink_url_1("http://www.google.com");
+		fav_link2.setLabel_1("Credit Cards");
+		fav_link2.setLink_url_1("CC");
 		
 		fav_links.add(fav_link);
 		fav_links.add(fav_link1);
@@ -76,12 +76,12 @@ public class TranscationServiceImpl implements TranscationService {
 		List<Top_payee> top_payees=new ArrayList<Top_payee>();
 		
 		Top_payee top_payee=new Top_payee();
-		top_payee.setPayeeAccountNumber_1("78669696966");
-		top_payee.setPayeeName_1(customerName);
+		top_payee.setPayeeAccountNumber_1("678945876543");
+		top_payee.setPayeeName_1("Aman Sharma");
 		
 		Top_payee top_payee1=new Top_payee();
-		top_payee1.setPayeeAccountNumber_1("78669696442");
-		top_payee1.setPayeeName_1(customerName);
+		top_payee1.setPayeeAccountNumber_1("543367876543");
+		top_payee1.setPayeeName_1("Nitish Bali");
 		
 		top_payees.add(top_payee);
 		top_payees.add(top_payee1);
@@ -92,7 +92,7 @@ public class TranscationServiceImpl implements TranscationService {
 		Accounts_information accounts_information=new Accounts_information();
 		List<Accounts> accounts=new ArrayList<Accounts>();
 		Accounts account=new Accounts();
-		account.setAccount_number("111111111111");
+		account.setAccount_number("005463289732");
 		account.setAccount_type("saving");
 		account.setAvailable_balance("87512");
 		account.setOpening_date("10-03-2014");
@@ -102,8 +102,8 @@ public class TranscationServiceImpl implements TranscationService {
 		
 		
 		Accounts account1=new Accounts();
-		account1.setAccount_number("222222222222");
-		account1.setAccount_type("CURRENT");
+		account1.setAccount_number("005612385356");
+		account1.setAccount_type("current");
 		account1.setAvailable_balance("87565");
 		account1.setOpening_date("08-08-2008");
 		account1.setCustomer_branch("INDIA");
@@ -112,8 +112,8 @@ public class TranscationServiceImpl implements TranscationService {
 		
 		
 		Accounts account2=new Accounts();
-		account2.setAccount_number("333333333333");
-		account2.setAccount_type("FD");
+		account2.setAccount_number("004323619876");
+		account2.setAccount_type("fd");
 		account2.setAvailable_balance("897965");
 		account2.setOpening_date("23-01-2010");
 		account2.setCustomer_branch("INDIA");
