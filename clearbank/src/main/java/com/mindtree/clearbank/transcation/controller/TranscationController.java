@@ -36,19 +36,15 @@ public class TranscationController {
 	@Autowired
 	RegistrationService registrationService;
 
-	@RequestMapping(value = "transcation", method = RequestMethod.POST)
+	@RequestMapping(value = "transaction", method = RequestMethod.POST)
 	public ResponseEntity<?> getTranscationDetails(HttpServletRequest request , @RequestBody AccountVO accountVO ) {
 
-		HttpSession session = request.getSession();
+
 		System.out.println("account details are " +accountVO.getAccountnumber() + "::::"  +accountVO.getAccounttype() );
 		
-//		String accountumber="111111111111" ;
-		
-//		String accountType="saving";
-		
+		long custid=accountVO.getId();
 	
-		
-        long custid = (Long) session.getAttribute("custid");
+     //   long custid = (Long) session.getAttribute("custid");
 		
 		
 		System.out.println("::::::::::::::::::::::::::" + custid);
@@ -57,10 +53,6 @@ public class TranscationController {
 		TransactionData transactionData = dashBoardService
 				.getCustomerTranscationDetails(custid, user ,accountVO.getAccountnumber() , accountVO.getAccounttype() );
 
-//		return ResponseEntity.ok(new JwtAuthenticationSuccessResponse(
-//				transactionData));
-		ResponseEntity.ok().header("Access-Control-Allow-Origin" , "*").header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
-		
 		return ResponseEntity.ok(new JwtAuthenticationSuccessResponse(transactionData));
 		
 	}
