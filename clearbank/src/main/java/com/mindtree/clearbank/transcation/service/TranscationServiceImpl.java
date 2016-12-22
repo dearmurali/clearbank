@@ -55,15 +55,15 @@ public class TranscationServiceImpl implements TranscationService {
 		List<Fav_links> fav_links=new ArrayList<Fav_links>();
 		Fav_links fav_link=new Fav_links();
 		fav_link.setLabel_1("Transfers");
-		fav_link.setLink_url_1("tranfers");
+		fav_link.setLink_url_1("transfers");
 		
 		Fav_links fav_link1=new Fav_links();
 		fav_link1.setLabel_1("Loans");
-		fav_link1.setLink_url_1("Loans");
+		fav_link1.setLink_url_1("loans");
 		
 		Fav_links fav_link2=new Fav_links();
 		fav_link2.setLabel_1("Credit Cards");
-		fav_link2.setLink_url_1("CC");
+		fav_link2.setLink_url_1("creditcards");
 		
 		fav_links.add(fav_link);
 		fav_links.add(fav_link1);
@@ -93,7 +93,7 @@ public class TranscationServiceImpl implements TranscationService {
 		List<Accounts> accounts=new ArrayList<Accounts>();
 		Accounts account=new Accounts();
 		account.setAccount_number("005463289732");
-		account.setAccount_type("saving");
+		account.setAccount_type("Saving");
 		account.setAvailable_balance("87512");
 		account.setOpening_date("10-03-2014");
 		account.setCustomer_branch("INDIA");
@@ -103,7 +103,7 @@ public class TranscationServiceImpl implements TranscationService {
 		
 		Accounts account1=new Accounts();
 		account1.setAccount_number("005612385356");
-		account1.setAccount_type("current");
+		account1.setAccount_type("Current");
 		account1.setAvailable_balance("87565");
 		account1.setOpening_date("08-08-2008");
 		account1.setCustomer_branch("INDIA");
@@ -113,7 +113,7 @@ public class TranscationServiceImpl implements TranscationService {
 		
 		Accounts account2=new Accounts();
 		account2.setAccount_number("004323619876");
-		account2.setAccount_type("fd");
+		account2.setAccount_type("Fixed Deposit");
 		account2.setAvailable_balance("897965");
 		account2.setOpening_date("23-01-2010");
 		account2.setCustomer_branch("INDIA");
