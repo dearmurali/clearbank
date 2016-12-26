@@ -12,16 +12,29 @@
                         <strong>Transaction Type</strong>
                     </h4>
                 </div>
-                <div class="panel-body table-responsive panel-transfers">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <td> <label ><input type="radio" name="option1">&nbsp;Own Account</label></td>
-                                <td> <label ><input type="radio" name="option1">&nbsp;Others Account same Bank</label></td>
-                                <td> <label ><input type="radio" name="option1">&nbsp;Others Account Other Bank</label></td>
-                            </tr>
-                        </thead>
-                    </table>
+                <div class="panel-body panel-transfers">
+                    <md-radio-group class="md-primary" ng-model="selected1">
+                        <div class="col-md-4 col-sm-4" >
+                        <md-radio-button value="1" >
+                         <strong>Your Linked Clear bank Account</strong>
+                        </md-radio-button>
+                        </div>
+                      <div class="col-md-4 col-sm-4 ">
+                       <md-radio-button value="2" >
+                      <strong> Others Clear bank Account</strong>
+                       </md-radio-button>
+                      </div>
+                      <div class="col-md-4 col-sm-4 ">
+                      <md-radio-button value="3" >
+                      <strong>   Other Bank (NEFT, RTGS or IMPS)</strong>
+                      </md-radio-button>
+                  </md-radio-group>       
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 col-sm-12">
+            <transfer-detail></transfer-detail>    
                 </div>
             </div>
         </div>

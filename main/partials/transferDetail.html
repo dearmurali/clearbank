@@ -1,0 +1,93 @@
+<div class="panel panel-default">
+<div class="panel-heading panel-heading-transfer">
+  <h4>{{transferHeading}}&nbsp;{{transferChoice}}</h4></div>
+
+    <div class="panel-body">
+        <div>
+            <md-radio-group ng-model="selected2" class="md-primary">
+            <md-radio-button value="NEFT" >
+             <strong>NEFT</strong>
+            </md-radio-button>
+            <md-radio-button  value="RTGS" >
+            <strong>RTGS</strong>
+            </md-radio-button>
+            <md-radio-button value="IMPS" >
+            <strong>IMPS</strong>
+            </md-radio-button>
+            </md-radio-group>
+        </div>
+        
+    <div class="row"> 
+    <div class="col-md-6 col-sm-6">
+        <div>       
+   <md-input-container >
+  <label><span class="customBlue">Select your Account</span><span class="red">&nbsp;*</span></label>
+  <md-select ng-model="someModel" >
+       <md-option ng-value="opt" >333079111313 </md-option>
+       <md-option ng-value="opt" >355689111505 </md-option>
+       <md-option ng-value="opt" >333079125634 </md-option>
+       <md-option ng-value="opt" >333079155584 </md-option>
+      
+  </md-select>
+</md-input-container>
+            </div>
+        <div>       
+   <md-input-container >
+  <label><span class="customBlue">Select payee Account</span><span class="red">&nbsp;*</span></label>
+  <md-select ng-model="someModel" >
+       <md-option ng-value="opt" >333079111313 </md-option>
+       <md-option ng-value="opt" >355689111505 </md-option>
+       <md-option ng-value="opt" >333079125634 </md-option>
+       <md-option ng-value="opt" >333079155584 </md-option>
+      
+  </md-select>
+</md-input-container>
+            </div>
+        
+         <div>
+        <md-input-container>
+       <label>IFSC code</label>
+       <input type="text" ng-model="ifscCode" ng-disabled="true">
+       </md-input-container>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div>
+         <label><span class="customBlue">Total available amount</span></label>
+              <h4 class="green"><strong>{{transactionInfo.currency}}&nbsp;{{transactionInfo.available_balance}}</strong></h4>
+          </div>
+        
+        <div>
+        <md-input-container>
+       <label>Amount ({{transactionInfo.currency}})&nbsp;<span class="red">&nbsp;*</span></label>
+       <input type="text" ng-model="amount">
+       </md-input-container>
+        </div>
+        
+         <div>
+        <md-input-container>
+       <label>Bank Name</label>
+       <input type="text" ng-model="bankName" ng-disabled="true">
+       </md-input-container>
+        </div>
+    </div>
+    </div>
+        
+        <div class="row">
+        <div class="col-md-12 col-sm-12">
+             <div>
+        <md-input-container>
+       <label>Remarks</label>
+       <input type="text" ng-model="remarks">
+       </md-input-container>
+        </div>
+            </div>
+          
+            <div class=" col-md-12 col-sm-12">
+            <button class=" transferOptions btn btn-primary btn-lg ">Transfer</button>
+                <h4 class="transferOptions"><strong><a ui-sref="managePayee">Add Payee &nbsp;</a></strong></h4>
+                </div>
+        </div>
+        
+    </div>
+</div>
