@@ -370,6 +370,14 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      text-decoration: none;
      cursor: pointer;
  }
+
+.panel-accountBalance{
+padding-bottom:0px;
+}
+
+.panel-transfers{
+padding:0px;
+}
  
  .container>.navbar-collapse {
      /*        margin-right: -15px;*/
@@ -404,6 +412,7 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
 .right-head:hover{
     
     color:#025A9E;
+    cursor:pointer;
 }
 
 .glyphicon-minus{

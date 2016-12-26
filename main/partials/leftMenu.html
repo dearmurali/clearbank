@@ -5,7 +5,7 @@
                 <a><strong>Account Balance</strong></a>
             </h4>
         </div>
-        <div class="panel-body">
+        <div class="panel-body panel-accountBalance">
             <ul class="asideMenu" data-ng-show="defaultData">
                 <span><strong>{{accNumber}}<small>- {{accType}}</small></strong><br />
                     <strong><span class="green">{{accBalance}}</span>&nbsp;<small class="green">{{accCurrency}}</small></strong>
@@ -14,8 +14,8 @@
 
 
             <ul class="asideMenu" data-ng-show="!defaultData">
-              <span><strong>{{accNumber}}<small>- {{accType}}</small></strong><br />
-                    <strong><span class="green">{{accBalance}}</span>&nbsp;<small class="green">{{accCurrency}}</small></strong>
+              <span><strong>{{transactionInfo.account_number}}<small>- {{transactionInfo.account_type}}</small></strong><br />
+                    <strong><span class="green">{{transactionInfo.available_balance}}</span>&nbsp;<small class="green">{{transactionInfo.currency}}</small></strong>
                </span>
             </ul>
         </div>
@@ -25,7 +25,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse2"><strong>Favourite Links</strong><span class="glyphicon glyphicon-minus "></span></a>
+                <a data-toggle="collapse" data-target="#collapse2"><strong>Favourite Links</strong><span class="glyphicon glyphicon-minus "></span></a>
             </h4>
         </div>
         <div id="collapse2" class="panel-collapse collapse in">
@@ -43,7 +43,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse3"><strong>Top Payee</strong><span class="glyphicon glyphicon-minus "></span></a>
+            <a data-toggle="collapse"  data-target="#collapse3"><strong>Top Payee</strong><span class="glyphicon glyphicon-minus "></span></a>
         </h4>
     </div>
     <div id="collapse3" class="panel-collapse collapse in">
