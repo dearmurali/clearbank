@@ -23,6 +23,7 @@ clearbank.controller('dashboardController', ['$scope', function ($scope) {
 
         var index = sessionStorage.getItem('currentIndex');
         $scope.transactionInfo = $scope.accountInfo[index];
+      console.log( $scope.transactionInfo);
 
 
 	}

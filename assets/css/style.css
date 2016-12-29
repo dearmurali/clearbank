@@ -138,6 +138,11 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      font-size: 15px;
  }
 
+.customBlue{
+color: #2079BE;
+}
+
+
  
  .asideMenu span.green {
      font-size: 30px;
@@ -373,6 +378,42 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      text-decoration: none;
      cursor: pointer;
  }
+
+.panel-accountBalance{
+padding-bottom:0px;
+}
+
+.panel-transfers{
+padding:1px;
+}
+
+.panel-heading-transfer{
+padding-top:2px;
+    padding-bottom: 2px;
+}
+
+.transferOptions{
+float:right;
+}
+
+md-radio-button {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+}
+
+md-input-container {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    margin: 18px 0;
+    vertical-align: middle;
+    width: 100%;
+}
  
  .container>.navbar-collapse {
      /*        margin-right: -15px;*/
@@ -407,6 +448,7 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
 .right-head:hover{
     
     color:#025A9E;
+    cursor:pointer;
 }
 
 .glyphicon-minus{
