@@ -40,7 +40,7 @@ clearbank.controller('registrationController', function ($scope, RegistrationSer
 
     });
     $('.cPass2').on('blur', function () {
-        if ($scope.customerPassword != $scope.confirmedPassword) {
+        if ($scope.customerPassword !== $scope.confirmedPassword) {
             $('.passError2').show('200');
 
         } else {
@@ -65,7 +65,7 @@ clearbank.controller('registrationController', function ($scope, RegistrationSer
                 window.location.href = "/";
             })
 
-        } else if ($scope.customerPassword != $scope.confirmedPassword) {
+        } else if ($scope.customerPassword !== $scope.confirmedPassword) {
             $('.passError2').show('200');
         } else {
             $('.passError2').hide('200');
