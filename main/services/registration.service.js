@@ -17,7 +17,7 @@ clearbank.service('RegistrationService',function($http){
                     console.log(result.data);
                     sessionStorage.setItem('csid',result.data.customerId);
                     if(result.status=="200"){
-					callback('successfully registered, your customer id is: '+result.data.customerId+'\n Please note it down for further reference.');
+					callback(result.data.customerId);
                     }
                     else{
                         callback("ERROR in registering: "+result.data.error)

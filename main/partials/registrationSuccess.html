@@ -1,0 +1,16 @@
+<md-dialog class="success-dialog">
+    <md-dialog-content>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <span class="green">
+            <p><span><img src="../../assets/images/success.PNG" class="image-responsive"></span></p>
+            <p><span>Registration Successfull</span></p>
+            </span>
+            <p><span>Please note your Customer ID</span></p>
+            <p><span><strong>{{$ctrl.registrationId}}</strong></span></p>
+<!--            <p> <button class="btn btn-primary">OK</button></p>-->
+            <md-button class="md-raised md-primary" data-ng-click="$ctrl.closeDialog()">OK</md-button>
+        </div>
+        <div class="col-md-2"></div>
+    </md-dialog-content>
+</md-dialog>
