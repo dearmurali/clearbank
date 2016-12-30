@@ -62,15 +62,16 @@ clearbank.controller('transfersController',['$scope','transferService',function(
                                  currency:$scope.accountInfo[i].currency});
         }     
     }
-    
-    
+    console.log($scope.selected1);
+    console.log($scope.selected2);  
     $scope.transferMethod=function(){
         
 //        if($scope.maxAmount>$scope.available_balance){
 //        alert("Can't enter more than available balance");
 //        }
        
-            
+           console.log($scope.selected1);  
+        console.log($scope.selected2);  
         for(i=0;i<$scope.transferAccount.length;i++)
         {
         if($scope.transferAccount[i].account_number==$scope.debitAccount)
