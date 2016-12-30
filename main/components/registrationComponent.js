@@ -48,6 +48,7 @@ clearbank.component('userRegistration', {
 
         self.closeDialog = function () {
                         $mdDialog.hide();
+             window.location.href = "/";
         }
 
         self.save = function () {
@@ -60,7 +61,7 @@ clearbank.component('userRegistration', {
                     self.registrationId = response;
                     //alert(response);
                     self.showAlert(self.registrationId);
-                    window.location.href = "/";
+                   
                 })
 
             } else if (self.customerPassword != self.confirmedPassword) {
