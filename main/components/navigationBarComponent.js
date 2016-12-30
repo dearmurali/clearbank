@@ -25,5 +25,19 @@ clearbank.component("navigationBar", {
             sessionStorage.clear();
             window.location.href = '/';
         }
+    self.selectLanguage=function(languageOption)
+    {
+      console.log(languageOption) ;  
+        if(languageOption===1)
+        {
+        
+  $(this).parents(".dropdown").find('.btn').html( '<span class="flag-icon flag-icon-nl"></span> '+$(this).text() + ' <span class="caret"></span>');
+        }
+            if($(this).text()=="United States")
+            {
+            $(this).parents(".dropdown").find('.btn').html( '<span class="flag-icon flag-icon-nl"></span> '+$(this).text() + ' <span class="caret"></span>');
+            }
+ // $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+}
     }
 });

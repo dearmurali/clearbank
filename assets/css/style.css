@@ -310,10 +310,9 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      border-color: rgba(0, 0, 0, 0.12);
  }
  
- md-input-container:not(.md-input-invalid).md-input-focused label {
+ md-input-container:not(.md-input-invalid).md-input-focused label,md-input-container:not(.md-input-invalid).md-input-has-value label {
      color: #2079BE
  }
- 
  .landing-page {
      background-color: #2079BE;
      min-height: 80vh;
@@ -409,4 +408,44 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
 .glyphicon-minus{
     float:right;
     font-size: 10px;
+}
+.dropdownItems{
+color:#2079BE;
+}
+.dropdownButton{
+width:200px;
+}
+
+.managePayee{
+color:#2079BE;
+}
+.managePayeeDropdown
+{
+color:#2079BE;
+}
+.deletePayee{
+color:#2079BE;
+    font-size: 18px;    
+}
+.alert {
+padding: 8px 35px 8px 14px;
+margin-bottom: 18px;
+
+}
+md-toolbar{
+background-color:red;
+}
+.align-center{
+text-align: center;
+}
+.fa-check-circle-o{
+    color:green;
+    font-size: 72px;
+}
+.md-dialog-content{
+    color:green;
+}
+.modalWindow
+{
+max-width: 150%;
 }
