@@ -9,21 +9,32 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <strong>Transfer to Accounts</strong>
+                        <strong>Transaction Type</strong>
                     </h4>
                 </div>
-                <div class="panel-body table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <td><a class="payeesMenu">Own Account</a></td>
-                                <td><a class="payeesMenu">Others Account same Bank</a></td>
-                                <td><a class="payeesMenu">Others Account Other Bank</a></td>
-                            </tr>
-                        </thead>
-                    </table>
-                    <p></p>
-                    <button class="btn btn-primary managePayee" ui-sref="managepayee">Manage Payee</button>
+                <div class="panel-body panel-transfers">
+                    <md-radio-group class="md-primary" ng-model="selected1">
+                        <div class="col-md-4 col-sm-4" >
+                        <md-radio-button value="1" >
+                         <strong>Your Linked ClearBank Account</strong>
+                        </md-radio-button>
+                        </div>
+                      <div class="col-md-4 col-sm-4 ">
+                       <md-radio-button value="2" >
+                      <strong> Others ClearBank Account</strong>
+                       </md-radio-button>
+                      </div>
+                      <div class="col-md-4 col-sm-4 ">
+                      <md-radio-button value="3" >
+                      <strong>   Other Bank (NEFT, RTGS or IMPS)</strong>
+                      </md-radio-button>
+                  </md-radio-group>       
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 col-sm-12">
+            <transfer-detail></transfer-detail>    
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 clearbank.component('userRegistration', {
 
     templateUrl: 'main/partials/registration.html',
-    controller: function registrationController(RegistrationService) {
+    controller: function registrationController(RegistrationService, $mdDialog, $scope) {
         var self = this;
         $('.nameError,.mailError,.passError,.passError2,.contactError').hide();
         $('.cName').on('blur', function () {
@@ -46,25 +46,46 @@ clearbank.component('userRegistration', {
             }
         });
 
+        self.closeDialog = function () {
+                        $mdDialog.hide();
 
+             window.location.href = "/";
+
+
+        }
 
         self.save = function () {
             console.log("saving")
-            console.log(self.customerName,self.customerContact, self.customerEmail,self.customerPassword)
-            if (!(self.customerName === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined)) {
-                
+            console.log(self.customerName, self.customerContact, self.customerEmail, self.customerPassword)
+            if (!(self.customerName === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined || self.customerPassword !== self.confirmedPassword)) {
+
                 RegistrationService.RegisterCustomer(self.customerName, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
                     console.log(response);
-                    alert(response);
-                   window.location.href = "/";
+                    self.registrationId = response;
+                    //alert(response);
+                    self.showAlert(self.registrationId);
+
                 })
 
             } else if (self.customerPassword != self.confirmedPassword) {
                 $('.passError2').show('200');
+              
             } else {
                 $('.passError2').hide('200');
                 $('.nameError,.mailError,.passError,.contactError').show();
+
             }
-        }
+        } 
+
+
+        self.showAlert = function () {
+            $mdDialog.show({
+                clickOutsideToClose: true,
+                controller: registrationController,
+                scope:$scope,
+                preserveScope: true,
+                templateUrl: 'main/partials/registrationSuccess.html'
+            });
+        };
     }
 });

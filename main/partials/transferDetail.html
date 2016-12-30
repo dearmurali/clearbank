@@ -1,0 +1,94 @@
+<div class="panel panel-default">
+<div class="panel-heading panel-heading-transfer">
+  <h4>{{transferHeading}}&nbsp;{{transferChoice}}</h4></div>
+
+    <div class="panel-body" data-ng-class="transferMethod()">
+        <div class="row transferMethod" >
+            <md-radio-group ng-model="selected2" class="md-primary">
+                   <div class="col-md-2 col-sm -2">
+            <md-radio-button value="1" >
+             <strong>NEFT</strong>
+            </md-radio-button>
+                </div>
+                   <div class="col-md-2 col-sm -2">  
+            <md-radio-button  value="2" >
+            <strong>RTGS</strong>
+            </md-radio-button>
+                       </div>
+                            <div class="col-md-2 col-sm -2">
+            <md-radio-button value="3" >
+            <strong>IMPS</strong>
+            </md-radio-button>
+                         </div>
+            </md-radio-group>
+        </div>
+        <br>
+    <div class="row"> 
+      
+    <div class="col-md-6 col-sm-6">
+        <div>       
+   <md-input-container >
+  <label><span class="customBlue">Debit Account</span><span class="red">&nbsp;*</span></label>
+  <md-select ng-model="debitAccount" placeholder="Select debit account *">
+       <md-option data-ng-repeat="account in transferAccount"  ng-value={{account.account_number}} >{{account.account_number}}</md-option>
+      
+  </md-select>
+</md-input-container>
+            </div>
+        <div>       
+   <md-input-container >
+  <label><span class="customBlue">Payee Account</span><span class="red">&nbsp;*</span></label>
+  <md-select ng-model="payeeAccount" placeholder="Select payee account *">
+      <md-option data-ng-repeat="payee in payeeData" ng-value={{payee.payeeAccountNumber}} >{{payee.payeeAccountNumber}}</md-option>
+      
+  </md-select>
+</md-input-container>
+            </div>
+        
+         <div>
+        <md-input-container>
+       <label>IFSC code</label>
+       <input type="text" ng-model="ifscCode" ng-disabled="true">
+       </md-input-container>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+            <div class="warning">Fill the mandatory fields *</div>
+      <div>
+         <label><span class="customBlue">Total available amount</span></label>
+              <h4 class="green"><strong>{{currency}}&nbsp;{{available_balance}}</strong></h4>
+          </div>
+        
+        <div>
+        <md-input-container>
+       <label>Amount ({{currency}})&nbsp;<span class="red">*</span></label>
+       <input type="number" ng-model="maxAmount" >
+       </md-input-container>
+        </div>
+         <div>
+        <md-input-container>
+       <label>Bank Name</label>
+       <input type="text" ng-model="bankName" ng-disabled="true">
+       </md-input-container>
+        </div>
+    </div>
+    </div>
+        
+        <div class="row">
+        <div class="col-md-12 col-sm-12">
+             <div>
+        <md-input-container>
+       <label>Remarks</label>
+       <input type="text" ng-model="remarks">
+       </md-input-container>
+        </div>
+            </div>
+          
+            <div class=" col-md-12 col-sm-12">
+            <button class=" transferOptions btn btn-primary btn-lg " data-ng-click="transferAmount()">Transfer</button>
+                <h4 class="transferOptions"><strong><a ui-sref="addpayee">Add Payee &nbsp;</a></strong></h4>
+                </div>
+        </div>
+        
+    </div>
+</div>

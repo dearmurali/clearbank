@@ -138,6 +138,11 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      font-size: 15px;
  }
 
+.customBlue{
+color: #2079BE;
+}
+
+
  
  .asideMenu span.green {
      font-size: 30px;
@@ -298,6 +303,9 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
  .md-button.md-primary.md-raised {
      color: rgba(255, 255, 255, 0.87);
      background-color: #2079BE;
+     height:50px;
+     width:110px;
+     font-size: 18px;
  }
  
  .md-button.md-primary.md-raised:not([disabled]):hover,
@@ -309,8 +317,8 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
  md-input-container:not(.md-input-invalid).md-input-focused .md-input {
      border-color: rgba(0, 0, 0, 0.12);
  }
- 
- md-input-container:not(.md-input-invalid).md-input-focused label,md-input-container:not(.md-input-invalid).md-input-has-value label {
+
+ md-input-container:not(.md-input-invalid).md-input-focused label, md-input-container:not(.md-input-invalid).md-input-has-value label {
      color: #2079BE
  }
  .landing-page {
@@ -369,6 +377,57 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      text-decoration: none;
      cursor: pointer;
  }
+
+.panel-accountBalance{
+padding-bottom:0px;
+}
+
+.panel-transfers{
+padding:1px;
+}
+
+.panel-heading-transfer{
+padding-top:2px;
+    padding-bottom: 2px;
+}
+
+.transferOptions{
+float:right;
+}
+
+.transferMethod{
+display:none;
+}
+
+.warning{
+display:none;
+    float:right;
+}
+
+md-radio-button {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+}
+
+md-input-container {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    margin: 18px 0;
+    vertical-align: middle;
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
  
  .container>.navbar-collapse {
      /*        margin-right: -15px;*/
@@ -403,14 +462,12 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
 .right-head:hover{
     
     color:#025A9E;
+    cursor:pointer;
 }
 
 .glyphicon-minus{
     float:right;
     font-size: 10px;
-}
-.dropdownItems{
-color:#2079BE;
 }
 .dropdownButton{
 width:200px;
@@ -445,7 +502,32 @@ text-align: center;
 .md-dialog-content{
     color:green;
 }
-.modalWindow
-{
-max-width: 150%;
+
+md-tabs .md-tab.md-active{
+    color: #2079BE;
+}
+
+md-tabs md-ink-bar {
+    color: #2097BE;
+ display: none
+}
+
+.md-tab:not(.md-active) {
+    background-color: #FFF5F5;
+}
+
+.md-tab{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.success-dialog{
+    min-height: 30vh;
+    min-width: 30vw;
+    padding-top: 30px;
+    text-align: center;
+    font-size:18px;
+}
+.form-dialog{
+    display:block;
 }
