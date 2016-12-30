@@ -48,7 +48,10 @@ clearbank.component('userRegistration', {
 
         self.closeDialog = function () {
                         $mdDialog.hide();
+
              window.location.href = "/";
+
+
         }
 
         self.save = function () {
@@ -61,7 +64,7 @@ clearbank.component('userRegistration', {
                     self.registrationId = response;
                     //alert(response);
                     self.showAlert(self.registrationId);
-                   
+
                 })
 
             } else if (self.customerPassword != self.confirmedPassword) {
@@ -72,7 +75,7 @@ clearbank.component('userRegistration', {
                 $('.nameError,.mailError,.passError,.contactError').show();
 
             }
-        }
+        } 
 
 
         self.showAlert = function () {
