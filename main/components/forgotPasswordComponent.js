@@ -25,7 +25,7 @@ clearbank.component('forgotPassword', {
              
              })
          }
-	}
+	} 
     
     self.checkMobile=function(mobileNumber){
         console.log(mobileNumber);

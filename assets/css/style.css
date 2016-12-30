@@ -481,3 +481,6 @@ md-tabs md-ink-bar {
     text-align: center;
     font-size:18px;
 }
+.form-dialog{
+    display:block;
+}
