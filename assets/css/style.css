@@ -396,6 +396,11 @@ padding-top:2px;
 float:right;
 }
 
+.transferMethod{
+display:none;
+}
+
+
 md-radio-button {
     box-sizing: border-box;
     display: block;
@@ -413,6 +418,12 @@ md-input-container {
     margin: 18px 0;
     vertical-align: middle;
     width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
  
  .container>.navbar-collapse {
