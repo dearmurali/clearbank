@@ -303,9 +303,11 @@ color: #2079BE;
  .md-button.md-primary.md-raised {
      color: rgba(255, 255, 255, 0.87);
      background-color: #2079BE;
+/*
      height:50px;
      width:110px;
-     font-size: 18px;
+*/
+/*     font-size: 18px;*/
  }
  
  .md-button.md-primary.md-raised:not([disabled]):hover,

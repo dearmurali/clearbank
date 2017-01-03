@@ -22,7 +22,7 @@ clearbank.service('transferService',function($http){
 //			)
 //		}
         
-        getPayeedata:function(csId, callback){
+     getPayeedata:function(csId, callback){
 			
 			$http({
 				method:"GET",

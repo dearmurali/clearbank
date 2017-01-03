@@ -1,0 +1,29 @@
+{
+"payee":[{
+"AccountNumber":"008764328649",
+    "Name":"Alexander Curtis",
+    "AccountType":"Saving",
+    "Action1":"Edit ",
+    "Action2":" Delete",
+    "ifscCode":"ABAB0000284",
+    "NickName":"Alex"
+},
+    {
+"AccountNumber":"205778368340",
+    "Name":"Diana Freeman",
+    "AccountType":"Current",
+    "Action1":"Edit ",
+    "Action2":" Delete",
+    "ifscCode":"CBCB0000234",
+    "NickName":"Diana"    
+},
+            {
+"AccountNumber":"040671886432",
+    "Name":"Robert Reid",
+    "AccountType":"Saving",
+    "Action1":"Edit ",
+    "Action2":" Delete",
+    "ifscCode":"ABAB0000234",
+    "NickName":"Reid"            
+}]
+}
