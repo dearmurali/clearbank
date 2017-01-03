@@ -533,3 +533,15 @@ md-tabs md-ink-bar {
 .form-dialog{
     display:block;
 }
+.langDropDown{
+width:100%;
+}
+
+.navbar-right{
+margin:8px auto;
+}
+
+#nav-collapse  li.active { 
+   color:green;
+    background-color: yellow; 
+}
