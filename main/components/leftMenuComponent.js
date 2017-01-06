@@ -1,37 +1,31 @@
 clearbank.component('leftMenu',{
   
         templateUrl : "main/partials/leftMenu.html",
-    bindings:{
-            accNumber:'<',
-            accBalance:'<',
-            accCurrency:'<',
-            accType:'<'
-    },
-    require : {
-        parent:'^dashboard'
-    },
-    transclude:true,
-    
         controller:function leftMenuController(){
             var self=this;
-            self.$onInit=function(){
-            this.accountNumber=self.parent.accNumber;
-                console.log(parent.accNumber);
-            this.accountBalance=self.parent.accBalance;
-            this.accountCurrency=self.parent.accCurrency;
-            this.accountType=self.parent.accType;    
-            }
-        
             
-        this.accNumber=sessionStorage.getItem('accountNumber');
-        this.accBalance=sessionStorage.getItem('accountBalance');    
-        this.accType=sessionStorage.getItem('accountType');
-        this.accCurrency=sessionStorage.getItem('currency');    
-            console.log(this.accNumber);
-                console.log(this.accType);
-        this.defaultData=sessionStorage.getItem('defaultData');
-            console.log(this.defaultData);
+        self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
+        console.log(self.accountInfo);
+        var customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
+        self.favLinks = customerInfo.fav_links;
+        self.topPayee = customerInfo.top_payee;
+        self.accNumber = sessionStorage.getItem('accountNumber');
+        self.accBalance = sessionStorage.getItem('accountBalance');
+        self.accCurrency = sessionStorage.getItem('currency');
+        self.accType = sessionStorage.getItem('accountType');
 
+        self.defaultData = true;
+
+        self.getIndex = function (index) {
+            console.log("index");
+            sessionStorage.setItem('currentIndex', index);
+            self.defaultData = false;
+             console.log(index);
+        }
+
+        var index = sessionStorage.getItem('currentIndex');
+        self.transactionInfo = self.accountInfo[index];
+      console.log( self.transactionInfo);
         }
   
 });

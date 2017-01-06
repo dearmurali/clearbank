@@ -1,11 +1,7 @@
 clearbank.component("topMenu",{
   
         templateUrl : "main/partials/topMenu.html",
-        controller:function topMenuController(){    
+        transclude:true
         
-        this.accName = sessionStorage.getItem('customerName');
-            console.log(this.accName);
-       
-        }
   
 });

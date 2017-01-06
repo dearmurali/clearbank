@@ -1,0 +1,45 @@
+{
+	"cardDetails":[
+		{
+			"type": "airline",
+			"detail":[{"data":"4 complementry airport lounge access"},
+                      {"data":"Reduce fuel bills with 2.5% cashback & 2.5% fuel surcharge"},
+                      {"data":"Upto 200 off every month on movie tickets"},
+                      {"data":"Minimum 15% savings at participating restaurants"},
+                      {"data":"Earn 2 payback points on every 100 spent except fuel expense"}
+				    ]	
+		},{
+			"type": "fuel",
+			"detail":[ {"data":"Reduce fuel bills with 2.5% cashback & 2.5% fuel surcharge"},
+                      {"data":"Upto 200 off every month on movie tickets"},
+                      {"data":"Minimum 15% savings at participating restaurants"},
+                      {"data":"Earn 2 payback points on every 100 spent except fuel expense"}
+				    ]	
+		},
+        {
+			"type": "contact",
+			"detail":[ {"data":"Reduce fuel bills with 2.5% cashback & 2.5% fuel surcharge"},
+                      {"data":"Upto 200 off every month on movie tickets"},
+                      {"data":"Minimum 15% savings at participating restaurants"},
+                      {"data":"Earn 2 payback points on every 100 spent except fuel expense"}
+				    ]	
+		},
+        {
+			"type": "expression",
+			"detail":[ {"data":"Reduce fuel bills with 2.5% cashback & 2.5% fuel surcharge"},
+                      {"data":"Upto 200 off every month on movie tickets"},
+                      {"data":"Minimum 15% savings at participating restaurants"},
+                      {"data":"Earn 2 payback points on every 100 spent except fuel expense"},
+                      {"data":"2 complementry airport lounge access"}
+				    ]	
+		},
+        {
+			"type": "metro",
+			"detail":[ {"data":"15% off on metro spends"},
+                      {"data":"Upto 200 off every month on movie tickets"},
+                      {"data":"Minimum 15% savings at participating restaurants"},
+                      {"data":"Earn 2 payback points on every 100 spent except fuel expense"}
+				    ]	
+		}
+        ]
+}

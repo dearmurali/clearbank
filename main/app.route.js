@@ -25,22 +25,19 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 
     .state('dashboard', {
         url: '/dashboard',
-        templateUrl: 'views/dashboard.html',
-        controller: 'dashboardController',
+        templateUrl: 'views/dashboard.html'
 
     })
 
     .state('lastTransactions', {
         url: '/lastTransactions',
-        templateUrl: 'views/lastTransactions.html',
-        controller: 'lastTransactionController'
+        templateUrl: 'views/lastTransactions.html'     
     })
 
 
     .state('transfers', {
         url: '/transfers',
-        templateUrl: 'views/transfers.html',
-        controller: 'transfersController'
+        templateUrl: 'views/transfers.html'
     })
 
     .state('mutualfunds', {

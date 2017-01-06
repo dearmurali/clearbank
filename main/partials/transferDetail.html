@@ -1,10 +1,43 @@
+    <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <strong>Transaction Type</strong>
+                    </h4>
+                </div>
+                <div class="panel-body panel-transfers">
+                    <md-radio-group class="md-primary" ng-model="$ctrl.selected1">
+                        <div class="col-md-4 col-sm-4" >
+                        <md-radio-button value="1" >
+                         <strong>Your Linked ClearBank Account</strong>
+                        </md-radio-button>
+                        </div>
+                      <div class="col-md-4 col-sm-4 ">
+                       <md-radio-button value="2" >
+                      <strong> Others ClearBank Account</strong>
+                       </md-radio-button>
+                      </div>
+                      <div class="col-md-4 col-sm-4 ">
+                      <md-radio-button value="3" >
+                      <strong>   Other Bank (NEFT, RTGS or IMPS)</strong>
+                      </md-radio-button>
+                  </md-radio-group>       
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 col-sm-12">
 <div class="panel panel-default">
 <div class="panel-heading panel-heading-transfer">
-  <h4>{{transferHeading}}&nbsp;{{transferChoice}}</h4></div>
+  <h4>{{$ctrl.transferHeading}}&nbsp;{{$ctrl.transferChoice}}
+     <small class="warning_fields">Fill all mandatory fields *</small>
+     <small class="warning_maxAmount">Maximum transfer amount can't be more than Available Balance *</small>
+     <small class="warning_maxIMPS">Maximum limit for IMPS is {{$ctrl.maxIMPSlimit}} *</small>
+      </h4>
+    </div>
 
-    <div class="panel-body" data-ng-class="transferMethod()">
+    <div class="panel-body" data-ng-class="$ctrl.transferMethod()">
         <div class="row transferMethod" >
-            <md-radio-group ng-model="selected2" class="md-primary">
+            <md-radio-group ng-model="$ctrl.selected2" class="md-primary">
                    <div class="col-md-2 col-sm -2">
             <md-radio-button value="1" >
              <strong>NEFT</strong>
@@ -29,8 +62,8 @@
         <div>       
    <md-input-container >
   <label><span class="customBlue">Debit Account</span><span class="red">&nbsp;*</span></label>
-  <md-select ng-model="debitAccount" placeholder="Select debit account *">
-       <md-option data-ng-repeat="account in transferAccount"  ng-value={{account.account_number}} >{{account.account_number}}</md-option>
+  <md-select ng-model="$ctrl.debitAccount" placeholder="Select debit account *" data-ng-blur="$ctrl.checkFields()">
+       <md-option data-ng-repeat="account in $ctrl.transferAccount"  ng-value={{account.account_number}} >{{account.account_number}}</md-option>
       
   </md-select>
 </md-input-container>
@@ -38,8 +71,8 @@
         <div>       
    <md-input-container >
   <label><span class="customBlue">Payee Account</span><span class="red">&nbsp;*</span></label>
-  <md-select ng-model="payeeAccount" placeholder="Select payee account *">
-      <md-option data-ng-repeat="payee in payeeData" ng-value={{payee.payeeAccountNumber}} >{{payee.payeeAccountNumber}}</md-option>
+  <md-select ng-model="$ctrl.payeeAccount" placeholder="Select payee account *" data-ng-blur="$ctrl.checkFields()">
+      <md-option data-ng-repeat="payee in $ctrl.payeeData" ng-value={{payee.payeeAccountNumber}} >{{payee.payeeAccountNumber}}</md-option>
       
   </md-select>
 </md-input-container>
@@ -48,27 +81,26 @@
          <div>
         <md-input-container>
        <label>IFSC code</label>
-       <input type="text" ng-model="ifscCode" ng-disabled="true">
+       <input type="text" ng-model="$ctrl.ifscCode" ng-disabled="true">
        </md-input-container>
         </div>
     </div>
     <div class="col-md-6 col-sm-6">
-            <div class="warning">Fill the mandatory fields *</div>
       <div>
          <label><span class="customBlue">Total available amount</span></label>
-              <h4 class="green"><strong>{{currency}}&nbsp;{{available_balance}}</strong></h4>
+              <h4 class="green"><strong>{{$ctrl.currency}}&nbsp;{{$ctrl.available_balance}}</strong></h4>
           </div>
         
         <div>
         <md-input-container>
-       <label>Amount ({{currency}})&nbsp;<span class="red">*</span></label>
-       <input type="number" ng-model="maxAmount" >
+       <label>Amount ({{$ctrl.currency}})&nbsp;<span class="red">*</span></label>
+       <input type="number" ng-model="$ctrl.maxAmount" data-ng-blur="$ctrl.checkFields()">
        </md-input-container>
         </div>
          <div>
         <md-input-container>
        <label>Bank Name</label>
-       <input type="text" ng-model="bankName" ng-disabled="true">
+       <input type="text" ng-model="$ctrl.bankName" ng-disabled="true">
        </md-input-container>
         </div>
     </div>
@@ -79,16 +111,18 @@
              <div>
         <md-input-container>
        <label>Remarks</label>
-       <input type="text" ng-model="remarks">
+       <input type="text" ng-model="$ctrl.remarks">
        </md-input-container>
         </div>
             </div>
           
             <div class=" col-md-12 col-sm-12">
-            <button class=" transferOptions btn btn-primary btn-lg " data-ng-click="transferAmount()">Transfer</button>
-                <h4 class="transferOptions"><strong><a ui-sref="managepayee">Add Payee &nbsp;</a></strong></h4>
+                <md-button class="md-raised md-primary transferOptions" data-ng-click="$ctrl.transferAmount()">Transfer</md-button>
+                <h4 class="transferOptions"><strong><a class="addPayeeLink" ui-sref="managepayee">Add Payee</a>&nbsp;</strong></h4>
                 </div>
         </div>
         
     </div>
+</div>
+                </div>
 </div>

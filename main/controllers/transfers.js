@@ -1,6 +1,6 @@
-clearbank.controller('transfersController',['$scope','transferService',function($scope,transferService){
+clearbank.controller('transfersController',['$scope','$mdDialog','transferService',function($scope,$mdDialog,transferService){
   
-    
+    var self=$scope;
      $scope.accName = sessionStorage.getItem('customerName');
      $scope.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
     $scope.accNumber=sessionStorage.getItem('accountNumber');
@@ -130,19 +130,50 @@ clearbank.controller('transfersController',['$scope','transferService',function(
         }
     });
     
+    $scope.checkFields=function(){
+     if($scope.debitAccount===undefined || $scope.payeeAccount===undefined || $scope.maxAmount===undefined ||    $scope.maxAmount===null){
+            $('.warning_transfer').css('display','block');
+        }
+        
+       else{
+            $('.warning_transfer').css('display','none');
+        }
+        
+    }
+    
     $scope.transferAmount=function(){
         
         console.log($scope.debitAccount);
         console.log( $scope.payeeAccount);
         console.log($scope.maxAmount);
-    if($scope.debitAccount=="undefined" || $scope.payeeAccount=="undefined" || $scope.maxAmount=="undefined"){
-            $('.warning').css('display','block');
+        
+        if($scope.debitAccount===undefined || $scope.payeeAccount===undefined || $scope.maxAmount===undefined ||    $scope.maxAmount===null){
+            $('.warning_transfer').css('display','block');
+            
         }
         
-        if($scope.debitAccoun!="undefined" && $scope.payeeAccount!="undefined" && $scope.maxAmount!="undefined"){
-            $('.warning').css('display','none');
-        }
+       else{
+            $('.warning_transfer').css('display','none');
+              $scope.showAlert();  
+       }
+     
+     
+        
     }
+    
+    $scope.showAlert = function () {
+            $mdDialog.show({
+                clickOutsideToClose: false,
+                controller: function DialogController($scope,$mdDialog) {
+                     $scope.closeDialog = function() {
+                        $mdDialog.hide();
+                     }
+                  },
+                scope:$scope,
+                preserveScope: true,
+                templateUrl: 'main/partials/transferSuccess.html'
+            });
+        }
     
     }
     

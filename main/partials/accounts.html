@@ -14,10 +14,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-ng-repeat="account in accountInfo track by $index">
-                        <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.account_number}}</a></td>
+                    <tr data-ng-repeat="account in $ctrl.accountInfo track by $index">
+                        <td data-ng-click="$ctrl.getIndex($index)"><a ui-sref="lastTransactions">{{account.account_number}}</a></td>
                         <td>{{account.account_type}}</td>
-                        <td data-ng-click="getIndex($index)"><a ui-sref="lastTransactions">{{account.available_balance}}&nbsp;{{account.currency}}</a></td>
+                        <td data-ng-click="$ctrl.getIndex($index)"><a ui-sref="lastTransactions">{{account.available_balance}}&nbsp;{{account.currency}}</a></td>
                         <td>{{account.opening_date}}</td>
                     </tr>
                 </tbody>

@@ -1,0 +1,61 @@
+  <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a><strong>{{$ctrl.transactionInfo.account_type}} Account Balance</strong></a>
+                    </h4>
+                </div>
+                <div class="panel-body table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr class="tableheading">
+                                    <td>Account Number</td>
+                                    <td>Account Type</td>
+                                    <td>Available Balance</td>
+                                    <td>Opening Date</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{$ctrl.transactionInfo.account_number}}</td>
+                                    <td>{{$ctrl.transactionInfo.account_type}}</td>
+                                    <td>{{$ctrl.transactionInfo.available_balance}}&nbsp;{{$ctrl.transactionInfo.currency}}</td>
+                                    <td>{{$ctrl.transactionInfo.opening_date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+
+        
+                 <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title">
+                        <a><strong>Last 10 transactions</strong></a><a><strong class="right-head">more</strong></a>
+                    </h4>
+                </div>
+                <div class=" panel-body table-responsive">
+
+                        <table class="table">
+                            <thead>
+                                <tr class="tableheading">
+                                    <td>Date</td> 
+                                    <td>Description</td>
+                                    <td>Reference Number</td>
+                                    <td>Amount</td>
+                                    <td>Balance</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="data in $ctrl.lastTransactionInfo">
+                                    <td>{{data.date}}</td>
+                                    <td>{{data.description}}</td>
+                                    <td>{{data.referenceNumber}}</td>
+                                    <td data-ng-class="getColor($index)">{{data.type}}.{{data.amount}}</td>
+                                    <td>{{data.finalAmount}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                     
+                </div>
+            </div>

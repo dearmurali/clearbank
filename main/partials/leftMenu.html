@@ -6,16 +6,16 @@
             </h4>
         </div>
         <div class="panel-body panel-accountBalance">
-            <ul class="asideMenu" data-ng-show="defaultData">
-                <span><strong>{{accNumber}}<small>- {{accType}}</small></strong><br />
-                    <strong><span class="green">{{accBalance}}</span>&nbsp;<small class="green">{{accCurrency}}</small></strong>
+            <ul class="asideMenu" data-ng-show="$ctrl.defaultData">
+                <span><strong>{{$ctrl.accNumber}}<small> -{{$ctrl.accType}}</small></strong><br />
+                    <strong><span class="green">{{$ctrl.accBalance}}</span>&nbsp;<small class="green">{{$ctrl.accCurrency}}</small></strong>
                 </span>
             </ul>
 
 
-            <ul class="asideMenu" data-ng-show="!defaultData">
-              <span><strong>{{transactionInfo.account_number}}<small>- {{transactionInfo.account_type}}</small></strong><br />
-                    <strong><span class="green">{{transactionInfo.available_balance}}</span>&nbsp;<small class="green">{{transactionInfo.currency}}</small></strong>
+            <ul class="asideMenu" data-ng-show="!($ctrl.defaultData)">
+              <span><strong>{{$ctrl.transactionInfo.account_number}}<small> -{{$ctrl.transactionInfo.account_type}}</small></strong><br />
+                    <strong><span class="green">{{$ctrl.transactionInfo.available_balance}}</span>&nbsp;<small class="green">{{$ctrl.transactionInfo.currency}}</small></strong>
                </span>
             </ul>
         </div>
@@ -31,7 +31,7 @@
         <div id="collapse2" class="panel-collapse collapse in">
 
             <ul class="list-group">
-                <li class="list-group-item" data-ng-repeat="fav in  favLinks">
+                <li class="list-group-item" data-ng-repeat="fav in  $ctrl.favLinks">
                     <a ui-sref={{fav.link_url_1}}>
                         <h5>{{fav.label_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
                     </a>
@@ -49,7 +49,7 @@
     <div id="collapse3" class="panel-collapse collapse in">
 
         <ul class="list-group">
-            <li class="list-group-item" data-ng-repeat="payee in topPayee">
+            <li class="list-group-item" data-ng-repeat="payee in $ctrl.topPayee">
                 <a ui-sref="transfers" class="topPayee">
                     <h5>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
                 </a>

@@ -1,0 +1,104 @@
+<top-menu></top-menu>
+</div>
+<!--</div>-->
+<div class=" container">
+<div class="row">
+<div class="col-md-3 col-sm-3 ">
+<left-menu></left-menu>
+</div>
+<div class="col-md-9 col-sm-9" ng-controller="addPayeeController as addPayee">
+ <div class="panel panel-default">
+     <div class="panel-heading">
+    <h3 class="panel-title"><strong>Manage Payee</strong></h3><br /><div  ng-show="addPayee.emptyFields" class="alert alert-danger">
+  <strong>Wrong value/ Empty Fields Found!</strong> Please Try again.
+</div>
+    </div>
+     <div class="panel-body">
+            <form class="form-horizontal" name="managePayeeForm">
+                <div class="col-md-6">
+                <md-input-container class="md-block">
+                    <label>Account Number</label>
+                    
+                    <input type="password" name="accountNumber" ng-model="addPayee.accountNumber" ng-FOCUS="addpayee.savePayee()" required ng-pattern="/^[0-9]{12}$/" maxlength="12">
+                    <span class="valText" ng-show="managePayeeForm.accountNumber.$error.pattern">Please enter a valid account number</span>
+<span class="valText" ng-show="addPayee.emptyAccountNumber">Please don't leave this Empty</span>
+                </md-input-container>
+</div>
+                  <div class="col-md-6">
+                <md-input-container class="md-block">
+                    <label>Repeat Account Number</label>
+
+                    <input type="text" name="reEnterAccountNumber" ng-model="addPayee.reEnterAccountNumber" required ng-pattern="/^[0-9]{12}$/" maxlength="12" ng-blur="addPayee.compareAccountNumber()" >
+                    <span class="valText" ng-show="addPayee.accountMatchFail">Account did not Match</span>
+                    <span class="valText" ng-show="addPayee.emptyRepeatAccountNumber">Please don't leave this Empty</span>
+                     </md-input-container>
+                    </div>
+         <div class="col-md-6">
+                <md-input-container class="md-block">
+                  <label>Account Type</label>
+
+                    <md-select ng-model="addPayee.accountType">
+                     <md-option ng-repeat="x in addPayee.accountTypes track by $index" ng-value="x.type">
+              {{x.type}}
+            </md-option> 
+                        </md-select>
+                    <span class="valText" ng-show="addPayee.emptyAccontType">Please don't leave this Empty</span>
+                     </md-input-container>
+             
+                    </div>
+                  <div class="col-md-6">
+                <md-input-container class="md-block">
+                    <label>IFSC Code</label>
+
+                    <input type="text" name="ifscCode" ng-model="addPayee.ifscCode" required ng-pattern="/^[a-zA-Z0-9]{10}$/" maxlength="10" >
+                    <span class="valText" ng-show="managePayeeForm.ifscCode.$error.pattern">Please enter a valid IFSC Code</span>
+                    <span class="valText" ng-show="addPayee.emptyIfscCode">Please don't leave this Empty</span>
+                     </md-input-container>
+                    </div>
+                <div class="col-md-6">
+                <md-input-container class="md-block">
+                    <label>Name</label>
+
+                    <input type="text" name="payeeName" ng-model="addPayee.payeeName" required ng-pattern="/^[a-z A-Z]+$/">
+                    <span class="valText" ng-show="managePayeeForm.payeeName.$error.pattern">Name should only contain Alphabets</span>
+                    <span class="valText" ng-show="addPayee.emptyName">Please don't leave this Empty</span>
+                     </md-input-container>
+                    </div>
+                <div class="col-md-6">
+                <md-input-container class="md-block">
+                    <label>Nick Name</label>
+
+                    <input type="text" name="payeeNickName" ng-model="addPayee.payeeNickName" required ng-pattern="/^[a-z A-Z]+$/">
+                    <span class="valText" ng-show="managePayeeForm.payeeNickName.$error.pattern">Nick Name should only contain Alphabets</span>
+                    <span class="valText" ng-show="addPayee.emptyNickName">Please don't leave this Empty</span>
+                     </md-input-container>
+                    </div>
+               
+  <div class="col-md-6">
+                <span class="managePayee"><strong>Do you want to set limit?</strong></span><br /><p></p>
+                    <md-radio-group class="md-primary" ng-model="addPayee.setLimitOption">
+                        <div class="col-md-2">
+                    <md-radio-button name="setLimit" ng-click="addPayee.checkLimit('yes')" value="yes"><strong>Yes</strong></md-radio-button></div>
+                           <div class="col-md-1">
+                        <md-radio-button ng-click="addPayee.checkLimit('no')" value="no"><strong>No</strong></md-radio-button></div>
+                        </md-radio-group>
+                </div>
+                <div class="col-md-6">
+                <md-input-container class="md-block">
+                    <label>Set Limit</label>
+                    <input type="text" name="transferLimit" ng-disabled="addPayee.setLimit" ng-model="addPayee.transferLimit" required ng-pattern="/^[0-9]{1,12}$/" /> 
+                    <span class="valText" ng-show="managePayeeForm.transferLimit.$error.pattern">Limit should only contain numbers</span>
+             <span class="valText" ng-show="addPayee.emptyTransferLimit">Please don't leave this Empty</span>       
+                    </md-input-container>
+                </div>
+     </form>
+        <div class="col-md-6 pull-right">
+           <md-button md-no-ink  class="deletePayee"><strong>Delete Payee</strong></md-button>
+            <md-button class="md-raised md-primary" ng-click="addPayee.savePayee()" data-toggle="successMessage" data-target="#successMessage"><strong>SAVE</strong></md-button>
+         </div>
+   
+                </div>
+     
+     </div>
+         </div>
+    </div>
