@@ -35,9 +35,9 @@ clearbank.component('forgotDialog', {
                 }
 
                 if (result.data.success) {
-                    console.log(self.checkNumber);
+//                    console.log(self.checkNumber);
                     self.checkNumber = true;
-                    console.log(self.checkNumber);
+//                    console.log(self.checkNumber);
                 }
 
             });

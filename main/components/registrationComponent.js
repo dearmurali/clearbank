@@ -1,7 +1,7 @@
 clearbank.component('userRegistration', {
 
     templateUrl: 'main/partials/registration.html',
-    controller: function registrationController(RegistrationService, $mdDialog, $scope) {
+    controller: function (RegistrationService, $mdDialog, $scope) {
         var self = this;
         $('.nameError,.mailError,.passError,.passError2,.contactError').hide();
         $('.cName').on('blur', function () {
@@ -37,7 +37,7 @@ clearbank.component('userRegistration', {
 
         });
         $('.cPass2').on('blur', function () {
-            if (self.customerPassword != self.confirmedPassword) {
+            if (self.customerPassword !== self.confirmedPassword) {
                 $('.passError2').show('200');
 
             } else {
@@ -55,19 +55,19 @@ clearbank.component('userRegistration', {
         }
 
         self.save = function () {
-            console.log("saving")
-            console.log(self.customerName, self.customerContact, self.customerEmail, self.customerPassword)
+//            console.log("saving")
+//            console.log(self.customerName, self.customerContact, self.customerEmail, self.customerPassword)
             if (!(self.customerName === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined || self.customerPassword !== self.confirmedPassword)) {
 
                 RegistrationService.RegisterCustomer(self.customerName, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
-                    console.log(response);
+//                    console.log(response);
                     self.registrationId = response;
                     //alert(response);
                     self.showAlert(self.registrationId);
 
                 })
 
-            } else if (self.customerPassword != self.confirmedPassword) {
+            } else if (self.customerPassword !== self.confirmedPassword) {
                 $('.passError2').show('200');
               
             } else {

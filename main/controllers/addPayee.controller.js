@@ -18,15 +18,15 @@ clearbank.controller('addPayeeController', ['$scope','$mdDialog', function ($sco
     // when save button is clicked//
     
     this.savePayee=function(){
-console.log(this.payeeName);
+//console.log(this.payeeName);
         if( this.accountNumber===undefined || this.reEnterAccountNumber===undefined || this.accountType===undefined || this.ifscCode===undefined || this.payeeName===undefined || this.payeeNickName===undefined)
         {this.emptyFields=true;
           this.emptyFields=true;
-        console.log("found")
+//        console.log("found")
         }
-        console.log(this.accountNumber);
+//        console.log(this.accountNumber);
          if(this.setLimitOption==="yes"){
-                console.log(this.transferLimit);
+//                console.log(this.transferLimit);
             if(this.transferLimit===undefined){
                 this.emptyFields=true;
             }
@@ -36,8 +36,8 @@ console.log(this.payeeName);
            if(this.setLimitOption==="yes" && this.transferLimit!=undefined)
            {
                 this.emptyFields=false;
-               console.log(this.transferLimit);
-               console.log("Calling service with limit value");
+//               console.log(this.transferLimit);
+//               console.log("Calling service with limit value");
                  this.showModal();
                }
                  
@@ -47,13 +47,13 @@ console.log(this.payeeName);
            if(this.setLimitOption==="no" || this.setLimitOption===undefined)
            {
                this.emptyFields=false;
-           console.log("Calling service without limit");
+//           console.log("Calling service without limit");
                this.showModal();
            }
        }}
        
        this.checkLimit=function(option){
-           console.log(option);
+//           console.log(option);
     if(option==="yes")
            {
            this.setLimit=false;
