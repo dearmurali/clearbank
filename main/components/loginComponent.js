@@ -21,6 +21,7 @@ clearbank.component('login', {
                     window.location.href = window.location.href + 'dashboard';
                 } else {
                     //	alert("Invalid ID and/or password.");
+
                     self.validCredentials = false;
                 }
             });

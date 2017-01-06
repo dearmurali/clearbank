@@ -1,0 +1,46 @@
+<!--
+<md-dialog >
+    <md-dialog-content>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <span class="green">
+            <p><span><img src="../../assets/images/success.PNG" class="image-responsive"></span></p>
+            <p><span>Registration Successfull</span></p>
+            </span>
+            <p><span>Please note your Customer ID</span></p>
+            <p><span><h3>{{$ctrl.registrationId}}</h3></span></p>
+            <p> <button class="btn btn-primary">OK</button></p>
+            <md-button class="md-raised md-primary" data-ng-click="$ctrl.closeDialog()">OK</md-button>
+        </div>
+        <div class="col-md-2"></div>
+    </md-dialog-content>
+</md-dialog>
+-->
+
+<md-dialog class="success-dialog">
+<!--
+  <form ng-cloak>
+    <md-toolbar>
+        <div class="col-md-offset-3" >
+      <div class="md-toolbar-tools">
+       <h2>Payee Added</h2>
+        
+      </div>
+            </div>
+    </md-toolbar>
+-->
+
+    <md-dialog-content>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <span class="green">
+            <p><span><img src="../../assets/images/success.PNG" class="image-responsive"></span></p>
+            <p><span>Payee Details Modified</span></p>
+                  </div>
+            <div class="col-md-2"></div>
+                 <md-button class="md-raised md-primary" ui-sref="dashboard" ng-click="cancel()">Home</md-button>
+    <md-button class="md-raised md-primary" ui-sref="transfers" ng-click="cancel()">Transfer</md-button>
+         <md-button class="md-raised md-primary" ui-sref="editpayee" ng-click="cancel()">Edit Payee</md-button>
+            </span>
+      
+</md-dialog>

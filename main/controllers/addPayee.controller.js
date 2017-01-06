@@ -1,5 +1,6 @@
 clearbank.controller('addPayeeController', ['$scope','$mdDialog', function ($scope,$mdDialog) {
-this.accountType="";
+
+    this.accountType="";
     this.accountTypes=[{type:"Savings"},{type:"Current"}];
     this.setLimit=true;
     this.compareAccountNumber=function(){
@@ -64,9 +65,19 @@ console.log(this.payeeName);
        this.showModal=function()
        {
        $mdDialog.show({
-//       controller:addPayeeController,
+           controller:modalController,
            templateUrl:'views/addPayeeSuccessModal.html',
            clickOutsideToClose:false
        })
        }
+
+       
+    function modalController($scope, $mdDialog) {
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+
+   
+};
+
 }])

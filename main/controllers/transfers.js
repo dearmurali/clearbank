@@ -26,33 +26,14 @@ clearbank.controller('transfersController',['$scope','$mdDialog','transferServic
     
     $scope.selected1="1";
     $scope.selected2="1";
-//    $scope.transfer_type="";
-    
+
     $scope.transferAccount=[]; 
     
     $scope.available_balance="Choose Debit Account First";
     $scope.currency="";
     
     for(i=0;i<$scope.accountInfo.length;i++){
-//    if($scope.accountInfo[i].account_type=="Saving")
-//        {
-//            $scope.debitAccount=$scope.accountInfo[i].account_number;
-//            $scope.available_balance=$scope.accountInfo[i].available_balance;
-//            $scope.currency=$scope.accountInfo[i].currency;
-//            
-//            $scope.transferAccount.push({ account_number:$scope.accountInfo[i].account_number,
-//                                 account_type:$scope.accountInfo[i].account_type,
-//                                 available_balance:$scope.accountInfo[i].available_balance,
-//                                 currency:$scope.accountInfo[i].currency});
-//        }
-//    if($scope.accountInfo[i].account_type=="Current")
-//        {
-//            $scope.transferAccount.push({ account_number:$scope.accountInfo[i].account_number,
-//                                 account_type:$scope.accountInfo[i].account_type,
-//                                 available_balance:$scope.accountInfo[i].available_balance,
-//                                 currency:$scope.accountInfo[i].currency});
-//        }  
-        
+
         
         if($scope.accountInfo[i].account_type=="Current" || $scope.accountInfo[i].account_type=="Saving")
         {
@@ -62,15 +43,12 @@ clearbank.controller('transfersController',['$scope','$mdDialog','transferServic
                                  currency:$scope.accountInfo[i].currency});
         }     
     }
-    
-    
+    console.log($scope.selected1);
+    console.log($scope.selected2);  
     $scope.transferMethod=function(){
-        
-//        if($scope.maxAmount>$scope.available_balance){
-//        alert("Can't enter more than available balance");
-//        }
-       
-            
+
+           console.log($scope.selected1);  
+        console.log($scope.selected2);  
         for(i=0;i<$scope.transferAccount.length;i++)
         {
         if($scope.transferAccount[i].account_number==$scope.debitAccount)

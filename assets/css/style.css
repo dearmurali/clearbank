@@ -304,9 +304,11 @@ color: #2079BE;
  .md-button.md-primary.md-raised {
      color: rgba(255, 255, 255, 0.87);
      background-color: #2079BE;
+/*
      height:50px;
      width:110px;
-     font-size: 18px;
+*/
+/*     font-size: 18px;*/
  }
  
  .md-button.md-primary.md-raised:not([disabled]):hover,
@@ -318,11 +320,10 @@ color: #2079BE;
  md-input-container:not(.md-input-invalid).md-input-focused .md-input {
      border-color: rgba(0, 0, 0, 0.12);
  }
- 
+
  md-input-container:not(.md-input-invalid).md-input-focused label, md-input-container:not(.md-input-invalid).md-input-has-value label {
      color: #2079BE
  }
- 
  .landing-page {
      background-color: #2079BE;
      min-height: 80vh;
@@ -497,6 +498,39 @@ padding:0px;
     float:right;
     font-size: 10px;
 }
+.dropdownButton{
+width:200px;
+}
+
+.managePayee{
+color:#2079BE;
+}
+.managePayeeDropdown
+{
+color:#2079BE;
+}
+.deletePayee{
+color:#2079BE;
+    font-size: 18px;    
+}
+.alert {
+padding: 8px 35px 8px 14px;
+margin-bottom: 18px;
+
+}
+md-toolbar{
+background-color:red;
+}
+.align-center{
+text-align: center;
+}
+.fa-check-circle-o{
+    color:green;
+    font-size: 72px;
+}
+.md-dialog-content{
+    color:green;
+}
 
 md-tabs .md-tab.md-active{
     color: #2079BE;
@@ -525,4 +559,21 @@ md-tabs md-ink-bar {
 }
 .form-dialog{
     display:block;
+}
+.langDropDown{
+width:100%;
+}
+
+.navbar-right{
+margin:8px auto;
+}
+
+#nav-collapse  li.active { 
+   color:green;
+    background-color: yellow; 
+}
+
+
+:focus{
+	outline: inherit;
 }

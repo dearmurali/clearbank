@@ -66,6 +66,21 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
         templateUrl: 'views/editProfile.html',
         
     })
+    
+    .state('addpayee',{
+    url:'/addpayee',
+        templateUrl:'views/addPayee.html'
+    })
+    
+    .state('payeelist',{
+    url:'/payeelist',
+        templateUrl:"views/payeelist.html"
+    })
+    .state('editpayee',{
+    url:'/editpayee',
+        templateUrl:"views/editPayee.html"
+    })
+    
 
     $locationProvider.html5Mode({
         enabled: false,
