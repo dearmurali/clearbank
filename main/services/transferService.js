@@ -33,8 +33,8 @@ clearbank.service('transferService',function($http){
 			}).then(
 				//success
 				function(result){
-                    console.log('inside transfer service');
-                    console.log(result.data);
+//                    console.log('inside transfer service');
+//                    console.log(result.data);
                     for(i=0;i<result.data.payeeData.length;i++){
                     if(result.data.payeeData[i].csId===csId){
 //                         console.log(result.data.payeeData[i].payee);

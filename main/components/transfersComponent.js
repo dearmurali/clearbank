@@ -18,7 +18,7 @@ clearbank.component("transferDetail", {
 
 		self.defaultData = true;
 
-		var index = sessionStorage.getItem('currentIndex');
+//		var index = sessionStorage.getItem('currentIndex');
 		//self.transactionInfo=$ctrl.accountInfo[index];
 		self.transferHeading = "Any Linked ClearBank Account";
 		self.transferChoice = "";

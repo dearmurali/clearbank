@@ -3,7 +3,7 @@ clearbank.service('lastTransactionService',function($http){
 
         
         getTransactionData:function(index,accId, callback){
-			console.log(index+" "+accId);
+//			console.log(index+" "+accId);
 			$http({
 				method:"get",
 				url:"http://localhost:3000/assets/transactionData.json"

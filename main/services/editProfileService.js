@@ -1,7 +1,7 @@
 clearbank.service('editProfileService', function ($http) {
     return {
         UpdateProfile: function (customer_id, customer_mobile, customer_email, customer_address, token, callback) {
-            console.log("in service",token);
+//            console.log("in service",token);
             $http({
                 method: "POST",
                 url: "http://10.80.190.161:9090/clearbank-1.0/modifyUser",
