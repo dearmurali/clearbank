@@ -12,18 +12,19 @@ clearbank.service('cardService',function($http){
 			}).then(
 				//success
 				function(result){
-                    console.log('inside card service');
-                    console.log(result.data);
+//                    console.log('inside card service');
+//                    console.log(result.data);
                     for(i=0;i<result.data.cardDetails.length;i++){
                     if(result.data.cardDetails[i].type===cardType){
-                         console.log(result.data.cardDetails[i].detail);
+//                         console.log(result.data.cardDetails[i].detail);
                     callback(result.data.cardDetails[i].detail);
                     }
                         }  
 				},
                 //error
 				function(err){
-					console.log('some error occurred');
+					callback("some error occured "+err)
+//					console.log('some error occurred');
 				}
 			)
 		}

@@ -11,8 +11,8 @@ clearbank.service('LoginService',function($http,$cookies){
 			}).then(
 				function(result){
 
-                    console.log(result.data);
-					console.log("result on login",result.config.data.username);
+//                    console.log(result.data);
+//					console.log("result on login",result.config.data.username);
 
 						if(result.data.success){
 
@@ -27,7 +27,7 @@ clearbank.service('LoginService',function($http,$cookies){
 
                            
                            sessionStorage.setItem('customerName', result.data.customer_information.customer_Name);
-                            console.log(result.data.customer_information.customer_Name);
+//                            console.log(result.data.customer_information.customer_Name);
                            sessionStorage.setItem('customerId', result.data.customer_information.customer_Id);
                            sessionStorage.setItem('customerMail', result.data.customer_information.customer_email);
                            sessionStorage.setItem('customerMobile',result.data.customer_information.customer_mobileNumber);
@@ -45,7 +45,8 @@ clearbank.service('LoginService',function($http,$cookies){
 							callback('false');
 				},
 				function(err){
-					console.log('some error occurred');
+					callback("some error occured"+err)
+//					console.log('some error occurred');
 				}
 			)
 		},

@@ -13,8 +13,8 @@ clearbank.service('RegistrationService', function ($http) {
 				}
 			}).then(
 				function (result) {
-					console.log('successfully resistered ', result);
-					console.log(result.data);
+//					console.log('successfully resistered ', result);
+//					console.log(result.data);
 					sessionStorage.setItem('csid', result.data.customerId);
 					if (result.status === 200) {
 						callback(result.data.customerId);
@@ -23,7 +23,7 @@ clearbank.service('RegistrationService', function ($http) {
 					}
 				},
 				function (err) {
-					console.log('some error occurred ', err);
+//					console.log('some error occurred ', err);
 					callback('not registered');
 				}
 			)

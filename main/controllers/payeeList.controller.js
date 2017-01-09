@@ -2,17 +2,17 @@ clearbank.controller("payeeListController",['$scope','payeeListService',function
 //this.payees={"JOH"};
     var payees=[];
     payeeListService.getPayeeData(function(result){
-console.log(result.payee[0]);
+//console.log(result.payee[0]);
    angular.forEach(result.payee,function(value,key){
    payees.push(value);
    }) 
 })
-    console.log(payees);
+//    console.log(payees);
     this.values=payees;
-    console.log(this.values);
+//    console.log(this.values);
     
     this.deletePayee=function(ndx){
-    console.log(ndx);
+//    console.log(ndx);
        var deletePayees= confirm("Are you sure you want to delete this item");
         
         if(deletePayees===true){

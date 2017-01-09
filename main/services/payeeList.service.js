@@ -7,12 +7,13 @@ method:"GET",
 })
 .then(
 function(result){
-    console.log("inside service")
+//    console.log("inside service")
     callback(result.data);
   //  console.log(result.data);
 },
     function(err){
-    console.log("Error")
+   callback("some error occured"+err);
+//		console.log("Error")
     }
     )
 

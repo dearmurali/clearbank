@@ -26,7 +26,7 @@ clearbank.component('forgotDialog', {
             $mdDialog.hide();
         }
         self.checkMobile = function (mobileNumber) {
-            console.log(mobileNumber);
+//            console.log(mobileNumber);
             ForgotPasswordService.validateMobileNumber(mobileNumber, function (result) {
 
                 if (result.data.success === false) {

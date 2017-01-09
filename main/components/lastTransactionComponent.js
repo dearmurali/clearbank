@@ -22,7 +22,7 @@ clearbank.component("lastTransaction",{
         self.accId=sessionStorage.getItem('customerId');
 	    self.showTransactions=false;
    
-       console.log(index);
+//       console.log(index);
     
         var info=JSON.parse(sessionStorage.getItem('accountInfo'));
         self.transactionInfo=info[index];   
@@ -37,10 +37,10 @@ clearbank.component("lastTransaction",{
         var token=sessionStorage.getItem('token');    
 
     lastTransactionService.getTransactionData(index,customerID,function(result){
-        console.log("transaction data");
-        console.log(result);
+//        console.log("transaction data");
+//        console.log(result);
         self.lastTransactionInfo=result;
-        console.log(self.lastTransactionInfo);
+//        console.log(self.lastTransactionInfo);
 		});
 
      

@@ -1,7 +1,7 @@
 clearbank.service('ForgotPasswordService',function($http){
 	return{
 		validateMobileNumber:function(mobile_number, callback){
-			console.log('mobile_number ',mobile_number);
+//			console.log('mobile_number ',mobile_number);
 			$http({
 					method:"POST",
 					url:"http://10.80.190.161:9090/clearbank-1.0/validate/mobile",
@@ -11,11 +11,11 @@ clearbank.service('ForgotPasswordService',function($http){
 			})
 			.then(
 				function(result){
-					console.log('success ',result);
+//					console.log('success ',result);
 					callback(result);
 				},
 				function(err){
-					console.log('error ',err);
+//					console.log('error ',err);
 					callback(err);
 				}
 			)
@@ -32,11 +32,11 @@ clearbank.service('ForgotPasswordService',function($http){
 		})
         .then(
 				function(result){
-					console.log('success ',result);
+//					console.log('success ',result);
 					callback(result);
 				},
 				function(err){
-					console.log('error ',err);
+//					console.log('error ',err);
 					callback(err);
 				}
 			)

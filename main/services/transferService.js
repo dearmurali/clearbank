@@ -37,14 +37,15 @@ clearbank.service('transferService',function($http){
                     console.log(result.data);
                     for(i=0;i<result.data.payeeData.length;i++){
                     if(result.data.payeeData[i].csId===csId){
-                         console.log(result.data.payeeData[i].payee);
+//                         console.log(result.data.payeeData[i].payee);
                     callback(result.data.payeeData[i].payee);
                     }
                         }  
 				},
                 //error
 				function(err){
-					console.log('some error occurred');
+//					console.log('some error occurred');
+					callback('some error occurred'+err);
 				}
 			)
 		}

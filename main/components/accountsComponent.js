@@ -3,7 +3,7 @@ clearbank.component('accounts', {
 	templateUrl: "main/partials/accounts.html",
 
 	controller: function () {
-		self = this;
+		var self = this;
 
 		self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
 		//           console.log(this.accountInfo);

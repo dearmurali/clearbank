@@ -16,7 +16,7 @@ clearbank.service('editProfileService', function ($http) {
                 }
             }).then(
                 function (result) {
-                    console.log('successfully resistered ', result);
+//                    console.log('successfully resistered ', result);
                     if (result.data.error === "undefined") {
                         callback('successfully updated');
                     } else {
@@ -24,7 +24,7 @@ clearbank.service('editProfileService', function ($http) {
                     }
                 },
                 function (err) {
-                    console.log('some error occurred ', err);
+//                    console.log('some error occurred ', err);
                     callback('not Updated');
                 }
             )
