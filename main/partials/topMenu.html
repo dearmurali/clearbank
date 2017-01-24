@@ -2,10 +2,10 @@
     <div class="container">
         <div class="navbar-header ">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
-        <span class="glyphicon glyphicon-list menuDropdown"></span>
+        <span  class="glyphicon glyphicon-list menuDropdown"></span>
       </button>
         </div>
-        <div class="collapse navbar-collapse nav nav-pills">
+        <div class="collapse navbar-collapse nav nav-pills" id="collapseNavbar">
             <ul class="nav navbar-nav navbar-left">
                 <li>
                     <a class="mainMenu" data-ng-click="$ctrl.delectedMenu('one')" ui-sref="dashboard" data-toggle="tab">Dashboard</a></li>
@@ -38,8 +38,8 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu langDropDown" aria-labelledby="dropdownMenu1">
-      <li class="dropdownItems" ng-click="$ctrl.selectLanguage(1)"><a href="" data-value="action"><span class="flag-icon flag-icon-nl"></span><span class="dropdownItems"> Dutch</span></li>
-      <li ><a href="" data-value="action" ng-click="$ctrl.selectLanguage(2)"><span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span></li>    
+	  <li class="dropdownItems" ng-click="$ctrl.selectLanguage(1)"><a href="" data-value="action"></a><span class="flag-icon flag-icon-nl"></span><span class="dropdownItems"> Dutch</span></li>
+	  <li ><a href="" data-value="action" ng-click="$ctrl.selectLanguage(2)"></a><span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span></li></ul>    
     </div>
             </ul>
         </div>

@@ -1,9 +1,5 @@
  @CHARSET "ISO-8859-1";
- /*
-body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
-    font-family: Arial;
-}
-*/
+
  
  .forget-form {
      width: 600px;
@@ -12,6 +8,13 @@ body,html,a,h4,span,small,h5,h3,h6,h2,h1,panel,table,tr,td,nav,li{
      vertical-align: baseline;
  }
  
+.forget-dialog {
+    width: 35%;
+     height: 45%px;
+     margin-left: -30px;
+     vertical-align: middle;
+ }
+
  @media(max-width: 450px) {
      .forget-form {
          width: 100%;
@@ -548,6 +551,8 @@ md-tabs md-ink-bar {
 .md-tab{
     font-size: 16px;
     font-weight: bolder;
+	overflow: inherit;
+	
 }
 
 .success-dialog{
@@ -573,6 +578,13 @@ margin:8px auto;
     background-color: yellow; 
 }
 
+md-radio-group:not([disabled]).md-primary .md-on{
+	background-color: #2079BE;
+	
+}
+md-radio-group:not([disabled]).md-primary .md-checked .md-off{
+border-color: #2079BE;	
+}
 
 :focus{
 	outline: inherit;

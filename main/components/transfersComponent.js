@@ -2,7 +2,7 @@ clearbank.component("transferDetail", {
 
 	templateUrl: "main/partials/transferDetail.html",
 	transclude: true,
-	controller: function (transferService, $mdDialog, $scope) {
+	controller: function transfersController(transferService, $mdDialog, $scope) {
 		var self = this;
 
 		self.accName = sessionStorage.getItem('customerName');
@@ -18,8 +18,8 @@ clearbank.component("transferDetail", {
 
 		self.defaultData = true;
 
-//		var index = sessionStorage.getItem('currentIndex');
-		//self.transactionInfo=$ctrl.accountInfo[index];
+		var index = sessionStorage.getItem('currentIndex');
+		self.transactionInfo=self.accountInfo[index];
 		self.transferHeading = "Any Linked ClearBank Account";
 		self.transferChoice = "";
 		self.bankName = "";
@@ -108,16 +108,12 @@ clearbank.component("transferDetail", {
 			for (i = 0; i < result.length; i++) {
 				if (result[i].type === self.transfer_type) {
 					self.payeeData = result[i].details;
-					//            console.log(self.payeeData);
+					            console.log(self.payeeData);
 				}
 			}
 		});
 
 		self.checkFields = function () {
-
-			//        if(self.maxAmount>self.available_balance){
-			//        alert("Can't enter more than available balance");
-			//        }
 
 			if (self.debitAccount === undefined || self.payeeAccount === undefined || self.maxAmount === undefined || self.maxAmount === null) {
 				$('.warning_transfer').css('display', 'block');
@@ -129,11 +125,11 @@ clearbank.component("transferDetail", {
 
 		self.transferAmount = function () {
 
-			//        console.log(self.selected2);
+			        console.log(self.selected2);
 
-			//        console.log(self.debitAccount);
-			//        console.log( self.payeeAccount);
-			//        console.log(self.maxAmount);
+			        console.log(self.debitAccount);
+			        console.log( self.payeeAccount);
+			        console.log(self.maxAmount);
 
 			if (self.debitAccount === undefined || self.payeeAccount === undefined || self.maxAmount === undefined || self.maxAmount === null) {
 				$('.warning_fields').css('display', 'block');

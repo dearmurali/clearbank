@@ -4,7 +4,7 @@ clearbank.service('RegistrationService', function ($http) {
 //			console.log("in service")
 			$http({
 				method: "POST",
-				url: "http://10.80.190.161:9090/clearbank-1.0/register",
+				url: "http://localhost:8080/clearbank/register",
 				data: {
 					"password": customer_password,
 					"customername": customer_name,
@@ -13,12 +13,14 @@ clearbank.service('RegistrationService', function ($http) {
 				}
 			}).then(
 				function (result) {
-//					console.log('successfully resistered ', result);
-//					console.log(result.data);
+					console.log('successfully resistered ', result);
+					console.log(result.data);
 					sessionStorage.setItem('csid', result.data.customerId);
-					if (result.status === 200) {
+					if (result.data.success) {
 						callback(result.data.customerId);
+						
 					} else {
+						console.log("error is "+result.data.error);
 						callback("ERROR in registering: " + result.data.error)
 					}
 				},

@@ -9,7 +9,7 @@ clearbank.component('login', {
         self.onLogin = function () {
 //            console.log("in login service");
             LoginService.validLogin(self.customer_id, self.pwd, function (result) {
-                //console.log('result ',result);
+                console.log(result+"asdas");
                 if (result === "success") {
                     self.validCredentials = true;
                     sessionStorage.setItem('isLoggedIn', true);

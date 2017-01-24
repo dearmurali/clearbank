@@ -1,4 +1,4 @@
-package com.mindtree.clearbank.transcation.controller;
+/*package com.mindtree.clearbank.transcation.controller;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -43,10 +43,12 @@ import com.mindtree.clearbank.transcation.service.TranscationService;
 				
 		}
 		
-		@RequestMapping(value="addpayee", method= RequestMethod.POST)
+		@RequestMapping(value = "addpayee", method = RequestMethod.POST)
 		public ResponseEntity<?> addPayee(@RequestBody CustPayee custPayee ,HttpServletRequest request ){
-			HttpSession session=request.getSession();
-			String token= (String) session.getAttribute("custtoken");
-		}
+			HttpSession session = request.getSession();
+			String token = (String) session.getAttribute("custtoken");
+			CustPayee customerPayee = dashBoardService.addPayee(custPayee);
+			return ResponseEntity.ok(new JwtAuthenticationSuccessResponse(token, customerPayee));
+		} 
 		
-	}
+	}*/

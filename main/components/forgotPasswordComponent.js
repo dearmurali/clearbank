@@ -4,10 +4,11 @@ clearbank.component('forgotPassword', {
 	controller: function (ForgotPasswordService) {
 		var self = this;
 		self.forgotPasswordWidget = true;
+		self.disable = true;
 		self.checkNumber = true;
 		self.changeSubmit = function () {
 			if (self.mobileNumber === undefined) {
-				self.checkMobile = false;
+				self.checkNumber = false;
 			}
 
 			if (self.changePassword !== self.confirmPassword || self.changePassword === undefined || self.confirmPassword === undefined) {
@@ -18,7 +19,8 @@ clearbank.component('forgotPassword', {
 					self.No_match = false;
 					self.forgotPasswordWidget = false;
 					self.changeSuccessWidget = true;
-
+					sessionStorage.clear();
+					window.location.href = '/';
 				})
 			}
 		}
@@ -29,12 +31,13 @@ clearbank.component('forgotPassword', {
 
 				if (result.data.success === false) {
 					self.checkNumber = false;
-
+					self.disable = true;
 				}
 
 				if (result.data.success) {
 					//					console.log(self.checkNumber);
 					self.checkNumber = true;
+					self.disable = false;
 					//					console.log(self.checkNumber);
 				}
 

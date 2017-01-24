@@ -1,31 +1,24 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var karmaServer = require('karma').Server;
-var sonarqubeScanner=require('sonarqube-scanner');	
+var browserSync = require('browser-sync').create();
 
-gulp.task('default', ['sass', 'karma'], function () {
-    console.log("Task's running");
-});
+// Static server
+gulp.task('browser-sync', function (done) {
+	console.log("running browser-sync.......");
+	browserSync.init({
+		server: {
+			baseDir: "./",
+		},
+		browser: ["chrome.exe", "firefox", "iexplore", "microsoft-edge:"],
+		ghostMode: {
+			clicks: true,
+			forms: true,
+			scroll: true
+		}
+	});
+	done();
+	console.log("press ctrl+c to stop........");
+}); //end of browser-sync
 
-gulp.task('sass', function () {
-    return gulp.src('./assets/sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./assets/css'))
-});
-
-gulp.task('karma', function () {
-    new Server({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun: true,
-
-    }, done).Start();
-});
-
-gulp.task('sonarqube', function(callback) {
-  sonarqubeScanner({
- serverUrl : "https://sonarqube.com",
-    token : "019d1e2e04eefdcd0caee1468f39a45e69d33d3f",
-    options : {}
-  }, callback);
-});
-
+gulp.task('default',['browser-sync'],function(){
+	console.log("running default.......");
+})
