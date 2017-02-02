@@ -13,12 +13,12 @@ clearbank.component('accounts', {
 		self.accCurrency = sessionStorage.getItem('currency');
 		self.accType = sessionStorage.getItem('accountType');
 
-
+console.log(sessionStorage.getItem('currentIndexes'));
 		self.getIndex = function (index) {
 			sessionStorage.setItem('currentIndex', index);
 			sessionStorage.setItem('defaultData', false);
 
-			//            console.log(sessionStorage.getItem('currentIndex'));
+			            
 
 		}
 
