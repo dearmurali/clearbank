@@ -1,32 +1,30 @@
-<div class=row><div class="container navbar">
-<div class="container">
-    <div class="nav-logo" ng-show="::loggedIn">
-        <a ui-sref="dashboard"><img src="assets/images/Logo-blue.png" height="70px"></a>
-    </div>
-    <div ng-show="loggedIn" class="topName">
-        <h4 class="topName">Welcome&nbsp;<strong>{{$ctrl.accName}}</strong></h4>
-    </div>
-    <div class="topName" ng-show="loggedIn">
-        <a ui-sref="profile">Profile</a>&nbsp; | &nbsp;<a ui-sref="forgotpassword">Change Password</a>&nbsp; | &nbsp;<a ng-click="$ctrl.logout()">Logout</a>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+			<a class="navbar-brand" href="#"><img class="clearbankLogo" src="assets/images/Logo.png"></a>
+		</div>
 
-    </div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-    <div ng-hide="loggedIn" class="lang-picker">
-
-<!--
-   <span class="flag-icon flag-icon-us"></span> EN |
- <span class="flag-icon flag-icon-nl"></span> NL
--->
-
-        <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle dropdownButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span>
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu langDropDown" aria-labelledby="dropdownMenu1">
-      <li class="dropdownItems" ng-click="$ctrl.selectLanguage(1)"><a href="" data-value="action"><span class="flag-icon flag-icon-nl"></span><span class="dropdownItems"> Dutch</span></li>
-      <li ><a href="" data-value="action" ng-click="$ctrl.selectLanguage(2)"><span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span></li>    
-    </div>
-    </div>
-</div>
-</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-Right"><a href="">Settings | </a> </li>
+				<li class="nav-Right"><a href="">Customer Care |</a> </li>
+				<li class="nav-Right"><a href="">Find ATM/Branch</a></li>
+				<li>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="inner-addon right-addon">
+							<i class="glyphicon glyphicon-search"></i>
+							<input type="text" class="form-control" placeholder="Search" />
+						</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<top-menu></top-menu>

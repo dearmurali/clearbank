@@ -5,15 +5,6 @@ clearbank.component("cardDetail", {
 
 		var self = this;
 
-		self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
-		var customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
-		self.favLinks = customerInfo.fav_links;
-		self.topPayee = customerInfo.top_payee;
-		self.accNumber = sessionStorage.getItem('accountNumber');
-		self.accBalance = sessionStorage.getItem('accountBalance');
-		self.accCurrency = sessionStorage.getItem('currency');
-		self.accType = sessionStorage.getItem('accountType');
-
 		self.defaultData = true;
 
 		self.getCardData = function (cardType) {

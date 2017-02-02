@@ -1,77 +1,75 @@
+<div id="myCarousel" class="carousel slide image">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="../assets/images/banner1.jpg" style="width:100%" class="img-responsive">
+
+		</div>
+		<div class="item">
+			<img src="../assets/images/banner2.jpg" class="img-responsive">
+
+		</div>
+		<div class="item">
+			<img src="../assets/images/banner3.jpg" class="img-responsive">
+
+		</div>
+	</div>
+</div>
+<div class="quickLinks container">
+	<h2 class="text-center headingQuickLinks">Cards</h2>
+	<hr><br>
+	
+
+			<md-content class="content">
+				<md-tabs md-stretch-tabs="always" class="form-tabs" md-dynamic-height>
 
 
-<top-menu></top-menu>
-</div>
-<div class=" container">
-<div class="row">
-<div class="col-md-3 col-sm-3 ">
-<left-menu></left-menu>
-</div>
-<div class="col-md-9 col-sm-9 ">
+					<md-tab class="tab-head" label="Credit Cards" data-ng-click="getCardData('airline')">
+						<md-content class="md-padding">
+							<card-detail></card-detail>
+						</md-content>
+					</md-tab>
+
+					<md-tab class="tab-head" label="debit cards" data-ng-click="getCardData('fuel')">
+						<md-content class="md-padding ">
+							<card-detail></card-detail>
+						</md-content>
+					</md-tab>
+
+					<md-tab class="tab-head" label="travel cards" data-ng-click="getCardData('metro')">
+						<md-content class="md-padding">
+							<card-detail></card-detail>
+						</md-content>
+					</md-tab>
+
+					<md-tab class="tab-head" label="international cards" data-ng-click="getCardData('expression')">
+						<md-content class="md-padding">
+							<card-detail></card-detail>
+						</md-content>
+					</md-tab>
+
+					<md-tab class="tab-head" label="prepaid cards" data-ng-click="getCardData('contact')">
+						<md-content class="md-padding">
+							<card-detail></card-detail>
+						</md-content>
+					</md-tab>
+
+				</md-tabs>
+			</md-content>
+
+		</div>
+
  
-    <div class="panel panel-default">
-<div class="panel-heading panel-heading-transfer">
-  <h4>Cards</h4>
-    </div>
-    <div class="panel-body cardsPanel">
-     
-         <md-content class="content">
-            <md-tabs md-stretch-tabs="always" class="form-tabs" md-dynamic-height>
 
+<script>
+	$('#myCarousel').carousel({
+		interval: 2000,
+		cycle: true
+	});
 
-                <md-tab class="tab-head" label="Airline" data-ng-click="getCardData('airline')" >
-                    <md-content class="md-padding">
-                        <card-detail></card-detail>
-                    </md-content>
-                </md-tab>
-
-                <md-tab class="tab-head" label="Fuel" data-ng-click="getCardData('fuel')">
-                    <md-content class="md-padding ">
-                        <card-detail></card-detail>
-                    </md-content>
-                </md-tab>
-                
-                <md-tab class="tab-head" label="Metro Card" data-ng-click="getCardData('metro')">
-                    <md-content class="md-padding">
-                        <card-detail></card-detail>
-                    </md-content>
-                </md-tab>
-                
-                <md-tab class="tab-head" label="Expression Card" data-ng-click="getCardData('expression')">
-                    <md-content class="md-padding">
-                       <card-detail></card-detail>
-                    </md-content>
-                </md-tab>
-                
-                <md-tab class="tab-head" label="Contact Card" data-ng-click="getCardData('contact')">
-                    <md-content class="md-padding">
-                        <card-detail></card-detail>
-                    </md-content>
-                </md-tab>
-
-            </md-tabs>
-        </md-content>
-        
-    </div>
-</div>
-  
-</div>
- </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>

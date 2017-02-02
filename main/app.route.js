@@ -15,7 +15,7 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 
     .state('register', {
         url: '/register',
-        template: 'views/registration.html'
+        templateUrl: 'views/registration.html'
     })
 
     .state('forgotpassword', {

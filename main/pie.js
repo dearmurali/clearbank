@@ -1,36 +1,41 @@
 
 var pie = new d3pie("pieChart", {
 	"size": {
-		"canvasHeight": 330,
-		"canvasWidth":550,
+		"canvasHeight": 430,
+		"canvasWidth":700,
 		"pieOuterRadius": "90%"
 	},
 	"data": {
 		"sortOrder": "value-asc",
 		"smallSegmentGrouping": {
-			"enabled": true
+			"enabled": false
 		},
 		"content": [
 			{
-				"label": "Savings(70%)",
-				"value": 70,
-				"color": "#387e6a"
+				"label": "Savings Account(40%)",
+				"value": 40,
+				"color": "#EB9532"
 			},
 			{
-				"label": "Expenditure(20%)",
-				"value": 20,
-				"color": "#386a7e"
+				"label": "Expenses(30%)",
+				"value": 30,
+				"color": "#26A65B"
 			},
 			{
-				"label": "Investment(10%)",
-				"value": 10,
-				"color": "#7e3838"
+				"label": "Investment(15%)",
+				"value": 15,
+				"color": "#674172"
+			},
+			{
+				"label": "Loans(15%)",
+				"value": 15,
+				"color": "#D64541"
 			}
 		]
 	},
 	"labels": {
 		"outer": {
-			"pieDistance": 32
+			"pieDistance": 30
 		},
 		"mainLabel": {
 			"font": "verdana",
@@ -45,7 +50,7 @@ var pie = new d3pie("pieChart", {
 		"value": {
 			"color": "#e1e1e1",
 			"font": "verdana",
-			"fontSize": 12
+			"fontSize": 25
 		},
 		"lines": {
 			"enabled": true,

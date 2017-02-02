@@ -1,5 +1,6 @@
-<div class="navbar menu ">
-    <div class="container">
+<div class=" menu navbar">
+	<div class="container-fluid">
+
         <div class="navbar-header ">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
         <span  class="glyphicon glyphicon-list menuDropdown"></span>
@@ -8,30 +9,20 @@
         <div class="collapse navbar-collapse nav nav-pills" id="collapseNavbar">
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a class="mainMenu" data-ng-click="$ctrl.delectedMenu('one')" ui-sref="dashboard" data-toggle="tab">Dashboard</a></li>
+                    <a class="mainMenu" ui-sref="cards"><strong>Cards</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="transfers" >Transfers</a></li>
+                    <a class="mainMenu" ui-sref="loans"><strong>Deposits</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="cards">Cards</a></li>
+                    <a class="mainMenu" ui-sref="mutualfunds"><strong>Investments</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="loans">Loans</a></li>
+                    <a class="mainMenu" ui-sref="nearby"><strong>Loans</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="mutualfunds">Mutual Funds</a></li>
-                <li>
-                    <a class="mainMenu" ui-sref="nearby">Nearby</a></li>
-                <li>
-                    <a class="mainMenu" ui-sref="contactus">Contact Us</a></li>
+                    <a class="mainMenu" ui-sref="contactus"><strong>Wallets</strong></a></li>
+				<li>
+                    <a class="mainMenu" ui-sref="contactus"><strong>Offers</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-<!--
-                <li>
-                    <a class="mainMenu" ><span class="flag-icon flag-icon-us"></span> EN </a>
-                </li>
-                <li>
-                    <a class="mainMenu" ><span class="flag-icon flag-icon-nl"></span> NL</a>
-                </li>
--->
-                
+        
         <div class="dropdown">
   <button class="btn btn-default dropdown-toggle dropdownButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span>
@@ -43,5 +34,5 @@
     </div>
             </ul>
         </div>
-    </div>
+</div>
 </div>

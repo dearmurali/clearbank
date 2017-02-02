@@ -1,771 +1,801 @@
  @CHARSET "ISO-8859-1";
-
- 
  .forget-form {
-     width: 600px;
-     height: 450px;
-     margin-left: -30px;
-     vertical-align: baseline;
+ 	width: 600px;
+ 	height: 450px;
+ 	margin-left: -30px;
+ 	vertical-align: baseline;
  }
  
-.forget-dialog {
-    width: 35%;
-     height: 45%px;
-     margin-left: -30px;
-     vertical-align: middle;
+ .forget-dialog {
+ 	width: 35%;
+ 	height: 45%px;
+ 	margin-left: -30px;
+ 	vertical-align: middle;
  }
-
+ 
  @media(max-width: 450px) {
-     .forget-form {
-         width: 100%;
-         height: 100%;
-         margin-left: 0px;
-     }
-     .landing-page {
-         display: none;
-     }
+ 	.forget-form {
+ 		width: 100%;
+ 		height: 100%;
+ 		margin-left: 0px;
+ 	}
+ 	.landing-page {
+ 		display: none;
+ 	}
  }
  
  @media(max-width: 720px) {
-     .forget-form {
-         width: 100%;
-         height: 100%;
-         margin-left: 0px;
-     }
-     .landing-page {
-         display: none;
-     }
+ 	.forget-form {
+ 		width: 100%;
+ 		height: 100%;
+ 		margin-left: 0px;
+ 	}
+ 	.landing-page {
+ 		display: none;
+ 	}
  }
  
  @media(max-width: 991px) {
-     .forget-form {
-         width: 90%;
-         height: 100%;
-         margin-left: 20px;
-     }
+ 	.forget-form {
+ 		width: 90%;
+ 		height: 100%;
+ 		margin-left: 20px;
+ 	}
  }
  
  .profile:hover {
-     cursor: pointer;
+ 	cursor: pointer;
  }
  
  .topPayee:hover {
-     cursor: pointer;
+ 	cursor: pointer;
  }
  
  .customerName {
-     color: white;
+ 	color: white;
  }
  
  hr {
-     border:1px solid gainsboro;
-
+ 	border: 1px solid gainsboro;
  }
  
  .nav-logo {
-     float: left;
+ 	float: left;
  }
  
  .topName {
-     float: right;
-     clear: right;
-     cursor: pointer;
+ 	float: right;
+ 	clear: right;
+ 	cursor: pointer;
  }
  
  .customerName:hover {
-     color: black;
-     cursor: pointer;
+ 	color: black;
+ 	cursor: pointer;
  }
  
  .lastTransaction:hover {
-     cursor: pointer;
+ 	cursor: pointer;
  }
  
  .payeesMenu:hover {
-     cursor: pointer;
+ 	cursor: pointer;
  }
  
  .menu {
-     background-color: dodgerblue;
+ 	background-color: rgb(20,121,191);
+	color: white;
+ 	font-size: 16px;
+	margin-top: -20px;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 4px #057; 
  }
  
  .mainMenu {
-     color: white;
+ 	color: white;
  }
  
  .asideMenu {
-     list-style: none;
-     padding: 0px;
+ 	list-style: none;
+ 	padding: 0px;
  }
  
  .arrow {
-     float: right;
+ 	float: right;
  }
  
  .accountBalance {
-     padding: 7%;
+ 	padding: 7%;
  }
  
  .favouriteLinks {
-     padding: 7%;
+ 	padding: 7%;
  }
  
  .topPayees {
-     margin-bottom: 8%;
-     background-color: #F8F8F8;
-     box-shadow: 0px 0px 8px #cccccc;
-     padding: 7%;
+ 	margin-bottom: 8%;
+ 	background-color: #F8F8F8;
+ 	box-shadow: 0px 0px 8px #cccccc;
+ 	padding: 7%;
  }
  
  .mainView {
-     background-color: #FfFfFf;
-     padding: 2%;
-     box-shadow: 0px 0px 8px #cccccc;
+ 	background-color: #FfFfFf;
+ 	padding: 2%;
+ 	box-shadow: 0px 0px 8px #cccccc;
  }
  
  .tableheading {
-     font-weight: bold;
-     color: black;
+ 	font-weight: bold;
+ 	color: black;
  }
  
  tbody {
-     color: #2079BE;
-     font-weight: bold;
+ 	color: #2079BE;
+ 	font-weight: bold;
  }
  
  .managePayee {
-     text-align: center;
+ 	text-align: center;
  }
  
- .asideMenu span{
-     color: #2079BE;
-     font-size: 15px;
+ .asideMenu span {
+ 	color: #2079BE;
+ 	font-size: 15px;
  }
-
-.customBlue{
-color: #2079BE;
-}
-
-
+ 
+ .customBlue {
+ 	color: #2079BE;
+ }
  
  .asideMenu span.green {
-     font-size: 30px;
-     color: #2EC40B;
+ 	font-size: 30px;
+ 	color: #2EC40B;
  }
  
- .asideMenu small {  
-     color: black;
+ .asideMenu small {
+ 	color: black;
  }
  
  .asideMenu small.green {
-    color: #2EC40B;
-     font-size: 18px;
+ 	color: #2EC40B;
+ 	font-size: 18px;
  }
+ 
  .accountInfo2 {
-     text-align: center;
+ 	text-align: center;
  }
  
  .lastTransactions {
-     display: none;
-     border: 1px solid grey;
+ 	display: none;
+ 	border: 1px solid grey;
  }
  
  .modal {
-     color: #3498db;
+ 	color: #3498db;
  }
  
  legend {
-     text-align: center;
-     padding: 10px;
-     color: black;
+ 	text-align: center;
+ 	padding: 10px;
+ 	color: black;
  }
  
  .reset_pass {
-     margin-right: -15px;
-     clear: left;
+ 	margin-right: -15px;
+ 	clear: left;
  }
  
  .valText {
-     color: red;
+ 	color: red;
  }
  
  .loginFrm {
-     /*margin-left:10%;*/
-     margin: 5% auto;
-     border-radius: 10px;
-     opacity: .8;
-     border: 2px solid #337ab7;
-     box-shadow: 0px 0px 25px #111111;
+ 	/*margin-left:10%;*/
+ 	margin: 5% auto;
+ 	border-radius: 10px;
+ 	opacity: .8;
+ 	border: 2px solid #337ab7;
+ 	box-shadow: 0px 0px 25px #111111;
  }
  
  .warning {
-     color: red;
+ 	color: red;
  }
  
  .mainContainer {
-     background-color: #F3F3E9;
+ 	background-color: #F3F3E9;
  }
  
  .modal {
-     display: none;
-     /* Hidden by default */
-     position: fixed;
-     /* Stay in place */
-     z-index: 1;
-     /* Sit on top */
-     padding-top: 150px;
-     /* Location of the box */
-     left: 0;
-     top: 0;
-     width: 100%;
-     /* Full width */
-     height: 100%;
-     /* Full height */
-     overflow: auto;
-     /* Enable scroll if needed */
-     background-color: rgb(0, 0, 0);
-     /* Fallback color */
-     background-color: rgba(0, 0, 0, 0.4);
-     /* Black w/ opacity */
+ 	display: none;
+ 	/* Hidden by default */
+ 	position: fixed;
+ 	/* Stay in place */
+ 	z-index: 1;
+ 	/* Sit on top */
+ 	padding-top: 150px;
+ 	/* Location of the box */
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
+ 	/* Full width */
+ 	height: 100%;
+ 	/* Full height */
+ 	overflow: auto;
+ 	/* Enable scroll if needed */
+ 	background-color: rgb(0, 0, 0);
+ 	/* Fallback color */
+ 	background-color: rgba(0, 0, 0, 0.4);
+ 	/* Black w/ opacity */
  }
  
  .modal-content {
-     background-color: #fefefe;
-     margin: auto;
-     padding: 20px;
-     border: 1px solid #888;
-     width: 50%;
+ 	background-color: #fefefe;
+ 	margin: auto;
+ 	padding: 20px;
+ 	border: 1px solid #888;
+ 	width: 50%;
  }
  
  .close {
-     color: #aaaaaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
+ 	color: #aaaaaa;
+ 	float: right;
+ 	font-size: 28px;
+ 	font-weight: bold;
  }
  
  .close:hover,
  .close:focus {
-     color: #000;
-     text-decoration: none;
-     cursor: pointer;
+ 	color: #000;
+ 	text-decoration: none;
+ 	cursor: pointer;
  }
  
  .reg-form {
-     margin-top: 5%;
-     box-shadow: 0px 0px 25px #111111;
-     opacity: 0.94;
+ 	margin-top: 5%;
+ 	box-shadow: 0px 0px 25px #111111;
+ 	opacity: 0.94;
  }
  
  .bank-web {
-     min-height: 100vh;
-     background-color: #34495e;
+ 	min-height: 100vh;
+ 	background-color: #34495e;
  }
  
  .errorMsg {
-     color: red;
+ 	color: red;
  }
  
  .logo {
-     max-width: 30vh;
-     margin-top: 30vh;
+ 	max-width: 30vh;
+ 	margin-top: 30vh;
  }
  
  .button1 {
-     margin-right: 2%;
+ 	margin-right: 2%;
  }
  
  .button2 {
-     margin-left: 2%;
+ 	margin-left: 2%;
  }
  
  .logout {
-     color: white;
-     font-size: 2em;
+ 	color: white;
+ 	font-size: 2em;
  }
  
  .jumbotron {
-     background-color: transparent;
-     text-align: center;
-     margin: 5% auto;
+ 	background-color: transparent;
+ 	text-align: center;
+ 	margin: 5% auto;
  }
  
  .login-hint {
-     float: right;
-     font-size:13px;
+ 	float: right;
+ 	font-size: 13px;
  }
  
  .login-panel {
-     min-height: 20vh;
-     vertical-align: middle;
+ 	min-height: 20vh;
+ 	vertical-align: middle;
  }
  
  .md-button.md-hue-1.md-primary {
-     color: #2079BE;
-     font-variant-east-asian: normal;
-     float:right;
+ 	color: #2079BE;
+ 	font-variant-east-asian: normal;
+ 	float: right;
  }
  
  .md-button.md-primary.md-raised {
-     color: rgba(255, 255, 255, 0.87);
-     background-color: #2079BE;
-/*
+ 	color: rgba(255, 255, 255, 0.87);
+ 	background-color: #2079BE;
+ 	/*
      height:50px;
      width:110px;
 */
-/*     font-size: 18px;*/
+ 	/*     font-size: 18px;*/
  }
  
  .md-button.md-primary.md-raised:not([disabled]):hover,
  .md-button.md-primary.md-raised:not([disabled]):focus {
-     color: rgba(255, 255, 255, 0.87);
-     background-color: #025A9E;
+ 	color: rgba(255, 255, 255, 0.87);
+ 	background-color: #025A9E;
  }
  
  md-input-container:not(.md-input-invalid).md-input-focused .md-input {
-     border-color: rgba(0, 0, 0, 0.12);
+ 	border-color: rgba(0, 0, 0, 0.12);
  }
-
- md-input-container:not(.md-input-invalid).md-input-focused label, md-input-container:not(.md-input-invalid).md-input-has-value label {
-     color: #2079BE
+ 
+ md-input-container:not(.md-input-invalid).md-input-focused label,
+ md-input-container:not(.md-input-invalid).md-input-has-value label {
+ 	color: #2079BE
  }
+ 
  .landing-page {
-     background-color: #2079BE;
-     min-height: 80vh;
-     vertical-align: middle;
+ 	background-color: #2079BE;
+ 	min-height: 80vh;
+ 	vertical-align: middle;
  }
  
  .navbar {
-     padding-left: 0px;
+ 	padding-left: 0px;
  }
  
  .lang-picker {
-     float: right;
-     clear: right;
-     vertical-align: middle;
-     padding-top: 3%;
+ 	float: right;
+ 	clear: right;
+ 	vertical-align: middle;
+ 	padding-top: 3%;
  }
  
  .home-page,
  {
-     height: 80vh;
-     padding: 0px;
-     box-shadow: 0 0px 10px #777;
+ 	height: 80vh;
+ 	padding: 0px;
+ 	box-shadow: 0 0px 10px #777;
  }
  
  .form-tabs {
-     min-height: 80vh;
+ 	min-height: 80vh;
  }
- 
-/*
+ /*
  .login-form {
      margin-top: 10vh;
  }
  
 */
+ 
  .nav>li>a:hover,
  .nav>li>a:focus,
  .nav>li>a:active,
  .nav>li>a:visited {
-     text-decoration: none;
-     background-color: #1168ac;
-     color: #ffffff;
+ 	text-decoration: none;
+ 	background-color: #1168ac;
+ 	color: #ffffff;
  }
  
  .panel-default>.panel-heading {
-     background-color: #ffffff;
+ 	background-color: #ffffff;
  }
  
  .panel-default>.panel-heading a:hover,
  .panel-default>.panel-heading a:focus {
-     text-decoration: none;
-     cursor: auto;
+ 	text-decoration: none;
+ 	cursor: auto;
  }
  
  .panel-default>.panel-collapse a:hover,
  .panel-default>.panel-collapse a:focus {
-     text-decoration: none;
-     cursor: pointer;
+ 	text-decoration: none;
+ 	cursor: pointer;
  }
-
-.panel-accountBalance{
-padding-bottom:0px;
-}
-
-.panel-transfers{
-padding:1px;
-}
-
-.panel-heading-transfer{
-padding-top:2px;
-    padding-bottom: 2px;
-}
-
-.transferOptions{
-float:right;
-}
-
-.addPayeeLink{
-vertical-align: middle;
-}
-
-.transferMethod{
-display:none;
-}
-
-.warning_maxIMPS{
-    color:red;
-    display:none;
-    float:right;
-}
-
-.warning_maxAmount{
-    color:red;
-    display:none;
-    float:right;
-}
-
-.warning_fields{
-    color:red;
-    display:none;
-    float:right;
-}
-
-md-radio-button {
-    box-sizing: border-box;
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    white-space: nowrap;
-    cursor: pointer;
-    position: relative;
-}
-
-md-input-container {
-    display: inline-block;
-    position: relative;
-    padding: 2px;
-    margin: 18px 0;
-    margin-bottom: -10px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
+ 
+ .panel-accountBalance {
+ 	padding-bottom: 0px;
+ }
+ 
+ .panel-transfers {
+ 	padding: 1px;
+	
+ }
+ 
+ .panel-heading-transfer {
+ 	padding-top: 2px;
+ 	padding-bottom: 2px;
+ }
+ 
+ .transferOptions {
+ 	float: right;
+ }
+ 
+ .addPayeeLink {
+ 	vertical-align: middle;
+ }
+ 
+ .transferMethod {
+ 	display: none;
+ }
+ 
+ .warning_maxIMPS {
+ 	color: red;
+ 	display: none;
+ 	float: right;
+ }
+ 
+ .warning_maxAmount {
+ 	color: red;
+ 	display: none;
+ 	float: right;
+ }
+ 
+ .warning_fields {
+ 	color: red;
+ 	display: none;
+ 	float: right;
+ }
+ 
+ md-radio-button {
+ 	box-sizing: border-box;
+ 	display: block;
+ 	margin-top: 5px;
+ 	margin-bottom: 5px;
+ 	white-space: nowrap;
+ 	cursor: pointer;
+ 	position: relative;
+ }
+ 
+ md-input-container {
+ 	display: inline-block;
+ 	position: relative;
+ 	padding: 2px;
+ 	margin: 18px 0;
+/* 	margin-bottom: -10px;*/
+ 	vertical-align: middle;
+ 	width: 100%;
+ }
+ 
+ input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button {
+ 	-webkit-appearance: none;
+ 	margin: 0;
+ }
  
  .container>.navbar-collapse {
-     /*        margin-right: -15px;*/
-     margin-left: -15px;
+ 	/*        margin-right: -15px;*/
+ 	margin-left: -15px;
  }
  
  .panel-default {
-     box-shadow: 0 0px 10px #ccc;
+ 	box-shadow: 0 0px 10px #ccc;
  }
-
-.cardsPanel{
-padding:0px;
-}
-
-.cards{
-    padding:5%;
-    width:95%;
-}
+ 
+ .cardsPanel {
+ 	padding: 0px;
+ }
+ 
+ .cards {
+ 	padding: 5%;
+ 	width: 95%;
+ }
  
  .panel>.list-group .list-group-item,
  .panel>.panel-collapse>.list-group .list-group-item {
-     border-width: 1px 0;
-     border-radius: 0;
-     padding-bottom: 0.5%;
-     padding-top: 0.5%;
+ 	border-width: 1px 0;
+ 	border-radius: 0;
+ 	padding-bottom: 0.5%;
+ 	padding-top: 0.5%;
  }
  
  .green {
-     color: #2EC40B;
+ 	color: #2EC40B;
  }
  
  .red {
-     color: #EF2D2D;
+ 	color: #EF2D2D;
+ }
+ 
+ .right-head {
+ 	color: #2079BE;
+ 	float: right;
+ }
+ 
+ .right-head:hover {
+ 	color: #025A9E;
+ 	cursor: pointer;
+ }
+ 
+ .glyphicon-minus {
+ 	float: right;
+ 	font-size: 10px;
+ }
+ 
+ .dropdownButton {
+ 	width: 200px;
+ }
+ 
+ .managePayee {
+ 	color: #2079BE;
+ }
+ 
+ .managePayeeDropdown {
+ 	color: #2079BE;
+ }
+ 
+ .deletePayee {
+ 	color: #2079BE;
+ 	font-size: 18px;
+ }
+ 
+ .alert {
+ 	padding: 8px 35px 8px 14px;
+ 	margin-bottom: 18px;
+ }
+ 
+ md-toolbar {
+ 	background-color: red;
+ }
+ 
+ .align-center {
+ 	text-align: center;
+ }
+ 
+ .fa-check-circle-o {
+ 	color: green;
+ 	font-size: 72px;
+ }
+ 
+ .md-dialog-content {
+ 	color: green;
+ }
+ 
+ md-tabs .md-tab.md-active {
+ 	color: #2079BE;
+ }
+ 
+ md-tabs md-ink-bar {
+ 	color: #2097BE;
+ 	display: none
+ }
+ 
+ .md-tab:not(.md-active) {
+ 	background-color: #FFF5F5;
+ }
+ 
+ .md-tab {
+ 	font-size: 16px;
+ 	font-weight: bolder;
+ 	overflow: inherit;
+ }
+ 
+ .success-dialog {
+ 	min-height: 30vh;
+ 	min-width: 30vw;
+ 	padding-top: 30px;
+ 	text-align: center;
+ 	font-size: 18px;
+ }
+ 
+ .form-dialog {
+ 	display: block;
+ }
+ 
+ .langDropDown {
+ 	width: 100%;
+ }
+ 
+ .navbar-right {
+ 	margin: 8px auto;
+ }
+ 
+ #nav-collapse li.active {
+ 	color: green;
+ 	background-color: yellow;
+ }
+ 
+ md-radio-group:not([disabled]).md-primary .md-on {
+ 	background-color: #2079BE;
+ }
+ 
+ md-radio-group:not([disabled]).md-primary .md-checked .md-off {
+ 	border-color: #2079BE;
+ }
+ 
+ :focus {
+ 	outline: inherit;
+ }
+ /*new design*/
+ 
+ .footer {
+ 	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	padding: 1rem;
+ 	background-color: #2079be;
+ 	text-align: center;
+ }
+ 
+ .footerMesssage {
+ 	position: absolute;
+ 	right: 0;
+ 	left: 0;
+ 	background-color: #025A9E;
+ 	padding: 10px;
+ 	margin-top: 10px;
+ }
+ 
+ .message {
+ 	opacity: 0.4;
+ 	color: white;
+ }
+ 
+ .footer-table {
+ 	color: white;
+ }
+ 
+ .text-left {
+ 	font-size: 12px;
+ }
+ 
+ .fa-facebook-official,
+ .fa-linkedin-square,
+ .fa-twitter-square {
+ 	font-size: 32px;
+ }
+ 
+ .clearbankLogo {
+ 	width: 100px;
+ 	margin-top: -15px;
+ }
+ 
+ .inner-addon {
+ 	position: relative;
+ }
+ 
+ .inner-addon .glyphicon {
+ 	position: absolute;
+ 	padding: 10px;
+ 	pointer-events: none;
+ }
+ 
+ .right-addon .glyphicon {
+ 	right: 00px;
+ }
+ 
+ .right-addon input {
+ 	padding-right: 100px;
+ }
+ 
+ .nav-Right {
+ 	margin-top: 10px;
+ }
+ 
+ .navbar-default .navbar-nav>li>a {
+ 	color: #2079BE;
+ }
+ 
+ .subNavbar {
+ 	background-color: #2079BE;
+ 	padding: 10px;
+ 	margin-top: -20px;
+ }
+ 
+ .list-inline {
+ 	color: white;
+ 	font-size: 16px;
+ }
+ 
+ .homeImage {
+ 	min-width: 100%;
+ 	height: 654px;
+ 	position: relative;
+ }
+ 
+ .headingQuickLinks {
+ 	color: #2079BE;
+ }
+ 
+.quickLinks>hr, .specialOffers>hr {
+ 	margin: 0px;
+ 	border-top: 1px solid rgba(204, 204, 204, 0.92);
+ 	margin-left: 42%;
+ 	margin-right: 42%;
+ }
+ 
+ .quickLinksList {
+ 	list-style: none
+ }
+ 
+ .quicklinksHeader {
+ 	font-size: 20px;
+	 color: #000;
+ }
+ 
+ a.quicklinksData {
+ 	color: #000;
+ }
+ 
+ a.InfoData {
+ 	color: #000;
+ }
+ 
+ a.CalData {
+ 	color: black;
+ }
+ 
+ .specialOffersHeading {
+ 	color: #2079BE;
+ }
+ 
+ .specialOffers {
+ 	background-color: #F7F8E0;
+ }
+ 
+ .bigBasket {
+ 	color: #2079BE;
+ }
+ 
+ .bigBasketDetail {
+ 	font-size: 17px;
+ }
+ 
+ .viewAll {
+ 	font-size: 20px;
+ }
+ 
+ a:hover {
+ 	text-decoration: none;
+ }
+ 
+ .personalLoanImage {
+ 	width: 100%;
+ 	height: 225px !important;
+ }
+ 
+ .footer a {
+ 	color:#fff;
+ }
+ 
+ .image {
+ 	position: relative;
+	 margin-top: -20px;
+ }
+ 
+ .textOverImage {
+ 	position: absolute;
+ 	top: 100px;
+ 	background-color:#fff;
+ 	display: inline-block;
+ }
+ 
+ .loginHead {
+ 	color: #025A9E;
+ }
+ 
+ tbody {
+ 	color: #fff;
+ }
+ 
+ .md-button.md-primary.md-raised {
+ 	width: 100%;
+ 	margin: 0px;
+ }
+ 
+ .registrationFooter {
+ 	/*padding: 0px;*/
+ }
+ 
+ a:focus {
+ 	text-decoration: none;
+ }
+ 
+ .glyphicon-eye-open,
+ .glyphicon-eye-close {
+ 	position: absolute;
+ 	right: 10px;
+ 	color: rgba(128, 128, 128, 0.71);
+ 	font-size: 20px;
+ 	cursor: pointer;
  }
 
-.right-head{
-    color: #2079BE;
-    float:right;
-}
 
-.right-head:hover{
-    
-    color:#025A9E;
-    cursor:pointer;
-}
-
-.glyphicon-minus{
-    float:right;
-    font-size: 10px;
-}
-.dropdownButton{
-width:200px;
-}
-
-.managePayee{
-color:#2079BE;
-}
-.managePayeeDropdown
-{
-color:#2079BE;
-}
-.deletePayee{
-color:#2079BE;
-    font-size: 18px;    
-}
-.alert {
-padding: 8px 35px 8px 14px;
-margin-bottom: 18px;
-
-}
-md-toolbar{
-background-color:red;
-}
-.align-center{
-text-align: center;
-}
-.fa-check-circle-o{
-    color:green;
-    font-size: 72px;
-}
-.md-dialog-content{
-    color:green;
-}
-
-md-tabs .md-tab.md-active{
-    color: #2079BE;
-}
-
-md-tabs md-ink-bar {
-    color: #2097BE;
- display: none
-}
-
-.md-tab:not(.md-active) {
-    background-color: #FFF5F5;
-}
-
-.md-tab{
-    font-size: 16px;
-    font-weight: bolder;
-	overflow: inherit;
-	
-}
-
-.success-dialog{
-    min-height: 30vh;
-    min-width: 30vw;
-    padding-top: 30px;
-    text-align: center;
-    font-size:18px;
-}
-.form-dialog{
-    display:block;
-}
-.langDropDown{
-width:100%;
-}
-
-.navbar-right{
-margin:8px auto;
-}
-
-#nav-collapse  li.active { 
-   color:green;
-    background-color: yellow; 
-}
-
-md-radio-group:not([disabled]).md-primary .md-on{
-	background-color: #2079BE;
-	
-}
-md-radio-group:not([disabled]).md-primary .md-checked .md-off{
-border-color: #2079BE;	
-}
-
-:focus{
-	outline: inherit;
-}
-
-
-/*new design*/
-
-
-.footer{
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #2079be;
-  text-align: center;
-}
-
-.footerMesssage {
-    position: absolute;
-    right: 0;
-    left: 0;
-    background-color:#025A9E;
-    padding:10px;
-    margin-top:10px;
-   
-  }
-.message{
-opacity: 0.4;
-    color: white;
-}
-.footer-table{
-color: white;
-}
-.text-left{
-font-size: 12px;
-}
-.fa-facebook-official,.fa-linkedin-square,.fa-twitter-square{
-font-size: 32px;
-}
-.navbar{
-padding: 8px;
-}
-.clearbankLogo{
-width:100px;
-margin-top: -15px;
-}
-
-.inner-addon {
-  position: relative;
-}
-
-
-.inner-addon .glyphicon {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
-}
-
-.right-addon .glyphicon { right: 00px;}
-
-.right-addon input { padding-right: 100px; }
-
-.nav-Right{
-margin-top:10px;    
-}
-.nav>li>a {
-padding: 5px 5px !important;
-}
-.navbar-default .navbar-nav>li>a {
-    color:#2079BE;
-}
-.subNavbar{
-background-color: #2079BE;
-padding:10px;
-margin-top: -20px;    
-}
-.list-inline{
-color: white;
-font-size: 16px;    
-}
-.list-inline>li{
-padding-right: 10px;
-padding-left:40px; 
-padding-top:4px;    
-}
-.homeImage{
-min-width:100%;
-height:654px;
-     position: relative; 
-}
-.headingQuickLinks{
-color: #2079BE;
-}
-hr{
-margin:0px;
-border-top: 1px solid rgba(204, 204, 204, 0.92);
-margin-left: 42%;
-margin-right: 42%;    
-}
-.quickLinksList{
-list-style:none
-}
-.quicklinksHeader{
-font-size: 20px;
-}
-a.quicklinksData{
-
-color: black;    
-}
-a.InfoData{
-color: black;    
-}
-a.CalData{
-
-color: black;    
-}
-.specialOffersHeading{
-color: #2079BE;
-}
-.specialOffers{
-background-color: #F7F8E0;
-}
-.bigBasket{
-color: #2079BE;
-}
-.bigBasketDetail{
-font-size: 17px;
-}
-.viewAll{
-font-size: 20px;
-}
-a:hover{
-text-decoration: none;
-}
-.personalLoanImage{
-width:100%;
-    height:225px !important;
-}
-.footer a{
-color:white;
-}
-
-.image { 
-   position: relative; 
-}
-
-.textOverImage { 
-   position: absolute; 
-   top: 100px;
-   background-color: white;
-    display: inline-block;
-}
-.loginHead{
-color: #025A9E;
-}
-tbody {
-     color:#fff;
-}
-
-.md-button.md-primary.md-raised {
-width:100%;
-    margin:0px;
-}
-
-.registrationFooter{
-/*padding: 0px;*/
-}
-
-a:focus{
-text-decoration: none;
-}
-.glyphicon-eye-open,.glyphicon-eye-close{
-position: absolute;
-    right:10px;
-    color:rgba(128,128,128,0.71);
-    font-size: 20px;
-    cursor:pointer;
-}
