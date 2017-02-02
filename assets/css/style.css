@@ -302,6 +302,8 @@ color: #2079BE;
  
  .md-button.md-hue-1.md-primary {
      color: #2079BE;
+     font-variant-east-asian: normal;
+     float:right;
  }
  
  .md-button.md-primary.md-raised {
@@ -355,10 +357,12 @@ color: #2079BE;
      min-height: 80vh;
  }
  
+/*
  .login-form {
      margin-top: 10vh;
  }
  
+*/
  .nav>li>a:hover,
  .nav>li>a:focus,
  .nav>li>a:active,
@@ -442,6 +446,7 @@ md-input-container {
     position: relative;
     padding: 2px;
     margin: 18px 0;
+    margin-bottom: -10px;
     vertical-align: middle;
     width: 100%;
 }
@@ -588,4 +593,179 @@ border-color: #2079BE;
 
 :focus{
 	outline: inherit;
+}
+
+
+/*new design*/
+
+
+.footer{
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #2079be;
+  text-align: center;
+}
+
+.footerMesssage {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color:#025A9E;
+    padding:10px;
+    margin-top:10px;
+   
+  }
+.message{
+opacity: 0.4;
+    color: white;
+}
+.footer-table{
+color: white;
+}
+.text-left{
+font-size: 12px;
+}
+.fa-facebook-official,.fa-linkedin-square,.fa-twitter-square{
+font-size: 32px;
+}
+.navbar{
+padding: 8px;
+}
+.clearbankLogo{
+width:100px;
+margin-top: -15px;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.right-addon .glyphicon { right: 00px;}
+
+.right-addon input { padding-right: 100px; }
+
+.nav-Right{
+margin-top:10px;    
+}
+.nav>li>a {
+padding: 5px 5px !important;
+}
+.navbar-default .navbar-nav>li>a {
+    color:#2079BE;
+}
+.subNavbar{
+background-color: #2079BE;
+padding:10px;
+margin-top: -20px;    
+}
+.list-inline{
+color: white;
+font-size: 16px;    
+}
+.list-inline>li{
+padding-right: 10px;
+padding-left:40px; 
+padding-top:4px;    
+}
+.homeImage{
+min-width:100%;
+height:654px;
+     position: relative; 
+}
+.headingQuickLinks{
+color: #2079BE;
+}
+hr{
+margin:0px;
+border-top: 1px solid rgba(204, 204, 204, 0.92);
+margin-left: 42%;
+margin-right: 42%;    
+}
+.quickLinksList{
+list-style:none
+}
+.quicklinksHeader{
+font-size: 20px;
+}
+a.quicklinksData{
+
+color: black;    
+}
+a.InfoData{
+color: black;    
+}
+a.CalData{
+
+color: black;    
+}
+.specialOffersHeading{
+color: #2079BE;
+}
+.specialOffers{
+background-color: #F7F8E0;
+}
+.bigBasket{
+color: #2079BE;
+}
+.bigBasketDetail{
+font-size: 17px;
+}
+.viewAll{
+font-size: 20px;
+}
+a:hover{
+text-decoration: none;
+}
+.personalLoanImage{
+width:100%;
+    height:225px !important;
+}
+.footer a{
+color:white;
+}
+
+.image { 
+   position: relative; 
+}
+
+.textOverImage { 
+   position: absolute; 
+   top: 100px;
+   background-color: white;
+    display: inline-block;
+}
+.loginHead{
+color: #025A9E;
+}
+tbody {
+     color:#fff;
+}
+
+.md-button.md-primary.md-raised {
+width:100%;
+    margin:0px;
+}
+
+.registrationFooter{
+/*padding: 0px;*/
+}
+
+a:focus{
+text-decoration: none;
+}
+.glyphicon-eye-open,.glyphicon-eye-close{
+position: absolute;
+    right:10px;
+    color:rgba(128,128,128,0.71);
+    font-size: 20px;
+    cursor:pointer;
 }
