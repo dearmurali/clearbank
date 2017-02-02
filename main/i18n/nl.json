@@ -1,0 +1,5 @@
+{
+    'CustomerID':'Klanten ID',
+    'password':'Wachtwoord',
+    'forgotPassword':'Wachtwoord vergeten?'
+}
