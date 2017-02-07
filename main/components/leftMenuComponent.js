@@ -1,3 +1,6 @@
+'use strict';
+
+
 clearbank.component('leftMenu',{
   
         templateUrl : "main/partials/leftMenu.html",
@@ -11,6 +14,7 @@ clearbank.component('leftMenu',{
         self.topPayee = customerInfo.top_payee;
         self.accNumber = sessionStorage.getItem('accountNumber');
         self.accBalance = sessionStorage.getItem('accountBalance');
+		 self.customerName = sessionStorage.getItem('customerName');
         self.accCurrency = sessionStorage.getItem('currency');
         self.accType = sessionStorage.getItem('accountType');
 
@@ -22,6 +26,13 @@ clearbank.component('leftMenu',{
             self.defaultData = false;
 //             console.log(index);
         }
+		
+		
+			self.logout = function () {
+			sessionStorage.clear();
+			window.location.href = '/';
+		
+		}
 
         var index = sessionStorage.getItem('currentIndex');
         self.transactionInfo = self.accountInfo[index];

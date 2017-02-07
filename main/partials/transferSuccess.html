@@ -8,7 +8,7 @@
             </span>
             <p><span>Your updated balance is</span></p>
 <!--            <p><span><h3>{{available_balance}}&nbsp;{{currency}}</h3></span></p>-->
-             <p><span><h3>&#x20B9 {{$ctrl.available_balance}}.<small>00</small></h3></span></p>
+             <p><span><h3>&#x20B9 {{$ctrl.available_balance-$ctrl.maxAmount}}.<small>00</small></h3></span></p>
 <!--            <p> <button class="btn btn-primary">OK</button></p>-->
             <md-button class="md-raised md-primary" data-ng-click="$ctrl.closeAlert()">OK</md-button>
         </div>

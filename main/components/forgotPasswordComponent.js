@@ -1,3 +1,5 @@
+'use strict';
+
 clearbank.component('forgotPassword', {
 	transclude: true,
 	templateUrl: 'main/partials/forgotPassword.html',

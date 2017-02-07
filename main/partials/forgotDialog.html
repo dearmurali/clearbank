@@ -38,7 +38,7 @@
             </form>
             <div ng-show="$ctrl.changeSuccessWidget">
                 <h2>
-                    Password changed successfully. Please <a href="#!">LOGIN</a> to continue.
+                    Password changed successfully. Please <a ng-click="$ctrl.closeForm()">LOGIN</a> to continue.
                 </h2>
             </div>
 		</div>

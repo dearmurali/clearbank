@@ -129,11 +129,13 @@
  	font-weight: bold;
  	color: black;
  }
+/*
  
  tbody {
  	color: #2079BE;
  	font-weight: bold;
  }
+*/
  
  .managePayee {
  	text-align: center;
@@ -549,6 +551,9 @@
  	color: green;
  }
  
+md-dialog{
+	opacity:1;
+}
  md-tabs .md-tab.md-active {
  	color: #2079BE;
  }
@@ -645,7 +650,7 @@
  
  .clearbankLogo {
  	width: 100px;
- 	margin-top: -15px;
+ 	margin-top: -5px;
  }
  
  .inner-addon {
@@ -687,7 +692,7 @@
  
  .homeImage {
  	min-width: 100%;
- 	height: 654px;
+ 	height: 85%;
  	position: relative;
  }
  
@@ -771,15 +776,19 @@
  .loginHead {
  	color: #025A9E;
  }
+
+.personal{
+	line-height: 40px;
+	font-size: 16px;
+}
  
- tbody {
- 	color: #fff;
- }
- 
+/*
  .md-button.md-primary.md-raised {
  	width: 100%;
  	margin: 0px;
+	
  }
+*/
  
  .registrationFooter {
  	/*padding: 0px;*/
@@ -798,4 +807,26 @@
  	cursor: pointer;
  }
 
+.registration{
+	width: 40%;
+}
 
+md-backdrop.md-opaque {
+	opacity : 0.95;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,200,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,155,0.7);
+	background-color:	rgba(41, 128, 185,0.6);
+}

@@ -13,10 +13,10 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
         templateUrl: 'views/login/login.html'
     })
 
-    .state('register', {
-        url: '/register',
-        templateUrl: 'views/registration.html'
-    })
+//    .state('register', {
+//        url: '/register',
+//        templateUrl: 'views/registration.html'
+//    })
 
     .state('forgotpassword', {
         url: '/forgotpassword',
@@ -54,6 +54,12 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
         url: '/cards',
         templateUrl: 'views/cards.html'
     })
+	
+	 .state('mycards', {
+        url: '/mycards',
+        templateUrl: 'views/userCards.html'
+    })
+	
 
     .state('managepayee', {
         url: '/managepayee',

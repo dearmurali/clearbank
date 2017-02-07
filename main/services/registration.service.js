@@ -1,7 +1,7 @@
 clearbank.service('RegistrationService', function ($http) {
 	return {
 		RegisterCustomer: function (customer_name, customer_mobile, customer_email, customer_password, callback) {
-//			console.log("in service")
+			console.log("in service")
 			$http({
 				method: "POST",
 				url: "http://localhost:8080/clearbank/register",
@@ -25,7 +25,7 @@ clearbank.service('RegistrationService', function ($http) {
 					}
 				},
 				function (err) {
-//					console.log('some error occurred ', err);
+					console.log('some error occurred ', err);
 					callback('not registered');
 				}
 			)
