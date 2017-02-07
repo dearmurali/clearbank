@@ -42,7 +42,7 @@ clearbank.component("transferDetail", {
 		self.available_balance = "Choose Debit Account First";
 		self.currency = "";
 
-		for (i = 0; i < self.accountInfo.length; i++) {
+		for (var i = 0; i < self.accountInfo.length; i++) {
 
 			if (self.accountInfo[i].account_type === "Current" || self.accountInfo[i].account_type === "Saving") {
 				self.transferAccount.push({

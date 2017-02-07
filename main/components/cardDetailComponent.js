@@ -1,5 +1,6 @@
 'use strict';
 
+
 clearbank.component("creditCard", {
 
 	templateUrl: "main/partials/creditcards.html",
@@ -111,20 +112,22 @@ clearbank.component("prepaidCard", {
 	templateUrl: "main/partials/prepaidcards.html",
 	controller: function (cardService) {
 
+
 		var self = this;
-
 		self.defaultData = true;
-
+        
 		self.getCardData = function (cardType) {
-			//        console.log(cardType); 
 			cardService.getCard(cardType, function (result) {
 
 				self.cardDetails = result;
-				//        console.log(self.cardDetails);
+             
+//				        console.log(self.cardDetails);
 			});
 		}
+        
 		cardService.getCard("airline", function (result) {
 			self.cardDetails = result;
+            
 		});
 
 

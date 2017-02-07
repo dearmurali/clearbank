@@ -8,7 +8,7 @@
 		var self = this;
 
 		self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
-		//           console.log(this.accountInfo);
+		          console.log(this.accountInfo);
 
 		self.accNumber = sessionStorage.getItem('accountNumber');
 		self.accBalance = sessionStorage.getItem('accountBalance');

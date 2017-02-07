@@ -1,13 +1,14 @@
 {
   "name": "clearbank",
   "version": "1.0.0",
-  "description": "",
+  "description": "Banking project for ClearBank",
   "main": "index.js",
   "directories": {
+    "doc": "docs",
     "test": "tests"
   },
   "scripts": {
-    "start" : "gulp"
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +32,15 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
-    "express": "^4.14.0"
-  }
+    "express": "^4.14.0",
+    "mysql": "^2.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dearmurali/clearbank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dearmurali/clearbank/issues"
+  },
+  "homepage": "https://github.com/dearmurali/clearbank#readme"
 }

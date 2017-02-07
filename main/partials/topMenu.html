@@ -9,17 +9,17 @@
         <div class="collapse navbar-collapse nav nav-pills" id="collapseNavbar">
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a class="mainMenu" ui-sref="cards"><strong>Cards</strong></a></li>
+                    <a class="mainMenu" ui-sref="cards"><strong>{{'cards' | translate}}</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="loans"><strong>Deposits</strong></a></li>
+                    <a class="mainMenu" ui-sref="loans"><strong>{{'deposits' | translate}}</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="mutualfunds"><strong>Investments</strong></a></li>
+                    <a class="mainMenu" ui-sref="mutualfunds"><strong>{{'investments' | translate}}</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="nearby"><strong>Loans</strong></a></li>
+                    <a class="mainMenu" ui-sref="nearby"><strong>{{'loans' | translate}}</strong></a></li>
                 <li>
-                    <a class="mainMenu" ui-sref="contactus"><strong>Wallets</strong></a></li>
+                    <a class="mainMenu" ui-sref="contactus"><strong>{{'wallets' | translate}}</strong></a></li>
 				<li>
-                    <a class="mainMenu" ui-sref="contactus"><strong>Offers</strong></a></li>
+                    <a class="mainMenu" ui-sref="contactus"><strong>{{'offers' | translate}}</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
         
@@ -30,7 +30,7 @@
   </button>
   <ul class="dropdown-menu langDropDown" aria-labelledby="dropdownMenu1">
 	  <li class="dropdownItems" ng-click="$ctrl.selectLanguage(1)"><a href="" data-value="action"></a><span class="flag-icon flag-icon-nl"></span><span class="dropdownItems"> Dutch</span></li>
-	  <li ><a href="" data-value="action" ng-click="$ctrl.selectLanguage(2)"></a><span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span></li></ul>    
+	  <li class="dropdownItems" ng-click="$ctrl.selectLanguage(2)"><a href="" data-value="action"></a><span class="flag-icon flag-icon-us"></span><span class="dropdownItems"> United States</span></li>    
     </div>
             </ul>
         </div>
