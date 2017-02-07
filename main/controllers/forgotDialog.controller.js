@@ -1,4 +1,4 @@
-clearbank.controller('forgotDialogController',function (ForgotPasswordService,$mdDialog) {
+clearbank.controller('forgotDialogController',function (ForgotPasswordService,$mdDialog,$translate) {
 		var self = this;
 		self.forgotPasswordWidget = true;
 		self.disable = true;

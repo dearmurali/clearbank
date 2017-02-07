@@ -4,38 +4,38 @@
         <div class="col-md-offset-9 col-xs-offset-1">
             <div class="panel panel-default textOverImage">
     <div class="panel-body">
-         <h2 class="loginHead">Login</h2>
+         <h2 class="loginHead">{{'login' | translate}}</h2>
 
 <div class="login-form">
  <form name="loginForm">
       <md-input-container class="md-block">
-            <label>Customer ID<span class="warning">*</span></label>
+            <label>{{'customerID' | translate}}<span class="warning">*</span></label>
             <input data-ng-model="$ctrl.customer_id" name="csId" data-ng-pattern="/^[0-9]{10}$/" maxlength="10">
             <div data-ng-messages="loginForm.csId.$error">
-                <div data-ng-message="pattern"><span class="warning">*Must have 10 digits</span></div>
+                <div data-ng-message="pattern"><span class="warning">*{{'digitsWarning' | translate}}</span></div>
             </div>
          
         </md-input-container>
 
         <md-input-container class="md-block">
-            <label>Password<span class="warning">*</span></label>
+            <label>{{'password' | translate}}<span class="warning">*</span></label>
             <input data-ng-model="$ctrl.pwd" type="{{$ctrl.inputType}}"/>
 
             <span class="glyphicon glyphicon-eye-open" ng-click="$ctrl.showPassword()" id="111" ng-show="$ctrl.eyeOpen"></span>
             <span class="glyphicon glyphicon-eye-close" ng-show="$ctrl.eyeClosed" ng-click="$ctrl.hidePassword()"></span>
         </md-input-container>
 
-        <div ng-show="!($ctrl.validCredentials)" class="warning">Invalid Id and/or Password.</div> <br/>
+        <div ng-show="!($ctrl.validCredentials)" class="warning">{{'loginFailWarning' | translate}}</div> <br/>
 
 
-      <md-button class="md-raised md-primary loginButton" data-ng-click="$ctrl.onLogin()"><strong>Login</strong></md-button>
+      <md-button class="md-raised md-primary loginButton" data-ng-click="$ctrl.onLogin()"><strong>{{'login' | translate}}</strong></md-button>
      
-            <md-button class="md-primary md-hue-1 sm-flex" data-ng-click="$ctrl.showForm()"><strong>Forgot Password?</strong></md-button>
+            <md-button class="md-primary md-hue-1 sm-flex" data-ng-click="$ctrl.showForm()"><strong>{{'forgotPassword' | translate}} ?</strong></md-button>
  
     </form>
 </div>
     </div>        
-            <div class="panel-footer registrationFooter">Don't have account yet? <a ui-sref="register">Register Now</a></div>    
+            <div class="panel-footer registrationFooter">{{'createAccount' | translate}} <a ui-sref="register">{{'RegisterNow' | translate}}</a></div>    
                 </div>
             
   </div>

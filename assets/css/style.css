@@ -645,7 +645,7 @@
  
  .clearbankLogo {
  	width: 100px;
- 	margin-top: -15px;
+ 	margin-top: -8px;
  }
  
  .inner-addon {
@@ -667,11 +667,12 @@
  }
  
  .nav-Right {
- 	margin-top: 10px;
+ 
  }
  
  .navbar-default .navbar-nav>li>a {
  	color: #2079BE;
+    margin-right:-25px;
  }
  
  .subNavbar {
@@ -797,5 +798,9 @@
  	font-size: 20px;
  	cursor: pointer;
  }
+.dropdownItems{
+color: black;
+margin-left:4px;
+}
 
 
