@@ -24,7 +24,7 @@ clearbank.service('ForgotPasswordService',function($http){
 		resetPassword:function(mobile, password, callback){
 		$http({
             method:"POST",
-            url:"http://localhost:8080/clearbank-1.0/resetpassword",
+            url:"http://localhost:8080/clearbank/resetpassword",
             data:{
             "customermobile":mobile,
             "password": password

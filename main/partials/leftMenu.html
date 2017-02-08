@@ -1,11 +1,25 @@
 
 	
 	<div class="panel-body panel-accountBalance personal">
-		<strong>Hi, </strong><a ui-sref="profile"><strong>{{$ctrl.customerName}}</strong></a>
+
+		<strong>Hi, </strong><a ui-sref="profile" ng-cloak><strong>{{$ctrl.customerName}}</strong></a><br/>
+
 		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>Logout</strong></md-button>
 	</div>
 
 
+<!--<<<<<<< HEAD-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a><strong>{{'accountBalance' | translate}}</strong></a>
+            </h4>
+        </div>
+        <div class="panel-body panel-accountBalance">
+            <ul class="asideMenu" data-ng-show="$ctrl.defaultData">
+                <span><strong>{{$ctrl.accNumber}}<small> -{{$ctrl.accType}}</small></strong><br />
+<!--
+=======
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">
@@ -15,6 +29,8 @@
 	<div class="panel-body panel-accountBalance">
 		<ul class="asideMenu" data-ng-show="$ctrl.defaultData">
 			<span><strong>{{$ctrl.accNumber}}<small> -{{$ctrl.accType}}</small></strong><br />
+>>>>>>> 7ce0e1c95d048d37b6e3d942fb595ee69e6c4b99
+-->
                     <strong><span class="green">{{$ctrl.accBalance}}</span>&nbsp;<small class="green">{{$ctrl.accCurrency}}</small></strong>
 			</span>
 		</ul>
@@ -28,6 +44,60 @@
 	</div>
 </div>
 
+<!--<<<<<<< HEAD-->
+<div class="panel-group"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-target="#collapse2"><strong>{{'goTo' | translate}}</strong><span class="glyphicon glyphicon-minus "></span></a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse in">
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a ui-sref="dashboard">
+                        <h5>{{'dashboad' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="transfers">
+                        <h5>{{'transfers' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="managepayee">
+                        <h5>{{'managePayees' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="cards">
+                        <h5>{{'cards' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="loans">
+                        <h5>{{'loans' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="MutualFunds">
+                        <h5>{{'mutualFunds' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse"  data-target="#collapse3"><strong>{{'topPayee'| translate}}</strong><span class="glyphicon glyphicon-minus "></span></a>
+        </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse in">
+<!--
+=======
 <div class="panel-group">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -96,6 +166,8 @@
 		</h4>
 	</div>
 	<div id="collapse3" class="panel-collapse collapse in">
+>>>>>>> 7ce0e1c95d048d37b6e3d942fb595ee69e6c4b99
+-->
 
 		<ul class="list-group">
 			<li class="list-group-item" data-ng-repeat="payee in $ctrl.topPayee">
@@ -107,6 +179,26 @@
 	</div>
 </div>
 
+<!--<<<<<<< HEAD-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse"  data-target="#collapse4"><strong>{{'offers' | translate}}</strong><span class="glyphicon glyphicon-cross" data-ng-click="$ctrl.remove()"></span></a>
+        </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse in">
+
+        <ul class="list-group">
+            <li class="list-group-item">
+			<h5><strong>{{'dashBoardOffer1' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+			</li>
+			<li class="list-group-item">
+			<h5><strong>{{'dashBoardOffer2' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+			</li>
+			<li class="list-group-item">
+			<h5><strong>{{'dashBoardOffer3' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+<!--
+=======
 <div class="panel panel-default" id="advPanel">
 	<div class="panel-heading">
 		<h4 class="panel-title">
@@ -125,6 +217,8 @@
 			</li>
 			<li class="list-group-item">
 				<h5><strong>Low Intrest Rates For You</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+>>>>>>> 7ce0e1c95d048d37b6e3d942fb595ee69e6c4b99
+-->
 			</li>
 
 
