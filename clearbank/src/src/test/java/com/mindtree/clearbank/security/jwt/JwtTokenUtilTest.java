@@ -1,4 +1,4 @@
- package com.mindtree.clearbank.security.jwt;
+package com.mindtree.clearbank.security.jwt;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

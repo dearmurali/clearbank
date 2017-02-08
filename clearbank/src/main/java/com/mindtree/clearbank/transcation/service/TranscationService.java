@@ -24,7 +24,7 @@ public interface TranscationService {
 	
 	public TransactionData getCustomerTranscationDetails(long customerId , User user , String accountNumber , String accountType);
 	
-	public PayeeData getPayeeListByCustomerId(long customerId , User user);
+	//public PayeeData getPayeeListByCustomerId(long customerId , User user);
 	
 	public CustPayee addPayee(CustPayee custPayee);
 	
