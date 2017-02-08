@@ -6,15 +6,14 @@
 		</div>
 		<div class="col-md-9 col-sm-9" ng-controller="addPayeeController as addPayee">
 			<div class="panel panel-default">
-
-				<div class="panel-heading">
-
-					<h3 class="panel-title"><strong ng-cloak>{{'addPayee' | translate}}</strong></h3><br />
-					<div ng-show="addPayee.emptyFields" class="alert alert-danger">
-						<strong ng-cloak>{{'formCorrection' | translate}}</strong> {{'tryAgain'| translate}}
-					</div>
-				</div>
-
+		 
+	<div class="panel-heading">
+            <span><h3 class="panel-title">
+                <a><strong ng-cloak>{{'addPayee' | translate}}</strong></a>
+            
+            <span  ng-show="addPayee.emptyFields" class="warning login-hint"  ng-cloak>{{'formCorrection' | translate}}</span></h3></span>
+        </div>
+				
 				<div class="panel-body">
 					<form class="form-horizontal" name="managePayeeForm">
 						<div class="row">
