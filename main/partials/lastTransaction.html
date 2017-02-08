@@ -1,7 +1,7 @@
   <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a><strong>{{$ctrl.transactionInfo.account_type}} Account Balance</strong></a>
+                        <a><strong ng-cloak>{{$ctrl.transactionInfo.account_type}} Account Balance</strong></a>
                     </h4>
                 </div>
                 <div class="panel-body table-responsive">
@@ -16,10 +16,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{{$ctrl.transactionInfo.account_number}}</td>
-                                    <td>{{$ctrl.transactionInfo.account_type}}</td>
-                                    <td>{{$ctrl.transactionInfo.available_balance}}&nbsp;{{$ctrl.transactionInfo.currency}}</td>
-                                    <td>{{$ctrl.transactionInfo.opening_date}}</td>
+                                    <td ng-cloak>{{$ctrl.transactionInfo.account_number}}</td>
+                                    <td ng-cloak>{{$ctrl.transactionInfo.account_type}}</td>
+                                    <td ng-cloak>{{$ctrl.transactionInfo.available_balance}}&nbsp;{{$ctrl.transactionInfo.currency}}</td>
+                                    <td ng-cloak>{{$ctrl.transactionInfo.opening_date}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -48,11 +48,11 @@
                             </thead>
                             <tbody>
                                 <tr data-ng-repeat="data in $ctrl.lastTransactionInfo">
-                                    <td>{{data.date}}</td>
-                                    <td>{{data.description}}</td>
-                                    <td>{{data.referenceNumber}}</td>
-                                    <td data-ng-class="$ctrl.getColor($index)">{{data.type}}.{{data.amount}}</td>
-                                    <td>{{data.finalAmount}}</td>
+                                    <td ng-cloak>{{data.date}}</td>
+                                    <td ng-cloak>{{data.description}}</td>
+                                    <td ng-cloak>{{data.referenceNumber}}</td>
+                                    <td data-ng-class="$ctrl.getColor($index)" ng-cloak>{{data.type}}.{{data.amount}}</td>
+                                    <td ng-cloak>{{data.finalAmount}}</td>
                                 </tr>
                             </tbody>
                         </table>

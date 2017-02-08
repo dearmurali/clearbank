@@ -3,21 +3,21 @@
 <!--			<div class="panel panel-default">-->
 				<div class="panel-heading">
 					<h3 class="panel-title">
-						<a><strong>{{'changePassword' | translate}}</strong></a></h3>
+						<a><strong ng-cloak>{{'changePassword' | translate}}</strong></a></h3>
 				</div>
 				<div class="panel-body" ng-controller="forgotDialogController as $ctrl">
 					<form class="form-horizontal" name="forgotPassForm" ng-show="$ctrl.forgotPasswordWidget">
                 <md-input-container class="md-block">
-                    <label>{{'enterNumber' | translate}}<span class="warning">*</span></label>
+                    <label ng-cloak>{{'enterNumber' | translate}}<span class="warning">*</span></label>
 
                     <input name="mobileNumber" ng-model="$ctrl.mobileNumber" ng-blur="$ctrl.checkMobile($ctrl.mobileNumber)" required ng-pattern="/^[0-9]{10}$/" maxlength="10">
-                    <span class="valText" ng-show="forgotPassForm.mobileNumber.$error.pattern">{{'mobileValidation' | translate}}<p></p></span>
-                    <span class="valText" ng-hide="$ctrl.checkNumber">{{'mobileNotFound' | translate}}</span>
+                    <span class="valText" ng-show="forgotPassForm.mobileNumber.$error.pattern" ng-cloak>{{'mobileValidation' | translate}}<p></p></span>
+                    <span class="valText" ng-hide="$ctrl.checkNumber" ng-cloak>{{'mobileNotFound' | translate}}</span>
 
                 </md-input-container>
 
                 <md-input-container class="md-block">
-                    <label for="cust-password">{{'resetPassword' | translate}}<span class="warning">*</span></label>
+                    <label for="cust-password" ng-cloak>{{'resetPassword' | translate}}<span class="warning">*</span></label>
                     <input type="password" name="changePassword" ng-model="$ctrl.changePassword" required ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" ng-disabled="$ctrl.disable">
                     <span class="valText" ng-show="forgotPassForm.changePassword.$error.pattern">{{'passwordValidation' | translate}}</span>
 
@@ -25,21 +25,21 @@
 
 
                 <md-input-container class="md-block">
-                    <label for="cust-password">{{'confirmPassword' | translate}}:<span class="warning">*</span></label>
+                    <label for="cust-password" ng-cloak>{{'confirmPassword' | translate}}:<span class="warning">*</span></label>
                     <input oncopy="return false" type="password" onpaste="return false" name="confirmPassword" ng-model="$ctrl.confirmPassword" ng-disabled="$ctrl.disable"/>
-                    <span class="valText" ng-show="$ctrl.No_match">{{'passwordMatch' | translate}}</span>
+                    <span class="valText" ng-show="$ctrl.No_match" ng-cloak>{{'passwordMatch' | translate}}</span>
                 </md-input-container>
 
-                <md-button class="md-raised md-primary" ng-click="$ctrl.changeSubmit()" data target="#changeSuccessModal"><strong>{{'reset' | translate}}</strong></md-button>
+                <md-button class="md-raised md-primary" ng-click="$ctrl.changeSubmit()" data target="#changeSuccessModal"><strong ng-cloak>{{'reset' | translate}}</strong></md-button>
               
                     <md-button class="md-warn md-hue-1" ng-click="$ctrl.closeForm()" ><strong>{{'cancel' | translate}}</strong></md-button>
                 
 
             </form>
             <div ng-show="$ctrl.changeSuccessWidget">
-                <h2>
+                <h2 ng-cloak>
 
-                    {{'passwordChanged' | translate}} <a ng-click="$ctrl.closeForm()">{{'login' | translate}}</a>{{'toContinue' | translate}}.
+                    {{'passwordChanged' | translate}} <a ng-click="$ctrl.closeForm()" ng-cloak>{{'login' | translate}}</a>{{'toContinue' | translate}}.
 
                 </h2>
             </div>

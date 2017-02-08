@@ -28,10 +28,10 @@
 	<div class="col-md-12 col-sm-12">
 		<div class="panel panel-default transfer-form">
 			<div class="panel-heading panel-heading-transfer">
-				<h4>{{$ctrl.transferHeading}}&nbsp;{{$ctrl.transferChoice}}
+				<h4 ng-cloak>{{$ctrl.transferHeading}}&nbsp;{{$ctrl.transferChoice}}
 					<small class="warning_fields">Fill all mandatory fields *</small>
 					<small class="warning_maxAmount">Maximum transfer amount can't be more than Available Balance *</small>
-					<small class="warning_maxIMPS">Maximum limit for IMPS is {{$ctrl.maxIMPSlimit}} *</small>
+					<small class="warning_maxIMPS" ng-cloak>Maximum limit for IMPS is {{$ctrl.maxIMPSlimit}} *</small>
 				</h4>
 			</div>
 
@@ -63,7 +63,7 @@
 							<md-input-container>
 								<label><span class="customBlue">Debit Account</span><span class="red">&nbsp;*</span></label>
 								<md-select ng-model="$ctrl.debitAccount" placeholder="Select debit account *" data-ng-blur="$ctrl.checkFields()">
-									<md-option data-ng-repeat="account in $ctrl.transferAccount" ng-value={{account.account_number}}>{{account.account_number}}</md-option>
+									<md-option data-ng-repeat="account in $ctrl.transferAccount" ng-value={{account.account_number}} ng-cloak>{{account.account_number}}</md-option>
 
 								</md-select>
 							</md-input-container>
@@ -72,7 +72,7 @@
 							<md-input-container>
 								<label><span class="customBlue">Payee Account</span><span class="red">&nbsp;*</span></label>
 								<md-select ng-model="$ctrl.payeeAccount" placeholder="Select payee*" data-ng-blur="$ctrl.checkFields()">
-									<md-option data-ng-repeat="payee in $ctrl.payeeData" ng-value={{payee.payeeAccountNumber}}>{{payee.payeeName}}-{{payee.payeeAccountNumber}}</md-option>
+									<md-option data-ng-repeat="payee in $ctrl.payeeData" ng-value={{payee.payeeAccountNumber}} ng-cloak>{{payee.payeeName}}-{{payee.payeeAccountNumber}}</md-option>
 
 								</md-select>
 							</md-input-container>
@@ -88,12 +88,12 @@
 					<div class="col-md-6 col-sm-6">
 						<div>
 							<label><span class="customBlue">Total available amount</span></label>
-							<h4 class="green"><strong>{{$ctrl.currency}}&nbsp;{{$ctrl.available_balance}}</strong></h4>
+							<h4 class="green"><strong ng-cloak>{{$ctrl.currency}}&nbsp;{{$ctrl.available_balance}}</strong></h4>
 						</div> 
 
 						<div>
 							<md-input-container>
-								<label>Amount ({{$ctrl.currency}})&nbsp;<span class="red">*</span></label>
+								<label ng-cloak>Amount ({{$ctrl.currency}})&nbsp;<span class="red">*</span></label>
 								<input type="number" ng-model="$ctrl.maxAmount" data-ng-blur="$ctrl.checkFields()">
 							</md-input-container>
 						</div>

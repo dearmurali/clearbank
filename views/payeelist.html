@@ -21,10 +21,10 @@
                 </thead>
             <tbody>
             <tr ng-repeat="payee in payeeList.values">
-                <td>{{payee.AccountNumber}}</td>
-                <td>{{payee.Name}}</td>
-                 <td>{{payee.AccountType}}</td>
-                 <td><a ui-sref="editpayee" ng-click="payeeList.getDetails($index)">{{payee.Action1}}</a><span>|</span><a href="" ng-click="payeeList.deletePayee($index)">{{payee.Action2}}</a></td>
+                <td ng-cloak>{{payee.AccountNumber}}</td>
+                <td ng-cloak>{{payee.Name}}</td>
+                 <td ng-cloak>{{payee.AccountType}}</td>
+                 <td><a ui-sref="editpayee" ng-click="payeeList.getDetails($index)" ng-cloak>{{payee.Action1}}</a><span>|</span><a href="" ng-click="payeeList.deletePayee($index)" ng-cloak>{{payee.Action2}}</a></td>
                 </tr>
             </tbody>
             </table>
