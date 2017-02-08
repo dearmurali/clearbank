@@ -7,15 +7,15 @@
 <div class="col-md-9 col-sm-9" ng-controller="editPayeeController as editPayee">
  <div class="panel panel-default">
      <div class="panel-heading">
-         <h3 class="panel-title"><strong>Manage Payee</strong></h3><br /><div ng-show="editPayee.emptyFields" class="alert alert-danger">
-  <strong>Wrong value/ Empty Fields Found!</strong> Please Try again.
+         <h3 class="panel-title"><strong>{{'editPayee' | translate}}</strong></h3><br /><div ng-show="editPayee.emptyFields" class="alert alert-danger">
+  <strong>{{'formCorrection' | translate}}
          </div>
 </div>
      <div class="panel-body">
             <form class="form-horizontal" name="managePayeeForm">
                 <div class="col-md-6">
                 <md-input-container class="md-block">
-                    <label>Account Number</label>
+                    <label>{{'accountNumber' | translate}}</label>
                     <strong>
                     <input type="password" name="accountNumber" ng-model="editPayee.accountNumber" disabled>
                 </strong>
@@ -23,7 +23,7 @@
 </div>
                   <div class="col-md-6">
                 <md-input-container class="md-block">
-                    <label>Repeat Account Number</label>
+                    <label>{{'repeatAccountNumber' | translate}}</label>
                     <strong>
                     <input type="text" name="reEnterAccountNumber" ng-model="editPayee.reEnterAccountNumber" disabled>
                         </strong>
@@ -31,20 +31,19 @@
                     </div>
         <div class="col-md-6">
                 <md-input-container class="md-block">
-                  <label>Account Type</label>
+                  <label>{{'accType' | translate}}</label>
 
                     <md-select ng-model="editPayee.accountType" disabled>
                      <md-option  ng-value="editPayee.accountType">
              <strong> {{editPayee.accountType}}</strong>
             </md-option> 
                         </md-select>
-                    <span class="valText" ng-show="addPayee.emptyAccontType">Please don't leave this Empty</span>
                      </md-input-container>
              
                     </div>
                   <div class="col-md-6">
                 <md-input-container class="md-block">
-                    <label>IFSC Code</label>
+                    <label>{{'IFSCCode' | translate}}</label>
                     <strong>
                     <input type="text" name="ifscCode" ng-model="editPayee.ifscCode"  disabled>
                     </strong>
@@ -52,7 +51,7 @@
                     </div>
                 <div class="col-md-6">
                 <md-input-container class="md-block">
-                    <label>Name</label>
+                    <label>{{'name' | translate}}</label>
                     <strong>
                     <input type="text" name="payeeName" ng-model="editPayee.payeeName"  disabled>
                    </strong>
@@ -60,35 +59,35 @@
                     </div>
                 <div class="col-md-6">
                 <md-input-container class="md-block">
-                    <label>Nick Name</label>
+                    <label>{{'nickName' | translate}}</label>
 
                     <input type="text" name="payeeNickName" ng-model="editPayee.payeeNickName" required ng-pattern="/^[a-z A-Z]+$/">
-                    <span class="valText" ng-show="managePayeeForm.payeeNickName.$error.pattern">Nick Name should only contain Alphabets</span>
-                    <span class="valText" ng-show="editPayee.emptyNickName">Please don't leave this Empty</span>
+                    <span class="valText" ng-show="managePayeeForm.payeeNickName.$error.pattern">{{'nickNameValidation' | translate}}</span>
+                    <span class="valText" ng-show="editPayee.emptyNickName">{{'fieldLeftEmpty' | translate}}</span>
                      </md-input-container>
                     </div>
                
   <div class="col-md-6">
-                <span class="managePayee"><strong>Do you want to Reset limit?</strong></span><br /><p></p>
+                <span class="managePayee"><strong>{{'updateLimit' | translate}}</strong></span><br /><p></p>
                     <md-radio-group class="md-primary" ng-model="editPayee.setLimitOption">
                         <div class="col-md-3">
-                    <md-radio-button name="setLimit" ng-click="editPayee.checkLimit('yes')" value="yes"><strong>Yes</strong></md-radio-button></div>
+                    <md-radio-button name="setLimit" ng-click="editPayee.checkLimit('yes')" value="yes"><strong>{{'yes' | translate}}</strong></md-radio-button></div>
                            <div class="col-md-2">
-                        <md-radio-button ng-click="editPayee.checkLimit('no')" value="no"><strong>No</strong></md-radio-button></div>
+                        <md-radio-button ng-click="editPayee.checkLimit('no')" value="no"><strong>{{'no' | translate}}</strong></md-radio-button></div>
                         </md-radio-group>
                 </div>
                 <div class="col-md-6">
                 <md-input-container class="md-block">
-                    <label>Set Limit</label>
+                    <label>{{'askLimit' | translate}}</label>
                     <input type="text" name="transferLimit" ng-disabled="editPayee.setLimit" ng-model="editPayee.transferLimit" required ng-pattern="/^[0-9]{1,12}$/" /> 
-                    <span class="valText" ng-show="managePayeeForm.transferLimit.$error.pattern">Limit should only contain numbers</span>
-             <span class="valText" ng-show="addPayee.emptyTransferLimit">Please don't leave this Empty</span>       
+                    <span class="valText" ng-show="managePayeeForm.transferLimit.$error.pattern">{{'limitValidation' | translate}}</span>
+             <span class="valText" ng-show="addPayee.emptyTransferLimit">{{'fieldLeftEmpty' | translate}}</span>       
                     </md-input-container>
                 </div>
      </form>
         <div class="col-md-6 pull-right">
-           <md-button md-no-ink  class="deletePayee"><strong><a ui-sref="payeelist">Delete Payee</a></strong></md-button>
-            <md-button class="md-raised md-primary" ng-click="editPayee.savePayee()"><strong>SAVE</strong></md-button>
+           <md-button md-no-ink  class="deletePayee"><strong><a ui-sref="payeelist">{{'deletePayee' | translate}}</a></strong></md-button>
+            <md-button class="md-raised md-primary" ng-click="editPayee.savePayee()"><strong>{{'save' | translate}}</strong></md-button>
          </div>
    
                 </div>

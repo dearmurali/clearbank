@@ -8,9 +8,9 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 
-					<h3 class="panel-title"><strong>Manage Payee</strong></h3><br />
+					<h3 class="panel-title"><strong>{{'addPayee' | translate}}</strong></h3><br />
 					<div ng-show="addPayee.emptyFields" class="alert alert-danger">
-						<strong>Wrong value/ Empty Fields Found!</strong> Please Try again.
+						<strong>{{'formCorrection' | translate}}</strong> {{'tryAgain'| translate}}
 					</div>
 				</div>
 				<div class="panel-body">
@@ -18,95 +18,95 @@
 						<div class="row">
 							<div class="col-md-6">
 								<md-input-container class="md-block">
-									<label>Account Number</label>
+									<label>{{'accountNumber'| translate}}</label>
 
 									<input type="password" name="accountNumber" ng-model="addPayee.accountNumber" ng-FOCUS="addpayee.savePayee()" required ng-pattern="/^[0-9]{12}$/" maxlength="12">
-									<span class="valText" ng-show="managePayeeForm.accountNumber.$error.pattern">Please enter a valid account number</span>
-									<span class="valText" ng-show="addPayee.emptyAccountNumber">Please don't leave this Empty</span>
+									<span class="valText" ng-show="managePayeeForm.accountNumber.$error.pattern">{{'accountNumberValidation'| translate}}</span>
+									<span class="valText" ng-show="addPayee.emptyAccountNumber">{{'fieldLeftEmpty' | translate}}</span>
 								</md-input-container>
 							</div>
 							<div class="col-md-6">
 								<md-input-container class="md-block">
-									<label>Repeat Account Number</label>
+									<label>{{'repeatAccountNumber' | translate}}</label>
 
 									<input type="text" name="reEnterAccountNumber" ng-model="addPayee.reEnterAccountNumber" required ng-pattern="/^[0-9]{12}$/" maxlength="12" ng-blur="addPayee.compareAccountNumber()">
-									<span class="valText" ng-show="addPayee.accountMatchFail">Account did not Match</span>
-									<span class="valText" ng-show="addPayee.emptyRepeatAccountNumber">Please don't leave this Empty</span>
+									<span class="valText" ng-show="addPayee.accountMatchFail">{{'accMatchFail' | translate}}</span>
+									<span class="valText" ng-show="addPayee.emptyRepeatAccountNumber">{{'fieldLeftEmpty' | translate}}</span>
 								</md-input-container>
 							</div>
 						</div>
 						<div class="row">
 						<div class="col-md-6">
 							<md-input-container class="md-block">
-								<label>Account Type</label>
+								<label>{{'accType' | translate}}</label>
 
 								<md-select ng-model="addPayee.accountType">
 									<md-option ng-repeat="x in addPayee.accountTypes track by $index" ng-value="x.type">
-										{{x.type}}
+										{{'x.type' + $index | translate}}
 									</md-option>
 								</md-select>
-								<span class="valText" ng-show="addPayee.emptyAccontType">Please don't leave this Empty</span>
+								<span class="valText" ng-show="addPayee.emptyAccontType">{{'fieldLeftEmpty' | translate}}</span>
 							</md-input-container>
 
 						</div>
 						<div class="col-md-6">
 							<md-input-container class="md-block">
-								<label>IFSC Code</label>
+								<label>{{'IFSCCode' | translate}}</label>
 
 								<input type="text" name="ifscCode" ng-model="addPayee.ifscCode" required ng-pattern="/^[a-zA-Z0-9]{10}$/" maxlength="10">
-								<span class="valText" ng-show="managePayeeForm.ifscCode.$error.pattern">Please enter a valid IFSC Code</span>
-								<span class="valText" ng-show="addPayee.emptyIfscCode">Please don't leave this Empty</span>
+								<span class="valText" ng-show="managePayeeForm.ifscCode.$error.pattern">{{'ifscValidation' | translate}}</span>
+								<span class="valText" ng-show="addPayee.emptyIfscCode">{{'fieldLeftEmpty' | translate}}</span>
 							</md-input-container>
 						</div>
 						</div>
 						<div class="row">
 						<div class="col-md-6">
 							<md-input-container class="md-block">
-								<label>Name</label>
+								<label>{{'name' | translate}}</label>
 
 								<input type="text" name="payeeName" ng-model="addPayee.payeeName" required ng-pattern="/^[a-z A-Z]+$/">
-								<span class="valText" ng-show="managePayeeForm.payeeName.$error.pattern">Name should only contain Alphabets</span>
-								<span class="valText" ng-show="addPayee.emptyName">Please don't leave this Empty</span>
+								<span class="valText" ng-show="managePayeeForm.payeeName.$error.pattern">{{'nameValidations' | translate}}</span>
+								<span class="valText" ng-show="addPayee.emptyName">{{'fieldLeftEmpty' | translate}}</span>
 							</md-input-container>
 						</div>
 						<div class="col-md-6">
 							<md-input-container class="md-block">
-								<label>Nick Name</label>
+								<label>{{'nickName' | translate}}</label>
 
 								<input type="text" name="payeeNickName" ng-model="addPayee.payeeNickName" required ng-pattern="/^[a-z A-Z]+$/">
-								<span class="valText" ng-show="managePayeeForm.payeeNickName.$error.pattern">Nick Name should only contain Alphabets</span>
-								<span class="valText" ng-show="addPayee.emptyNickName">Please don't leave this Empty</span>
+								<span class="valText" ng-show="managePayeeForm.payeeNickName.$error.pattern">{{'nickNameValidation' | translate}}</span>
+								<span class="valText" ng-show="addPayee.emptyNickName">{{'fieldLeftEmpty' | translate}}</span>
 							</md-input-container>
 						</div>
 						</div>
 						<div class="row">
 						<div class="col-md-6">
-							<span class="managePayee"><strong>Do you want to set limit?</strong></span><br />
+							<span class="managePayee"><strong>{{'setLimit' | translate}}</strong></span><br />
 							<p></p>
 							<md-radio-group class="md-primary" ng-model="addPayee.setLimitOption">
 
 								<div class="col-md-2">
-									<md-radio-button name="setLimit" ng-click="addPayee.checkLimit('yes')" value="yes"><strong>Yes</strong></md-radio-button>
+									<md-radio-button name="setLimit" ng-click="addPayee.checkLimit('yes')" value="yes"><strong>{{'yes' | translate}}</strong></md-radio-button>
 								</div>
 								<div class="col-md-1">
 
-									<md-radio-button ng-click="addPayee.checkLimit('no')" value="no"><strong>No</strong></md-radio-button>
+									<md-radio-button ng-click="addPayee.checkLimit('no')" value="no"><strong>{{'no' | translate}}</strong></md-radio-button>
 								</div>
 							</md-radio-group>
 						</div>
 						<div class="col-md-6">
 							<md-input-container class="md-block">
-								<label>Set Limit</label>
+								<label>{{'askLimit' | translate}}</label>
 								<input type="text" name="transferLimit" ng-disabled="addPayee.setLimit" ng-model="addPayee.transferLimit" required ng-pattern="/^[0-9]{1,12}$/" />
-								<span class="valText" ng-show="managePayeeForm.transferLimit.$error.pattern">Limit should only contain numbers</span>
-								<span class="valText" ng-show="addPayee.emptyTransferLimit">Please don't leave this Empty</span>
+								<span class="valText" ng-show="managePayeeForm.transferLimit.$error.pattern">{{'limitValidation' | translate}}</span>
+								<span class="valText" ng-show="addPayee.emptyTransferLimit">{{'fieldLeftEmpty' | translate}}</span>
 							</md-input-container>
 						</div>
 						</div>
 						<div class="row">
 						<div class="col-md-12 col-sm-12">
-							<md-button class="md-raised md-primary transferOptions" ng-click="addPayee.savePayee()" data-toggle="successMessage" data-target="#successMessage"><strong>SAVE</strong></md-button>
-							<md-button class="md-primary md-hue-1 transferOptions" ui-sref="payeelist"><strong>Delete Payee</strong></md-button>
+							<md-button class="md-raised md-primary transferOptions" ng-click="addPayee.savePayee()" data-toggle="successMessage" data-target="#successMessage"><strong>{{'save' | translate}}</strong></md-button>
+							<md-button class="md-primary md-hue-1 transferOptions" ui-sref="payeelist"><strong>{{'deletePayee' | translate}}</strong></md-button>
 
 						</div>
 						</div>

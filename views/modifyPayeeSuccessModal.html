@@ -6,13 +6,13 @@
 		<div class="col-md-8">
 			<span class="green">
             <p><span><img src="../../assets/images/success.PNG" class="image-responsive"></span></p>
-			<p><span>Payee Details Modified</span></p>
+			<p><span>{{'editSuccess' | translate}}</span></p>
 			</span>
 		</div>
 		<div class="col-md-2"></div>
-		<md-button class="md-raised md-primary" ui-sref="dashboard" ng-click="cancel()">Home</md-button>
-		<md-button class="md-raised md-primary" ui-sref="transfers" ng-click="cancel()">Transfer</md-button>
-		<md-button class="md-raised md-primary" ui-sref="editpayee" ng-click="cancel()">Edit Payee</md-button>
+		<md-button class="md-raised md-primary" ui-sref="dashboard" ng-click="cancel()">{{'home'| translate}}</md-button>
+		<md-button class="md-raised md-primary" ui-sref="transfers" ng-click="cancel()">{{'transfer' | translate}}</md-button>
+		<md-button class="md-raised md-primary" ui-sref="editpayee" ng-click="cancel()">{{'editPayee' | translate}}</md-button>
 	</md-dialog-content>
 
 </md-dialog>
