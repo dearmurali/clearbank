@@ -31,8 +31,8 @@ clearbank.component("lastTransaction", {
 		self.transactionInfo = info[index];
 
 		var customerID = self.accId;
-		//        var currentAccountNumber=self.transactionInfo.account_number;
-		//        var accountType=self.transactionInfo.account_type;    
+		        var currentAccountNumber=self.transactionInfo.account_number;
+		        var accountType=self.transactionInfo.account_type;    
 
 
 		self.showTransactions = false;

@@ -156,7 +156,7 @@ clearbank.component("transferDetail", {
 					$('.warning_fields').css('display', 'none');
 					$('.warning_maxIMPS').css('display', 'none');
 					$('.warning_maxAmount').css('display', 'none');
-		
+					console.log(self.payeeAccount+"werwerwer");
 					self.showAlert();
 				}
 			}

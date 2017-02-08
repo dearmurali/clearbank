@@ -71,8 +71,8 @@
 						<div>
 							<md-input-container>
 								<label><span class="customBlue">Payee Account</span><span class="red">&nbsp;*</span></label>
-								<md-select ng-model="$ctrl.payeeAccount" placeholder="Select payee account *" data-ng-blur="$ctrl.checkFields()">
-									<md-option data-ng-repeat="payee in $ctrl.payeeData" ng-value={{payee.payeeAccountNumber}}>{{payee.payeeAccountNumber}}</md-option>
+								<md-select ng-model="$ctrl.payeeAccount" placeholder="Select payee*" data-ng-blur="$ctrl.checkFields()">
+									<md-option data-ng-repeat="payee in $ctrl.payeeData" ng-value={{payee.payeeAccountNumber}}>{{payee.payeeName}}-{{payee.payeeAccountNumber}}</md-option>
 
 								</md-select>
 							</md-input-container>

@@ -1,6 +1,6 @@
 clearbank.controller("editPayeeController", function ($scope, $mdDialog) {
-//	console.log(sessionStorage.getItem('editAccountType'));
-//	console.log(sessionStorage.getItem('editAccountType'));
+	//	console.log(sessionStorage.getItem('editAccountType'));
+	//	console.log(sessionStorage.getItem('editAccountType'));
 	this.accountNumber = sessionStorage.getItem('editAccountNumber');
 	this.reEnterAccountNumber = sessionStorage.getItem('editAccountNumber');
 	this.accountType = sessionStorage.getItem('editAccountType');
@@ -20,8 +20,17 @@ clearbank.controller("editPayeeController", function ($scope, $mdDialog) {
 			this.emptyFields = true;
 		} else {
 			this.emptyFields = false;
+
+			self.updatedPayee = {
+				"payeeAccountNumber": this.accountNumber,
+				"payeeIFSC": this.ifscCode,
+				"payeeLimit":this.transferLimit ,
+				"payeeNickName": this.payeeNickName,
+				"customerid": sessionStorage.getItem('customerId')
+			} 
+			console.log("updated payee object",self.updatedPayee)
 			this.showModal();
-//			console.log("Saving")
+			//			console.log("Saving")
 		}
 	}
 

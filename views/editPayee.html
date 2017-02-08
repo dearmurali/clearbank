@@ -5,12 +5,20 @@
 <left-menu></left-menu>
 </div>
 <div class="col-md-9 col-sm-9" ng-controller="editPayeeController as editPayee">
+
  <div class="panel panel-default">
-     <div class="panel-heading">
+<!--     <div class="panel-heading">
          <h3 class="panel-title"><strong>Manage Payee</strong></h3><br /><div ng-show="editPayee.emptyFields" class="alert alert-danger">
   <strong>Wrong value/ Empty Fields Found!</strong> Please Try again.
          </div>
 </div>
+-->
+	<div class="panel-heading">
+            <span><h3 class="panel-title">
+                <a><strong>Edit Payee</strong></a>
+            
+            <span  ng-show="addPayee.emptyFields" class="warning login-hint">Wrong value/ Empty Fields Found! Please Try again.</span></h3></span>
+        </div>
      <div class="panel-body">
             <form class="form-horizontal" name="managePayeeForm">
                 <div class="col-md-6">
@@ -87,7 +95,7 @@
                 </div>
      </form>
         <div class="col-md-6 pull-right">
-           <md-button md-no-ink  class="deletePayee"><strong><a ui-sref="payeelist">Delete Payee</a></strong></md-button>
+           <md-button md-no-ink  class="deletePayee"><strong><a ui-sref="payeelist">Payee List</a></strong></md-button>
             <md-button class="md-raised md-primary" ng-click="editPayee.savePayee()"><strong>SAVE</strong></md-button>
          </div>
    

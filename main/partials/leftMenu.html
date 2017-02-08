@@ -1,22 +1,15 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">
-			<a><strong>Personal</strong></a>
-		</h4>
-	</div>
+
+	
 	<div class="panel-body panel-accountBalance personal">
-		<strong>Hi, </strong><a ui-sref="profile"><strong>{{$ctrl.customerName}}</strong></a><br/>
+		<strong>Hi, </strong><a ui-sref="profile"><strong>{{$ctrl.customerName}}</strong></a>
 		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>Logout</strong></md-button>
-		
-		
-		
 	</div>
-</div>
+
 
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">
-			<a><strong>Account Balance</strong></a>
+			<a><strong><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;</strong><strong>Account Balance</strong></a>
 		</h4>
 	</div>
 	<div class="panel-body panel-accountBalance">
@@ -39,7 +32,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">
-				<a data-toggle="collapse" data-target="#collapse2"><strong>Go To</strong><span class="glyphicon glyphicon-minus "></span></a>
+				<a data-toggle="collapse" data-target="#collapse2"><strong><span class="glyphicon glyphicon-share-alt"></span></strong>&nbsp;&nbsp;<strong>Go To</strong><span class="glyphicon glyphicon-minus "></span></a>
 			</h4>
 		</div>
 		<div id="collapse2" class="panel-collapse collapse in">
@@ -53,7 +46,7 @@
 				
 				<li class="list-group-item">
 					<a ui-sref="transfers">
-						<h5>Transfer<img class="arrow" src="assets/images/Arrow.png"></h5>
+						<h5>Transfer Funds<img class="arrow" src="assets/images/Arrow.png"></h5>
 					</a>
 				</li>
 				<li class="list-group-item">
@@ -99,7 +92,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4 class="panel-title">
-			<a data-toggle="collapse" data-target="#collapse3"><strong>Top Payee</strong><span class="glyphicon glyphicon-minus "></span></a>
+			<a data-toggle="collapse" data-target="#collapse3"><strong><span class="glyphicon glyphicon-flash"></span>&nbsp;&nbsp;</strong><strong>Top Payee</strong></a>
 		</h4>
 	</div>
 	<div id="collapse3" class="panel-collapse collapse in">
@@ -117,7 +110,7 @@
 <div class="panel panel-default" id="advPanel">
 	<div class="panel-heading">
 		<h4 class="panel-title">
-			<a data-toggle="collapse" data-target="#collapse4"><strong>OFFERS</strong></a>
+			<strong><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;</strong><a data-toggle="collapse" data-target="#collapse4"><strong>OFFERS</strong></a>
 			<a id="close"><span class="glyphicon glyphicon-remove arrow"></span></a>
 		</h4>
 	</div>
