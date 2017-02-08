@@ -138,6 +138,18 @@
     "offers":"OFFERS",
     "dashBoardOffer1":"GET 15% OFF ON BIGBASKET",
     "dashBoardOffer2":"FLAT 15% OFF ON EBAY",
-    "dashBoardOffer3":"Low Intrest Rates For You"
+    "dashBoardOffer3":"Low Intrest Rates For You",
+    "nameValidation":"'please enter alphabets only'!",
+    "mandatoryFields":"*All fields are mandatory",
+    "contactNumber":"Contact Number",
+    "mobileValidation":"please enter a valid 10 digit contact number",
+    "emailID":"Email address to contact you",
+    "emailValidation":"please enter a valid email address!",
+    "passwordPlaceholder":"set a password for this account",
+    "Reenterpassword":"and reenter to confirm",
+    "passwordMatch":"enter same password as above!",
+    "matchFail":"passwords do not match.",
+    "notNow":"Not Now"
+    
     
 }
