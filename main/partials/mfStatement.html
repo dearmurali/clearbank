@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<strong>Mutual Funds Summary</strong>
+		</h4>
+	</div>
+	<div class="panel-body table-responsive">
+        
+            <table class="table">
+                <thead>
+                    <tr class="tableheading">
+                        <td>Fund Name</td>
+                        <td>Units</td>
+                        <td>Unit Avg Cost</td>
+                        <td>Adjusted Cost Base</td>
+						<td>Current Unit Price</td>
+						<td>Unrealized Gain(Loss)</td>
+						<td>Current Value</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="mfs in $ctrl.MFStatement track by $index">
+                        <td>{{mfs.fundName}}</td>
+                        <td>{{mfs.units}}</td>
+                        <td>{{mfs.avgCost}}</td>
+                        <td>{{mfs.adjustedCostBase}}</td>
+						<td>{{mfs.currUnitPrice}}</td>
+						<td>{{mfs.unrealizedGL}}</td>
+						<td>{{mfs.currentValue}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    </div>
+</div>

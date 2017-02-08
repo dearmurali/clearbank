@@ -21,10 +21,7 @@ clearbank.component("navigationBar", {
 
 		//        console.log(self.accName);
 
-		self.logout = function () {
-			sessionStorage.clear();
-			window.location.href = '/';
-		}
+		
 		self.selectLanguage = function (languageOption) {
 
 			if (languageOption === 1) {

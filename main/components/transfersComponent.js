@@ -1,3 +1,7 @@
+
+'use strict';
+
+
 clearbank.component("transferDetail", {
 
 	templateUrl: "main/partials/transferDetail.html",
@@ -38,7 +42,7 @@ clearbank.component("transferDetail", {
 		self.available_balance = "Choose Debit Account First";
 		self.currency = "";
 
-		for (i = 0; i < self.accountInfo.length; i++) {
+		for (var i = 0; i < self.accountInfo.length; i++) {
 
 			if (self.accountInfo[i].account_type === "Current" || self.accountInfo[i].account_type === "Saving") {
 				self.transferAccount.push({
@@ -51,11 +55,11 @@ clearbank.component("transferDetail", {
 		}
 
 
-		self.transferMethod = function () {
+		self.transferMethod = function () { 
 
 
 			for (i = 0; i < self.transferAccount.length; i++) {
-				if (self.transferAccount[i].account_number === self.debitAccount) {
+				if (self.transferAccount[i].account_number == self.debitAccount) {
 					self.available_balance = self.transferAccount[i].available_balance;
 					self.currency = self.transferAccount[i].currency;
 				}
@@ -95,7 +99,7 @@ clearbank.component("transferDetail", {
 
 			for (i = 0; i < self.payeeData.length; i++) {
 
-				if (self.payeeData[i].payeeAccountNumber === self.payeeAccount) {
+				if (self.payeeData[i].payeeAccountNumber == self.payeeAccount) {
 					self.bankName = self.payeeData[i].bankName;
 					self.ifscCode = self.payeeData[i].ifscCode;
 				}
@@ -152,6 +156,7 @@ clearbank.component("transferDetail", {
 					$('.warning_fields').css('display', 'none');
 					$('.warning_maxIMPS').css('display', 'none');
 					$('.warning_maxAmount').css('display', 'none');
+		
 					self.showAlert();
 				}
 			}

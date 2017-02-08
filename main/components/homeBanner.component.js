@@ -1,3 +1,6 @@
+'use strict';
+
+
 angular.module("ClearBank")
 
 .component('homeImage',{
@@ -55,6 +58,15 @@ angular.module("ClearBank")
                 templateUrl: 'main/partials/forgotDialog.html',
                 scope: $scope,
                 preserveScope: true,
+            });
+        };
+		
+		self.register = function () {
+            $mdDialog.show({
+                clickOutsideToClose: true,
+                templateUrl: '../views/registration.html',
+                scope: $scope,
+          
             });
         };
     }

@@ -3,11 +3,14 @@ clearbank.component('userRegistration', {
     templateUrl: 'main/partials/registration.html',
     controller: function registrationController(RegistrationService, $mdDialog, $scope) {
         var self = this;
+		
+	
+		
         $('.nameError,.mailError,.passError,.passError2,.contactError').hide();
         $('.cName').on('blur', function () {
             if (self.customerName === undefined) {
                 $('.nameError').show('200');
-
+				
             }
 
         });
@@ -47,7 +50,7 @@ clearbank.component('userRegistration', {
         });
 
         self.closeDialog = function () {
-                        $mdDialog.hide();
+                        $mdDialog.cancel();
 
              window.location.href = "/";
 
@@ -58,6 +61,8 @@ clearbank.component('userRegistration', {
 //            console.log("saving")
 //            console.log(self.customerName, self.customerContact, self.customerEmail, self.customerPassword)
             if (!(self.customerName === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined || self.customerPassword !== self.confirmedPassword)) {
+				
+				alert("verified");
 
                 RegistrationService.RegisterCustomer(self.customerName, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
 					
@@ -69,6 +74,7 @@ clearbank.component('userRegistration', {
                 })
 
             } else if (self.customerPassword !== self.confirmedPassword) {
+				alert("password dont match");
                 $('.passError2').show('200');
               
             } else {
@@ -78,10 +84,14 @@ clearbank.component('userRegistration', {
             }
         } 
 
-
+		
+		self.close = function () {
+            $mdDialog.cancel();
+        }
+		
         self.showAlert = function () {
             $mdDialog.show({
-                clickOutsideToClose: true,
+                clickOutsideToClose: false,
                 controller: registrationController,
                	scope:$scope,
                 

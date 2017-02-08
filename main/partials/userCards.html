@@ -1,0 +1,56 @@
+<div class=" container">
+<div class="row">
+<div class="col-md-3 col-sm-3 ">
+<left-menu></left-menu>
+</div>
+<div class="col-md-9 col-sm-9 ">
+ 
+    <div class="panel panel-default">
+<div class="panel-heading panel-heading-transfer">
+  <h4>Cards</h4>
+    </div>
+    <div class="panel-body cardsPanel">
+     
+         <md-content class="content">
+            <md-tabs md-stretch-tabs="always" class="form-tabs" md-dynamic-height>
+
+
+                <md-tab class="tab-head" label="credit cards" data-ng-click="getCardData('airline')" >
+                    <md-content class="md-padding">
+                        <credit-card></credit-card>
+                    </md-content>
+                </md-tab>
+
+                <md-tab class="tab-head" label="debit cards" data-ng-click="getCardData('fuel')">
+                    <md-content class="md-padding ">
+                        <debit-card></debit-card>
+                    </md-content>
+                </md-tab>
+                
+                <md-tab class="tab-head" label="travel cards" data-ng-click="getCardData('metro')">
+                    <md-content class="md-padding">
+                        <travel-card></travel-card>
+                    </md-content>
+                </md-tab>
+                
+                <md-tab class="tab-head" label="international cards" data-ng-click="getCardData('expression')">
+                    <md-content class="md-padding">
+                      <international-card></international-card>
+                    </md-content>
+                </md-tab>
+                
+                <md-tab class="tab-head" label="prepaid cards" data-ng-click="getCardData('contact')">
+                    <md-content class="md-padding">
+                       <prepaid-card></prepaid-card>
+                    </md-content>
+                </md-tab>
+
+            </md-tabs>
+        </md-content>
+        
+    </div>
+</div>
+  
+</div>
+ </div>
+</div>

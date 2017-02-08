@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" data-target="#mfdata"><strong>Mutual Funds Rates of Return</strong><span class="glyphicon glyphicon-minus "></span></a>
+		</h4>
+	</div>
+	<div id="mfdata" class="panel-collapse panel-body collapse in table-responsive">
+        
+            <table class="table">
+                <thead>
+                    <tr class="tableheading">
+                        <td>Funds</td>
+                        <td>Year to Date</td>
+                        <td>1Year</td>
+                        <td>3yrs</td>
+						<td>5yrs</td>
+						<td>10yrs</td>
+						<td>Total Earnings</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="mf in $ctrl.MFData track by $index">
+                        <td>{{mf.funds}}</td>
+                        <td>{{mf.YOD}}</td>
+                        <td>{{mf.Oneyear}}</td>
+                        <td>{{mf.Threeyrs}}</td>
+						<td>{{mf.Fiveyrs}}</td>
+						<td>{{mf.Tenyrs}}</td>
+						<td>{{mf.totalEarning}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    </div>
+</div>

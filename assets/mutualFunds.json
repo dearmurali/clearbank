@@ -1,0 +1,76 @@
+{
+	"mutualfunds":[
+		{
+			"funds":"CI Canadian Investment Fund Class E",
+			"YOD":"6.92%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"6.92%"
+		},
+		{
+			"funds":"Cambridge Global Equity Corp Cls E",
+			"YOD":"9.90%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"9.90%"
+		},
+		{
+			"funds":"Black Creek Global Leaders Corp Class E",
+			"YOD":"3.66%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"3.66%"
+		},
+		{
+			"funds":"Signature Global Dividend Fund Class E",
+			"YOD":"15.76%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"15.76%"
+		},
+		{
+			"funds":"Harbour Growth & Income Fund Class E",
+			"YOD":"3.53%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"3.53%"
+		},
+		{
+			"funds":"Signature Income & Growth Fund Class E",
+			"YOD":"9.67%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"9.67%"
+		},
+		{
+			"funds":"Signature Diversified Yield II Fund Class E",
+			"YOD":"8.95%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"8.95%"
+		},
+		{
+			"funds":"Cambridge Asset Alloc Corp Cls E",
+			"YOD":"10.74%",
+			"Oneyear":"6.92",
+			"Threeyrs":"9.90%",
+			"Fiveyrs":"15.76",
+			"Tenyrs":"10.74%",
+			"totalEarning":"10.74%"
+		}
+	]
+}

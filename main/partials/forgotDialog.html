@@ -38,7 +38,9 @@
             </form>
             <div ng-show="$ctrl.changeSuccessWidget">
                 <h2>
-                    {{'passwordChanged' | translate}} <a href="#!">{{'login' | translate}}</a>{{'toContinue' | translate}}.
+
+                    {{'passwordChanged' | translate}} <a ng-click="$ctrl.closeForm()">{{'login' | translate}}</a>{{'toContinue' | translate}}.
+
                 </h2>
             </div>
 		</div>

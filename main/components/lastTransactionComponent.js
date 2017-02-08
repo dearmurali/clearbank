@@ -1,3 +1,6 @@
+'use strict';
+
+
 clearbank.component("lastTransaction", {
 
 	templateUrl: "main/partials/lastTransaction.html",

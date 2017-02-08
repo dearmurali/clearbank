@@ -1,3 +1,4 @@
+
 clearbank.component('login', {
     templateUrl: 'main/partials/login.html',
     controller: function (LoginService, $state, $scope, $mdDialog) {

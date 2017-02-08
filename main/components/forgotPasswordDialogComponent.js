@@ -1,3 +1,6 @@
+'use strict';
+
+
 clearbank.component('forgotDialog', {
     transclude: true,
     templateUrl: 'main/partials/forgotDialog.html',
@@ -23,7 +26,7 @@ clearbank.component('forgotDialog', {
             }
         }
         self.closeDialog = function () {
-            $mdDialog.hide();
+            $mdDialog.cancel();
         }
         self.checkMobile = function (mobileNumber) {
 //            console.log(mobileNumber);

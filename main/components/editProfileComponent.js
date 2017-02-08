@@ -1,3 +1,5 @@
+'use strict';
+
 clearbank.component('editProfile', {
 
 	templateUrl: 'main/partials/editProfile.html',
