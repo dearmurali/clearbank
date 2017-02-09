@@ -33,8 +33,10 @@ public class PayeeController
 	}
 	catch(Exception e)
 	{
+
 		e.printStackTrace();
 		return new GenericFailResponse("Unable to add Payee" +e.getMessage());
+
 	}
 
 	}
@@ -43,8 +45,10 @@ public class PayeeController
 	public GenericResponse deletePayee(@RequestBody Payee payee) {
 	
 	String IFSCCode =payee.getPayeeIFSC();
+
 	long accountNumber = payee.getPayeeAccountNumber();
 	Long customerid = payee.getCustomerid();
+
 	
 	try
 	{
@@ -55,8 +59,10 @@ public class PayeeController
 	}
 	catch(Exception e)
 	{
+
 		e.printStackTrace();
 		return new GenericFailResponse("Unable to delete Payee" +e.getMessage());
+
 	}
 
 	}
@@ -72,14 +78,18 @@ public class PayeeController
 		}
 		catch(Exception e)
 		{
+
 			e.printStackTrace();
 			return new GenericFailResponse("Unable to update Payee" +e.getMessage());
+
 		}
 	
 	}
 	
 	@RequestMapping(value = "payeeList", method = RequestMethod.GET)
+
 	public GenericResponse getPayeeList(Long customerId) 
+
 	{
 	
 		try
@@ -89,8 +99,10 @@ public class PayeeController
 		}
 		catch(Exception e)
 		{
+
 			e.printStackTrace();
 			return new GenericFailResponse("Unable to find Payee list" +e.getMessage());
+
 		}
 		
 	

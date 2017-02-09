@@ -15,7 +15,7 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 	self.compareAccountNumber = function () {
 		if (self.accountNumber !== self.reEnterAccountNumber) {
 
-			selfself.accountMatchFail = true;
+			self.accountMatchFail = true;
 		} else {
 			self.accountMatchFail = false;
 		}

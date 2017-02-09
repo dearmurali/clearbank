@@ -22,24 +22,32 @@ public interface PayeeRepository extends JpaRepository<Payee, Long> {
 	@Modifying
 	@Transactional
 	@Query("delete FROM Payee p WHERE p.payeeAccountNumber =:accountNumber and p.payeeIFSC = :IFSCCode and p.customerid = :customerid")
+
 	void deletePayee(@Param("accountNumber") long accountNumber, @Param("IFSCCode") String IFSCCode, @Param("customerid") Long customerid);
+
 	
 	@Modifying
 	@Transactional
 	@Query("delete FROM Payee p WHERE p.payeeAccountNumber =:accountNumber and p.customerid = :customerid")
+
 	void deletePayee1(@Param("accountNumber") long accountNumber, @Param("customerid") Long customerid);
+
 	
 	@Modifying
 	@Transactional
 	@Query("update Payee p set p.payeeNickName =:nickName , p.payeeLimit = :transferLimit WHERE p.payeeAccountNumber =:accountNumber and p.payeeIFSC = :IFSCCode and p.customerid = :customerid")
+
 	void updatePayee(@Param("accountNumber") long accountNumber, @Param("IFSCCode") String IFSCCode, @Param("customerid") Long customerid, @Param("nickName") String nickName, @Param("transferLimit") double transferLimit);
+
 	
 	@Modifying
 	@Transactional
 	@Query("update Payee p set p.payeeNickName =:nickName , p.payeeLimit = :transferLimit WHERE p.payeeAccountNumber =:accountNumber and p.customerid = :customerid")
+
 	void updatePayee1(@Param("accountNumber") long accountNumber, @Param("customerid") Long customerid, @Param("nickName") String nickName, @Param("transferLimit") double transferLimit);
 	
 	ArrayList <Payee> findByCustomerid(Long customerid);
+
    
     
      

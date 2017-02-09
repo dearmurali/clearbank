@@ -39,7 +39,9 @@ public class PayeeServiceImpl implements PayeeService
 				
 	}
 	
+
    	   public void deletePayee(long accountNumber, String IFSCCode, Long customerid)
+
 	    {
    		   if(IFSCCode==null || IFSCCode.equals(""))
    		   {
@@ -55,8 +57,10 @@ public class PayeeServiceImpl implements PayeeService
    	 public void updatePayee(Payee payee)
 	    {
 	   		String IFSCCode =payee.getPayeeIFSC();
+
 	   		long accountNumber = payee.getPayeeAccountNumber();
 	   		Long customerid = payee.getCustomerid();
+
 	   		String nickName = payee.getNickName();
 	   		double transferLimit = payee.getPayeeLimit();
 	   		
@@ -74,7 +78,9 @@ public class PayeeServiceImpl implements PayeeService
    	 
    	 
    	@Override
+
 	public PayeeData getPayeeListByCustomerId(Long customerId) {
+
    		
    		System.out.println("customerid#################"+customerId);
 

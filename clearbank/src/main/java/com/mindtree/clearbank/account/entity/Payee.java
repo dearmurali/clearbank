@@ -28,6 +28,7 @@ public class Payee
 	private String payeeName;
 	
 	@Column(name = "customerid")
+
   	private Long customerid;
 	
 	public Long getCustomerid() {
@@ -35,6 +36,7 @@ public class Payee
 	}
 
 	public void setCustomerid(Long customerid) {
+
 		this.customerid = customerid;
 	}
 
@@ -69,7 +71,9 @@ public class Payee
 	}
 
 	@Column(name = "account_number")
+
     private long payeeAccountNumber;
+
 	
 	@Column(name = "payee_type")
 	@NotNull
@@ -97,12 +101,16 @@ public class Payee
         this.payeeName = payeeName;
     }    
 
+
     public long getPayeeAccountNumber ()
+
     {
         return payeeAccountNumber;
     }
 
+
     public void setPayeeAccountNumber (long payeeAccountNumber)
+
     {
         this.payeeAccountNumber = payeeAccountNumber;
     }
