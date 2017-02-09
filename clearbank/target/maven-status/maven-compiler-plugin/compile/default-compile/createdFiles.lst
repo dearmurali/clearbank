@@ -14,6 +14,7 @@ com\mindtree\clearbank\account\entity\Fav_links.class
 com\mindtree\clearbank\account\entity\Pie_chart.class
 com\mindtree\clearbank\registration\controller\RegistrationController.class
 com\mindtree\clearbank\security\entity\User.class
+com\mindtree\clearbank\security\repository\PayeeRepository.class
 com\mindtree\clearbank\security\vo\CustomerVO.class
 com\mindtree\clearbank\security\repository\UserRepository.class
 com\mindtree\clearbank\account\entity\OtherBank.class
@@ -31,6 +32,7 @@ com\mindtree\clearbank\security\vo\GenericResponse.class
 com\mindtree\clearbank\account\entity\Accounts.class
 com\mindtree\clearbank\security\entity\Authority.class
 com\mindtree\clearbank\security\jwt\JwtTokenUtil.class
+com\mindtree\clearbank\registration\service\PayeeService.class
 com\mindtree\clearbank\account\entity\Accounts_information.class
 com\mindtree\clearbank\registration\service\RegistrationServiceImpl.class
 com\mindtree\clearbank\security\repository\AccountRepository.class
@@ -43,8 +45,10 @@ com\mindtree\clearbank\account\entity\Payee.class
 com\mindtree\clearbank\registration\service\RegistrationService.class
 com\mindtree\clearbank\ClearBankApplication.class
 com\mindtree\clearbank\account\entity\CustTranscation.class
+com\mindtree\clearbank\registration\service\PayeeServiceImpl.class
 com\mindtree\clearbank\security\jwt\JwtUser.class
 com\mindtree\clearbank\account\entity\CustPayee.class
+com\mindtree\clearbank\registration\controller\PayeeController.class
 com\mindtree\clearbank\transcation\service\TranscationService.class
 com\mindtree\clearbank\account\entity\SameBank.class
 com\mindtree\clearbank\security\jwt\JwtUserFactory.class

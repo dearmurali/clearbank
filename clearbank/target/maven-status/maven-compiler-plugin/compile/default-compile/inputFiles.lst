@@ -1,5 +1,6 @@
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\vo\JwtAuthenticationRequest.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\registration\controller\RegistrationController.java
+D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\registration\controller\PayeeController.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\AccountInfo.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Accounts_information.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\transcation\controller\TranscationController.java
@@ -16,7 +17,6 @@ D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\controller\
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Customer.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Fav_links.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\ClearBankApplication.java
-D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\transcation\controller\TransactionController2.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Customer_information.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\OtherBank.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Accounts.java
@@ -24,6 +24,7 @@ D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Accou
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\CustPayee.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\vo\GenericDataResponse.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\PayeeData.java
+D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\registration\service\PayeeService.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Transcation.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Transactions.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\vo\JwtAuthenticationSuccessResponse.java
@@ -42,6 +43,7 @@ D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\transcation\service\
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\vo\GenericResponse.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\vo\AccountVO.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\Pie_chart.java
+D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\registration\service\PayeeServiceImpl.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\account\entity\CustAccount.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\registration\service\RegistrationServiceImpl.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\config\WebSecurityConfig.java
@@ -50,3 +52,4 @@ D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\transcation\service\
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\jwt\JwtAuthenticationTokenFilter.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\entity\AuthorityName.java
 D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\jwt\JwtUserFactory.java
+D:\clearbank\clearbank\src\main\java\com\mindtree\clearbank\security\repository\PayeeRepository.java

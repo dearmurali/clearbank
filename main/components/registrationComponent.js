@@ -49,26 +49,19 @@ clearbank.component('userRegistration', {
             }
         });
 
-        self.closeDialog = function () {
-                        $mdDialog.cancel();
-
-             window.location.href = "/";
-
-
-        }
 
         self.save = function () {
 //            console.log("saving")
 //            console.log(self.customerName, self.customerContact, self.customerEmail, self.customerPassword)
             if (!(self.customerName === undefined || self.customerContact === undefined || self.customerEmail === undefined || self.customerPassword === undefined || self.customerPassword !== self.confirmedPassword)) {
 				
-				alert("verified");
+//				alert("verified");
 
                 RegistrationService.RegisterCustomer(self.customerName, self.customerContact, self.customerEmail, self.customerPassword, function (response) {
 					
                     console.log("response is a "+typeof(response));
                     self.registrationId = response;
-//                    alert(response);
+                    alert(response);
                     self.showAlert(self.registrationId);
 
                 })
@@ -86,15 +79,12 @@ clearbank.component('userRegistration', {
 
 		
 		self.close = function () {
-            $mdDialog.cancel();
+            $mdDialog.hide();	
         }
 		
         self.showAlert = function () {
             $mdDialog.show({
                 clickOutsideToClose: false,
-                controller: registrationController,
-               	scope:$scope,
-                
                 templateUrl: 'main/partials/registrationSuccess.html'
             });
         };

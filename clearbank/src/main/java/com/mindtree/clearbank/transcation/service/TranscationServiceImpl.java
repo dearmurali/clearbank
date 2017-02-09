@@ -52,7 +52,7 @@ public class TranscationServiceImpl implements TranscationService {
 		customer_information.setCustomer_Name(customerName);
 		customer_information.setCustomer_email(email);
 		customer_information.setCustomer_mobileNumber(String.valueOf(customerMobile));
-		List<Fav_links> fav_links=new ArrayList<Fav_links>();
+	/*	List<Fav_links> fav_links=new ArrayList<Fav_links>();
 		Fav_links fav_link=new Fav_links();
 		fav_link.setLabel_1("Transfers");
 		fav_link.setLink_url_1("transfers");
@@ -87,6 +87,7 @@ public class TranscationServiceImpl implements TranscationService {
 		top_payees.add(top_payee1);
 		
 		customer_information.setTop_payee(top_payees);
+		*/
 		
 		
 		Accounts_information accounts_information=new Accounts_information();
@@ -486,128 +487,7 @@ public class TranscationServiceImpl implements TranscationService {
 		return transactionData;
 	}
 
-	@Override
-	public PayeeData getPayeeListByCustomerId(long customerId, User user) {
-
-		PayeeData payeeData = new PayeeData();
-		if (customerId==1000000000) {
-			payeeData.setCsId(customerId);
-			List<Payee> payee = new ArrayList<Payee>();
-			Payee payee1 = new Payee();
-			List<SameBank> sameBank = new ArrayList<SameBank>();
-			SameBank sameBank11 = new SameBank();
-			sameBank11.setPayeeAccountNumber("33307915126");
-			sameBank11.setPayeeName("Nitish Bali");
-			sameBank11.setPayeeLimit("100000");
-
-			SameBank sameBank12 = new SameBank();
-			sameBank12.setPayeeAccountNumber("33307916666");
-			sameBank12.setPayeeName("Nitesh Rana");
-			sameBank12.setPayeeLimit("800000");
-
-			SameBank sameBank13 = new SameBank();
-			sameBank13.setPayeeAccountNumber("33307915456");
-			sameBank13.setPayeeName("Akash Singh");
-			sameBank13.setPayeeLimit("500000");
-
-			sameBank.add(sameBank11);
-			sameBank.add(sameBank12);
-			sameBank.add(sameBank13);
-
-			payee1.setSameBank(sameBank);
-
-			List<OtherBank> otherBank = new ArrayList<OtherBank>();
-			OtherBank otherBank11 = new OtherBank();
-			otherBank11.setPayeeAccountNumber("415307915126");
-			otherBank11.setPayeeName("KT");
-			otherBank11.setPayeeAccountNumber("SBIN0017008");
-			otherBank11.setPayeeLimit("200000");
-
-			OtherBank otherBank12 = new OtherBank();
-			otherBank12.setPayeeAccountNumber("88307916698");
-			otherBank12.setPayeeName("Manmeet");
-			otherBank12.setPayeeAccountNumber("UTB000170123");
-			otherBank12.setPayeeLimit("200000");
-
-			OtherBank otherBank13 = new OtherBank();
-			otherBank13.setPayeeAccountNumber("12307915942");
-			otherBank13.setPayeeName("Praveen Kumar Nagle ");
-			otherBank13.setPayeeAccountNumber("UTB000170123");
-			otherBank13.setPayeeLimit("400000");
-
-			otherBank.add(otherBank11);
-			otherBank.add(otherBank12);
-			otherBank.add(otherBank13);
-
-			payee1.setSameBank(sameBank);
-			payee1.setOtherBank(otherBank);
-			payee.add(payee1);
-			payeeData.setPayee(payee);
-
-		}
-
-		else if (customerId==1000000003) {
-
-			payeeData.setCsId(customerId);
-			List<Payee> payee = new ArrayList<Payee>();
-			Payee payee1 = new Payee();
-			List<SameBank> sameBank = new ArrayList<SameBank>();
-			SameBank sameBank11 = new SameBank();
-			sameBank11.setPayeeAccountNumber("33307915126");
-			sameBank11.setPayeeName("Nitish Bali");
-			sameBank11.setPayeeLimit("100000");
-
-			SameBank sameBank12 = new SameBank();
-			sameBank12.setPayeeAccountNumber("33307916666");
-			sameBank12.setPayeeName("Rakesh Pandey");
-			sameBank12.setPayeeLimit("8686800");
-
-			SameBank sameBank13 = new SameBank();
-			sameBank13.setPayeeAccountNumber("33307915456");
-			sameBank13.setPayeeName("Sanjay Bhuyan");
-			sameBank13.setPayeeLimit("242500");
-
-			sameBank.add(sameBank11);
-			sameBank.add(sameBank12);
-			sameBank.add(sameBank13);
-
-			payee1.setSameBank(sameBank);
-
-			List<OtherBank> otherBank = new ArrayList<OtherBank>();
-			OtherBank otherBank11 = new OtherBank();
-			otherBank11.setPayeeAccountNumber("415307915656");
-			otherBank11.setPayeeName("Dhawal");
-			otherBank11.setPayeeAccountNumber("SBIN0017238");
-			otherBank11.setPayeeLimit("202420");
-			otherBank11.setPayeeIFSC("HDFC0017008");
-
-			OtherBank otherBank12 = new OtherBank();
-			otherBank12.setPayeeAccountNumber("88307916698");
-			otherBank12.setPayeeName("Manmeet");
-			otherBank12.setPayeeAccountNumber("UTB000170123");
-			otherBank12.setPayeeLimit("6767000");
-			otherBank12.setPayeeIFSC("UTB000170123");
-
-			OtherBank otherBank13 = new OtherBank();
-			otherBank13.setPayeeAccountNumber("123079159141");
-			otherBank13.setPayeeName("Swaroop Singh");
-			otherBank13.setPayeeAccountNumber("UTB000170245");
-			otherBank13.setPayeeLimit("242000");
-			otherBank13.setPayeeIFSC("SBIN0017008");
-
-			otherBank.add(otherBank11);
-			otherBank.add(otherBank12);
-			otherBank.add(otherBank13);
-
-			payee1.setSameBank(sameBank);
-			payee1.setOtherBank(otherBank);
-			payee.add(payee1);
-			payeeData.setPayee(payee);
-
-		}
-
-		return payeeData;
-	}
+	
 
 	@Override
 	public CustPayee addPayee(CustPayee custPayee) {

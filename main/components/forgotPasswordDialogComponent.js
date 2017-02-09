@@ -26,7 +26,7 @@ clearbank.component('forgotDialog', {
             }
         }
         self.closeDialog = function () {
-            $mdDialog.cancel();
+            $mdDialog.close();
         }
         self.checkMobile = function (mobileNumber) {
 //            console.log(mobileNumber);

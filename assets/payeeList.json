@@ -1,0 +1,57 @@
+{
+    "success": true,
+    "user": null,
+    "customer_information": null,
+    "transactionData": null,
+    "payeeData": {
+        "csId": 1,
+        "payee": [{
+            "payeeName": "rajni1",
+            "customerid": 1,
+            "payeeNickName": "rajni_nick_new",
+            "payeeIFSC": "BPL123",
+            "payeeAccountNumber": 12334345,
+            "payeeType": 0.0,
+            "payeeLimit": 300000.0,
+            "nickName": "rajni_nick_new"
+        }, {
+            "payeeName": "rajni1",
+            "customerid": 1,
+            "payeeNickName": "rajni_nick1",
+            "payeeIFSC": "BPL123",
+           "payeeAccountNumber": 12334346,
+            "payeeType": 0.0,
+            "payeeLimit": 200.0,
+            "nickName": "rajni_nick1"
+        }, {
+            "payeeName": "rajni1",
+            "customerid": 1,
+            "payeeNickName": "rajni_new",
+            "payeeIFSC": "ABCDE123",
+            "payeeAccountNumber": 11223334,
+            "payeeType": 0.0,
+            "payeeLimit": 1000.0,
+            "nickName": "rajni_new"
+        }, {
+            "payeeName": "rajni_kewlani",
+            "customerid": 1,
+            "payeeNickName": "rajni_new",
+            "payeeIFSC": "ABCDE123",
+            "payeeAccountNumber": 11223335,
+            "payeeType": 0.0,
+            "payeeLimit": 1000.0,
+            "nickName": "rajni_new"
+        }, {
+            "payeeName": "rajni1",
+            "customerid": 1,
+            "payeeNickName": "rajni_nick",
+            "payeeIFSC": "2",
+            "payeeAccountNumber": 1,
+            "payeeType": 0.0,
+            "payeeLimit": 100.0,
+            "nickName": "rajni_nick"
+        }]
+    },
+    "custPayee": null,
+    "customerId": null
+}

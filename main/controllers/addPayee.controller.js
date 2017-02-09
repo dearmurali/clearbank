@@ -1,87 +1,112 @@
 clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeServices', function ($scope, $mdDialog, PayeeServices) {
-
-	this.accountType = "";
-	this.accountTypes = [{
-		type: "Savings"
+	var self = this;
+	self.payeeType = "";
+	self.disable = true;
+	self.PayeeTypes = [
+		{
+			type: "Own account in clearBank"
+	},
+		{
+			type: "Other in clearBank"
 	}, {
-		type: "Current"
+			type: "InterBank"
 	}];
-	this.setLimit = true;
-	this.compareAccountNumber = function () {
-		if (this.accountNumber !== this.reEnterAccountNumber) {
+	self.setLimit = true;
+	self.compareAccountNumber = function () {
+		if (self.accountNumber !== self.reEnterAccountNumber) {
 
-			this.accountMatchFail = true;
+			selfself.accountMatchFail = true;
 		} else {
-			this.accountMatchFail = false;
+			self.accountMatchFail = false;
 		}
 	}
 
+	self.isSame = function () {
+		console.log(self.payeeType )
+		if (self.payeeType !== 0) {
+			self.disable = false;
+		} else {
+			self.disable = true;
+		}
+
+	};
 	// when save button is clicked//
 
-	this.savePayee = function () {
+	self.savePayee = function () {
 		//console.log(this.payeeName);
-		if (this.accountNumber === undefined || this.reEnterAccountNumber === undefined || this.accountType === undefined || this.ifscCode === undefined || this.payeeName === undefined || this.payeeNickName === undefined) {
-			this.emptyFields = true;
-			this.emptyFields = true;
+		if (self.accountNumber === undefined || self.reEnterAccountNumber === undefined || self.payeeType === undefined || self.payeeName === undefined || self.payeeNickName === undefined) {
+			self.emptyFields = true;
+			self.emptyFields = true;
 			//        console.log("found")
 		}
 		//        console.log(this.accountNumber);
-		if (this.setLimitOption === "yes") {
+		if (self.setLimitOption === "yes") {
 			//                console.log(this.transferLimit);
-			if (this.transferLimit === undefined) {
-				this.emptyFields = true;
+			if (self.transferLimit === undefined) {
+				self.emptyFields = true;
 			}
 		}
-		if (this.accountNumber !== undefined && this.reEnterAccountNumber !== undefined && this.accountType !== undefined && this.ifscCode !== undefined && this.payeeName !== undefined && this.payeeNickName !== undefined && (this.accountNumber === this.reEnterAccountNumber)) {
-			if (this.setLimitOption === "yes" && this.transferLimit !== undefined) {
-				this.emptyFields = false;
+		if (self.accountNumber !== undefined && self.reEnterAccountNumber !== undefined && self.payeeType !== undefined && self.payeeName !== undefined && self.payeeNickName !== undefined && (self.accountNumber === self.reEnterAccountNumber)) {
+			if (self.setLimitOption === "yes" && self.transferLimit !== undefined) {
+				self.emptyFields = false;
 				//               console.log(this.transferLimit);
 				//               console.log("Calling service with limit value");
+				console.log(self.payeeType )
 
 				self.newPayee = {
 
-					"payeeAccountNumber": this.accountNumber,
-					"payeeName": this.payeeName,
-					"payeeNickName": this.payeeNickName,
-					"payeeIFSC": this.ifscCode,
-					"payeeLimit": this.transferLimit,
+					"payeeAccountNumber": self.accountNumber,
+					"payeeName": self.payeeName,
+					"payeeNickName": self.payeeNickName,
+					"payeeIFSC": self.ifscCode,
+					"payeeType": self.payeeType.toString(),
+					"payeeLimit": self.transferLimit,
 					"customerid": sessionStorage.getItem('customerId')
 				}
+				PayeeServices.addNewPayee(self.newPayee,function(response){
+					console.log(response);
+									self.showModal();   
+									   });
 				
-				this.showModal();
+//				this.showModal();
 			}
 
 			//service call with limit
 
 
-			if (this.setLimitOption === "no" || this.setLimitOption === undefined) {
-				this.emptyFields = false;
+			if (self.setLimitOption === "no" || self.setLimitOption === undefined) {
+				self.emptyFields = false;
 				//           console.log("Calling service without limit");
+				console.log(self.payeeType )
 				self.newPayee = {
-					"payeeAccountNumber": this.accountNumber,
-					"payeeName": this.payeeName,
-					"payeeNickName": this.payeeNickName,
-					"payeeIFSC": this.ifscCode,
-					"payeeLimit": null,
+					"payeeAccountNumber": self.accountNumber,
+					"payeeName": self.payeeName,
+					"payeeNickName": self.payeeNickName,
+					"payeeIFSC": self.ifscCode,
+					"payeeType": self.payeeType.toString(),
+					"payeeLimit": 5000,
 					"customerid": sessionStorage.getItem('customerId')
 				}
 
-				this.showModal();
+				PayeeServices.addNewPayee(self.newPayee,function(response){
+					console.log(response);
+									self.showModal();   
+									   })
 			}
-			
-			console.log("new payee ",self.newPayee);
+
+			console.log("new payee ", self.newPayee);
 		}
 	}
 
-		this.checkLimit = function (option) {
-			//           console.log(option);
-			if (option === "yes") {
-				this.setLimit = false;
-			} else {
-				this.setLimit = true;
-			}
+	self.checkLimit = function (option) {
+		//           console.log(option);
+		if (option === "yes") {
+			self.setLimit = false;
+		} else {
+			self.setLimit = true;
 		}
-	this.showModal = function () {
+	}
+	self.showModal = function () {
 		$mdDialog.show({
 			controller: modalController,
 			templateUrl: 'views/addPayeeSuccessModal.html',

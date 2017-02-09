@@ -2,27 +2,18 @@ clearbank.service('PayeeServices', function ($http) {
 	return {
 
 
-		addNewPayee: function (callback) {
-			console.log("add payee service");
+		addNewPayee: function (newPayee,callback) {
+			console.log("add payee service",newPayee );
 			//			console.log(index+" "+accId);
 			$http({
 					method: "POST",
 					url: "http://localhost:8080/clearbank/addPayee",
-					data: {
-						"payeeAccountNumber": 12334345,
-						"payeeName": "rajni1",
-						"payeeAccountType": "Savings",
-						"payeeNickName": "rajni_nick",
-						"payeeIFSC": "BPL123",
-						"payeeLimit": 100.0,
-						"customerid": 1
-					}
-
+					data: newPayee
 				})
 				.then(
 					function (result) {
 						console.log("inside service")
-						callback(result.data);
+						callback(result.data.success);
 						console.log(result.data);
 					},
 					function (err) {
@@ -31,19 +22,13 @@ clearbank.service('PayeeServices', function ($http) {
 					});
 		},
 
-		UpdatePayee: function (callback) {
+		updatePayee: function (updatedPayee,callback) {
 			console.log("add payee service");
 			//			console.log(index+" "+accId);
 			$http({
 					method: "POST",
 					url: "http://localhost:8080/clearbank/updatePayee",
-					data: {
-						"payeeAccountNumber": 12334345,
-						"payeeIFSC": "BPL123",
-						"payeeLimit": 100.0,
-						"payeeNickName": "rajni_nick",
-						"customerid": 1
-					}
+					data: updatedPayee
 
 
 				})
@@ -59,6 +44,47 @@ clearbank.service('PayeeServices', function ($http) {
 					});
 		},
 
+		getPayeeList: function (customerId,callback) {
+			$http({
+					method: "GET",
+					url: "http://localhost:8080/clearbank/payeeList?customerId="+customerId,
+					
+				})
+				.then(
+					function (result) {
+						//    console.log("inside service")
+						console.log(result.data)
+						callback(result.data.payeeData);
+//						console.log("result", result.data.payeeData.payee, typeof (result.data.payeeData.payee));
+					},
+					function (err) {
+						callback("some error occured" + err);
+						//		console.log("Error")
+					}
+				)
+
+		},
+
+		deletePayee: function (payeeData,callback) {
+			$http({
+					method: "POST",
+					url: "http://localhost:8080/clearbank/deletePayee",
+					data: payeeData
+
+				})
+				.then(
+					function (result) {
+						//    console.log("inside service")
+						callback(result.data.success);
+					
+					},
+					function (err) {
+						callback("some error occured" + err);
+						//		console.log("Error")
+					}
+				)
+
+		}
 
 	}
 });

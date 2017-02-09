@@ -834,3 +834,8 @@ md-backdrop.md-opaque {
 .logout-btn{
 	    background-color: rgba(158,158,158,0.2);
 }
+
+.glyphicon-trash,.glyphicon-edit{
+
+	font-size: 1.5em;
+}

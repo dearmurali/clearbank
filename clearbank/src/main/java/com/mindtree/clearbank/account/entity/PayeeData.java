@@ -11,16 +11,16 @@ import java.util.List;
  */
 public class PayeeData
 {
-    private long csId;
+    private Long csId;
 
     private List<Payee> payee;
 
-    public long getCsId ()
+    public Long getCsId ()
     {
         return csId;
     }
 
-    public void setCsId (long csId)
+    public void setCsId (Long csId)
     {
         this.csId = csId;
     }

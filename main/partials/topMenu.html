@@ -1,38 +1,40 @@
 <div class="menu navbar">
-	<div class="container-fluid">
+	<div class="container">
 
-        <div class="navbar-header ">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
-        <span  class="glyphicon glyphicon-list menuDropdown"></span>
-      </button>
-        </div>
-        <div class="collapse navbar-collapse nav nav-pills" id="collapseNavbar">
-            <ul class="nav navbar-nav navbar-left">
-                <li>
-                    <a class="mainMenu" ui-sref="cards"><strong><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'cards' | translate}}</strong></a></li>
-                <li>
-                    <a class="mainMenu" ui-sref="loans"><strong><span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'deposits' | translate}}</strong></a></li>
-                <li>
-                    <a class="mainMenu" ui-sref="mutualfunds"><strong><span class="glyphicon glyphicon-export"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'investments' | translate}}</strong></a></li>
-                <li>
-                    <a class="mainMenu" ui-sref="nearby"><strong><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'loans' | translate}}</strong></a></li>
-                <li>
-                    <a class="mainMenu" ui-sref="contactus"><strong><span class="glyphicon glyphicon-folder-close"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'wallets' | translate}}</strong></a></li>
+		<div class="navbar-header ">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
+        		<span  class="glyphicon glyphicon-list menuDropdown"></span>
+        	</button>
+		</div>
+		<div class="collapse navbar-collapse nav nav-pills" id="collapseNavbar">
+			<ul class="nav navbar-nav navbar-left">
 				<li>
-                    <a class="mainMenu" ui-sref="contactus"><strong><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'offers' | translate}}</strong></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-        
-        <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle dropdownButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span>
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu langDropDown" aria-labelledby="dropdownMenu1">
-	  <li class="dropdownItems" ng-click="$ctrl.selectLanguage(1)"><a href="" data-value="action"></a><span class="flag-icon flag-icon-nl"></span><span class="dropdownItems"> Dutch</span></li>
-	  <li class="dropdownItems" ng-click="$ctrl.selectLanguage(2)"><a href="" data-value="action"></a><span class="flag-icon flag-icon-us"></span><span class="dropdownItems"> United States</span></li>    
-    </div>
-            </ul>
-        </div>
-</div>
+					<a class="mainMenu" ui-sref="cards"><strong><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'cards' | translate}}</strong></a></li>
+				<li>
+					<a class="mainMenu" ui-sref="loans"><strong><span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'deposits' | translate}}</strong></a></li>
+				<li>
+					<a class="mainMenu" ui-sref="mutualfunds"><strong><span class="glyphicon glyphicon-export"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'investments' | translate}}</strong></a></li>
+				<li>
+					<a class="mainMenu" ui-sref="nearby"><strong><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'loans' | translate}}</strong></a></li>
+				<li>
+					<a class="mainMenu" ui-sref="contactus"><strong><span class="glyphicon glyphicon-folder-close"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'wallets' | translate}}</strong></a></li>
+				<li>
+					<a class="mainMenu" ui-sref="contactus"><strong><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'offers' | translate}}</strong></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+
+
+				<button class="btn btn-default dropdown-toggle dropdownButton" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				<span class="flag-icon flag-icon-us"></span> <span class="dropdownItems"> United States</span>
+    			<span class="caret"></span>
+  				</button>
+				<ul class="dropdown-menu langDropDown" aria-labelledby="dropdownMenu1">
+					<li class="dropdownItems" ng-click="$ctrl.selectLanguage(1)">
+						<a href="" data-value="action"></a><span class="flag-icon flag-icon-nl"></span><span class="dropdownItems"> Dutch</span></li>
+					<li class="dropdownItems" ng-click="$ctrl.selectLanguage(2)">
+						<a href="" data-value="action"></a><span class="flag-icon flag-icon-us"></span><span class="dropdownItems"> United States</span></li>
+				</ul>
+			</ul>
+		</div>
+	</div>
 </div>

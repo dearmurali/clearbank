@@ -69,7 +69,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/resetpassword/**").permitAll()
 		//		.antMatchers("/transcation/**").permitAll()
 		//		.antMatchers("/modifyUser/**").permitAll()
-		//	    .antMatchers("/addPayee/**").permitAll()
+			    .antMatchers("/addPayee/**").permitAll()
+			     .antMatchers("/deletePayee/**").permitAll()
+			     .antMatchers("/updatePayee/**").permitAll()
+			     .antMatchers("/payeeList/**").permitAll()
+			     
 				.anyRequest().authenticated();
 
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(), 
