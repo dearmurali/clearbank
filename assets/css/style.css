@@ -344,12 +344,14 @@
  	padding-left: 0px;
  }
  
+/*
  .lang-picker {
  	float: right;
  	clear: right;
  	vertical-align: middle;
  	padding-top: 3%;
  }
+*/
  
  .home-page,
  {
@@ -585,9 +587,6 @@ md-dialog{
  	display: block;
  }
  
- .langDropDown {
- 	width: 100%;
- }
  
  .navbar-right {
  	margin: 8px auto;
@@ -649,8 +648,8 @@ md-dialog{
  }
  
  .clearbankLogo {
- 	width: 100px;
- 	margin-top: -5px;
+ 	width: 11vh;
+ 	margin-top: -12px;
 
  }
  
@@ -838,4 +837,8 @@ md-backdrop.md-opaque {
 .glyphicon-trash,.glyphicon-edit{
 
 	font-size: 1.5em;
+}
+
+.caps{
+	text-transform: capitalize;
 }
