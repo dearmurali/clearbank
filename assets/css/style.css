@@ -845,6 +845,7 @@ md-backdrop.md-opaque {
 .logout-btn{
 	    background-color: rgba(158,158,158,0.2);
 }
+
 .footer-small{
 line-height: 1.7;
 }
@@ -904,3 +905,10 @@ position: relative;
 
 
 }*/
+=======
+
+.glyphicon-trash,.glyphicon-edit{
+
+	font-size: 1.5em;
+}
+

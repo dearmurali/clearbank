@@ -1,15 +1,15 @@
 <md-dialog class="success-dialog">
     <md-dialog-content>
         <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-8" ng-controller="registrationSuccessController as rsctrl">
             <span class="green">
             <p><span><img src="../../assets/images/success.PNG" class="image-responsive"></span></p>
             <p><span>Registration Successfull</span></p>
             </span>
             <p><span>Please note your Customer ID</span></p>
-            <p><span><h3 ng-cloak>{{$ctrl.registrationId}}</h3></span></p>
+            <p><span ng-cloak><h3 >{{rsctrl.registrationId}}</h3></span></p>
 <!--            <p> <button class="btn btn-primary">OK</button></p>-->
-            <md-button class="md-raised md-primary" data-ng-click="$ctrl.closeDialog()">OK</md-button>
+            <md-button class="md-raised md-primary" data-ng-click="rsctrl.closeDialog()">OK</md-button>
         </div>
         <div class="col-md-2"></div>
     </md-dialog-content>

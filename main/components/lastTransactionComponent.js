@@ -40,8 +40,8 @@ clearbank.component("lastTransaction", {
 		//        var token=sessionStorage.getItem('token');    
 
 		lastTransactionService.getTransactionData(index, customerID, function (result) {
-			//        console.log("transaction data");
-			//        console.log(result);
+			      console.log("transaction data");
+			       console.log(result);
 			self.lastTransactionInfo = result;
 //			console.log(self.lastTransactionInfo);
 		});

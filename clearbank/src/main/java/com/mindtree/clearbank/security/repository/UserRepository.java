@@ -6,6 +6,7 @@ import com.mindtree.clearbank.security.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findById(long id);
-    User findByCustomermobile(Long customermobile);
+   User findByCustomermobile(Long customermobile);
+ 
      
 }

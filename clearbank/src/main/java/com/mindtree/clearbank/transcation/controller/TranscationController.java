@@ -60,13 +60,5 @@ public class TranscationController {
 	
 	
 
-	@RequestMapping(value = "addPayee", method = RequestMethod.POST)
-	public ResponseEntity<?> addPayee(@RequestBody CustPayee custPayee , HttpServletRequest request) {
-
-		HttpSession session = request.getSession();
-		String token = (String) session.getAttribute("custtoken");
-	   CustPayee customerPayee=	dashBoardService.addPayee(custPayee);
-		return ResponseEntity.ok(new JwtAuthenticationSuccessResponse(token , customerPayee));
-
-	}
+	
 }

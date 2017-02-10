@@ -1,35 +1,35 @@
- 
 <div class=" container">
-<div class="row">
-<div class="col-md-3 col-sm-3 ">
-<left-menu></left-menu>
-</div>
-    <div class="col-md-9 col-sm-9" ng-controller="payeeListController as payeeList">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-         <h3 class="panel-title"><strong>Payee list</strong></h3>
+	<div class="row">
+		<div class="col-md-3 col-sm-3 ">
+			<left-menu></left-menu>
 		</div>
-        <div class="panel-body">
-        <table class="table">
-            <thead>
-                <tr>
-                <th>Account Number</th>
-            <th>Name</th>
-            <th>Account Type</th>
-            <th>Action</th>
-                </tr>
-                </thead>
-            <tbody>
-            <tr ng-repeat="payee in payeeList.values">
-                <td ng-cloak>{{payee.AccountNumber}}</td>
-                <td ng-cloak>{{payee.Name}}</td>
-                 <td ng-cloak>{{payee.AccountType}}</td>
-                 <td><a ui-sref="editpayee" ng-click="payeeList.getDetails($index)" ng-cloak>{{payee.Action1}}</a><span>|</span><a href="" ng-click="payeeList.deletePayee($index)" ng-cloak>{{payee.Action2}}</a></td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-        </div>
-    </div>
+		<div class="col-md-9 col-sm-9" ng-controller="payeeListController as payeeList">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Payee list</strong></h3>
+				</div>
+				<div class="panel-body table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Account Number</th>
+								<th>IFSC</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="payee in payeeList.payees">
+								<td ng-cloak>{{payee.payeeName}}</td>
+								<td ng-cloak>{{payee.payeeAccountNumber}}</td>
+								
+								<td ng-cloak>{{payee.payeeIFSC}}</td>
+								<td><a ui-sref="editpayee" ng-click="payeeList.getDetails($index)"><span class="glyphicon glyphicon-edit green"> </span></a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="" ng-click="payeeList.deletePayee($index)"><span class="glyphicon glyphicon-trash red"></span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
