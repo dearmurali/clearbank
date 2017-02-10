@@ -72,6 +72,7 @@
         "detail.data3":"Minimaal 15% besparing bij deelnemende restaurants",
         "detail.data4":"Verdien 2 terugverdientijd punten op elke 100 verbruikte splijtstof behalve kosten",
         "creditCards":"Kredietkaarten",
+        "twoWheelerLoan":"Tweewieler lening EMI rekenmachine",
         "debitCards":"Debetkaarten",
         "travelCards":"Reizen Kaarten",
         "internationalCards":"Internationale Kaarten",
@@ -103,8 +104,8 @@
         "repeatAccountNumber":"Herhaling Rekeningnummer",
         "accMatchFail":"Account Niet Pas",
         "accType":"Account Type",
-        "x.type0":"Savings",
-        "x.type1":"Current",
+        "x.type0":"spaargeld",
+        "x.type1":"Actueel",
         "IFSCCode":"IFSC Code",
         "ifscValidation":"Voer Een Geldige IFSC Code",
         "name":"Naam",
@@ -131,7 +132,6 @@
         "managePayees":"Beheer incassanten",
         "mutualFunds":"Beleggingsfondsen",
         "topPayee":"Top begunstigde",
-        "offers":"AANBIEDINGEN",
         "dashBoardOffer1":"KRIJG 15% KORTING OP grote mand",
         "dashBoardOffer2":"VLAK 15% KORTING OP EBAY",
         "dashBoardOffer3":"Lage rente Tarieven Voor jou",
@@ -146,6 +146,7 @@
     "passwordMatch":"voer hetzelfde wachtwoord als hierboven!",
     "matchFail":"Wachtwoorden komen niet overeen.",
     "notNow":"Niet nu",
-    "register":"Registreren"
+    "register":"Registreren",
+    "hi":"Hoi"
     
 }

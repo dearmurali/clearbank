@@ -3,7 +3,7 @@ clearbank.service('LoginService', function ($http) {
 		validLogin: function (customer_id, password, callback) {
 			$http({
 				method: "POST",
-				url: "http://localhost:8080/clearbank/auth",
+				url: "http://10.80.190.161:8080/clearbank/auth",
 				data: {
 					"username": customer_id,
 					"password": password

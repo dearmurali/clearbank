@@ -1,19 +1,9 @@
-clearbank.controller("editPayeeController", function ($scope, $mdDialog) {
+clearbank.controller("editPayeeController", function ($scope, $mdDialog,$translate) {
 
 	this.accountNumber = sessionStorage.getItem('editAccountNumber');
 	this.reEnterAccountNumber = sessionStorage.getItem('editAccountNumber');
 	this.accountType = sessionStorage.getItem('editAccountType');
-    if(this.accountType==='Saving'){
-        this.Savings=true;
-        this.current="false";
-    this.accType0="Savings";
-    }
-    else{
-        console.log("in current")
-    this.accType1='Current';
-        this.Savings=false;
-        this.current="true";
-    }
+    
 	this.ifscCode = sessionStorage.getItem('editIFSCcode');
 	this.payeeName = sessionStorage.getItem('editName');
 	this.payeeNickName = sessionStorage.getItem('editNickname');

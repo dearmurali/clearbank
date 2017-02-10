@@ -1,14 +1,19 @@
 <div class="image"  id="image-container">
     <img id="top-header" src="assets/images/Banner.jpg" alt="homeimage" class="homeImage img-responsive" />
     <div class="container">
-        <div class="col-md-offset-8 col-xs-offset-3">
-            <div class="panel panel-default textOverImage">
-    <div class="panel-body">
+        <div class="row">
+<!--        <div class="">-->
+            <div class="panel panel-default textOverImage col-md-offset-6">
+    <div class="panel-body login-panel">
          <h2 class="loginHead" ng-cloak>{{'login' | translate}}</h2>
-
+        <br>
+        <br>
+        <div ng-show="!($ctrl.validCredentials)" class="warning" ng-cloak>{{'loginFailWarning' | translate}}</div> 
 <div class="login-form">
  <form name="loginForm">
-      <md-input-container class="md-block">
+     <div class="row">
+         <div class="col-md-12">
+      <md-input-container class="md-block login-block">
             <label ng-cloak>{{'customerID' | translate}}<span class="warning">*</span></label>
             <input data-ng-model="$ctrl.customer_id" name="csId" data-ng-pattern="/^[0-9]{10}$/" maxlength="10">
             <div data-ng-messages="loginForm.csId.$error">
@@ -16,32 +21,33 @@
             </div>
          
         </md-input-container>
-
-        <md-input-container class="md-block">
+</div>
+         </div>
+     <div class="row">
+         <div class="col-md-12">
+        <md-input-container class="md-block login-block">
             <label ng-cloak>{{'password' | translate}}<span class="warning">*</span></label>
             <input data-ng-model="$ctrl.pwd" type="{{$ctrl.inputType}}"/>
 
             <span class="glyphicon glyphicon-eye-open" ng-click="$ctrl.showPassword()" id="111" ng-show="$ctrl.eyeOpen"></span>
             <span class="glyphicon glyphicon-eye-close" ng-show="$ctrl.eyeClosed" ng-click="$ctrl.hidePassword()"></span>
         </md-input-container>
-
-        <div ng-show="!($ctrl.validCredentials)" class="warning" ng-cloak>{{'loginFailWarning' | translate}}</div> <br/>
-
-
+</div>
       <md-button class="md-raised md-primary loginButton" data-ng-click="$ctrl.onLogin()"><strong ng-cloak>{{'login' | translate}}</strong></md-button>
-     
+     </div>
             <md-button class="md-primary md-hue-1 sm-flex" data-ng-click="$ctrl.showForm()"><strong ng-cloak>{{'forgotPassword' | translate}} ?</strong></md-button>
- 
+     
     </form>
 </div>
     </div>        
 
-            <div class="panel-footer registrationFooter" ng-cloak>{{'createAccount' | translate}} <a data-ng-click="$ctrl.register()" ng-cloak>{{'RegisterNow' | translate}}</a></div>    
+            <div class="panel-footer registrationFooter text-center" ng-cloak>{{'createAccount' | translate}} <a data-ng-click="$ctrl.register()" ng-cloak><strong>{{'RegisterNow' | translate}}</strong></a></div>    
 
                 </div>
             
   </div>
 
             </div>
+        </div>
      
     </div>
