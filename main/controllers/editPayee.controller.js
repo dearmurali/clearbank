@@ -1,8 +1,11 @@
+
 clearbank.controller("editPayeeController", function ($scope, $mdDialog,PayeeServices) {
+
 
 	this.accountNumber = sessionStorage.getItem('editAccountNumber');
 	this.reEnterAccountNumber = sessionStorage.getItem('editAccountNumber');
 	this.accountType = sessionStorage.getItem('editAccountType');
+
 	this.transferLimit=sessionStorage.getItem('payeelimit');
 	console.log(this.accountType);
 	if (this.accountType === 1) {
@@ -15,6 +18,7 @@ clearbank.controller("editPayeeController", function ($scope, $mdDialog,PayeeSer
 		this.Savings = false;
 		this.current = "true";
 	}
+
 	this.ifscCode = sessionStorage.getItem('editIFSCcode');
 	this.payeeName = sessionStorage.getItem('editName');
 	this.payeeNickName = sessionStorage.getItem('editNickname');

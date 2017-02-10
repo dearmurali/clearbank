@@ -2,7 +2,9 @@
 	
 	<div class="panel-body panel-accountBalance personal">
 
-		<strong>{{'hi' | translate}}, </strong><a ui-sref="profile" ng-cloak><strong ng-cloak>{{$ctrl.customerName}}</strong></a><br/>
+
+		<strong ng-cloak>{{'hi'| translate}}, </strong><a ui-sref="profile" ng-cloak><strong ng-cloak>{{$ctrl.customerName}}</strong></a><br/>
+
 
 		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>{{'logout' | translate}}</strong></md-button>
 	</div>

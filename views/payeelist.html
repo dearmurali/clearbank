@@ -20,7 +20,7 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="payee in payeeList.payees">
-								<td ng-cloak>{{payee.payeeName}}</td>
+								<td ng-cloak>{{payee.payeeName |uppercase }}</td>
 								<td ng-cloak>{{payee.payeeAccountNumber}}</td>
 								
 								<td ng-cloak>{{payee.payeeIFSC}}</td>

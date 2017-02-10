@@ -129,6 +129,7 @@
     "editSuccess":"Payee Details Modified",
     "home":"Home",
     "transfer":"Transfer",
+    "twoWheelerLoan":"Two wheeler loan EMI calculator",
     "accountBalance":"Account Balance",
     "goTo":"Go To",
     "dashboad":"Dashboard",
@@ -163,5 +164,6 @@
 	"accountDetails":"Account Details",
 	"cashStatistics":"Cash Statistics",
 	"payeeType":"Payee Type"
+
     
 }
