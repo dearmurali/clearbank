@@ -1,0 +1,132 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 admin-menu">
+			<admin-menu></admin-menu>
+		</div>
+		<div class="col-md-9  col-sm-8">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>
+						Update Branch Details<a data-ng-click="$ctrl.showHide()"><strong> <span class="right-head">{{$ctrl.btntext}}</span></strong></a>
+
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div ng-show="$ctrl.showform">
+						<form name="branch-details">
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<md-input-container class="md-block">
+										<label>Branch Name<span class="warning">*</span></label>
+										<input type="text" data-ng-model="$ctrl.branchName" required>
+									</md-input-container>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<md-input-container class="md-block">
+										<label>Branch Contact Number<span class="warning">*</span></label>
+										<input data-ng-model="$ctrl.branchContact" data-ng-pattern="/^[0-9]{10}$/" required maxlength="10">
+									</md-input-container>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<md-input-container class="md-block">
+										<label>Branch IFSC Code<span class="warning">*</span></label>
+										<input data-ng-model="$ctrl.branchIFSC" required maxlength="11">
+									</md-input-container>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<md-input-container class="md-block">
+										<label>Branch MICR Code<span class="warning">*</span></label>
+										<input data-ng-model="$ctrl.branchMICR" data-ng-pattern="/^[0-9]{9}$/" required maxlength="9">
+									</md-input-container>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12">
+									<md-input-container class="md-block">
+										<label>Branch Address<span class="warning">*</span></label>
+										<input type="text" data-ng-model="$ctrl.branchAddress" required>
+									</md-input-container>
+								</div>
+
+								<div class="col-md-3 col-sm-6">
+									<md-input-container class="md-block">
+										<label>Branch Manager<span class="warning">*</span></label>
+										<input type="text" data-ng-model="$ctrl.branchManager" required>
+									</md-input-container>
+								</div>
+
+								<div class="col-md-3 col-sm-6">
+									<md-input-container class="md-block">
+										<label>Branch Manager Contact<span class="warning">*</span></label>
+										<input type="text" data-ng-pattern="/^[0-9]{10}$/" data-ng-model="$ctrl.branchManagerContact" required maxlength="10">
+									</md-input-container>
+								</div>
+							</div>
+
+							<md-button class="md-raised md-primary admin-btn" data-ng-click="$ctrl.addNewBranch()"><strong>ADD</strong></md-button>
+						</form>
+					</div>
+					<table class="table">
+						<thead>
+							<tr data-ng-repeat="branch in $ctrl.branches track by $index">
+								<td>
+									<div class="row">
+										<div class="col-md-3 col-sm-6">
+											<md-input-container class="md-block">
+												<label>Branch Name<span class="warning">*</span></label>
+												<input type="text" data-ng-model="branch.branchName" required>
+											</md-input-container>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<md-input-container class="md-block">
+												<label>Branch Contact Number<span class="warning">*</span></label>
+												<input data-ng-model="branch.branchContact" data-ng-pattern="/^[0-9]{10}$/" required maxlength="10">
+											</md-input-container>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<md-input-container class="md-block">
+												<label>Branch IFSC Code<span class="warning">*</span></label>
+												<input data-ng-model="branch.branchIFSC" required maxlength="11">
+											</md-input-container>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<md-input-container class="md-block">
+												<label>Branch MICR Code<span class="warning">*</span></label>
+												<input data-ng-model="branch.branchMICR" data-ng-pattern="/^[0-9]{9}$/" required maxlength="9">
+											</md-input-container>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 col-sm-12">
+											<md-input-container class="md-block">
+												<label>Branch Address<span class="warning">*</span></label>
+												<input type="text" data-ng-model="branch.branchAddress" required>
+											</md-input-container>
+										</div>
+
+										<div class="col-md-3 col-sm-6">
+											<md-input-container class="md-block">
+												<label>Branch Manager<span class="warning">*</span></label>
+												<input type="text" data-ng-model="branch.branchManager" required>
+											</md-input-container>
+										</div>
+
+										<div class="col-md-3 col-sm-6">
+											<md-input-container class="md-block">
+												<label>Branch Manager Contact<span class="warning">*</span></label>
+												<input type="text" data-ng-model="branch.branchManagerContact" required>
+											</md-input-container>
+										</div>
+									</div>
+
+									<md-button class="md-raised md-primary admin-btn"><strong>Update</strong></md-button>
+								</td>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

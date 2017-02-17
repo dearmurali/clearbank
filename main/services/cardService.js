@@ -5,7 +5,7 @@ clearbank.service('cardService',function($http){
 			
 			$http({
 				method:"GET",
-				url:"http://localhost:3000/assets/cards.json"
+				url:"http://localhost:3000/assets/data/cards.json"
 //                data:{"customer_id":csId,
 //                      "transfer_type":transferType
 //                }

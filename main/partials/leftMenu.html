@@ -21,14 +21,14 @@
             <ul class="asideMenu" data-ng-show="$ctrl.defaultData">
                 <span><strong ng-cloak>{{$ctrl.accNumber}}<small> -{{$ctrl.accType}}</small></strong><br />
 
-                    <strong><span class="green" ng-cloak>{{$ctrl.accBalance}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.accCurrency}}</small></strong>
+                    <strong><span class="green" ng-cloak>{{$ctrl.accBalance| number :2}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.accCurrency}}</small></strong>
 			</span>
 		</ul>
 
 
 		<ul class="asideMenu" data-ng-hide="$ctrl.defaultData">
 			<span><strong ng-cloak>{{$ctrl.transactionInfo.account_number}}<small ng-cloak> -{{$ctrl.transactionInfo.account_type}}</small></strong><br />
-                    <strong><span class="green" ng-cloak>{{$ctrl.transactionInfo.available_balance}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.transactionInfo.currency}}</small></strong>
+                    <strong><span class="green" ng-cloak>{{$ctrl.transactionInfo.available_balance | number :2}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.transactionInfo.currency}}</small></strong>
 			</span>
 		</ul>
 	</div>
@@ -114,10 +114,10 @@
 -->
 
 
-<div class="panel panel-default">
+<div class="panel panel-default" id="advPanel">
     <div class="panel-heading">
         <h4 class="panel-title">
-			<a data-toggle="collapse"  data-target="#collapse4"><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;<strong ng-cloak>{{'offers' | translate}}</strong><span class="glyphicon glyphicon-remove arrow" data-ng-click="$ctrl.remove()"></span></a>
+			<a data-toggle="collapse"  data-target="#collapse4"><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;<strong ng-cloak>{{'offers' | translate}}</strong></a><a><span class="glyphicon glyphicon-remove arrow"></span></a>
         </h4>
     </div>
     <div id="collapse4" class="panel-collapse collapse in">

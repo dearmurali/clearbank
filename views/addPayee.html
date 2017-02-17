@@ -54,7 +54,7 @@
 							<md-input-container class="md-block">
 								<label ng-cloak>{{'IFSCCode' | translate}}</label>
 
-								<input type="text" name="ifscCode" ng-model="addPayee.ifscCode" required ng-pattern="/^[a-zA-Z0-9]{10}$/" maxlength="10" ng-disabled="addPayee.disable">
+								<input type="text" name="ifscCode" ng-model="addPayee.ifscCode" required ng-pattern="/^[a-zA-Z0-9]{11}$/" maxlength="11" ng-disabled="addPayee.disable">
 								<span class="valText" ng-show="managePayeeForm.ifscCode.$error.pattern" ng-cloak>{{'ifscValidation' | translate}}</span>
 								<span class="valText" ng-show="addPayee.emptyIfscCode" ng-cloak>{{'fieldLeftEmpty' | translate}}</span>
 							</md-input-container>

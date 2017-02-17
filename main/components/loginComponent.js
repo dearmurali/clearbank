@@ -18,7 +18,7 @@ clearbank.component('login', {
 
 //                    console.log(window.location.href);
 
-                    window.location.href = window.location.href + 'dashboard';
+                    window.location.href = window.location.href + 'clearbankAdmin';
                 } else {
                     //	alert("Invalid ID and/or password.");
 

@@ -3,7 +3,7 @@ clearbank.service("payeeListService", function ($http) {
 		getPayeeData: function (callback) {
 			$http({
 					method: "GET",
-					url: "http://localhost:3000/assets/payeeDetails.json"
+					url: "http://localhost:3000/assets/data/payeeDetails.json"
 				})
 				.then(
 					function (result) {

@@ -18,7 +18,7 @@
                                 <tr>
                                     <td ng-cloak>{{$ctrl.transactionInfo.account_number}}</td>
                                     <td ng-cloak>{{$ctrl.transactionInfo.account_type}}</td>
-                                    <td ng-cloak>{{$ctrl.transactionInfo.available_balance}}&nbsp;{{$ctrl.transactionInfo.currency}}</td>
+                                    <td ng-cloak>{{$ctrl.transactionInfo.available_balance | number : 2}}&nbsp;{{$ctrl.transactionInfo.currency}}</td>
                                     <td ng-cloak>{{$ctrl.transactionInfo.opening_date}}</td>
                                 </tr>
                             </tbody>
@@ -51,8 +51,8 @@
                                     <td ng-cloak>{{data.date}}</td>
                                     <td ng-cloak>{{data.description}}</td>
                                     <td ng-cloak>{{data.referenceNumber}}</td>
-                                    <td data-ng-class="$ctrl.getColor($index)" ng-cloak>{{data.type}}.{{data.amount}}</td>
-                                    <td ng-cloak>{{data.finalAmount}}</td>
+                                    <td data-ng-class="$ctrl.getColor($index)" ng-cloak>{{data.type}}.{{data.amount| number :2}}</td>
+                                    <td ng-cloak>{{data.finalAmount| number :2}}</td>
                                 </tr>
                             </tbody>
                         </table>

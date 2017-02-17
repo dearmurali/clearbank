@@ -5,7 +5,7 @@ clearbank.service('transferService',function($http){
 //			console.log(index+" "+accId);
 //			$http({
 //				method:"POST",
-//				url:"http://localhost:3000/assets/transactionData.json",
+//				url:"http://localhost:3000/assets/data/transactionData.json",
 //                data:{
 //                }
 //			}).then(
@@ -26,7 +26,7 @@ clearbank.service('transferService',function($http){
 			
 			$http({
 				method:"GET",
-				url:"http://localhost:3000/assets/payeeData.json",
+				url:"http://localhost:3000/assets/data/payeeData.json",
 //                data:{"customer_id":csId,
 //                      "transfer_type":transferType
 //                }
