@@ -5,6 +5,7 @@ clearbank.component('updateContacts', {
 		var self = this;
 		self.btntext="+ Add New"
 		self.showform = false;
+		self.navHeading="Update Contacts";
 		self.showHide=function(){
 			self.showform= !self.showform;
 			if(self.showform)

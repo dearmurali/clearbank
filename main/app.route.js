@@ -88,17 +88,17 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 	})
 	
 	.state('addMF',{
-		url:'/addmutualfunds',
+		url:'/addmutualfundsAdmin',
 		template:'<add-mutual-fund></add-mutual-fund>'	
 	})
 	
 	.state('updatePL',{
-		url:'/updatepayeelist',
+		url:'/updateAdminpayeelist',
 		template:'<update-payee-list></update-payee-list>'
 	})
 	
 	.state('updateContact',{
-		url:'/updatecontacts',
+		url:'/updateAdminContacts',
 		template:'<update-contacts></update-contacts>'
 		
 	})

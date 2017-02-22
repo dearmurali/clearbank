@@ -1,11 +1,14 @@
 <div class="container-fluid">
-	<div class="row">
+	<div class="row admin">
+		<admin-navbar></admin-navbar>
 		<div class="col-md-3 col-sm-4 admin-menu">
 			<div class="panel-group">
 				<admin-menu></admin-menu>
 			</div>
 		</div>
-		<div class="col-md-9 col-lg-9 col-sm-8">
+		<div class="col-md-9 col-sm-8">
+
+
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3>
@@ -14,36 +17,53 @@
 					</h3>
 				</div>
 				<div class="panel-body">
-					<div class="row">
-						<div class="col-md-6">
-							<md-input-container class="md-block">
-								<label>Mutual Fund Name<span class="warning">*</span></label>
-								<input type="text" required>
-							</md-input-container>
+					<form name="addMF">
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<md-input-container class="md-block">
+									<label>Mutual Fund Name<span class="warning">*</span></label>
+									<input type="text" data-ng-model="$ctrl.MFName" name="mfname" required>
+									<div ng-messages="addMF.mfname.$error">
+										<div ng-message="required"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+									</div>
+								</md-input-container>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<md-input-container class="md-block">
+									<label>Price Per Unit(INR)<span class="warning">*</span></label>
+									<input name="price" data-ng-pattern="/^(\d{1,5}|\d{0,5}\.\d{1,2})$/" data-ng-model="$ctrl.price" required>
+									<div ng-messages="addMF.price.$error">
+										<div ng-message="pattern"><small>enter a valid amount</small></div>
+										<div ng-message="required"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+									</div>
+								</md-input-container>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<md-input-container class="md-block">
-								<label>Price Per Unit(INR)<span class="warning">*</span></label>
-								<input type="number" required>
-							</md-input-container>
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<md-input-container class="md-block">
+									<label>Units Available<span class="warning">*</span></label>
+									<input type="number" name="units" data-ng-model="$ctrl.availableUnits" data-ng-pattern="/^[0-9]{6}$/" required>
+									<div ng-messages="addMF.units.$error">
+										<div ng-message="pattern"><small>enter a valid amount</small></div>
+										<div ng-message="required"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+									</div>
+								</md-input-container>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<md-input-container class="md-block">
+									<label>Overall %age Gain<span class="warning">*</span></label>
+									<input type="number" name="gain" data-ng-model="$ctrl.netGain" data-ng-pattern="/^(\d{1,5}|\d{0,5}\.\d{1,2})$/" required>
+									<div ng-messages="addMF.gain.$error">
+										<div ng-message="pattern"><small>enter a valid amount</small></div>
+										<div ng-message="required"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+									</div>
+								</md-input-container>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<md-input-container class="md-block">
-								<label>Units Available<span class="warning">*</span></label>
-								<input type="number" required>
-							</md-input-container>
-						</div>
-						<div class="col-md-6">
-							<md-input-container class="md-block">
-								<label>Overall %age Gain<span class="warning">*</span></label>
-								<input type="number" required>
-							</md-input-container>
-						</div>
-					</div>
 
-					<md-button class="md-raised md-primary admin-btn"><strong>ADD</strong></md-button>
+						<md-button class="md-raised md-primary admin-btn"><strong>ADD</strong></md-button>
+					</form>
 				</div>
 			</div>
 		</div>

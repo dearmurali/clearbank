@@ -1,9 +1,11 @@
 <div class="container-fluid">
 	<div class="row">
+			<admin-navbar></admin-navbar>
 		<div class="col-md-3 col-sm-4 admin-menu">
 			<admin-menu></admin-menu>
 		</div>
 		<div class="col-md-9  col-sm-8">
+
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3>
@@ -19,6 +21,7 @@
 									<md-input-container class="md-block">
 										<label>Branch Name<span class="warning">*</span></label>
 										<input type="text" data-ng-model="$ctrl.branchName" required>
+
 									</md-input-container>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -67,7 +70,7 @@
 						</form>
 					</div>
 					<table class="table">
-						<thead>
+						<tbody>
 							<tr data-ng-repeat="branch in $ctrl.branches track by $index">
 								<td>
 									<div class="row">
@@ -122,7 +125,7 @@
 									<md-button class="md-raised md-primary admin-btn"><strong>Update</strong></md-button>
 								</td>
 							</tr>
-						</thead>
+						</tbody>
 					</table>
 				</div>
 

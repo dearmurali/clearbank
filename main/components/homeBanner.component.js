@@ -38,7 +38,8 @@ angular.module("ClearBank")
                 console.log(result+"asdas");
                 if (result === "success") {
                     self.validCredentials = true;
-                    sessionStorage.setItem('isLoggedIn', true);
+
+//					sessionStorage.setItem('userRole',"customer");
 //                    console.log('session', sessionStorage.getItem('isLoggedIn'));
 
 //                    console.log(window.location.href);

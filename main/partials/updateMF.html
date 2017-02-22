@@ -1,12 +1,13 @@
 <div class="container-fluid">
-	<div class="row">
-
-		<div class="col-md-3 col-sm-4 admin-menu">
+	<div class="row admin">
+<admin-navbar></admin-navbar>
+		<div class="col-md-3 col-sm-4 col-xs-12 admin-menu">
 			<div class="panel-group">
 				<admin-menu></admin-menu>
 			</div>
 		</div>
-		<div class="col-md-9 col-sm-8">
+		<div class="col-md-9 col-sm-8 col-xs-12">
+
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3>
@@ -19,26 +20,32 @@
 							<tr class="tableheading">
 								<td>S No.</td>
 								<td>Mutual Fund</td>
-								<td>Current Price</td>
-								<td>Overall %age Gain</td>
-								<td>Updated Price(INR)</td>
+								<td class="text-center">Current Price</td>
+								<td class="text-center">Overall %age Gain</td>
+								<td class="text-center" ng-show="$ctrl.isDisabled>=0">Updated Price(INR)</td>
+								<td><md-button class="md-primary md-hue-1" data-ng-show="$ctrl.isDisabled>=0" data-ng-click="$ctrl.enable(-1)">Close</md-button></td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr ng-repeat="mfs in $ctrl.MFStatement track by $index">
 								<td>{{$index+1}}</td>
 								<td ng-cloak>{{mfs.fundName}}</td>
-								<td ng-cloak>{{mfs.currUnitPrice *64| number :2}}</td>
-								<td ng-cloak class="green">{{(mfs.unrealizedGL/(mfs.avgCost*mfs.units))*100 | number :2}}%</td>
+								<td ng-cloak class="text-center">{{mfs.currUnitPrice *64| number :2}}</td>
+								<td ng-cloak class="green text-center">{{(mfs.unrealizedGL/(mfs.avgCost*mfs.units))*100 | number :2}}%</td>
 								<td ng-cloak>
-
-									<md-input-container class="md-block tab-input">
-										<input type="number">
-									</md-input-container>
-
+									<form name="updateMF" ng-show="$index===$ctrl.isDisabled">
+										<md-input-container class="md-block tab-input">
+											<input name="price" data-ng-pattern="/^(\d{1,5}|\d{0,5}\.\d{1,2})$/" ng-model="$ctrl.updatedPrice" required autofocus>
+											<div ng-messages="updateMF.price.$error">
+												<div ng-message="required"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+												<div ng-message="pattern" class="errorMsg">Enter a valid amount</div>
+											</div>
+										</md-input-container>
+									</form>
 								</td>
 								<td>
-									<md-button class="md-primary md-hue-1">Update</md-button>
+									<md-button class="md-primary md-hue-1" data-ng-click="$ctrl.enable($index)" data-ng-hide="$index===$ctrl.isDisabled">Update</md-button>
+									<md-button class="md-primary md-hue-1" data-ng-show="$index===$ctrl.isDisabled">Done</md-button>
 								</td>
 							</tr>
 						</tbody>

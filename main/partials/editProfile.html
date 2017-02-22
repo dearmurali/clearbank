@@ -22,7 +22,7 @@
 
             <md-input-container class="md-block">
                 <label>Contact Number<span class="warning">*</span></label>
-                <input type="text" class="contact" name="phone" data-ng-model="$ctrl.customerContact" data-ng-pattern="/^[0-9]{10}$/" required md-maxlength="10">
+                <input type="text" class="contact" name="phone" data-ng-model="$ctrl.customerContact" data-ng-pattern="/^[0-9]{10}$/" required maxlength="10">
                 <div ng-messages="myform.phone.$error" class="contactError">
                     <div ng-message="pattern" class="errorMsg"><small>please enter a valid 10 digit contact number</small></div>
                     <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
@@ -31,7 +31,7 @@
 
             <md-input-container class="md-block">
                 <label for="cust-email">Email address to contact you<span class="warning">*</span></label>
-                <input class="cMail" name="mail" data-ng-model="$ctrl.customerEmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" md-minlength="10" md-maxlength="30" required>
+                <input class="cMail" name="mail" data-ng-model="$ctrl.customerEmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" minlength="10" maxlength="30" required>
                 <div ng-messages="myform.mail.$error" class="mailError">
                     <div ng-message="pattern" class="errorMsg"><small>please enter a valid email address!</small></div>
                     <div ng-message="required" class="errorMsg"><small>dont leave this empty.</small></div>
@@ -40,7 +40,7 @@
 
             <md-input-container class="md-block">
                 <label>Address<span class="warning">*</span></label>
-                <input name="address" class="cAddress" data-ng-model="$ctrl.address" md-minlength="4" md-maxlength="30" required>
+                <input name="address" class="cAddress" data-ng-model="$ctrl.address" minlength="4" maxlength="30" required>
                 <div ng-messages="myform.address.$error" class= "addressError" role="alert" multiple="">
                     <div ng-message="required" class="errorMsg">You must supply an address</div>
                     <div ng-message="maxlength" class="errorMsg">
@@ -64,13 +64,13 @@
 
                     <md-input-container class="md-block" flex-gt-sm="">
                         <label>Postal Code</label>
-                        <input name="postalCode" ng-model="$ctrl.postalCode" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                        <input name="postalCode" ng-model="$ctrl.postalCode" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" maxlength="5">
 
                         <div ng-messages="myform.postalCode.$error" role="alert" multiple="">
                             <div ng-message="required" class="errorMsg">You must supply a postal code.</div>
                             <div ng-message="pattern" class="errorMsg">That is not a valid postal code.
                             </div>
-                            <div ng-message="md-maxlength" class="errorMsg">
+                            <div ng-message="maxlength" class="errorMsg">
                                 Don't use the long version 
                             </div>
                         </div>
