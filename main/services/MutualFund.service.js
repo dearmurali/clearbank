@@ -7,7 +7,7 @@ clearbank.service('MutualFundService', function ($http) {
 			//			console.log(index+" "+accId);
 			$http({
 					method: "GET",
-					url: "http://localhost:3000/assets/mutualFunds.json"
+					url: "http://localhost:3000/assets/data/mutualFunds.json"
 				})
 				.then(
 					function (result) {
@@ -27,7 +27,7 @@ clearbank.service('MutualFundService', function ($http) {
 			//			console.log(index+" "+accId);
 			$http({
 					method: "GET",
-					url: "http://localhost:3000/assets/MFStatement.json"
+					url: "http://localhost:3000/assets/data/MFStatement.json"
 				})
 				.then(
 					function (result) {

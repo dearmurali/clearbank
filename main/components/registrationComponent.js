@@ -61,7 +61,7 @@ clearbank.component('userRegistration', {
 					
                     console.log("response is a "+typeof(response));
                     self.registrationId = response;
-                    alert(response);
+//                    alert(response);
                     self.showAlert(self.registrationId);
 
                 })

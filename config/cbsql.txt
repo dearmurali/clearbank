@@ -1,0 +1,262 @@
+-- MySQL dump 10.13  Distrib 5.1.59, for Win32 (ia32)
+--
+-- Host: localhost    Database: clearbank
+-- ------------------------------------------------------
+-- Server version	5.1.59-community
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `clearbank`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `clearbank` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `clearbank`;
+
+--
+-- Table structure for table `account`
+--
+
+DROP TABLE IF EXISTS `account`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `account` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT,
+  `account_number` bigint(20) NOT NULL,
+  `opening_date` datetime DEFAULT NULL,
+  `account_type` varchar(20) DEFAULT NULL,
+  `account_balance` bigint(20) NOT NULL,
+  `currency` varchar(5) NOT NULL,
+  `customer_id` bigint(10) NOT NULL,
+  `account_status` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `account`
+--
+
+LOCK TABLES `account` WRITE;
+/*!40000 ALTER TABLE `account` DISABLE KEYS */;
+INSERT INTO `account` VALUES (111,1112222,'2017-01-19 13:39:58','current',1000,'INR',1000000010,'');
+/*!40000 ALTER TABLE `account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `authority`
+--
+
+DROP TABLE IF EXISTS `authority`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `authority` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `authority`
+--
+
+LOCK TABLES `authority` WRITE;
+/*!40000 ALTER TABLE `authority` DISABLE KEYS */;
+INSERT INTO `authority` VALUES (1,'ROLE_USER'),(2,'ROLE_USER'),(3,'ROLE_USER'),(4,'ROLE_USER'),(5,'ROLE_USER'),(6,'ROLE_USER'),(7,'ROLE_USER'),(8,'ROLE_USER'),(9,'ROLE_USER'),(10,'ROLE_USER'),(11,'ROLE_USER'),(12,'ROLE_USER'),(13,'ROLE_USER'),(14,'ROLE_USER'),(15,'ROLE_USER'),(16,'ROLE_USER'),(17,'ROLE_USER'),(18,'ROLE_USER'),(19,'ROLE_USER'),(20,'ROLE_USER'),(21,'ROLE_USER'),(22,'ROLE_USER'),(23,'ROLE_USER'),(24,'ROLE_USER'),(25,'ROLE_USER'),(26,'ROLE_USER'),(27,'ROLE_USER'),(28,'ROLE_USER'),(29,'ROLE_USER'),(30,'ROLE_USER'),(31,'ROLE_USER'),(32,'ROLE_USER'),(33,'ROLE_USER'),(34,'ROLE_USER'),(35,'ROLE_USER'),(36,'ROLE_USER');
+/*!40000 ALTER TABLE `authority` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `customer` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customer`
+--
+
+LOCK TABLES `customer` WRITE;
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES (1,'Jirka'),(2,'Michal'),(3,'Jirka'),(4,'Michal');
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `fund_transfer_types`
+--
+
+DROP TABLE IF EXISTS `fund_transfer_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `fund_transfer_types` (
+  `transfer_type` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(45) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL DEFAULT '',
+  PRIMARY KEY (`transfer_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fund_transfer_types`
+--
+
+LOCK TABLES `fund_transfer_types` WRITE;
+/*!40000 ALTER TABLE `fund_transfer_types` DISABLE KEYS */;
+INSERT INTO `fund_transfer_types` VALUES (1,'account in same bank'),(2,'account in other bank');
+/*!40000 ALTER TABLE `fund_transfer_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payee`
+--
+
+DROP TABLE IF EXISTS `payee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payee` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `account_number` bigint(12) unsigned NOT NULL DEFAULT '0',
+  `name` varchar(45) NOT NULL DEFAULT '',
+  `nick_name` varchar(45) DEFAULT NULL,
+  `ifsc_code` varchar(45) DEFAULT NULL,
+  `transfer_limit` double DEFAULT NULL,
+  `payee_type` int(10) unsigned NOT NULL DEFAULT '0',
+  `customerid` bigint(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uc_payee` (`account_number`,`ifsc_code`),
+  KEY `FK_payee_2` (`payee_type`),
+  KEY `FK_payee_1` (`customerid`),
+  CONSTRAINT `FK_payee_1` FOREIGN KEY (`customerid`) REFERENCES `user` (`customer_id`),
+  CONSTRAINT `FK_payee_2` FOREIGN KEY (`payee_type`) REFERENCES `fund_transfer_types` (`transfer_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payee`
+--
+
+LOCK TABLES `payee` WRITE;
+/*!40000 ALTER TABLE `payee` DISABLE KEYS */;
+INSERT INTO `payee` VALUES (50,909090909090,'vijay malya','malya','9090909090',90,1,1000000010),(51,898989898989,'brijmohan birju bhopali','BBB','9990909090',1000000,1,1000000010),(52,555555555555,'nitesh rana','manu','6666666666',5000,1,1000000010);
+/*!40000 ALTER TABLE `payee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `transaction`
+--
+
+DROP TABLE IF EXISTS `transaction`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `transaction` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT,
+  `amount` bigint(20) NOT NULL,
+  `transaction_date` datetime DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `type` varchar(100) NOT NULL,
+  `account_type` varchar(10) NOT NULL,
+  `transaction_number` bigint(20) NOT NULL,
+  `customer_id` bigint(10) NOT NULL,
+  `account_number` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `transaction`
+--
+
+LOCK TABLES `transaction` WRITE;
+/*!40000 ALTER TABLE `transaction` DISABLE KEYS */;
+INSERT INTO `transaction` VALUES (1,10001,'2017-01-19 13:39:58','des','d','current',1234,1000000010,1112222);
+/*!40000 ALTER TABLE `transaction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `customer_id` bigint(10) NOT NULL AUTO_INCREMENT,
+  `activation_date` datetime DEFAULT NULL,
+  `customer_address` varchar(100) DEFAULT NULL,
+  `customer_email` varchar(30) NOT NULL,
+  `customer_mobile` bigint(10) NOT NULL,
+  `customer_name` varchar(50) NOT NULL,
+  `enabled` bit(1) NOT NULL,
+  `customer_password` varchar(100) NOT NULL,
+  PRIMARY KEY (`customer_id`),
+  UNIQUE KEY `UK_hyrmk6s9ib92eflmphgxt3myy` (`customer_email`),
+  UNIQUE KEY `UK_rox9pfnyl0wmxd9ri6riodjfg` (`customer_mobile`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000000074 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1000000010,'2017-01-19 13:39:58',NULL,'akki12@gmial.com',7869057476,'Akash Singh','','$2a$10$gf5WWj.rMkJbBDemk54CEOIPs/pM6ayWnhRjBQyjNWzOrgNyuLw9W'),(1000000012,'2017-01-19 15:30:31',NULL,'vinay.luthria@ymail.co.in',9876987698,'vinay luthria','','$2a$10$o93MMeuI2vfE24FcN5tuBeq1o9KVJZ2LriV3ZluGYRQqvNNX5.AMK'),(1000000013,'2017-01-19 15:31:52',NULL,'akash.singh@gmail.com',9200028920,'Akash Singh','','$2a$10$K/5oPuQpGitaFgoKBL23meV1N7n/U6SPE5CMJxcb/XkKmhL6P3wku'),(1000000018,'2017-01-19 15:37:41',NULL,'alok.jain@jmail.com',9876542233,'Alok jain','','$2a$10$FhjiooHdnHSm3zNLZpxkK.TNa4mdP3zecmDA7XCfHBuNLK5wzcXMy'),(1000000021,'2017-01-19 15:40:38',NULL,'aniruddh@gmail.com',1111111111,'aniruddh bharti','','$2a$10$HkzNyi5HTaEoFLuJzVrllOA7RAk.K.Z/BWwygN4hYHCX28/Y7jbrm'),(1000000024,'2017-01-19 15:51:35',NULL,'vinay@gmial.com',1231232434,'VINAY PATEL','','$2a$10$FCLNQ1biJJFfgnBwEw1wyOZgubUgrqEnfUN2vn7Wkd4oRihzeoK96'),(1000000025,'2017-01-23 15:51:29',NULL,'alok@mindtre.com',1234567890,'customer1','','$2a$10$Ml5LB6GHRkk87b75hcdcLu2OLLWZdXGUH9vot6M9jn17y.TxWiQoq'),(1000000032,'2017-01-25 11:53:01',NULL,'alok1@mindtre.com',7869057776,'new_cust251','','$2a$10$iMbZQiBJiIhI3aPg9Zg5g.GDghIpMKLzOy6tWPcKbWD4Lu1LDNepG'),(1000000034,'2017-01-25 11:54:30',NULL,'alok11@mindtre.com',7869057976,'new_cust2511','','$2a$10$D2XdOpw1vp2VHj0/Wudqu.NOk81XgwtTgU0CtFFbqUBWCPx7yDK9.'),(1000000035,'2017-01-25 14:42:30',NULL,'1@mindtres.com',7819057966,'post_sdep2511','','$2a$10$BAV7OsoJvoKwl6N.jkgVbOiBfEQbe3d9e75lnw1F84.Q1DjnAG5Dq'),(1000000040,'2017-02-02 12:48:55',NULL,'d@mindtre.com',78692357496,'tttth1','','$2a$10$DwsGVR1f7cxABpKe3m/.1exHHz6aOOuR0Qel/I6RIGVq.xS/7vyuK'),(1000000045,'2017-02-09 14:07:08',NULL,'akiaki@aki.aki',9200020920,'Akshay singh','','$2a$10$q4K7UqyRn2TD5P.BDSrrsuxk0es6QWrJSSlt/4CJ26H3RFUAhhCk2'),(1000000046,'2017-02-09 14:10:09',NULL,'aki@aki.aki',9898989890,'arun waliya','','$2a$10$WyDzTpsICdgQrpRGn1KSlOvbC9fX8ZhFmp.BmT/3Nk6a5DewEDzaW'),(1000000047,'2017-02-09 14:11:36',NULL,'aki@aaki.aki',8989898989,'ajay malik','','$2a$10$a.XSzwb4fkLQJCHmbCxHAO35.i5n5T7ZUz9n.kWZHIypbfSWH1wS2'),(1000000049,'2017-02-09 14:12:13',NULL,'aki@aakkki.aki',8989898000,'ajay malik','','$2a$10$Xg6AkIWKsnIiod4rKgCA4uZm126x2mlK17A5hKjp.qkBCNV8QbDPq'),(1000000051,'2017-02-09 14:14:12',NULL,'akas@aki.aki',1231231231,'ajay shah','','$2a$10$ABlPkeM/aaovTXzGzvuo9OzIL55AcmJencrp92.pI9oaMNB7LrGEO'),(1000000052,'2017-02-09 14:16:44',NULL,'akash@123.123',1231412342,'manav kamblli','','$2a$10$/s9XnMaYVwOKfbGLsxPbSucHM7V7GEUJlOG6YT0ffuV1.Ees8ZV9W'),(1000000053,'2017-02-09 14:23:08',NULL,'aki@123.123',1234123123,'akram baiju','','$2a$10$6GD5OgGKiYoS5/JJvbvBPOfrTF/kHmbAFjxQxdfBlATOU19V5zPOK'),(1000000055,'2017-02-09 14:31:37',NULL,'nitesh@nitesh.nitesh',1010101010,'nitesh rana','','$2a$10$AlpwL3x527o.I49AjAb92OJi0x1ia9bmKEXFSgqU0ZmpC2J.zk1fi'),(1000000056,'2017-02-09 14:37:08',NULL,'Mui@mui.mui',1919191919,'Akash Singh','','$2a$10$AOl.9nyZfnCfYK77p3Avhe0nSklztmaWXTmEkJ2zrOd/FdJ5DOaQu'),(1000000057,'2017-02-09 14:38:53',NULL,'sanjay@san.jay',9892786756,'Sanjay bhuyan','','$2a$10$91DD8PJx7teH6Y6pDenWSOiwXEX59iq2zCvLzOyMA91hBM9s/4KSi'),(1000000059,'2017-02-09 14:41:44',NULL,'LAK@lka.lak',1567156767,'akash singh','','$2a$10$BbOEOTcX95E082yU8i75vexyk2Ohn162y8M4iAmshKFl0EQ6r2eBe'),(1000000060,'2017-02-09 14:47:06',NULL,'akash@aka.sh',1981981981,'akash wahi','','$2a$10$tjZb0.vcNk8MF4f5fy4XZuIjcVlOWY77zpDnYoxqSQyXCDhQlFg7.'),(1000000061,'2017-02-09 14:48:53',NULL,'akshay@aks.hay',1901901901,'akshay kahnna','','$2a$10$uHF/D26B42QnzY7UxQ0Qsuj7cniScCAc9GrDAqt.A.9j5K8.cPFe.'),(1000000062,'2017-02-09 14:53:30',NULL,'raman@ram.an',1971971971,'raman singh','','$2a$10$DRSVgIlmKDvXvyInX087R.QXOErjsbhs6ZVFpT1kcCx61FRB2i.uS'),(1000000063,'2017-02-09 15:00:20',NULL,'ashd@adas.er',7843587345,'ajsdsa','','$2a$10$HXC0nQMCtiD538jW8pNX5.XXAEZgyvm133gjLCorH/aM6/Jc9smwa'),(1000000064,'2017-02-09 15:02:05',NULL,'aki@aki.akish',1111122222,'Akash Singh','','$2a$10$vpmskSSjlV8tStrSfQSQ4uIk8Cwf3guBxZKSs5cm1LyILvnIdQbk6'),(1000000065,'2017-02-09 15:03:53',NULL,'fghdg@serfe.yutyu',5465675675,'werert','','$2a$10$gr3uU91diSwkd7cRi0aL.OJOWHU8YAn61awvjaTLCxQSvLOhxdilC'),(1000000066,'2017-02-09 15:04:49',NULL,'asd@asd.sdf',1237128938,'Akash Singh','','$2a$10$ndzU4lEv7ZhqcM2clljDPumyyOC3Jmy0.AA.RDkdIzrw/.Q.TPO96'),(1000000067,'2017-02-09 15:06:38',NULL,'asdsa@awd.asd',2343534655,'asdsadhgasjd','','$2a$10$9aUKl1Ro/FgZ6MYp5ga1seZyXJtP36FkFzwHcBGbBTGjpRNAQFpYu'),(1000000068,'2017-02-09 15:08:38',NULL,'jfgs@sdf.sdf',7657576576,'akasj','','$2a$10$62mw7NzivWn4B/pzGq6fe.uM3N9uWAcn34wcKP6e9Xl8HV/0EdRFS'),(1000000069,'2017-02-09 15:12:02',NULL,'aki@aki.akl',8978977898,'akash','','$2a$10$OehSMiuyo4ZcLARdQQer2.7/R9nS2KX6B6QM7Mdkds1BIben0rxNS'),(1000000070,'2017-02-09 17:42:46',NULL,'vijaay@malya.com',9000000000,'vijay malya','','$2a$10$ADCluHzr3kH.oho/i1.qE.oplrmf57n9Ua8JrH/uCaFDke0rv1b6O'),(1000000071,'2017-02-10 14:06:41',NULL,'aki@aki.aklp',7878787787,'Akash singh','','$2a$10$YVHx4cAWa1QGaM83MYCZN.zrtOXA6F7T2E0lljyB7.WfwNLEmtoDC'),(1000000072,'2017-02-10 14:36:20',NULL,'murali.kannan@mindtree.com',9899376907,'Muralikkannan','','$2a$10$M1rSy8cmMdfYOk4gp7N/KO1LWG4WU4NoxxBcUGIiOoniWNutXVn5C'),(1000000073,'2017-02-10 15:43:00',NULL,'jayant@gmail.com',7777777777,'Jayant Patil','','$2a$10$IhXTdcBbfKRX3I/rhzVubO3689iDNoNCkVqE4d6MDbetZ5MhpctOW');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_authority`
+--
+
+DROP TABLE IF EXISTS `user_authority`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_authority` (
+  `user_id` bigint(10) NOT NULL,
+  `authority_id` bigint(3) NOT NULL,
+  KEY `FKgvxjs381k6f48d5d2yi11uh89` (`authority_id`),
+  KEY `FKpqlsjpkybgos9w2svcri7j8xy` (`user_id`),
+  CONSTRAINT `FKgvxjs381k6f48d5d2yi11uh89` FOREIGN KEY (`authority_id`) REFERENCES `authority` (`id`),
+  CONSTRAINT `FKpqlsjpkybgos9w2svcri7j8xy` FOREIGN KEY (`user_id`) REFERENCES `user` (`customer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_authority`
+--
+
+LOCK TABLES `user_authority` WRITE;
+/*!40000 ALTER TABLE `user_authority` DISABLE KEYS */;
+INSERT INTO `user_authority` VALUES (1000000010,1),(1000000012,2),(1000000013,3),(1000000018,4),(1000000021,5),(1000000024,6),(1000000025,7),(1000000032,8),(1000000034,9),(1000000035,10),(1000000040,11),(1000000045,12),(1000000046,13),(1000000047,14),(1000000049,15),(1000000051,16),(1000000052,17),(1000000053,18),(1000000055,19),(1000000056,20),(1000000057,21),(1000000059,22),(1000000060,23),(1000000061,24),(1000000062,25),(1000000063,26),(1000000064,27),(1000000065,28),(1000000066,29),(1000000067,30),(1000000068,31),(1000000069,32),(1000000070,33),(1000000071,34),(1000000072,35),(1000000073,36);
+/*!40000 ALTER TABLE `user_authority` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-02-17 14:38:32

@@ -16,8 +16,9 @@
                 <tbody>
                     <tr data-ng-repeat="account in $ctrl.accountInfo track by $index">
                         <td ng-cloak>{{account.account_number}}</td>
-                        <td ng-cloak translate>{{account.account_type}}</td>
-                        <td ng-cloak>{{account.available_balance}}&nbsp;{{account.currency}}</td>
+
+                        <td ng-cloak>{{account.account_type}}</td>
+                        <td ng-cloak>{{account.available_balance | number : 2}}&nbsp;{{account.currency}}</td>
                         <td ng-cloak>{{account.opening_date}}</td>
 						<td><a ui-sref="lastTransactions" data-ng-click="$ctrl.getIndex($index)"><img class="arrow" src="assets/images/Arrow.png"></a></td>
                     </tr>

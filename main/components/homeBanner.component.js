@@ -43,7 +43,8 @@ angular.module("ClearBank")
 
 //                    console.log(window.location.href);
 
-                    window.location.href = window.location.href + 'dashboard';
+//					window.location.href = window.location.href + 'clearbankAdmin';
+					window.location.href = window.location.href + 'dashboard';
                 } else {
                     //	alert("Invalid ID and/or password.");
 

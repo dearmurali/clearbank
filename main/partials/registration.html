@@ -7,7 +7,7 @@
 
 					<md-input-container class="md-block">
 						<label>{{'name' | translate}}<span class="warning">*</span></label>
-						<input name="cname" class="cName" data-ng-model="$ctrl.customerName" data-ng-pattern="/^[a-z A-Z]+$/" required>
+						<input name="cname" class="cName caps" data-ng-model="$ctrl.customerName" data-ng-pattern="/^[a-z A-Z]+$/" required>
 						<div ng-messages="myform.cname.$error" class="nameError">
 							<div ng-message="pattern" class="errorMsg"><small>{{'nameValidation' | translate}}</small></div>
 							<div ng-message="required" class="errorMsg"><small>{{'fieldLeftEmpty' | translate}}</small></div>

@@ -14,19 +14,19 @@
                         <td>Unit Avg Cost</td>
                         <td>Adjusted Cost Base</td>
 						<td>Current Unit Price</td>
-						<td>Unrealized Gain(Loss)</td>
+						<td>Unrealized Gain(Loss)</td> 
 						<td>Current Value</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr data-ng-repeat="mfs in $ctrl.MFStatement track by $index">
                         <td ng-cloak>{{mfs.fundName}}</td>
-                        <td ng-cloak>{{mfs.units}}</td>
-                        <td ng-cloak>{{mfs.avgCost}}</td>
-                        <td ng-cloak>{{mfs.adjustedCostBase}}</td>
-						<td ng-cloak>{{mfs.currUnitPrice}}</td>
-						<td ng-cloak>{{mfs.unrealizedGL}}</td>
-						<td ng-cloak>{{mfs.currentValue}}</td>
+                        <td ng-cloak>{{mfs.units | number :2}}</td>
+                        <td ng-cloak>{{mfs.avgCost | number :2}}</td>
+                        <td ng-cloak>{{mfs.adjustedCostBase | number :2}}</td>
+						<td ng-cloak>{{mfs.currUnitPrice | number :2}}</td>
+						<td ng-cloak>{{mfs.unrealizedGL | number :2}}</td>
+						<td ng-cloak>{{mfs.currentValue | number :2}}</td>
                     </tr>
                 </tbody>
             </table>

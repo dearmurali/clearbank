@@ -1,9 +1,11 @@
 
+
 <nav class="navbar navbar-default" ng-controller="navigationController as navCtrl" ng-show="navCtrl.showNavbar">
 
 	<div class="container-fluid">
         <div class="row">
 		<div class="navbar-header col-md-1">
+<!--<<<<<<< HEAD-->
             
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 
@@ -35,14 +37,27 @@
            
 			<ul class="nav navbar-nav navbar-right upperNavbar">
 
+<!--
+<<<<<<< HEAD
 				<li class="nav-Right upperNavFont hidden-xs"><a href="" ng-cloak>{{'settings' | translate}} | </a> </li>
 				<li class="nav-Right upperNavFont hidden-xs"><a href="" ng-cloak>{{'customerCare' | translate}} |</a> </li>
 				<li class="nav-Right upperNavFont hidden-xs"><a href="" ng-cloak>{{'findATMbranch' | translate}}</a></li>
                 
 				<li class="hidden-xs">
+-->
+<!--=======-->
+
+				<li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'settings' | translate}} | </a> </li>
+				<li class="nav-Right upperNavFont"><a href=""  data-toggle="tooltip" title="Hooray!" ng-cloak>{{'customerCare' | translate}} |</a> </li>
+				<li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'findATMbranch' | translate}}</a></li>
+
+
+				<li>
+
 					<form class="navbar-form" role="search">
 						<div class="inner-addon right-addon">
 							<i class="glyphicon glyphicon-search"></i>
+
 							<input type="text" class="form-control" placeholder="Search"/>
 						</div>
 					</form>
@@ -66,7 +81,8 @@
 			</ul>
            
 	</div>
-        </div>
-    </div>
+
+		</div>
+	</div>
 </nav>
 <top-menu></top-menu>

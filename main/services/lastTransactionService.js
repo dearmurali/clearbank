@@ -6,7 +6,7 @@ clearbank.service('lastTransactionService',function($http){
 			console.log(index+" "+accId);
 			$http({
 				method:"get",
-				url:"http://localhost:3000/assets/transactionData.json"
+				url:"http://localhost:3000/assets/data/transactionData.json"
 			}).then(
 				//success
 				function(result){

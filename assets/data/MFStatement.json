@@ -1,0 +1,59 @@
+{
+	"MFAccount":[
+		{
+			"fundName":"CI Canadian Investment Fund Class E",
+			"units":5607.499,
+			"avgCost":10.6086,
+			"adjustedCostBase":59487.74,
+			"currUnitPrice":14.09,
+			"unrealizedGL":19521.92,
+			"currentValue":79009.66
+		},
+		{
+			"fundName":"Cambridge Global Equity Corp Cls E",
+			"units":4292.526,
+			"avgCost":12.0382,
+			"adjustedCostBase":51674.50,
+			"currUnitPrice":18.66,
+			"unrealizedGL":28424.04,
+			"currentValue":80098.54
+		},
+		{
+			"fundName":"Black Creek Global Leaders Corp Class E",
+			"units":4385.961,
+			"avgCost":10.3265,
+			"adjustedCostBase":45291.78,
+			"currUnitPrice":17.29,
+			"unrealizedGL":30541.49,
+			"currentValue":75833.27
+		},
+		{
+			"fundName":"Harbour Growth & Income Fund Class E",
+			"units":6308.485,
+			"avgCost":12.7514,
+			"adjustedCostBase":80442.13,
+			"currUnitPrice":13.15,
+			"unrealizedGL":2514.45,
+			"currentValue":82956.58
+		},
+		{
+			"fundName":"CI Canadian Investment Fund Class E",
+			"units":5607.499,
+			"avgCost":10.6086,
+			"adjustedCostBase":59487.74,
+			"currUnitPrice":14.09,
+			"unrealizedGL":19521.92,
+			"currentValue":79009.66
+		},
+		{
+			"fundName":"CI Canadian Investment Fund Class E",
+			"units":5607.499,
+			"avgCost":10.6086,
+			"adjustedCostBase":59487.74,
+			"currUnitPrice":14.09,
+			"unrealizedGL":19521.92,
+			"currentValue":79009.66
+		}
+		
+	]
+}

@@ -17,7 +17,7 @@ clearbank.component('leftMenu',{
 		 self.customerName = sessionStorage.getItem('customerName');
         self.accCurrency = sessionStorage.getItem('currency');
         self.accType = sessionStorage.getItem('accountType');
-            
+
         self.defaultData = true;
 
         self.getIndex = function (index) {

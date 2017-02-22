@@ -1,0 +1,50 @@
+<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-md-3 col-sm-4 admin-menu">
+			<div class="panel-group">
+				<admin-menu></admin-menu>
+			</div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>
+						Update Mutual Funds
+					</h3>
+				</div>
+				<div class="panel-body table-responsive">
+					<table class="table">
+						<thead>
+							<tr class="tableheading">
+								<td>S No.</td>
+								<td>Mutual Fund</td>
+								<td>Current Price</td>
+								<td>Overall %age Gain</td>
+								<td>Updated Price(INR)</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="mfs in $ctrl.MFStatement track by $index">
+								<td>{{$index+1}}</td>
+								<td ng-cloak>{{mfs.fundName}}</td>
+								<td ng-cloak>{{mfs.currUnitPrice *64| number :2}}</td>
+								<td ng-cloak class="green">{{(mfs.unrealizedGL/(mfs.avgCost*mfs.units))*100 | number :2}}%</td>
+								<td ng-cloak>
+
+									<md-input-container class="md-block tab-input">
+										<input type="number">
+									</md-input-container>
+
+								</td>
+								<td>
+									<md-button class="md-primary md-hue-1">Update</md-button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

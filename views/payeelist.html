@@ -12,15 +12,15 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Name</th>
-								<th>Account Number</th>
-								<th>IFSC</th>
-								<th>Action</th>
+								<td>Name</td>
+								<td>Account Number</td>
+								<td>IFSC</td>
+								<td>Action</td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr ng-repeat="payee in payeeList.payees">
-								<td ng-cloak>{{payee.payeeName}}</td>
+								<td ng-cloak>{{payee.payeeName |uppercase }}</td>
 								<td ng-cloak>{{payee.payeeAccountNumber}}</td>
 								
 								<td ng-cloak>{{payee.payeeIFSC}}</td>

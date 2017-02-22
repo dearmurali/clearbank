@@ -4,6 +4,7 @@ clearbank.service('LoginService', function ($http) {
 			$http({
 				method: "POST",
 				url: "http://10.80.190.161:9090/clearbank-1.0/auth",
+
 				data: {
 					"username": customer_id,
 					"password": password
