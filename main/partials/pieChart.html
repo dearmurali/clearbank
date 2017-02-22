@@ -1,7 +1,7 @@
 <script src="bower_components/d3pie/d3pie.js"></script>
 <!--<div class="panel-group" ><div class="accountInfo2" id="pieChart"></div></div>-->
 <p></p><p></p><p></p><p></p>
-<div class="panel panel-default">
+<div class="panel panel-default hidden-xs hidden-sm">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <strong>Cash Statistics</strong>
@@ -9,15 +9,131 @@
         </div>
         <div class="panel-collapse collapse in">
             <div class="accountInfo2" id="pieChart"></div>
-<!--
-            <ul class="list-group">
-                <li class="list-group-item" data-ng-repeat="fav in  favLinks">
-                    <a href={{fav.link_url_1}}>
-                        <h5>{{fav.label_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+        </div>
+    </div>
+<div class="panel panel-default hidden-md hidden-lg accordion">
+        <div class="panel-heading">
+            <h4 class="panel-title" data-target="#pieChartMobile1" data-toggle="collapse" >
+                <strong>Cash Statistics</strong>
+               <span class="glyphicon glyphicon-plus text-right" data-toggle="collapse" data-target="#pieChartMobile1" aria-expanded="false">
+   <strong></strong>
+  </span>  
+            </h4>
+        </div>
+        <div class="panel-collapse collapse" id="pieChartMobile1">
+            <div class="accountInfo2" id="pieChartMobile"></div>
+            <div class="conatiner">
+                <div class="row">
+                <div class="col-xs-5 col-xs-offset-1">
+            <div class="savingsPieChart"></div><span class="pietext1">&nbsp;Savings Account</span></div>
+                    <div class="col-xs-4 col-xs-offset-1">
+            <div class="loanPieChart" ></div><span class="pietext2">&nbsp;Loans</span>
+</div><br>
+                      <div class="col-xs-5 col-xs-offset-1">
+
+            <div class="investmentsChart"></div><span class="pietext3">&nbsp;Investment</span></div>
+                    
+                <div class="col-xs-4 col-xs-offset-1">
+            <div class="expensesChart"></div><span class="pietext3">&nbsp;Expenses</span></div>
+                </div>
+        </div>
+                </div>
+    </div>
+    </div>
+   <script src="main/pie.js"></script>
+
+ <div class="panel panel-default hidden-md hidden-lg hidden-sm accordion">
+    <div class="panel-heading ">
+        <h4 class="panel-title mobileACDetails"><strong>{{'goTo' | translate}}</strong></h4>
+         <span class="glyphicon glyphicon-plus text-right" data-toggle="collapse" data-target="#collapselinks" aria-expanded="false" aria-controls="collapseExample">
+   <strong></strong>
+  </span>
+    </div>
+    <div class="panel-body table-responsive collapse" id="collapselinks">
+         <ul class="list-group">
+                <li class="list-group-item">
+                    <a ui-sref="dashboard">
+                        <h5 ng-cloak>{{'dashboad' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="transfers">
+                        <h5 ng-cloak>{{'transfers' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a data-toggle="collapse" data-target="#SubMenu2">
+						<h5>{{'managePayee' | translate}}<span class="glyphicon glyphicon-menu-down arrow"></span></h5>
+					</a>
+
+					<ul class="list-group collapse" id="SubMenu2">
+						<li class="list-group-item">
+							<a ui-sref="addpayee">
+								<h5>{{'addPayee' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+							</a>
+						</li>
+						<li class="list-group-item">
+							<a ui-sref="payeelist">
+								<h5>{{'payeeList' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+							</a>
+						</li>
+						
+					</ul>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="mycards">
+                        <h5 ng-cloak>{{'cards' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="loans">
+                        <h5 ng-cloak>{{'loans' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
+                    </a>
+                </li>
+				<li class="list-group-item">
+                    <a ui-sref="mutualfunds">
+                        <h5 ng-cloak>{{'mutualFunds' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
                     </a>
                 </li>
             </ul>
--->
-        </div>
     </div>
-   <script src="main/pie.js"></script>
+</div>
+ 
+<div class="panel panel-default hidden-lg hidden-sm hidden-md accordion">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse"  data-target="#topPayeeDetails"><strong ng-cloak>{{'topPayee'| translate}}</strong><span class="glyphicon glyphicon-plus"></span></a>
+        </h4>
+    </div>
+</div>
+
+
+<div class="panel panel-default hidden-md hidden-lg hidden-sm accordion">
+    <div class="panel-heading ">
+        <h4 class="panel-title mobileACDetails"><strong>{{'offers' | translate}}</strong></h4>
+         <span class="glyphicon glyphicon-plus text-right" data-toggle="collapse" data-target="#offerdetails" aria-expanded="false" aria-controls="collapseExample">
+   <strong></strong>
+  </span>
+    </div>
+    <div class="panel-body table-responsive collapse" id="offerdetails">
+        
+                    <ul class="list-group offersList">
+            <li class="list-group-item">
+			<h5><strong ng-cloak>{{'dashBoardOffer1' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+			</li>
+			<li class="list-group-item">
+			<h5><strong ng-cloak>{{'dashBoardOffer2' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+			</li>
+			<li class="list-group-item">
+			<h5><strong ng-cloak>{{'dashBoardOffer3' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
+
+			</li>
+
+
+		</ul>
+        
+    </div>
+</div>
+
+
+

@@ -1,48 +1,12 @@
+
  @CHARSET "ISO-8859-1";
- .forget-form {
- 	width: 600px;
- 	height: 450px;
- 	margin-left: -30px;
- 	vertical-align: baseline;
- }
- 
+
  .forget-dialog {
  	width: 35%;
- 	height: 45%px;
- 	margin-left: -30px;
+ 	height: 50%;
  	vertical-align: middle;
  }
- 
- @media(max-width: 450px) {
- 	.forget-form {
- 		width: 100%;
- 		height: 100%;
- 		margin-left: 0px;
- 	}
- 	.landing-page {
- 		display: none;
- 	}
- }
- 
- @media(max-width: 720px) {
- 	.forget-form {
- 		width: 100%;
- 		height: 100%;
- 		margin-left: 0px;
- 	}
- 	.landing-page {
- 		display: none;
- 	}
- }
- 
- @media(max-width: 991px) {
- 	.forget-form {
- 		width: 90%;
- 		height: 100%;
- 		margin-left: 20px;
- 	}
- }
- 
+  
  .profile:hover {
  	cursor: pointer;
  }
@@ -59,9 +23,6 @@
  	border: 1px solid gainsboro;
  }
  
- .nav-logo {
- 	float: left;
- }
  
  .topName {
  	float: right;
@@ -192,22 +153,10 @@
  	color: red;
  }
  
- .loginFrm {
- 	/*margin-left:10%;*/
- 	margin: 5% auto;
- 	border-radius: 10px;
- 	opacity: .8;
- 	border: 2px solid #337ab7;
- 	box-shadow: 0px 0px 25px #111111;
- }
- 
  .warning {
  	color: red;
  }
  
- .mainContainer {
-/* 	background-color: #F3F3E9;*/
- }
  
  .modal {
  	display: none;
@@ -298,10 +247,7 @@
  	font-size: 13px;
  }
  
- .login-panel {
- 	min-height: 20vh;
- 	vertical-align: middle;
- }
+
  
  .md-button.md-hue-1.md-primary {
  	color: #2079BE;
@@ -616,6 +562,7 @@ md-dialog{
  /*new design*/
  
  .footer {
+    position: relative; 
  	right: 0;
  	bottom: 0;
  	left: 0;
@@ -623,6 +570,18 @@ md-dialog{
  	background-color: #2079be;
  	text-align: center;
  }
+
+@media (max-width: 480px)
+{
+    .footer {
+    position: fixed;
+    
+    text-align: center;
+ 	bottom: 100;
+ 	left: 0;
+ 	background-color: #2079be;
+ }
+}
  
  .footerMesssage {
  	position: absolute;
@@ -654,13 +613,46 @@ md-dialog{
  	font-size: 32px;
  }
  
- .clearbankLogo {
+/*****************************************/
+ .clearbankLogo {               
  	width: 13vh;
- 	margin-top:-8px;
-   
-
+/* 	margin-top:-10px;*/
+    
+     position: relative;
+     top:6px;
+  }
+@media (max-width: 480px)
+{
+   .clearbankLogo {
+ 	width: 10vh;
+ 	margin-top:-10px;
  }
- 
+    hr{
+    width:40%;
+    position: relative;
+    right:55px;
+    }
+}
+
+@media (max-width: 768px)
+{
+   
+   .clearbankLogo {
+ 	width: 10vh;
+ 	margin-top:-10px;
+ } 
+}
+
+@media (min-width: 992px)
+{
+   
+   .clearbankLogo {
+ 	width: 10vh;
+ 	margin-top:-10px;
+ } 
+}
+ /*****************************************/
+
  .inner-addon {
  	position: relative;
  }
@@ -679,10 +671,7 @@ md-dialog{
  	padding-right: 100px;
  }
  
- .nav-Right {
- 
- }
- 
+
  .navbar-default .navbar-nav>li>a {
  	color: #2079BE;
     margin-right:-25px;
@@ -704,9 +693,11 @@ md-dialog{
      height:600px;
  	position: relative;
  }
+
 .quickLinks{
 margin-top:40px;
 }
+
  .headingQuickLinks {
  	color: #2079BE;
  }
@@ -730,6 +721,27 @@ margin-top:40px;
  a.quicklinksData {
  	color: #000;
  }
+@media (max-width: 480px){
+    .quickLinks-table{
+        
+        text-align: center;
+           
+    }  
+    .quicklinksHeader{
+        
+        display:block;
+        position: relative;
+        text-align: center;
+        
+    }
+    
+    .formButtonsMobile{
+       
+        position: relative;
+        top:-23px;
+    }
+    
+}
  
  a.InfoData {
  	color: #000;
@@ -781,7 +793,7 @@ margin-top:40px;
  .textOverImage {
  	position: absolute;
  	top: 100px;
- 	background-color:#fff;
+/* 	background-color:#fff;*/
  	
  }
  
@@ -846,9 +858,6 @@ md-backdrop.md-opaque {
 	    background-color: rgba(158,158,158,0.2);
 }
 
-.footer-small{
-line-height: 1.7;
-}
 .loginButton{ 
     width:90%;
    left:7px;
@@ -857,10 +866,20 @@ line-height: 1.7;
 margin:0px !important;
 }
 .login-panel{
-width:50vh;
-box-shadow: 0 0px 10px #999 !important;
+    width:50vh;
+    box-shadow: 0 0px 10px #999 !important;
     padding:0px;
     padding-left:15px;
+}
+@media (max-width: 480px){
+   .login-form1{
+       width:50vh;
+       left:0px;
+       box-shadow: 0 0px 10px #999 !important;
+       padding:0px;
+       padding-left:15px;
+}
+   
 }
 .fa-facebook-official-mobile,.fa-twitter-square-mobile,.fa-linkedin-square-mobile{
 position:relative;
@@ -876,6 +895,15 @@ right:-8px;
 .lowerNavbar{
 position: relative;
  left:39px;   
+}
+
+@media (max-width: 768px)
+{
+   .lowerNavbar{
+       position: relative;
+    
+       left:0px;
+} 
 }
 a.InfoData,a.quicklinksData,a.CalData{
 line-height: 1.8
@@ -894,21 +922,178 @@ position: relative;
 .Offer1Image{
 margin-left:100px;
 }
-/*
-.leftTopMenu{
-left:38px;
-}
-.lowerNavbar{
-position: relative;
-    
-}
 
-
-}*/
-=======
 
 .glyphicon-trash,.glyphicon-edit{
-
 	font-size: 1.5em;
 }
+.glyphicon-user{
+    display: block;
+     font-size: 18px;
+    right: 30px;
+
+}
+.glyphicon-log-out{
+    display: block;
+     font-size: 18px;
+    right: 30px;
+    top:-2px;
+}
+.search-small{
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    margin-top:-40px;
+   
+}
+.navbarRight-small{
+/*    background-color: red;*/
+    position: absolute;
+    right:100px;
+}
+.popover {
+    width:140px;
+   line-height: 1.9;
+}
+.banner-mobile{
+    width:100%;
+    position: relative;
+    top:-21px;
+}
+
+.bannerText{
+    padding:25px;
+    text-align: justify;
+    position: relative;
+    top:-20px;
+}
+.bannerHead{
+    color:#2079BE;
+}
+.loginHead-mobile{
+   color:#2079BE;
+    padding-left:50px;
+    padding-top:100px;
+    
+}
+.registerHead-mobile{
+   color:#2079BE;
+    padding-left:50px;
+    padding-top:70px;  
+}
+.forgotPassHead-mobile{
+  color:#2079BE;
+    padding-left:35px;
+    padding-top:100px;  
+}
+.loginButtonMobile{
+     width:90%;
+    left:24px;
+}
+.forgotPasswordMobile{
+    right:110px;
+}
+.registerNowMobile{
+    position:absolute;
+    bottom: 0px;
+    width:100%
+}
+.loginLogoMobile{
+    width:25vh;
+     display: block;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    top:45px;
+}
+.backToHome{
+    font-size: 16px;
+    position: relative;
+    top:10px;
+}
+.resetPasswordMobileButton ,.buttonRegister{
+width:100%;
+}
+
+@media (max-width: 480px){
+    .userAccountInfo{
+       text-align: center;
+    }
+    .userAccountInfoTitle,.accountsData,.offersList{
+    color: #2079BE;
+    }
+}
+
+.mobileACDetails{
+    display: inline;
+}
+.glyphicon-plus{
+    
+    position: relative;
+    float:right;
+}
+
+@media (max-width: 480px)
+{
+    #collapsedetails{
+        height:183px;
+    }
+    #collapselinks{
+        height: 370px;
+    }
+    #offerdetails{
+        height:190px;
+    }
+    .transferOptions{
+        position: relative;
+        top:-20px;
+    }
+}
+
+.savingsPieChart{
+
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    float:left;
+    background-color: #EB9532;
+}
+
+.investmentsChart{
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    float:left;
+    background-color: #D64541; 
+}
+
+.expensesChart{
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    float:left;
+    background-color: #674172; 
+}
+.pietext1,.pietext3{
+
+    position: relative;
+     top:-2px;
+}
+.loanPieChart{
+  
+    
+    background-color:#26A65B; 
+     width: 30px;
+    height: 16px;
+    display:inline-block;
+   
+}
+
+.pietext2{
+    
+    position: relative;
+    top:-4px;
+
+}
+
 

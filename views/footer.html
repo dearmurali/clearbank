@@ -1,14 +1,14 @@
 
-<div class="footer">
+<div class="footer" ng-controller="footerController as footerCtrl" ng-show="footerCtrl.showFooter">
 
     <div class="container-fluid">
-<!--    <div class="row">-->
-        <div class="col-xs-12 hidden-md hidden-lg hidden-sm footer-small" style="color:white">
+    <div class="row">
+        <div class="col-xs-12 hidden-md hidden-lg footer" style="color:white">
             <span><a href="">{{'personalBanking' | translate}}</a></span>&nbsp;&nbsp;|<span>&nbsp;&nbsp;<a href="">{{'NRIBanking' | translate}}</a>a</span>&nbsp;&nbsp;|<span>&nbsp;&nbsp;<a href="">{{'premier' | translate}}</a></span>&nbsp;&nbsp;
             <br>
             <span>&nbsp;&nbsp;<a href="">{{'wealthManagement' | translate}}</a></span>
         </div>
-    <div class="col-md-2 col-sm-3 col-sm-offset-1 hidden-xs footerAlign" >
+    <div class="col-md-2 col-sm-3 col-sm-offset-1 hidden-xs hidden-sm footerAlign" >
        <table class="footer-table ">
         <tbody>
        <th class="footer-head "><a href="" ng-cloak>{{'personalBanking' | translate}}</a></th>
@@ -21,7 +21,7 @@
        </tbody>
         </table>
             </div>
-          <div class="col-md-2 col-xs-4  hidden-xs">
+          <div class="col-md-2 col-xs-4  hidden-xs hidden-sm ">
        <table class="footer-table hidden-xs">
         <tbody>
        <th class="footer-head"><a href="" ng-cloak>{{'NRIBanking' | translate}}</a></th>
@@ -34,7 +34,7 @@
        </tbody>
         </table>
             </div>
-         <div class="col-md-2 col-xs-2  hidden-xs">
+         <div class="col-md-2 col-xs-2  hidden-xs hidden-sm ">
        <table class="footer-table hidden-xs">
        
        <th class="footer-head"><a href="" ng-cloak>{{'premier' | translate}}</a></th>
@@ -47,8 +47,8 @@
        </tbody>
         </table>
         </div>
-        <div class="col-md-2 col-xs-6 hidden-xs">
-             <table class="footer-table hidden-xs">
+        <div class="col-md-2 col-xs-6 hidden-xs hidden-sm ">
+             <table class="footer-table hidden-xs hidden-sm ">
         <tbody>
        <th class="footer-head"><a href="" ng-cloak>{{'wealthManagement' | translate}}</a></th>
             <tr class="hidden-xs"><td class="text-left" ng-cloak><a href="">{{'home' | translate}}</a></td></tr>
@@ -61,7 +61,7 @@
        </tbody>
         </table>
             </div>
-               <div class="col-md-2 hidden-xs">
+               <div class="col-md-2 hidden-xs hidden-sm">
              <table class="footer-table ">
         
        <th class="footer-head hidden-xs"><a href="" ng-cloak>{{'socialMedia' | translate}}</a></th>
@@ -70,13 +70,12 @@
        </tbody>
         </table>
             </div>
-<!--            </div>-->
+            </div>
      
 <!--    </div>-->
 
-<!--
            
-     <div class="footerMesssage hidden-xs">
+     <div class="footerMesssage hidden-xs hidden-sm">
          <div class="container-fluid">
          <div class="col-md-7  siteMessage"> <span class="message" ng-cloak>
 {{'siteMessage' | translate}} </div>     
@@ -88,7 +87,7 @@
                   </div>
              </div>
     </div>
--->
 
       </div> 
+    </div>
     </div>

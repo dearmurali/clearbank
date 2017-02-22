@@ -1,22 +1,22 @@
-<div class="panel panel-default">
+<div class="panel panel-default hidden-xs">
     <div class="panel-heading ">
-        <h4 class="panel-title"><strong>Account Details</strong></h4>
+        <h4 class="panel-title"><strong>{{'accountDetails' | translate}}</strong></h4>
     </div>
     <div class="panel-body table-responsive">
         
-            <table class="table">
+            <table class="table accounts-table">
                 <thead>
                     <tr class="tableheading">
-                        <td>Account Number</td>
-                        <td>Account Type</td>
-                        <td>Available Balance</td>
-                        <td>Opening Date</td>
+                        <td>{{'accountNumber' | translate}}</td>
+                        <td>{{'accountType' | translate}}</td>
+                        <td>{{'availableBalance' | translate}}</td>
+                        <td>{{'openingDate' | translate}}</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr data-ng-repeat="account in $ctrl.accountInfo track by $index">
                         <td ng-cloak>{{account.account_number}}</td>
-                        <td ng-cloak>{{account.account_type}}</td>
+                        <td ng-cloak translate>{{account.account_type}}</td>
                         <td ng-cloak>{{account.available_balance}}&nbsp;{{account.currency}}</td>
                         <td ng-cloak>{{account.opening_date}}</td>
 						<td><a ui-sref="lastTransactions" data-ng-click="$ctrl.getIndex($index)"><img class="arrow" src="assets/images/Arrow.png"></a></td>
@@ -26,3 +26,38 @@
         
     </div>
 </div>
+
+<!--MOBILE******************************************************************-->
+
+ <div class="panel panel-default hidden-md hidden-lg hidden-sm accordion">
+    <div class="panel-heading ">
+        <h4 class="panel-title mobileACDetails"><strong>{{'accountDetails' | translate}}</strong></h4>
+         <span class="glyphicon glyphicon-plus text-right" data-toggle="collapse" data-target="#collapsedetails" aria-expanded="false" aria-controls="collapseExample">
+   <strong></strong>
+  </span>
+    </div>
+    <div class="panel-body table-responsive collapse in" id="collapsedetails">
+        
+            <table class="table accounts-table">
+                <thead>
+                    <tr class="tableheading">
+                        <td>{{'accountNumber' | translate}}</td>
+                        <td>{{'accountType' | translate}}</td>
+                        <td>{{'balance' | translate}}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="account in $ctrl.accountInfo track by $index" class="accountsData">
+                        <td ng-cloak>{{account.account_number}}</td>
+                        <td ng-cloak translate>{{account.account_type}}</td>
+                        <td ng-cloak>{{account.available_balance}}&nbsp;{{account.currency}}</td>
+                       
+						<td><a ui-sref="lastTransactions" data-ng-click="$ctrl.getIndex($index)"><img class="arrow" src="assets/images/Arrow.png"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    </div>
+</div>
+
+

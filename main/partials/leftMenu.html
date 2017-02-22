@@ -1,43 +1,27 @@
-
-	
-	<div class="panel-body panel-accountBalance personal">
+<div class="panel-body panel-accountBalance personal hidden-xs">
 
 		<strong ng-cloak>{{'hi'| translate}}, </strong><a ui-sref="profile" ng-cloak><strong ng-cloak>{{$ctrl.customerName}}</strong></a><br/>
 
-		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>Logout</strong></md-button>
+		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>{{'logout' | translate}}</strong></md-button>
 	</div>
 
-
-<!--<<<<<<< HEAD-->
-    <div class="panel panel-default">
+    <div class="panel panel-default userAccountInfo">
         <div class="panel-heading">
-            <h4 class="panel-title">
+            <h4 class="panel-title userAccountInfoTitle">
                 <a><strong ng-cloak>{{'accountBalance' | translate}}</strong></a>
             </h4>
         </div>
         <div class="panel-body panel-accountBalance">
             <ul class="asideMenu" data-ng-show="$ctrl.defaultData">
                 <span><strong ng-cloak>{{$ctrl.accNumber}}<small> -{{$ctrl.accType}}</small></strong><br />
-<!--
-=======
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">
-			<a><strong><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;</strong><strong>Account Balance</strong></a>
-		</h4>
-	</div>
-	<div class="panel-body panel-accountBalance">
-		<ul class="asideMenu" data-ng-show="$ctrl.defaultData">
-			<span><strong>{{$ctrl.accNumber}}<small> -{{$ctrl.accType}}</small></strong><br />
->>>>>>> 7ce0e1c95d048d37b6e3d942fb595ee69e6c4b99
--->
+
                     <strong><span class="green" ng-cloak>{{$ctrl.accBalance}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.accCurrency}}</small></strong>
 			</span>
 		</ul>
 
 
-		<ul class="asideMenu" data-ng-hide="$ctrl.defaultData">
-			<span><strong ng-cloak>{{$ctrl.transactionInfo.account_number}}<small ng-cloak> -{{$ctrl.transactionInfo.account_type}}</small></strong><br />
+		<ul translate class="asideMenu" data-ng-hide="$ctrl.defaultData">
+			<span ><strong ng-cloak>{{$ctrl.transactionInfo.account_number}}<small ng-cloak> -{{$ctrl.transactionInfo.account_type}}</small></strong><br />
                     <strong><span class="green" ng-cloak>{{$ctrl.transactionInfo.available_balance}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.transactionInfo.currency}}</small></strong>
 			</span>
 		</ul>
@@ -45,7 +29,7 @@
 </div>
 
 <!--<<<<<<< HEAD-->
-<div class="panel-group"> 
+<div class="panel-group hidden-xs"> 
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -67,18 +51,18 @@
                 </li>
 				<li class="list-group-item">
                     <a data-toggle="collapse" data-target="#SubMenu1">
-						<h5>Manage Payee<span class="glyphicon glyphicon-menu-down arrow"></span></h5>
+						<h5>{{'managePayee' | translate}}<span class="glyphicon glyphicon-menu-down arrow"></span></h5>
 					</a>
 
 					<ul class="list-group collapse" id="SubMenu1">
 						<li class="list-group-item">
 							<a ui-sref="addpayee">
-								<h5>Add Payee<img class="arrow" src="assets/images/Arrow.png"></h5>
+								<h5>{{'addPayee' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
 							</a>
 						</li>
 						<li class="list-group-item">
 							<a ui-sref="payeelist">
-								<h5>Payee List<img class="arrow" src="assets/images/Arrow.png"></h5>
+								<h5>{{'payeeList' | translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
 							</a>
 						</li>
 						
@@ -103,97 +87,15 @@
         </div>
     </div>
 </div>
-<div class="panel panel-default">
+<div class="panel panel-default hidden-xs">
     <div class="panel-heading">
         <h4 class="panel-title">
             <a data-toggle="collapse"  data-target="#collapse3"><strong ng-cloak>{{'topPayee'| translate}}</strong><span class="glyphicon glyphicon-minus "></span></a>
         </h4>
     </div>
-    <div id="collapse3" class="panel-collapse collapse in">
-<!--
-=======
-<div class="panel-group">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-				<a data-toggle="collapse" data-target="#collapse2"><strong><span class="glyphicon glyphicon-share-alt"></span></strong>&nbsp;&nbsp;<strong>Go To</strong><span class="glyphicon glyphicon-minus "></span></a>
-			</h4>
-		</div>
-		<div id="collapse2" class="panel-collapse collapse in">
-
-			<ul class="list-group">
-				<li class="list-group-item">
-					<a ui-sref="dashboard">
-						<h5>Dashboad<img class="arrow" src="assets/images/Arrow.png"></h5>
-					</a>
-				</li>
-				
-				<li class="list-group-item">
-					<a ui-sref="transfers">
-						<h5>Transfer Funds<img class="arrow" src="assets/images/Arrow.png"></h5>
-					</a>
-				</li>
-				<li class="list-group-item">
-
-					<a data-toggle="collapse" data-target="#SubMenu1">
-						<h5>Manage Payee<span class="glyphicon glyphicon-menu-down arrow"></span></h5>
-					</a>
-
-					<ul class="list-group collapse" id="SubMenu1">
-						<li class="list-group-item">
-							<a ui-sref="addpayee">
-								<h5>Add Payee<img class="arrow" src="assets/images/Arrow.png"></h5>
-							</a>
-						</li>
-						<li class="list-group-item">
-							<a ui-sref="payeelist">
-								<h5>Payee List<img class="arrow" src="assets/images/Arrow.png"></h5>
-							</a>
-						</li>
-						
-					</ul>
-
-				</li>
-					<li class="list-group-item">
-						<a ui-sref="mycards">
-							<h5>My Cards<img class="arrow" src="assets/images/Arrow.png"></h5>
-						</a>
-					</li>
-					<li class="list-group-item">
-						<a ui-sref="loans">
-							<h5>My Loans<img class="arrow" src="assets/images/Arrow.png"></h5>
-						</a>
-					</li>
-					<li class="list-group-item">
-						<a ui-sref="mutualfunds">
-							<h5>Mutual Funds<img class="arrow" src="assets/images/Arrow.png"></h5>
-						</a>
-					</li>
-			</ul>
-		</div>
-	</div>
 </div>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4 class="panel-title">
-			<a data-toggle="collapse" data-target="#collapse3"><strong><span class="glyphicon glyphicon-flash"></span>&nbsp;&nbsp;</strong><strong>Top Payee</strong></a>
-		</h4>
-	</div>
-	<div id="collapse3" class="panel-collapse collapse in">
->>>>>>> 7ce0e1c95d048d37b6e3d942fb595ee69e6c4b99
--->
+    <div id="collapse3" class="panel-collapse collapse in hidden-xs">
 
-		<ul class="list-group">
-			<li class="list-group-item" data-ng-repeat="payee in $ctrl.topPayee">
-				<a ui-sref="transfers" class="topPayee">
-					<h5 ng-cloak>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
-				</a>
-
-		</ul>
-	</div>
-</div>
-
-<!--<<<<<<< HEAD-->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
@@ -211,33 +113,13 @@
 			</li>
 			<li class="list-group-item">
 			<h5><strong ng-cloak>{{'dashBoardOffer3' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
-<!--
-=======
-<div class="panel panel-default" id="advPanel">
-	<div class="panel-heading">
-		<h4 class="panel-title">
-			<strong><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;</strong><a data-toggle="collapse" data-target="#collapse4"><strong>OFFERS</strong></a>
-			<a id="close"><span class="glyphicon glyphicon-remove arrow"></span></a>
-		</h4>
-	</div>
-	<div id="collapse4" class="panel-collapse collapse in">
 
-		<ul class="list-group">
-			<li class="list-group-item">
-				<h5><strong>GET 15% OFF ON BIGBASKET</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
-			</li>
-			<li class="list-group-item">
-				<h5><strong>FLAT 15% OFF ON EBAY</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
-			</li>
-			<li class="list-group-item">
-				<h5><strong>Low Intrest Rates For You</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
->>>>>>> 7ce0e1c95d048d37b6e3d942fb595ee69e6c4b99
--->
 			</li>
 
 
 		</ul>
 	</div>
+</div>
 </div>
 
 <script>

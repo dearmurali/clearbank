@@ -1,0 +1,28 @@
+.clearbankLogo {
+  width: 13vh;
+  margin-top: -10px;
+}
+@media (max-width: 480px) {
+  .clearbankLogo {
+    width: 10vh;
+    margin-top: -10px;
+  }
+}
+@media (max-width: 480px) {
+  hr {
+    width: 40%;
+    position: relative;
+    right: 55px;
+  }
+}
+a:focus {
+  text-decoration: none;
+}
+.glyphicon-eye-open,
+.glyphicon-eye-close {
+  position: absolute;
+  right: 10px;
+  color: rgba(128, 128, 128, 0.71);
+  font-size: 22px;
+  cursor: pointer;
+}

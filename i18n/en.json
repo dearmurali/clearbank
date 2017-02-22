@@ -80,7 +80,7 @@
         "travelCards":"Travel Cards",
         "internationalCards":"International Cards",
         "prepaidCards":"Prepaid Cards",
-        "changePassword":"CHANGE PASSWORD",
+        "changePassword":"Change Password",
         "enterNumber":"ENTER MOBILE NUMBER:",
         "mobileValidation":"Please enter a valid mobile number",
         "mobileNotFound":"Mobile Number does not exist",
@@ -151,7 +151,23 @@
     "passwordMatch":"enter same password as above!",
     "matchFail":"passwords do not match.",
     "notNow":"Not Now",
-    "hi":"Hi"
-    
+    "hi":"Hi",
+    "logout":"Logout",
+    "accountDetails":"Account Details",
+    "accountNumber":"Account Number",
+    "accountType":"Account Type",
+    "availableBalance":"Available Balance",
+    "openingDate":"Opening Date",
+    "managePayee":"Manage Payee",
+    "addPayee":"Add Payee",
+    "payeeList":"Payee List",
+    "Saving":"Saving",
+    "Current":"Current",
+    "Fixed Deposit":"Fixed Deposit",
+    "payeeType":"Payee Type",
+    "Own account in clearBank":"Own account in clearBank",
+    "Other in clearBank":"Other in clearBank",
+    "InterBank":"InterBank",
+    "balance":"Balance"
     
 }

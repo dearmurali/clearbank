@@ -148,6 +148,22 @@
     "matchFail":"Wachtwoorden komen niet overeen.",
     "notNow":"Niet nu",
     "register":"Registreren",
-    "hi":"Hoi"
-    
+    "hi":"Hoi",
+    "logout":"Uitloggen",
+    "accountDetails":"Account Gegevens",
+    "accountNumber":"Account Aantal",
+    "accountType":"Account Type",
+    "availableBalance":"Beschikbaar Saldo",
+    "openingDate":"Openingsdatum",
+    "managePayee":"Beheren Begunstigde",
+    "addPayee":"Voeg Begunstigde",
+    "payeeList":"Begunstigde Lijst",
+    "Saving":"Besparing",
+    "Current":"Actueel",
+    "Fixed Deposit":"Vaste Storting",
+    "payeeType":"Begunstigde Type",
+    "Own account in clearBank":"Eigen rekening in clearBank",
+    "Other in clearBank":"Andere in clearBank",
+    "InterBank":"InterBank",
+    "balance":"Balance"
 }
