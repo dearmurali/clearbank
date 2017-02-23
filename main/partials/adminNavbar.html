@@ -1,23 +1,28 @@
+
 <nav class="navbar navbar-default admin-nav">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="navbar-header col-md-1">
-				<button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="#admin-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-<!--
-				<div class="collapse navbar-collapse col-md-4 col-md-offset-5" id="admin-nav">
-					<ul class="nav navbar-nav navbar-right upperNavbar">
-						<li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'settings' | translate}} | </a> </li>
-						<li class="nav-Right upperNavFont"><a href="#" ng-cloak>logout</a></li>
-						<li>
-							<form class="navbar-form" role="search">
-								<div class="inner-addon right-addon"> <i class="glyphicon glyphicon-search"></i>
-									<input type="text" class="form-control" placeholder="Search" /> </div>
-							</form>
-						</li>
-					</ul>
-				</div>
--->
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ClearBank Admin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'settings' | translate}} | </a> </li>
+					<li class="nav-Right upperNavFont"><a href="#" ng-cloak>Logout</a> </li>
+					<li>
+						<form class="navbar-form" role="search">
+							<div class="inner-addon right-addon">
+								<i class="glyphicon glyphicon-search"></i>
+
+								<input type="text" class="form-control" placeholder="Search" />
+							</div>
+						</form>
+					</li>
+      </ul>
+    </div>
+  </div>
 </nav>

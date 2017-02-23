@@ -3,16 +3,17 @@
 
 <head>
 	<base href="/">
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale==1">
 	<title>ClearBank</title>
 
-	<script src="bower_components/jquery/dist/jquery.js" ></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js" ></script>
-	<script src="bower_components/angular/angular.js" ></script>
-	<script src="bower_components/angular-route/angular-route.js" ></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="bower_components/angular-messages/angular-messages.js" ></script>
-	<script src="bower_components/angular-aria/angular-aria.min.js" ></script>
+
+	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+	<script src="bower_components/angular-route/angular-route.js" type="text/javascript"></script>
+	<script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
+	<script src="bower_components/angular-messages/angular-messages.js" type="text/javascript"></script>
+	<script src="bower_components/angular-aria/angular-aria.min.js" type="text/javascript"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
 	<script src="bower_components/angular-mocks/angular-mocks.js" ></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js" ></script>
@@ -20,10 +21,12 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" ></script>
 	<script src="bower_components/angular-translate/angular-translate.js" ></script>
 	<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
 	<script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
     <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
-
+    <script src="bower_components/d3pie/d3pie/d3pie.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
 
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -34,42 +37,12 @@
 	<script  src="main/app.route.js"></script>
 
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
 
 
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
-	<link rel="stylesheet" href="assets/css/anim.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-
-
-	<script  src="main/services/loginService.js"></script>
-	<script  src="main/services/forgotPassword.js"></script>
-	<script  src="main/services/lastTransactionService.js"></script>
-	<script  src="main/services/registration.service.js"></script>
-	<script  src="main/services/editProfileService.js"></script>
-	<script  src="main/services/transferService.js"></script>
-	<script  src="main/services/cardService.js"></script>
-	<script  src="main/services/payeeList.service.js"></script>
-	<script  src="main/services/MutualFund.service.js"></script>
-	<script  src="main/services/Payee.service.js"></script>
-
-
-	<script src="main/controllers/managePayee.js"></script>
-	<script src="main/controllers/addPayee.controller.js"></script>
-	<script src="main/controllers/payeeList.controller.js"></script>
-	<script src="main/controllers/editPayee.controller.js"></script>
-	<script src="main/controllers/forgotDialog.controller.js"></script>
-	<script src="main/controllers/resgistrationSuccessController.js"></script>
-
-	<script src="main/directives/managePayee.js"></script>
-	<script src="main/directives/pieChart.js"></script>
-	<script src="main/directives/navBar.directive.js"></script>
-	<script src="main/directives/bankLinks.directive.js"></script>
-	<script src="main/directives/footer.directive.js"></script>
-	<script src="main/directives/adminNavbar.js"></script>
 
 
 	<script src="main/components/navigationBarComponent.js"></script>
@@ -86,11 +59,51 @@
 	<script src="main/components/homeBanner.component.js"></script>
 	<script src="main/components/userCards.component.js"></script>
 	<script src="main/components/mutualfunds.component.js"></script>
+    <script src="main/components/registerMobileComponent.js"></script>
+	<script src="main/components/adminmenu.component.js"></script>
 	<script src="main/components/updateContact.component.js"></script>
 	<script src="main/components/addNewMF.component.js"></script>
 	<script src="main/components/updateMF.component.js"></script>
 	<script src="main/components/updatePayee.component.js"></script>
-	<script src="main/components/adminmenu.component.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+	<link rel="stylesheet" href="assets/css/anim.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<script  src="main/services/loginService.js"></script>
+	<script  src="main/services/forgotPassword.js"></script>
+	<script  src="main/services/lastTransactionService.js"></script>
+	<script  src="main/services/registration.service.js"></script>
+	<script  src="main/services/editProfileService.js"></script>
+	<script  src="main/services/transferService.js"></script>
+	<script  src="main/services/cardService.js"></script>
+	<script  src="main/services/payeeList.service.js"></script>
+	<script  src="main/services/MutualFund.service.js"></script>
+	<script  src="main/services/Payee.service.js"></script>
+
+
+	<script src="main/directives/managePayee.js"></script>
+	<script src="main/directives/pieChart.js"></script>
+	<script src="main/directives/navBar.directive.js"></script>
+	<script src="main/directives/bankLinks.directive.js"></script>
+	<script src="main/directives/footer.directive.js"></script>
+	<script src="main/directives/adminNavbar.js"></script>
+	<script src="main/directives/commonMobileLogo.directive.js"></script>
+
+
+    <script src="main/controllers/managePayee.js"></script>
+	<script src="main/controllers/addPayee.controller.js"></script>
+	<script src="main/controllers/payeeList.controller.js"></script>
+	<script src="main/controllers/editPayee.controller.js"></script>
+	<script src="main/controllers/forgotDialog.controller.js"></script>
+	<script src="main/controllers/resgistrationSuccessController.js"></script>
+    <script src="main/controllers/navigation.controller.js"></script>
+    <script src="main/controllers/footer.controller.js"></script>
+    <script src="main/controllers/loginMobile.controller.js"></script>
+
+
+
 
 </head>
 

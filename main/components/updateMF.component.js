@@ -3,7 +3,7 @@ clearbank.component('updateMutualFund', {
 	controller: function mfController(MutualFundService) {
 		var self = this;
 		self.isDisabled = -1;
-
+		self.navHeading="Update Mutual Funds";
 		console.log("in mfcontroller");
 		MutualFundService.getStatement(function (result) {
 

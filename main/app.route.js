@@ -13,11 +13,24 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 		templateUrl: 'views/login/login.html'
 	})
 
+      .state('loginmobile', {
+        url: '/loginmobile',
+        templateUrl:'main/partials/loginMobile.html'
+        })
 
-	.state('forgotpassword', {
-		url: '/forgotpassword',
-		templateUrl: 'views/forgotPassword.html',
-	})
+       .state('forgotPasswordMobile',{
+        url:'/forgotPasswordMobile',
+        templateUrl:'main/partials/forgotPasswordMobile.html'
+    })
+        .state('registerMobile',{
+            url:'/registerMobile',
+            templateUrl:'main/partials/registerMobile.html'
+        })
+
+//	.state('forgotpassword', {
+//		url: '/forgotpassword',
+//		templateUrl: 'views/forgotPassword.html',
+//	})
 
 	.state('dashboard', {
 		url: '/dashboard',

@@ -14,16 +14,16 @@
 							<tr>
 								<td>Name</td>
 								<td>Account Number</td>
-								<td>IFSC</td>
+								<td class="hidden-xs">IFSC</td>
 								<td>Action</td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr ng-repeat="payee in payeeList.payees">
-								<td ng-cloak>{{payee.payeeName |uppercase }}</td>
+								<td ng-cloak class="payeeName">{{payee.payeeName |uppercase }}</td>
 								<td ng-cloak>{{payee.payeeAccountNumber}}</td>
 								
-								<td ng-cloak>{{payee.payeeIFSC}}</td>
+								<td ng-cloak class="hidden-xs">{{payee.payeeIFSC}}</td>
 								<td><a ui-sref="editpayee" ng-click="payeeList.getDetails($index)"><span class="glyphicon glyphicon-edit green"> </span></a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="" ng-click="payeeList.deletePayee($index)"><span class="glyphicon glyphicon-trash red"></span></a></td>
 							</tr>
 						</tbody>

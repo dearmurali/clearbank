@@ -10,6 +10,7 @@ clearbank.component("topMenu", {
 			if (languageOption === 1) {
 				//console.log(languageOption);
 				$(".dropdownButton").html('<span class="flag-icon flag-icon-nl"></span> Dutch  <span class="caret"></span>');
+//                console.log($translate.value);
                 $translate.use('nl');
 			}
 			if (languageOption === 2) {

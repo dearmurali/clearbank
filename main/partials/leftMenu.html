@@ -1,11 +1,17 @@
-
-	
-	<div class="panel-body panel-accountBalance personal">
+<div class="panel-body panel-accountBalance personal hidden-xs">
 
 
 		<strong ng-cloak>{{'hi'| translate}}, </strong><a ui-sref="profile" ng-cloak><strong ng-cloak>{{$ctrl.customerName}}</strong></a><br/>
 
+		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>{{'logout' | translate}}</strong></md-button>
+	</div>
 
+    <div class="panel panel-default userAccountInfo">
+        <div class="panel-heading">
+            <h4 class="panel-title userAccountInfoTitle">
+                <a><strong ng-cloak>{{'accountBalance' | translate}}</strong></a>
+
+<!--
 		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>{{'logout' | translate}}</strong></md-button>
 	</div>
 
@@ -15,6 +21,8 @@
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a><strong><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'accountBalance' | translate}}</strong></a>
+>>>>>>> 749438e5438656a19b8accf2ce73e2d4125d365e
+-->
             </h4>
         </div>
         <div class="panel-body panel-accountBalance">
@@ -26,16 +34,19 @@
 		</ul>
 
 
+
 		<ul class="asideMenu" data-ng-hide="$ctrl.defaultData">
 			<span><strong ng-cloak>{{$ctrl.transactionInfo.account_number}}<small ng-cloak> -{{$ctrl.transactionInfo.account_type}}</small></strong><br />
                     <strong><span class="green" ng-cloak>{{$ctrl.transactionInfo.available_balance | number :2}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.transactionInfo.currency}}</small></strong>
+
 			</span>
 		</ul>
 	</div>
 </div>
 
 
-<div class="panel-group"> 
+<div class="panel-group hidden-xs">
+
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -68,6 +79,7 @@
 						</li>
 						<li class="list-group-item">
 							<a ui-sref="payeelist">
+
 								<h5>{{'payeeList'| translate}}<img class="arrow" src="assets/images/Arrow.png"></h5>
 							</a>
 						</li>
@@ -93,13 +105,21 @@
         </div>
     </div>
 </div>
+
 <!--
 <div class="panel panel-default">
+>>>>>>> 749438e5438656a19b8accf2ce73e2d4125d365e
     <div class="panel-heading">
         <h4 class="panel-title">
             <a data-toggle="collapse"  data-target="#collapse3"><strong><span class="glyphicon glyphicon-flash"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'topPayee'| translate}}</strong><span class="glyphicon glyphicon-minus "></span></a>
         </h4>
     </div>
+<<<<<<< HEAD
+</div>
+    <div id="collapse3" class="panel-collapse collapse in hidden-xs">
+
+<div class="panel panel-default">
+=======
     <div id="collapse3" class="panel-collapse collapse in">
 
 		<ul class="list-group">
@@ -114,7 +134,7 @@
 -->
 
 
-<div class="panel panel-default" id="advPanel">
+<div class="panel panel-default hidden-xs" id="advPanel">
     <div class="panel-heading">
         <h4 class="panel-title">
 			<a data-toggle="collapse"  data-target="#collapse4"><span class="glyphicon glyphicon-gift"></span>&nbsp;&nbsp;<strong ng-cloak>{{'offers' | translate}}</strong></a><a><span class="glyphicon glyphicon-remove arrow"></span></a>
@@ -137,6 +157,7 @@
 
 		</ul>
 	</div>
+</div>
 </div>
 
 <script>

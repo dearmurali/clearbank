@@ -42,8 +42,13 @@
 								<label ng-cloak>{{'payeeType' | translate}}*</label>
 
 								<md-select ng-model="addPayee.payeeType" ng-change="addPayee.isSame()">
+<<<<<<< HEAD
+									<md-option ng-repeat="x in addPayee.PayeeTypes track by $index" ng-value="$index" ng-cloak translate >
+										{{x.type}}
+=======
 									<md-option ng-repeat="x in addPayee.PayeeTypes track by $index" ng-value="$index" ng-cloak >
 										{{'x.type' + $index| translate}}
+>>>>>>> 749438e5438656a19b8accf2ce73e2d4125d365e
 									</md-option>
 								</md-select>
 								<span class="valText" ng-show="addPayee.emptyAccontType" ng-cloak>{{'fieldLeftEmpty' | translate}}</span>
@@ -105,7 +110,7 @@
 						</div>
 						</div>
 						<div class="row">
-						<div class="col-md-12 col-sm-12">
+						<div class="col-md-12 col-sm-12 formButtonsMobile">
 
 							<md-button class="md-raised md-primary transferOptions" ng-click="addPayee.savePayee()" data-toggle="successMessage" data-target="#successMessage"><strong ng-cloak>{{'save' | translate}}</strong></md-button>
 							<md-button class="md-primary md-hue-1 transferOptions" ui-sref="payeelist"><strong ng-cloak>{{'deletePayee' | translate}}</strong></md-button>

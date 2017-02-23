@@ -7,7 +7,7 @@ clearbank.service('PayeeServices', function ($http) {
 			//			console.log(index+" "+accId);
 			$http({
 					method: "POST",
-					url: "http://localhost:8080/clearbank/addPayee",
+					url: "http://10.80.190.161:9090/clearbank-1.0/addPayee",
 					data: newPayee
 				})
 				.then(
@@ -27,7 +27,7 @@ clearbank.service('PayeeServices', function ($http) {
 			//			console.log(index+" "+accId);
 			$http({
 					method: "POST",
-					url: "http://localhost:8080/clearbank/updatePayee",
+					url: "http://10.80.190.161:9090/clearbank-1.0/updatePayee",
 					data: updatedPayee
 
 
@@ -47,7 +47,7 @@ clearbank.service('PayeeServices', function ($http) {
 		getPayeeList: function (customerId,callback) {
 			$http({
 					method: "GET",
-					url: "http://localhost:8080/clearbank/payeeList?customerId="+customerId,
+					url: "http://10.80.190.161:9090/clearbank-1.0/payeeList?customerId="+customerId,
 					
 				})
 				.then(
@@ -68,7 +68,7 @@ clearbank.service('PayeeServices', function ($http) {
 		deletePayee: function (payeeData,callback) {
 			$http({
 					method: "POST",
-					url: "http://localhost:8080/clearbank/deletePayee",
+					url: "http://10.80.190.161:9090/clearbank-1.0/deletePayee",
 					data: payeeData
 
 				})

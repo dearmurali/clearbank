@@ -1,0 +1,62 @@
+<h3 class="registerHead-mobile">Register</h3>
+		<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-md-12">
+			<div >
+				<form name="myform">
+
+					<md-input-container class="md-block">
+						<label>{{'name' | translate}}<span class="warning">*</span></label>
+						<input name="cname" class="cName" data-ng-model="$ctrl.customerName" data-ng-pattern="/^[a-z A-Z]+$/" required>
+						<div ng-messages="myform.cname.$error" class="nameError">
+							<div ng-message="pattern" class="errorMsg"><small>{{'nameValidation' | translate}}</small></div>
+							<div ng-message="required" class="errorMsg"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+						</div>
+					</md-input-container>
+
+
+					<md-input-container class="md-block">
+						<label>{{'contactNumber' | translate}}<span class="warning">*</span></label>
+						<input type="text" class="contact" name="phone" data-ng-model="$ctrl.customerContact" data-ng-pattern="/^[0-9]{10}$/" required maxlength="10">
+						<div ng-messages="myform.phone.$error" class="contactError">
+							<div ng-message="pattern" class="errorMsg"><small>{{'mobileValidation'| translate}}</small></div>
+							<div ng-message="required" class="errorMsg"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+						</div>
+					</md-input-container>
+
+					<md-input-container class="md-block">
+						<label for="cust-email">{{'emailID'| translate}}<span class="warning">*</span></label>
+						<input class="cMail" name="mail" data-ng-model="$ctrl.customerEmail" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" minlength="10" maxlength="30" required>
+						<div ng-messages="myform.mail.$error" class="mailError">
+							<div ng-message="pattern" class="errorMsg"><small>{{'emailValidation'| translate}}</small></div>
+							<div ng-message="required" class="errorMsg"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+						</div>
+					</md-input-container>
+
+
+					<md-input-container class="md-block">
+						<label for="cust-password">{{'passwordPlaceholder'| translate}}<span class="warning">*</span></label>
+						<input type="password" class="cPass" name="password" data-ng-model="$ctrl.customerPassword" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" required>
+						<div ng-messages="myform.password.$error" class="passError">
+							<div ng-message="pattern" class="errorMsg"><small>{{'passwordValidation'| translate}}</small></div>
+							<div ng-message="required" class="errorMsg"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+						</div>
+
+					</md-input-container>
+
+					<md-input-container class="md-block">
+						<label for="cust-password2">{{'Reenterpassword' | translate}}<span class="warning">*</span></label>
+						<input type="password" class="cPass2" name="password2" data-ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&-_/\\])[A-Za-z\d$@$!%*?&-_/\\]{8,20}/" data-ng-model="$ctrl.confirmedPassword" required>
+						<div ng-messages="myform.password2.$error" class="passError2" oncopy="return false">
+							<div ng-message="pattern" class="errorMsg"><small>{{'passwordMatch' | translate}}</small></div>
+							<div ng-message="required" class="errorMsg"><small>{{'fieldLeftEmpty' | translate}}</small></div>
+						</div>
+						<span class="errorMsg passError2"><small>{{'matchFail' | translate}}</small></span>
+					</md-input-container>
+
+
+					<md-button class="md-raised md-primary buttonRegister" data-ng-click="$ctrl.save()"><strong>{{'register' | translate}}</strong></md-button>
+<!--					<md-button class="md-warn md-hue-1" data-ng-click="$ctrl.close()"><strong>{{'notNow'| translate}}</strong></md-button>&nbsp;-->
+
+				</form>
+			</div>
+		</div>
+

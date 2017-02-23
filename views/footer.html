@@ -1,14 +1,16 @@
 
-<div class="footer">
+<div class="footer" ng-controller="footerController as footerCtrl" ng-show="footerCtrl.showFooter">
 
     <div class="container-fluid">
     <div class="row">
+
         <div class="col-xs-12 hidden-md hidden-lg hidden-sm footer-small" style="color:white">
+
             <span><a href="">{{'personalBanking' | translate}}</a></span>&nbsp;&nbsp;|<span>&nbsp;&nbsp;<a href="">{{'NRIBanking' | translate}}</a>a</span>&nbsp;&nbsp;|<span>&nbsp;&nbsp;<a href="">{{'premier' | translate}}</a></span>&nbsp;&nbsp;
             <br>
             <span>&nbsp;&nbsp;<a href="">{{'wealthManagement' | translate}}</a></span>
         </div>
-    <div class="col-md-2 col-sm-3 col-sm-offset-1 hidden-xs footerAlign" >
+    <div class="col-md-2 col-sm-3  hidden-xs footerAlign" >
        <table class="footer-table ">
         <tbody>
        <th class="footer-head "><a href="" ng-cloak>{{'personalBanking' | translate}}</a></th>
@@ -21,7 +23,7 @@
        </tbody>
         </table>
             </div>
-          <div class="col-md-2 col-xs-4  hidden-xs">
+          <div class="col-md-2 col-sm-4 hidden-xs">
        <table class="footer-table hidden-xs">
         <tbody>
        <th class="footer-head"><a href="" ng-cloak>{{'NRIBanking' | translate}}</a></th>
@@ -34,7 +36,7 @@
        </tbody>
         </table>
             </div>
-         <div class="col-md-2 col-xs-2  hidden-xs">
+         <div class="col-md-2 col-sm-2  hidden-xs">
        <table class="footer-table hidden-xs">
        
        <th class="footer-head"><a href="" ng-cloak>{{'premier' | translate}}</a></th>
@@ -47,7 +49,7 @@
        </tbody>
         </table>
         </div>
-        <div class="col-md-2 col-xs-6 hidden-xs">
+        <div class="col-md-2 col-sm-2 hidden-xs">
              <table class="footer-table hidden-xs">
         <tbody>
        <th class="footer-head"><a href="" ng-cloak>{{'wealthManagement' | translate}}</a></th>
@@ -72,13 +74,9 @@
             </div>
             </div>
 
-     
-<!--    </div>-->
-
-           
      <div class="footerMesssage hidden-xs">
          <div class="container-fluid">
-         <div class="col-md-7 col-sm-9 siteMessage"> <span class="message" ng-cloak>
+			 <div class="col-md-7 col-sm-9 siteMessage"> <span class="message" ng-cloak></span>
 {{'siteMessage' | translate}} </div>     
               <div class="container-fluid">
              <div class="row">
@@ -90,4 +88,5 @@
     </div>
 
       </div> 
+    </div>
     </div>

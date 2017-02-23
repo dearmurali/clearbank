@@ -29,5 +29,9 @@
   "resolutions": {
     "angular": "1.6.0",
     "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "ui-bootstrap": "^2.5.0",
+    "angular-bootstrap": "^2.5.0"
   }
 }

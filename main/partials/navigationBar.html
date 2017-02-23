@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default" ng-hide="$ctrl.adminNav">
+
+<nav class="navbar navbar-default hidden-xs" ng-hide="$ctrl.adminNav">
 
 	<div class="container-fluid">
 		<div class="row">
@@ -19,7 +20,6 @@
 			<div class="collapse navbar-collapse col-md-4 col-md-offset-5" id="bs-example-navbar-collapse-1">
 
 				<ul class="nav navbar-nav navbar-right upperNavbar">
-
 
 					<li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'settings' | translate}} | </a> </li>
 					<li class="nav-Right upperNavFont"><a href="" data-toggle="tooltip" title="Hooray!" ng-cloak>{{'customerCare' | translate}} |</a> </li>
@@ -43,3 +43,73 @@
 </nav>
 <top-menu ng-hide="$ctrl.adminNav"></top-menu>
 
+
+<nav class="navbar navbar-default hidden-md hidden-lg hidden-sm" ng-controller="navigationController as navCtrl" ng-show="navCtrl.showNavbar">
+
+	<div class="container-fluid">
+        <div class="row">
+		<div class="navbar-header col-md-1">
+
+
+
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+            <div class="col-md-offset-5">
+			<a class="navbar-brand" href="#"><img class="clearbankLogo" src="assets/images/Logo.png" ng-click="navCtrl.logoutMobile()"></a>
+
+            </div>
+              <div class="hidden-md hidden-lg col-xs-1 hidden-sm navbarRight-small">
+            <ul class="nav navbar-nav navbar-right hidden-md hidden-lg">
+        <li>
+
+<!--            <a href="" data-toggle="popover" ng-click="navCtrl.navigate()" data-placement="bottom" popover-trigger="click" data-content="<a href='' >Customer Login</a> <a href=''>RD calculator</a>">-->
+
+
+          <a ui-sref="loginmobile" ng-click="navCtrl.goToLogin()">  <span class="glyphicon glyphicon-user hidden-md hidden-lg hidden-sm" ng-show="navCtrl.showLogin" ></span> <span class="glyphicon glyphicon-log-out hidden-md hidden-lg" ng-show="navCtrl.showLogout" ng-click="navCtrl.logoutMobile()"></span>   </a></li>
+                <li><a href=""><i class="glyphicon glyphicon-search search-small"></i></a></li></ul>
+            </div>
+		</div>
+
+
+
+<!--
+            <span class="glyphicon glyphicon-user hidden-md hidden-lg" ></span>
+            <i class="glyphicon glyphicon-search search-small"></i>
+-->
+
+		<div class="collapse navbar-collapse col-md-4 col-md-offset-5" id="bs-example-navbar-collapse-1" >
+
+			<ul class="nav navbar-nav navbar-right upperNavbar">
+
+		<li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'settings' | translate}} | </a> </li>
+					<li class="nav-Right upperNavFont"><a href="" data-toggle="tooltip" title="Hooray!" ng-cloak>{{'customerCare' | translate}} |</a> </li>
+					<li class="nav-Right upperNavFont"><a href="" ng-cloak>{{'findATMbranch' | translate}}</a></li>
+
+                <li class="hidden-md hidden-lg hidden-sm" style="background-color:#F7F8E0">
+                    <a class="mainMenu" ui-sref="cards"><strong ng-cloak>{{'cards' | translate}}</strong></a></li>
+                <li class="hidden-md hidden-lg hidden-sm"  style="background-color:#F7F8E0">
+                    <a class="mainMenu" ui-sref="loans"><strong></strong><strong ng-cloak>{{'deposits' | translate}}</strong></a></li>
+                <li class="hidden-md hidden-lg hidden-sm"  style="background-color:#F7F8E0">
+                    <a class="mainMenu" ui-sref="mutualfunds"><strong></strong><strong ng-cloak>{{'investments' | translate}}</strong></a></li>
+                <li class="hidden-md hidden-lg hidden-sm"  style="background-color:#F7F8E0">
+                    <a class="mainMenu" ui-sref="nearby"><strong></strong><strong ng-cloak>{{'loans' | translate}}</strong></a></li>
+                <li class="hidden-md hidden-lg hidden-sm"  style="background-color:#F7F8E0">
+                    <a class="mainMenu" ui-sref="contactus"><strong ng-cloak>{{'wallets' | translate}}</strong></a></li>
+				<li class="hidden-md hidden-lg hidden-sm"  style="background-color:#F7F8E0" >
+                    <a class="mainMenu" ui-sref="contactus"><strong></strong><strong ng-cloak>{{'offers' | translate}}</strong></a></li>
+               <a href="" class="nav-Right upperNavFont-small hidden-md hidden-lg hidden-sm" ng-cloak>&nbsp;&nbsp;{{'settings' | translate}} |   </a>
+				<a href="" class="nav-Right upperNavFont-small hidden-md hidden-lg hidden-sm" ng-cloak>{{'customerCare' | translate}} | </a>
+				<a href="" class="nav-Right upperNavFont-small hidden-md hidden-lg hidden-sm" ng-cloak>{{'findATMbranch' | translate}}</a>
+
+			</ul>
+
+	</div>
+
+		</div>
+	</div>

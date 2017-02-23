@@ -2,10 +2,12 @@ clearbank.component("navigationBar", {
 	templateUrl: "main/partials/navigationBar.html",
 	controller: function ($state, $scope) {
 		var self = this;
-		if(window.location.href.includes('Admin')){
+		 if(window.location.href.includes('Admin')){
 			self.adminNav=true;
 		}
-
+		else{
+			self.adminNav=false;
+		}
 		self.selectLanguage = function (languageOption) {
 
 			if (languageOption === 1) {

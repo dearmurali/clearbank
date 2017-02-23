@@ -4,7 +4,7 @@ clearbank.service('editProfileService', function ($http) {
 //            console.log("in service",token);
             $http({
                 method: "POST",
-                url: "http://localhost:8080/clearbank/modifyUser",
+                url: "http://10.80.190.161:8080/clearbank/modifyUser",
                 data: {
                     "id": customer_id,
                     "customermobile": customer_mobile,

@@ -4,7 +4,7 @@
 clearbank.component('leftMenu',{
   
         templateUrl : "main/partials/leftMenu.html",
-        controller:function (){
+        controller:function ($translate){
             var self=this;
             
         self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
@@ -17,7 +17,7 @@ clearbank.component('leftMenu',{
 		 self.customerName = sessionStorage.getItem('customerName');
         self.accCurrency = sessionStorage.getItem('currency');
         self.accType = sessionStorage.getItem('accountType');
-			
+
         self.defaultData = true;
 
         self.getIndex = function (index) {
