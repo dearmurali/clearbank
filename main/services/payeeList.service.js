@@ -1,3 +1,4 @@
+'use strict';
 clearbank.service("payeeListService", function ($http) {
 	return {
 		getPayeeData: function (callback) {
@@ -7,13 +8,10 @@ clearbank.service("payeeListService", function ($http) {
 				})
 				.then(
 					function (result) {
-						//    console.log("inside service")
 						callback(result.data);
-						//  console.log(result.data);
 					},
 					function (err) {
 						callback("some error occured" + err);
-						//		console.log("Error")
 					}
 				)
 

@@ -7,9 +7,9 @@
             <p><span>Transfer Successfull</span></p>
             </span>
             <p><span>Your updated balance is</span></p>
-<!--            <p><span><h3>{{available_balance}}&nbsp;{{currency}}</h3></span></p>-->
+
              <p><span><h3 ng-cloak>&#x20B9 {{$ctrl.available_balance-$ctrl.maxAmount | number :2}}.<small>00</small></h3></span></p>
-<!--            <p> <button class="btn btn-primary">OK</button></p>-->
+
             <md-button class="md-raised md-primary" data-ng-click="$ctrl.closeAlert()">OK</md-button>
         </div>
         <div class="col-md-2"></div>

@@ -8,7 +8,7 @@ clearbank.component("lastTransaction", {
 
 
 	controller: function leftTransactionController(lastTransactionService) {
-		var self = this;
+		const self = this;
 
 		self.accName = sessionStorage.getItem('customerName');
 		self.accNumber = sessionStorage.getItem('accountNumber');
@@ -16,34 +16,29 @@ clearbank.component("lastTransaction", {
 		self.accCurrency = sessionStorage.getItem('currency');
 		self.accType = sessionStorage.getItem('accountType');
 
-		var customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
+		let customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
 		self.favLinks = customerInfo.fav_links;
 		self.topPayee = customerInfo.top_payee;
 
-
-		var index = sessionStorage.getItem('currentIndex');
+		let index = sessionStorage.getItem('currentIndex');
 		self.accId = sessionStorage.getItem('customerId');
 		self.showTransactions = false;
 
-		//       console.log(index);
 
-		var info = JSON.parse(sessionStorage.getItem('accountInfo'));
+		let info = JSON.parse(sessionStorage.getItem('accountInfo'));
 		self.transactionInfo = info[index];
 
-		var customerID = self.accId;
-		        var currentAccountNumber=self.transactionInfo.account_number;
-		        var accountType=self.transactionInfo.account_type;    
+		let customerID = self.accId;
+		let currentAccountNumber = self.transactionInfo.account_number;
+		let accountType = self.transactionInfo.account_type;
 
 
 		self.showTransactions = false;
 
-		//        var token=sessionStorage.getItem('token');    
 
 		lastTransactionService.getTransactionData(index, customerID, function (result) {
-			      console.log("transaction data");
-			       console.log(result);
+
 			self.lastTransactionInfo = result;
-//			console.log(self.lastTransactionInfo);
 		});
 
 

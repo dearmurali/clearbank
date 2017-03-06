@@ -1,34 +1,22 @@
-clearbank.service('lastTransactionService',function($http){
-	return{
-
-        
-        getTransactionData:function(index,accId, callback){
-			console.log(index+" "+accId);
+'use strict';
+clearbank.service('lastTransactionService', function ($http) {
+	return {
+		getTransactionData: function (index, accId, callback) {
 			$http({
-				method:"get",
-				url:"http://localhost:3000/assets/data/transactionData.json"
+				method: "get",
+				url: "http://localhost:3000/assets/data/transactionData.json"
 			}).then(
-				//success
-				function(result){
-                    console.log('inside last transaction service');
-                    console.log(result.data);
-					for(i=0;i<result.data.transactionData.length;i++){
-						console.log('inside for');
-						if(accId=== result.data.transactionData[i].csId){
-				     callback(result.data.transactionData[i].accountInfo[index].transactions);	
-                            console.log("result.data.transactionData[i].accountInfo[index].transactions");
+				function (result) {
+					for (i = 0; i < result.data.transactionData.length; i++) {
+						if (accId === result.data.transactionData[i].csId) {
+							callback(result.data.transactionData[i].accountInfo[index].transactions);
 						}
 					}
-					
 				},
-				//error
-				function(err){
-//					console.log('some error occurred');
-					callback("some error occured "+err);
-				}
-			)
+				function (err) {
+					callback("some error occured " + err);
+				});
 		}
-		
+
 	}
 });
-

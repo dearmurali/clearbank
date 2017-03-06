@@ -1,6 +1,7 @@
-clearbank.component('addMutualFund',{
-	templateUrl : 'main/partials/addMF.html',
+'use strict';
+clearbank.component('addMutualFund', {
+	templateUrl: 'main/partials/addMF.html',
 	controller: function () {
-		self.navHeading="Add New Mutual Funds";
+		self.navHeading = "Add New Mutual Funds";
 	}
 })

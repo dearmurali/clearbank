@@ -42,13 +42,8 @@
 								<label ng-cloak>{{'payeeType' | translate}}*</label>
 
 								<md-select ng-model="addPayee.payeeType" ng-change="addPayee.isSame()">
-<<<<<<< HEAD
-									<md-option ng-repeat="x in addPayee.PayeeTypes track by $index" ng-value="$index" ng-cloak translate >
-										{{x.type}}
-=======
 									<md-option ng-repeat="x in addPayee.PayeeTypes track by $index" ng-value="$index" ng-cloak >
 										{{'x.type' + $index| translate}}
->>>>>>> 749438e5438656a19b8accf2ce73e2d4125d365e
 									</md-option>
 								</md-select>
 								<span class="valText" ng-show="addPayee.emptyAccontType" ng-cloak>{{'fieldLeftEmpty' | translate}}</span>

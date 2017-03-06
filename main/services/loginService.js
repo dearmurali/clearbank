@@ -1,3 +1,4 @@
+'use strict';
 clearbank.service('LoginService', function ($http) {
 	return {
 		validLogin: function (customer_id, password, callback) {
@@ -12,17 +13,12 @@ clearbank.service('LoginService', function ($http) {
 			}).then(
 				function (result) {
 
-					console.log(result.data);
-					//					console.log("result on login",result.config.data.username);
-
 					if (result.data.success) {
 
 						sessionStorage.setItem('isLoggedIn', true);
-						//							 console.log(result.data.token)
 						callback('success');
 
 						sessionStorage.setItem('customerName', result.data.customer_information.customer_Name);
-						//                            console.log(result.data.customer_information.customer_Name);
 						sessionStorage.setItem('customerId', result.data.customer_information.customer_Id);
 						sessionStorage.setItem('customerMail', result.data.customer_information.customer_email);
 						sessionStorage.setItem('customerMobile', result.data.customer_information.customer_mobileNumber);
@@ -38,9 +34,7 @@ clearbank.service('LoginService', function ($http) {
 						callback('false');
 				},
 				function (err) {
-					console.log(err);
-					//					callback("some error occured"+result.data.error)
-					//					console.log('some error occurred');
+					callback('false');
 				}
 			)
 		},

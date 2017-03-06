@@ -1,43 +1,43 @@
-<div class="container-fluid" >
+<div class="container-fluid">
 
-<div class="editBox">
-    <div class="heading">
-  <div class="well heading" ng-cloak>{{updateProfile.customerName}}</div>
-        <hr>
+	<div class="editBox">
+		<div class="heading">
+			<div class="well heading" ng-cloak>{{updateProfile.customerName}}</div>
+			<hr>
+		</div>
+
+		<div class="col-md-12 details">
+			<table class="table table-responsive clearfix">
+				<tr>
+					<td>Customer Id:</td>
+					<td><input type="text" id="customerId" class="id form-control" disabled></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" id="customerName" class="form-control" ng-keydown="updateProfile.writeName($event)" ng-model="updateProfile.newName" /> </td>
+				</tr>
+				<tr>
+					<td>Email Id:</td>
+					<td><input type="text" id="EmailId" class="form-control" ng-model="updateProfile.newEmail" /></td>
+				</tr>
+				<tr>
+					<td>Mob. Number:</td>
+					<td><input type="text" ng-keydown="updateProfile.writeNumber($event)" id="mobileNumber" class="form-control" ng-model="updateProfile.mobileNumber" maxlength="10" /> </td>
+
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td><textarea class="form-control" cols="22" ng-model="updateProfile.newAddress"></textarea></td>
+				</tr>
+
+			</table>
+
+			<div class="col-md-offset-4 update">
+				<button class="btn btn-warning" ng-click="updateProfile.updateProfile()">UPDATE</button>
+				<button class="btn btn-primary">RESTORE</button>
+			</div>
+
+		</div>
+	</div>
 </div>
-      
-    <div class="col-md-12 details">
-        <table class="table table-responsive clearfix">
-        <tr>
-            <td>Customer Id:</td>
-            <td><input type="text" id="customerId" class="id form-control" disabled></td>
-            </tr>
-        <tr>    
-            <td>Name:</td>
-            <td><input type="text"  id="customerName" class="form-control" ng-keydown="updateProfile.writeName($event)" ng-model="updateProfile.newName"/> </td>
-            </tr>
-        <tr>
-            <td>Email Id:</td>
-            <td><input type="text"  id="EmailId" class="form-control" ng-model="updateProfile.newEmail"/></td>
-            </tr>
-        <tr>
-            <td>Mob. Number:</td>
-            <td><input type="text" ng-keydown="updateProfile.writeNumber($event)"  id="mobileNumber" class="form-control" ng-model="updateProfile.mobileNumber"  maxlength="10"/>  </td>
-     
-            </tr>
-        <tr>
-            <td>Address:</td>
-            <td><textarea class="form-control" cols="22" ng-model="updateProfile.newAddress"></textarea></td>
-            </tr>    
-            
-        </table>
-
-        <div class="col-md-offset-4 update">
-        <button class="btn btn-warning" ng-click="updateProfile.updateProfile()">UPDATE</button>
-            <button class="btn btn-primary">RESTORE</button>
-    </div>
-            
-    </div>
-        </div>
-    </div>
 </div>

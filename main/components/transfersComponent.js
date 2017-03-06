@@ -1,4 +1,3 @@
-
 'use strict';
 
 
@@ -7,7 +6,7 @@ clearbank.component("transferDetail", {
 	templateUrl: "main/partials/transferDetail.html",
 	transclude: true,
 	controller: function transfersController(transferService, $mdDialog, $scope) {
-		var self = this;
+		const self = this;
 
 		self.accName = sessionStorage.getItem('customerName');
 		self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
@@ -16,14 +15,14 @@ clearbank.component("transferDetail", {
 		self.accCurrency = sessionStorage.getItem('currency');
 		self.accType = sessionStorage.getItem('accountType');
 
-		var customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
+		let customerInfo = JSON.parse(sessionStorage.getItem('customerInfo'));
 		self.favLinks = customerInfo.fav_links;
 		self.topPayee = customerInfo.top_payee;
 
 		self.defaultData = true;
 
-		var index = sessionStorage.getItem('currentIndex');
-		self.transactionInfo=self.accountInfo[index];
+		let index = sessionStorage.getItem('currentIndex');
+		self.transactionInfo = self.accountInfo[index];
 		self.transferHeading = "Any Linked ClearBank Account";
 		self.transferChoice = "";
 		self.bankName = "";
@@ -55,7 +54,7 @@ clearbank.component("transferDetail", {
 		}
 
 
-		self.transferMethod = function () { 
+		self.transferMethod = function () {
 
 
 			for (i = 0; i < self.transferAccount.length; i++) {
@@ -112,7 +111,6 @@ clearbank.component("transferDetail", {
 			for (i = 0; i < result.length; i++) {
 				if (result[i].type === self.transfer_type) {
 					self.payeeData = result[i].details;
-					            console.log(self.payeeData);
 				}
 			}
 		});
@@ -128,12 +126,6 @@ clearbank.component("transferDetail", {
 		}
 
 		self.transferAmount = function () {
-
-			        console.log(self.selected2);
-
-			        console.log(self.debitAccount);
-			        console.log( self.payeeAccount);
-			        console.log(self.maxAmount);
 
 			if (self.debitAccount === undefined || self.payeeAccount === undefined || self.maxAmount === undefined || self.maxAmount === null) {
 				$('.warning_fields').css('display', 'block');
@@ -156,7 +148,6 @@ clearbank.component("transferDetail", {
 					$('.warning_fields').css('display', 'none');
 					$('.warning_maxIMPS').css('display', 'none');
 					$('.warning_maxAmount').css('display', 'none');
-					console.log(self.payeeAccount+"werwerwer");
 					self.showAlert();
 				}
 			}

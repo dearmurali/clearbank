@@ -1,7 +1,8 @@
+'use strict';
 clearbank.service('editProfileService', function ($http) {
     return {
         UpdateProfile: function (customer_id, customer_mobile, customer_email, customer_address, token, callback) {
-//            console.log("in service",token);
+
             $http({
                 method: "POST",
                 url: "http://10.80.190.161:8080/clearbank/modifyUser",
@@ -16,7 +17,7 @@ clearbank.service('editProfileService', function ($http) {
                 }
             }).then(
                 function (result) {
-//                    console.log('successfully resistered ', result);
+
                     if (result.data.error === "undefined") {
                         callback('successfully updated');
                     } else {
@@ -24,7 +25,6 @@ clearbank.service('editProfileService', function ($http) {
                     }
                 },
                 function (err) {
-//                    console.log('some error occurred ', err);
                     callback('not Updated');
                 }
             )

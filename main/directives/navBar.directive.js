@@ -1,6 +1,5 @@
-angular.module("ClearBank")
-
-.directive('navBar',function(){
+'use strict';
+clearbank.directive('navBar',function(){
     return{
         transclude: true,
         restrict:'AE',

@@ -1,17 +1,14 @@
-clearbank.controller('footerController',function(){
+'use strict';
+clearbank.controller('footerController', function () {
 
-    this.showFooter=false;
-   // console.log(window.location.hash)
+	this.showFooter = false;
+	if (window.location.hash == '#!/loginmobile' || window.location.hash == '#!/forgotPasswordMobile' || window.location.hash == '#!/registerMobile') {
+		console.log(this.showFooter)
+		this.showFooter = false;
 
-    if(window.location.hash=='#!/loginmobile' || window.location.hash=='#!/forgotPasswordMobile' || window.location.hash=='#!/registerMobile')
-    {
-        console.log(this.showFooter)
-        this.showFooter=false;
-
-    }
-    else{
-        this.showFooter=true;
-    }
+	} else {
+		this.showFooter = true;
+	}
 
 
 })

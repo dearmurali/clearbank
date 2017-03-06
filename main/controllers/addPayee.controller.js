@@ -1,5 +1,7 @@
+'use strict';
+
 clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeServices', function ($scope, $mdDialog, PayeeServices) {
-	var self = this;
+	const self = this;
 	self.payeeType = "";
 	self.disable = true;
 	self.PayeeTypes = [
@@ -22,7 +24,7 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 	}
 
 	self.isSame = function () {
-		console.log(self.payeeType )
+
 		if (self.payeeType !== 0) {
 			self.disable = false;
 		} else {
@@ -33,15 +35,14 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 	// when save button is clicked//
 
 	self.savePayee = function () {
-		//console.log(this.payeeName);
 		if (self.accountNumber === undefined || self.reEnterAccountNumber === undefined || self.payeeType === undefined || self.payeeName === undefined || self.payeeNickName === undefined) {
 			self.emptyFields = true;
 			self.emptyFields = true;
-			//        console.log("found")
+
 		}
-		//        console.log(this.accountNumber);
+
 		if (self.setLimitOption === "yes") {
-			//                console.log(this.transferLimit);
+
 			if (self.transferLimit === undefined) {
 				self.emptyFields = true;
 			}
@@ -49,10 +50,6 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 		if (self.accountNumber !== undefined && self.reEnterAccountNumber !== undefined && self.payeeType !== undefined && self.payeeName !== undefined && self.payeeNickName !== undefined && (self.accountNumber === self.reEnterAccountNumber)) {
 			if (self.setLimitOption === "yes" && self.transferLimit !== undefined) {
 				self.emptyFields = false;
-				//               console.log(this.transferLimit);
-				//               console.log("Calling service with limit value");
-				console.log(self.payeeType )
-
 				self.newPayee = {
 
 					"payeeAccountNumber": self.accountNumber,
@@ -63,21 +60,13 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 					"payeeLimit": self.transferLimit,
 					"customerid": sessionStorage.getItem('customerId')
 				}
-				PayeeServices.addNewPayee(self.newPayee,function(response){
-					console.log(response);
-									self.showModal();   
-									   });
-				
-//				this.showModal();
+				PayeeServices.addNewPayee(self.newPayee, function (response) {
+					self.showModal();
+				});
+
 			}
-
-			//service call with limit
-
-
 			if (self.setLimitOption === "no" || self.setLimitOption === undefined) {
 				self.emptyFields = false;
-				//           console.log("Calling service without limit");
-				console.log(self.payeeType )
 				self.newPayee = {
 					"payeeAccountNumber": self.accountNumber,
 					"payeeName": self.payeeName,
@@ -88,18 +77,14 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 					"customerid": sessionStorage.getItem('customerId')
 				}
 
-				PayeeServices.addNewPayee(self.newPayee,function(response){
-					console.log(response);
-									self.showModal();   
-									   })
+				PayeeServices.addNewPayee(self.newPayee, function (response) {
+					self.showModal();
+				})
 			}
-
-			console.log("new payee ", self.newPayee);
 		}
 	}
 
 	self.checkLimit = function (option) {
-		//           console.log(option);
 		if (option === "yes") {
 			self.setLimit = false;
 		} else {
@@ -113,7 +98,6 @@ clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeService
 			clickOutsideToClose: false
 		})
 	}
-
 
 	function modalController($scope, $mdDialog) {
 		$scope.cancel = function () {

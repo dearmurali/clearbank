@@ -1,6 +1,5 @@
-angular.module("ClearBank")
-
-.directive("footer",function(){
+'use strict';
+clearbank.directive("footer",function(){
 return{
 templateUrl:"views/footer.html"
 }

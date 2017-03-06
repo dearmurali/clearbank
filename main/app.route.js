@@ -1,3 +1,4 @@
+'use strict';
 clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
 
 	$urlRouterProvider.otherwise('/');
@@ -13,24 +14,19 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 		templateUrl: 'views/login/login.html'
 	})
 
-      .state('loginmobile', {
-        url: '/loginmobile',
-        templateUrl:'main/partials/loginMobile.html'
-        })
+	.state('loginmobile', {
+		url: '/loginmobile',
+		templateUrl: 'main/partials/loginMobile.html'
+	})
 
-       .state('forgotPasswordMobile',{
-        url:'/forgotPasswordMobile',
-        templateUrl:'main/partials/forgotPasswordMobile.html'
-    })
-        .state('registerMobile',{
-            url:'/registerMobile',
-            templateUrl:'main/partials/registerMobile.html'
-        })
-
-//	.state('forgotpassword', {
-//		url: '/forgotpassword',
-//		templateUrl: 'views/forgotPassword.html',
-//	})
+	.state('forgotPasswordMobile', {
+			url: '/forgotPasswordMobile',
+			templateUrl: 'main/partials/forgotPasswordMobile.html'
+		})
+		.state('registerMobile', {
+			url: '/registerMobile',
+			templateUrl: 'main/partials/registerMobile.html'
+		})
 
 	.state('dashboard', {
 		url: '/dashboard',
@@ -67,7 +63,7 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 		url: '/mycards',
 		templateUrl: 'views/userCards.html'
 	})
-	
+
 	.state('managepayee', {
 		url: '/managepayee',
 		templateUrl: 'views/managePayee.html',
@@ -86,34 +82,34 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 	})
 
 	.state('payeelist', {
-			url: '/payeelist',
-			templateUrl: "views/payeelist.html"
+		url: '/payeelist',
+		templateUrl: "views/payeelist.html"
 	})
-	
+
 	.state('editpayee', {
-			url: '/editpayee',
-			templateUrl: "views/editPayee.html"
+		url: '/editpayee',
+		templateUrl: "views/editPayee.html"
 	})
-	
-	.state('updateMF',{
-		url:'/clearbankAdmin',
-		template:'<update-mutual-fund></update-mutual-fund>'
+
+	.state('updateMF', {
+		url: '/clearbankAdmin',
+		template: '<update-mutual-fund></update-mutual-fund>'
 	})
-	
-	.state('addMF',{
-		url:'/addmutualfundsAdmin',
-		template:'<add-mutual-fund></add-mutual-fund>'	
+
+	.state('addMF', {
+		url: '/addmutualfundsAdmin',
+		template: '<add-mutual-fund></add-mutual-fund>'
 	})
-	
-	.state('updatePL',{
-		url:'/updateAdminpayeelist',
-		template:'<update-payee-list></update-payee-list>'
+
+	.state('updatePL', {
+		url: '/updateAdminpayeelist',
+		template: '<update-payee-list></update-payee-list>'
 	})
-	
-	.state('updateContact',{
-		url:'/updateAdminContacts',
-		template:'<update-contacts></update-contacts>'
-		
+
+	.state('updateContact', {
+		url: '/updateAdminContacts',
+		template: '<update-contacts></update-contacts>'
+
 	})
 
 
@@ -121,13 +117,5 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 		enabled: false,
 		requireBase: false
 	});
-
-	//	$locationProvider.html5Mode({
-	//		enabled: true,
-	//		requireBase: false
-	//	});
-
-	//      $locationProvider.html5Mode(false);
-	//    $locationProvider.hashPrefix('!');
 
 });

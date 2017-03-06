@@ -10,19 +10,6 @@
         <div class="panel-heading">
             <h4 class="panel-title userAccountInfoTitle">
                 <a><strong ng-cloak>{{'accountBalance' | translate}}</strong></a>
-
-<!--
-		<md-button class="md-hue-1 md-primary" data-ng-click="$ctrl.logout()"><strong>{{'logout' | translate}}</strong></md-button>
-	</div>
-
-
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a><strong><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'accountBalance' | translate}}</strong></a>
->>>>>>> 749438e5438656a19b8accf2ce73e2d4125d365e
--->
             </h4>
         </div>
         <div class="panel-body panel-accountBalance">
@@ -32,9 +19,6 @@
                     <strong><span class="green" ng-cloak>{{$ctrl.accBalance| number :2}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.accCurrency}}</small></strong>
 			</span>
 		</ul>
-
-
-
 		<ul class="asideMenu" data-ng-hide="$ctrl.defaultData">
 			<span><strong ng-cloak>{{$ctrl.transactionInfo.account_number}}<small ng-cloak> -{{$ctrl.transactionInfo.account_type}}</small></strong><br />
                     <strong><span class="green" ng-cloak>{{$ctrl.transactionInfo.available_balance | number :2}}</span>&nbsp;<small class="green" ng-cloak>{{$ctrl.transactionInfo.currency}}</small></strong>
@@ -44,9 +28,7 @@
 	</div>
 </div>
 
-
 <div class="panel-group hidden-xs">
-
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -106,34 +88,6 @@
     </div>
 </div>
 
-<!--
-<div class="panel panel-default">
->>>>>>> 749438e5438656a19b8accf2ce73e2d4125d365e
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a data-toggle="collapse"  data-target="#collapse3"><strong><span class="glyphicon glyphicon-flash"></span>&nbsp;&nbsp;</strong><strong ng-cloak>{{'topPayee'| translate}}</strong><span class="glyphicon glyphicon-minus "></span></a>
-        </h4>
-    </div>
-<<<<<<< HEAD
-</div>
-    <div id="collapse3" class="panel-collapse collapse in hidden-xs">
-
-<div class="panel panel-default">
-=======
-    <div id="collapse3" class="panel-collapse collapse in">
-
-		<ul class="list-group">
-			<li class="list-group-item" data-ng-repeat="payee in $ctrl.topPayee">
-				<a ui-sref="transfers" class="topPayee">
-					<h5 ng-cloak>{{payee.payeeName_1}}<img class="arrow" src="assets/images/Arrow.png"></h5>
-				</a>
-
-		</ul>
-	</div>
-</div>
--->
-
-
 <div class="panel panel-default hidden-xs" id="advPanel">
     <div class="panel-heading">
         <h4 class="panel-title">
@@ -151,13 +105,9 @@
 			</li>
 			<li class="list-group-item">
 			<h5><strong ng-cloak>{{'dashBoardOffer3' | translate}}</strong><img class="arrow" src="assets/images/Arrow.png"></h5>
-
 			</li>
-
-
 		</ul>
 	</div>
-</div>
 </div>
 
 <script>

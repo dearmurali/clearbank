@@ -1,8 +1,7 @@
-
 var pie = new d3pie("pieChartMobile", {
 	"size": {
 		"canvasHeight": 300,
-		"canvasWidth":380,
+		"canvasWidth": 380,
 		"pieOuterRadius": "110%"
 	},
 	"data": {
@@ -12,22 +11,18 @@ var pie = new d3pie("pieChartMobile", {
 		},
 		"content": [
 			{
-//				"label": "Savings",
 				"value": 40,
 				"color": "#EB9532"
 			},
 			{
-//				"label": "Expenses",
 				"value": 30,
 				"color": "#26A65B"
 			},
 			{
-//				"label": "Loans",
 				"value": 15,
 				"color": "#674172"
 			},
 			{
-//				"label": "Investment",
 				"value": 15,
 				"color": "#D64541"
 			}
@@ -39,7 +34,7 @@ var pie = new d3pie("pieChartMobile", {
 		},
 		"mainLabel": {
 			"font": "verdana",
-            "fontFace": "bold",
+			"fontFace": "bold",
 			"fontSize": 13
 		},
 		"percentage": {
@@ -74,7 +69,7 @@ var pie = new d3pie("pieChartMobile", {
 var pie = new d3pie("pieChart", {
 	"size": {
 		"canvasHeight": 430,
-		"canvasWidth":700,
+		"canvasWidth": 700,
 		"pieOuterRadius": "90%"
 	},
 	"data": {
@@ -111,7 +106,7 @@ var pie = new d3pie("pieChart", {
 		},
 		"mainLabel": {
 			"font": "verdana",
-            "fontFace": "bold",
+			"fontFace": "bold",
 			"fontSize": 13
 		},
 		"percentage": {
@@ -144,12 +139,11 @@ var pie = new d3pie("pieChart", {
 	"callbacks": {}
 });
 
-    var $accordions = $(".accordion").accordion({
-            collapsible: true,
-            active: false,
-            icons: false
-        }).on('click', function() {
-            console.log('abc')
-            $accordions.not(this).accordion('option','active', 2);
-        });
-
+var $accordions = $(".accordion").accordion({
+	collapsible: true,
+	active: false,
+	icons: false
+}).on('click', function () {
+	console.log('abc')
+	$accordions.not(this).accordion('option', 'active', 2);
+});

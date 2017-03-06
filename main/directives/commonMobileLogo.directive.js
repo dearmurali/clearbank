@@ -1,6 +1,5 @@
-angular.module("ClearBank")
-
-.directive('commonMobileLogo',function(){
+'use strict';
+clearbank.directive('commonMobileLogo',function(){
     return{
         transclude: true,
         restrict:'AE',
