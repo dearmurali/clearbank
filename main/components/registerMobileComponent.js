@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.component('registerMobileComponent', {
 
 	templateUrl: 'main/partials/registerMobileComponent.html',

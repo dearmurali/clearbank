@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('PayeeServices', function ($http) {
 	return {
 		addNewPayee: function (newPayee, callback) {

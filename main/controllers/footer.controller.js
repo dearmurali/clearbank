@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller('footerController', function () {
 
 	this.showFooter = false;

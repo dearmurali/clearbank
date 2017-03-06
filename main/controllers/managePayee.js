@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller('managePayee', ['$scope', function ($scope) {
 
 		$scope.accName = sessionStorage.getItem('customerName');

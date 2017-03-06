@@ -1,4 +1,3 @@
-'use strict';
 
 clearbank.service('cardService', function ($http) {
 	return {

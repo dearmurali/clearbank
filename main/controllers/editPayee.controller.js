@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller("editPayeeController", function ($scope, $mdDialog, PayeeServices) {
 
 

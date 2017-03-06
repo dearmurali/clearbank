@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller('forgotDialogController', function (ForgotPasswordService, $mdDialog, $translate) {
 	const self = this;
 	self.forgotPasswordWidget = true;

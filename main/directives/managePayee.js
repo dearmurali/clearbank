@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.directive("managePayee", function() {
     return {
         restrict : "E",

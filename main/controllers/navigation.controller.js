@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller('navigationController', function () {
 
 	this.showNavbar = true;

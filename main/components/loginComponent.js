@@ -1,4 +1,3 @@
-'use strict';
 
 clearbank.component('login', {
 	templateUrl: 'main/partials/login.html',

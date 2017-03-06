@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller('registrationSuccessController', function ($scope, $mdDialog) {
 		const self = this
 		self.registrationId = sessionStorage.getItem('csid');

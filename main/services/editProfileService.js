@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('editProfileService', function ($http) {
     return {
         UpdateProfile: function (customer_id, customer_mobile, customer_email, customer_address, token, callback) {

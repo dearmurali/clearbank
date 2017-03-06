@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('ForgotPasswordService', function ($http) {
 	return {
 		validateMobileNumber: function (mobile_number, callback) {

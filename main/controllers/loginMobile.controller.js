@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller('loginMobileController', function ($scope, LoginService, $state, $mdDialog) {
 
 	this.showHomePage = function () {

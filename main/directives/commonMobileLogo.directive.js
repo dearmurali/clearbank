@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.directive('commonMobileLogo',function(){
     return{
         transclude: true,

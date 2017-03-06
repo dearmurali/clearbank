@@ -1,4 +1,3 @@
-'use strict';
 
 clearbank.controller('addPayeeController', ['$scope', '$mdDialog', 'PayeeServices', function ($scope, $mdDialog, PayeeServices) {
 	const self = this;

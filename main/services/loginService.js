@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('LoginService', function ($http) {
 	return {
 		validLogin: function (customer_id, password, callback) {

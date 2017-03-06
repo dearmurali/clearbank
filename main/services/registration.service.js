@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('RegistrationService', function ($http) {
 	return {
 		RegisterCustomer: function (customer_name, customer_mobile, customer_email, customer_password, callback) {

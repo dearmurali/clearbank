@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.controller("payeeListController", ['$scope', 'PayeeServices', function ($scope, PayeeServices) {
 	const self = this;
 	PayeeServices.getPayeeList(sessionStorage.getItem('customerId'), function (result) {

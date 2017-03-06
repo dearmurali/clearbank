@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('transferService', function ($http) {
 	return {
 

@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.component('addMutualFund', {
 	templateUrl: 'main/partials/addMF.html',
 	controller: function () {

@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.component("navigationBar", {
 	templateUrl: "main/partials/navigationBar.html",
 	controller: function ($state, $scope) {

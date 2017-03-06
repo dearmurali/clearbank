@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.component("topMenu", {
 
 	templateUrl: "main/partials/topMenu.html",

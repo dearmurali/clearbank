@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.directive('bankLinks',function(){
     return{
         transclude: true,

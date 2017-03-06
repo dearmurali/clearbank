@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service("payeeListService", function ($http) {
 	return {
 		getPayeeData: function (callback) {

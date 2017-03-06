@@ -1,5 +1,3 @@
-'use strict';
-
 
 clearbank.component("lastTransaction", {
 

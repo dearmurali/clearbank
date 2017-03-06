@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('lastTransactionService', function ($http) {
 	return {
 		getTransactionData: function (index, accId, callback) {

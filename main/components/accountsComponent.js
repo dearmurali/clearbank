@@ -1,10 +1,9 @@
-'use strict';
 
 clearbank.component('accounts', {
 
 	templateUrl: "main/partials/accounts.html",
 
-	controller: function ($translate) {
+	controller: function () {
 		const self = this;
 
 		self.accountInfo = JSON.parse(sessionStorage.getItem('accountInfo'));
@@ -23,7 +22,7 @@ clearbank.component('accounts', {
 
 		}
 
-		let $accordions = $(".accordion").accordion({
+		const $accordions = $(".accordion").accordion({
 			collapsible: true,
 			active: false,
 			icons: false

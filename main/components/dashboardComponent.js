@@ -1,4 +1,4 @@
-'use strict';
+
 if (sessionStorage.length === 0) {
 	alert('you need to login to see this page');
 	window.location.href = '/';

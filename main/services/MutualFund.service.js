@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.service('MutualFundService', function ($http) {
 	return {
 		getInformation: function (callback) {

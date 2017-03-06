@@ -1,4 +1,4 @@
-'use strict';
+
 clearbank.component('userRegistration', {
 
 	templateUrl: 'main/partials/registration.html',
