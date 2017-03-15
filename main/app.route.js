@@ -87,7 +87,7 @@ clearbank.config(function ($routeProvider, $locationProvider, $stateProvider, $u
 	.state('updateContact', {
 		url: '/updateAdminContacts',
 		template: '<update-contacts></update-contacts>'
-	})
+	});
 	$locationProvider.html5Mode({
 		enabled: false,
 		requireBase: false

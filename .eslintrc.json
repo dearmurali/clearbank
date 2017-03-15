@@ -1,0 +1,222 @@
+{
+    
+    "root": true,
+    "env": {
+        "browser": true,
+        "node":true
+    },
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs"
+  },
+     "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "globals": {
+        "clearbank": true,
+        "$":true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "eqeqeq":[ 
+            "error",
+            "smart"
+        ],
+        "curly":[
+            "error"
+        ],
+        "strict":[ 
+            "error",
+            "global"
+        ],
+        "no-console":[ 
+            "error"
+        ],
+        "no-cond-assign":[
+            "error"
+        ],
+        "no-constant-condition":[
+            "error"
+        ],
+        "no-debugger":[
+            "error"
+        ],
+        "no-dupe-args":[
+            "error"
+        ],
+        "no-dupe-keys":[
+            "error"
+        ],
+        "no-duplicate-case":[
+            "error"
+        ],
+        "no-empty":[
+            "error"
+        ],
+        "no-func-assign":[
+            "error"
+        ],
+        "no-sparse-arrays":[
+            "error"
+        ],
+        "no-unreachable":[
+            "error"
+        ],
+        "no-const-assign":[
+            "error"  
+        ],
+        "prefer-const":[
+            "error"
+        ],
+        "no-new-object":[
+            "error"
+        ],
+        "object-shorthand":[
+            "error"
+        ],
+        "no-array-constructor":[
+            "error"
+        ],
+        "array-callback-return":[
+            "error"
+        ],
+        "quotes": [
+            "error", 
+            "single"
+        ],
+        "prefer-template":[
+            "error"
+        ],
+        "no-useless-escape":[
+            "error"
+        ],
+        "func-style": [
+            "error", 
+            "expression"
+        ],
+        "no-loop-func":[
+            "error"
+        ],
+        "wrap-iife": [
+            "error", 
+            "outside"
+        ],
+        "prefer-rest-params":[
+            "error"
+        ],
+        "no-new-func":[
+            "error"
+        ],
+        "space-before-function-paren":[
+            "error"
+        ],
+        "space-before-blocks":[
+            "error"
+        ],
+        "no-param-reassign": [
+            "error", 
+            { "props": true }
+        ],
+        "prefer-spread":[
+            "error"
+        ],
+        "prefer-arrow-callback":[
+            "error"
+        ],
+        "arrow-spacing": [
+            "error"
+        ],
+        "arrow-parens":[
+            "error",
+            "always"
+        ],
+        "arrow-body-style": [
+            "error", 
+            "always"
+        ],
+        "no-confusing-arrow":[
+            "error"
+        ],
+        "no-useless-constructor":[
+            "error"
+        ],
+        "no-dupe-class-members":[ 
+            "error"
+        ],
+        "no-duplicate-imports":[
+            "error"
+        ],
+        "dot-notation":[
+            "error"
+        ],
+        "no-plusplus":[
+            "error"
+        ],
+        "no-case-declarations":[
+            "error"
+        ],
+        "no-nested-ternary":[
+            "error"
+        ],
+        "no-unneeded-ternary":[
+            "error"
+        ],
+        "spaced-comment":[
+            "error",
+            "always"
+        ],
+        "space-before-blocks":[
+            "error"
+        ],
+        "space-infix-ops":[
+            "error"
+        ],
+        "padded-blocks": [
+            "error", 
+            "always"
+        ],
+        "space-in-parens": [
+            "error", 
+            "always"
+        ],
+        "array-bracket-spacing": [
+            "error", 
+            "never"
+        ],
+        "object-curly-spacing": [
+            "error", 
+            "always"
+        ],
+        "max-len": [
+            "error", 
+            100
+        ],
+        "comma-style": [
+            "error", 
+            "last"
+        ],
+        "id-length":[
+            "error"
+        ],
+        "camelcase":[
+            "error"
+        ],
+        "no-underscore-dangle":[
+            "error"
+        ],
+        "no-undef": [
+            "error"
+        ],
+        "one-var": [
+            "error",
+            "always"
+        ]
+        
+    }
+    
+}
